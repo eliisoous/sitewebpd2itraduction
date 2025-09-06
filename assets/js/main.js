@@ -57,6 +57,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
+    // Mobile Language Dropdown
+    const mobileLangBtn = document.getElementById('mobileLangBtn');
+    const mobileLangDropdown = document.getElementById('mobileLangDropdown');
+    
+    if (mobileLangBtn && mobileLangDropdown) {
+        mobileLangBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileLangDropdown.classList.toggle('hidden');
+            
+            // Rotate arrow
+            const arrow = mobileLangBtn.querySelector('svg');
+            if (mobileLangDropdown.classList.contains('hidden')) {
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileLangBtn.contains(e.target) && !mobileLangDropdown.contains(e.target)) {
+                mobileLangDropdown.classList.add('hidden');
+                const arrow = mobileLangBtn.querySelector('svg');
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+    
+    // Language Selection Function
+    window.selectLanguage = function(lang) {
+        const mobileLangBtn = document.getElementById('mobileLangBtn');
+        const mobileLangDropdown = document.getElementById('mobileLangDropdown');
+        
+        if (mobileLangBtn) {
+            // Update button text
+            const textNode = mobileLangBtn.childNodes[0];
+            textNode.textContent = lang + ' ';
+            
+            // Close dropdown
+            if (mobileLangDropdown) {
+                mobileLangDropdown.classList.add('hidden');
+                const arrow = mobileLangBtn.querySelector('svg');
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Here you can add logic to actually change the language
+        console.log('Language selected:', lang);
+    };
+    
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
