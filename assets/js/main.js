@@ -85,6 +85,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Tablet Language Dropdown
+    const tabletLangBtn = document.getElementById('tabletLanguageBtn');
+    const tabletLangDropdown = document.getElementById('tabletLanguageDropdown');
+    
+    if (tabletLangBtn && tabletLangDropdown) {
+        tabletLangBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            tabletLangDropdown.classList.toggle('hidden');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!tabletLangBtn.contains(e.target) && !tabletLangDropdown.contains(e.target)) {
+                tabletLangDropdown.classList.add('hidden');
+            }
+        });
+    }
+    
     // Language Selection Function
     window.selectLanguage = function(lang) {
         const mobileLangBtn = document.getElementById('mobileLangBtn');

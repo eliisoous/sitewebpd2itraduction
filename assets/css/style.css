@@ -238,16 +238,23 @@ nav a::after {
 
 /* Responsive Styles */
 @media (max-width: 1023px) {
-    .desktop-nav {
-        display: none;
-    }
-    
     .mobile-menu-btn {
         display: block;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* Tablet landscape navigation visible */
+    .tablet-nav {
+        display: flex;
+    }
+    
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1280px) {
     .desktop-nav {
         display: flex;
     }
@@ -258,6 +265,45 @@ nav a::after {
     
     .mobile-menu {
         display: none !important;
+    }
+}
+
+/* Mobile specific (up to tablet) */
+@media (max-width: 1023px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Ensure mobile menu works well on small tablets */
+    #mobileMenu {
+        font-size: 0.95rem;
+    }
+    
+    #mobileMenu a {
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Better spacing for mobile dropdown buttons */
+    .mobile-dropdown button {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablet specific adjustments (landscape) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* Compact tablet navigation styles */
+    nav a {
+        font-size: 0.875rem;
+    }
+    
+    /* Smaller dropdowns for tablet */
+    .group .absolute {
+        width: 14rem;
     }
 }
 
