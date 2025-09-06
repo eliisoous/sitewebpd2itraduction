@@ -39,225 +39,65 @@
         }
     </script>
     
+    <!-- Header Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-24">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="flex items-center">
-                        <img src="assets/images/logo-pd2i.png" alt="PD2i Logo" class="h-16 w-auto">
-                    </a>
-                </div>
-                
-                <!-- Tablet Compact Navigation (1024px - 1279px) -->
-                <nav class="hidden lg:flex xl:hidden items-center space-x-4">
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm">Home</a>
-                    
-                    <!-- Coating Equipments Dropdown -->
-                    <div class="relative group">
-                        <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center text-sm">
-                            Coating
-                            <svg class="w-3 h-3 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">PVD Technology for Tooling</a>
-                                <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">PVD Coating System for Molds & Dies</a>
-                                <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">DLC for Tribological Coatings</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm">Edge Prep</a>
-                    
-                    <!-- Turnkey Dropdown -->
-                    <div class="relative group">
-                        <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center text-sm">
-                            Turnkey
-                            <svg class="w-3 h-3 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">Turnkey Solutions</a>
-                                <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">Greenclean Ultrasonic Cleaning</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm">Plasma</a>
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm">Services</a>
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm">About</a>
-                </nav>
-                
-                <!-- Tablet Contacts & Language (1024px - 1279px) -->
-                <div class="hidden lg:flex xl:hidden items-center space-x-3">
-                    <a href="#" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-4 py-1 text-sm font-medium">
-                        Contacts
-                    </a>
-                    <div class="relative">
-                        <button class="flex items-center text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm" id="tabletLanguageBtn">
-                            EN
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute right-0 mt-2 w-20 bg-white border border-gray-200 rounded-md shadow-lg hidden" id="tabletLanguageDropdown">
-                            <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100">EN</a>
-                            <a href="#" class="block px-3 py-2 text-xs text-pd2i-black hover:bg-gray-100">FR</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Desktop Full Navigation (1280px+) -->
-                <nav class="hidden xl:flex items-center space-x-6 2xl:space-x-8">
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Home</a>
-                    
-                    <!-- Coating Equipments Dropdown -->
-                    <div class="relative group">
-                        <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center">
-                            Coating Equipments
-                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">PVD Technology for Tooling</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">PVD Coating System for Molds & Dies</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">DLC for Tribological Coatings</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Edge Preparation</a>
-                    
-                    <!-- Turnkey Dropdown -->
-                    <div class="relative group">
-                        <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center">
-                            Turnkey
-                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">Turnkey Solutions</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200">Greenclean Ultrasonic Cleaning</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Plasma Nitriding</a>
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Services</a>
-                    <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">About us</a>
-                </nav>
-                
-                <!-- Contacts Button & Language Selector -->
-                <div class="hidden xl:flex items-center space-x-4">
-                    <a href="#" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
-                        Contacts
-                    </a>
-                    <div class="relative">
-                        <button class="flex items-center text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium" id="languageBtn">
-                            EN
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute right-0 mt-2 w-24 bg-white border border-gray-200 rounded-md shadow-lg hidden" id="languageDropdown">
-                            <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100">EN</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-pd2i-black hover:bg-gray-100">FR</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden">
-                    <button class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200" id="mobileMenuBtn">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <div class="lg:hidden hidden" id="mobileMenu">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                    <a href="#" class="block px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Home</a>
-                    
-                    <!-- Mobile Coating Equipments Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="w-full flex items-center justify-between px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-left" onclick="toggleMobileDropdown('coatingDropdown')">
-                            Coating Equipments
-                            <svg class="w-4 h-4 transform transition-transform duration-200" id="coatingArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="hidden pl-6 space-y-1" id="coatingDropdown">
-                            <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:text-pd2i-blue transition-colors duration-200">PVD Technology for Tooling</a>
-                            <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:text-pd2i-blue transition-colors duration-200">PVD Coating System for Molds & Dies</a>
-                            <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:text-pd2i-blue transition-colors duration-200">DLC for Tribological Coatings</a>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="block px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Edge Preparation</a>
-                    
-                    <!-- Mobile Turnkey Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button class="w-full flex items-center justify-between px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-left" onclick="toggleMobileDropdown('turnkeyDropdown')">
-                            Turnkey
-                            <svg class="w-4 h-4 transform transition-transform duration-200" id="turnkeyArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="hidden pl-6 space-y-1" id="turnkeyDropdown">
-                            <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:text-pd2i-blue transition-colors duration-200">Turnkey Solutions</a>
-                            <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:text-pd2i-blue transition-colors duration-200">Greenclean Ultrasonic Cleaning</a>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="block px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Plasma Nitriding</a>
-                    <a href="#" class="block px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">Services</a>
-                    <a href="#" class="block px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">About us</a>
-                    <div class="px-3 py-2">
-                        <a href="#" class="inline-block bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
-                            Contacts
-                        </a>
-                    </div>
-                    <div class="px-3 py-2">
-                        <div class="relative">
-                            <button class="flex items-center text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium bg-white border border-gray-300 px-3 py-2 rounded w-20 justify-between" id="mobileLangBtn">
-                                EN
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="absolute left-0 mt-1 w-20 bg-white border border-gray-300 rounded shadow-lg hidden z-50" id="mobileLangDropdown">
-                                <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200" onclick="selectLanguage('EN')">EN</a>
-                                <a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200" onclick="selectLanguage('FR')">FR</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header sera généré automatiquement par le composant -->
 
     <!-- Main Content will be added here -->
     <main>
         <!-- Content sections will be added in next steps -->
     </main>
 
+    <!-- Header Component -->
+    <script src="components/Header.js"></script>
+    
+    <!-- Initialize Header -->
+    <script>
+        // Initialisation du header avec la configuration PD2i
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: '#', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: '#' },
+                        { label: 'PVD Coating System for Molds & Dies', href: '#' },
+                        { label: 'DLC for Tribological Coatings', href: '#' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: '#', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: '#' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: '#', type: 'link' },
+                { label: 'Services', href: '#', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: '#', type: 'link' }
+            ]
+        });
+        
+        // Écouter les changements de langue
+        document.addEventListener('languageChanged', (event) => {
+            console.log('Langue changée vers:', event.detail.language);
+            // Ici vous pouvez ajouter la logique pour changer la langue du site
+        });
+    </script>
+    
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
 </body>

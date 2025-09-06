@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemple d'utilisation du composant Header PD2i">
+    <title>Exemple - Header Component PD2i</title>
+    
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Header Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+</head>
+<body class="font-roboto bg-gray-50 text-pd2i-black">
+    <!-- Le header sera généré automatiquement par le composant -->
+    
+    <main class="pt-8">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h1 class="text-3xl font-bold text-pd2i-black mb-6">Exemple d'utilisation du Header Component</h1>
+                
+                <div class="prose max-w-none">
+                    <p class="text-lg text-gray-700 mb-4">
+                        Cette page démontre comment utiliser le composant Header réutilisable de PD2i.
+                    </p>
+                    
+                    <h2 class="text-2xl font-semibold text-pd2i-black mt-8 mb-4">Fonctionnalités du composant</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Navigation responsive (mobile, tablette, desktop)</li>
+                        <li>Menus déroulants pour "Coating Equipments" et "Turnkey"</li>
+                        <li>Sélecteur de langue multiplateforme</li>
+                        <li>Logo personnalisable</li>
+                        <li>Bouton Contacts stylisé</li>
+                        <li>Configuration entièrement personnalisable</li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-semibold text-pd2i-black mt-8 mb-4">Utilisation simple</h2>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <pre class="text-sm"><code>// Initialisation basique
+const header = new Header();
+
+// Initialisation avec configuration personnalisée
+const header = new Header({
+    logoSrc: 'mon-logo.png',
+    currentLang: 'FR',
+    navigationItems: [
+        { label: 'Accueil', href: '/', type: 'link' }
+    ]
+});</code></pre>
+                    </div>
+                    
+                    <h2 class="text-2xl font-semibent text-pd2i-black mt-8 mb-4">Contrôles dynamiques</h2>
+                    <div class="space-y-4">
+                        <button onclick="changeLang('FR')" class="bg-pd2i-blue text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                            Changer en Français
+                        </button>
+                        <button onclick="changeLang('EN')" class="bg-pd2i-blue text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors ml-2">
+                            Change to English
+                        </button>
+                        <button onclick="updateNav()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors ml-2">
+                            Modifier la navigation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Header Component -->
+    <script src="components/Header.js"></script>
+    
+    <!-- Initialize Header -->
+    <script>
+        // Initialisation du header
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR', 'ES'],
+            navigationItems: [
+                { label: 'Home', href: '#', type: 'link' },
+                {
+                    label: 'Products',
+                    labelCompact: 'Prod',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Product 1', href: '#' },
+                        { label: 'Product 2', href: '#' }
+                    ]
+                },
+                { label: 'Services', href: '#', type: 'link' },
+                { label: 'Contact', href: '#', type: 'link' }
+            ]
+        });
+        
+        // Fonctions de démonstration
+        function changeLang(lang) {
+            window.headerInstance.setCurrentLanguage(lang);
+        }
+        
+        function updateNav() {
+            window.headerInstance.updateNavigation([
+                { label: 'Accueil', href: '#', type: 'link' },
+                { label: 'À propos', href: '#', type: 'link' },
+                {
+                    label: 'Solutions',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Solution A', href: '#' },
+                        { label: 'Solution B', href: '#' },
+                        { label: 'Solution C', href: '#' }
+                    ]
+                },
+                { label: 'Contact', href: '#', type: 'link' }
+            ]);
+        }
+        
+        // Écouter les changements de langue
+        document.addEventListener('languageChanged', (event) => {
+            console.log('Langue changée vers:', event.detail.language);
+            alert('Langue changée vers: ' + event.detail.language);
+        });
+    </script>
+</body>
+</html>
