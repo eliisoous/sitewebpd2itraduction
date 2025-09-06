@@ -32,6 +32,9 @@
     
     <!-- Header Component CSS -->
     <link rel="stylesheet" href="components/header.css">
+    
+    <!-- Footer Component CSS -->
+    <link rel="stylesheet" href="components/footer.css">
 </head>
 <body class="font-roboto bg-gray-50 text-pd2i-black">
     <!-- Le header sera généré automatiquement par le composant -->
@@ -82,14 +85,22 @@ const header = new Header({
                         <button onclick="updateNav()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors ml-2">
                             Modifier la navigation
                         </button>
+                        <button onclick="updateFooter()" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors ml-2">
+                            Modifier le footer
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     
+    <!-- Le footer sera généré automatiquement par le composant -->
+    
     <!-- Header Component -->
     <script src="components/Header.js"></script>
+    
+    <!-- Footer Component -->
+    <script src="components/Footer.js"></script>
     
     <!-- Initialize Header -->
     <script>
@@ -136,6 +147,32 @@ const header = new Header({
                 { label: 'Contact', href: '#', type: 'link' }
             ]);
         }
+        
+        function updateFooter() {
+            window.footerInstance.updateCompanyInfo({
+                name: 'Nouvelle Entreprise',
+                phone: '+33 (0) 987 65 43 21',
+                email: 'nouveau@contact.com'
+            });
+            window.footerInstance.updateNavigation([
+                { label: 'Accueil', href: '/' },
+                { label: 'Produits', href: '/products' },
+                { label: 'Support', href: '/support' }
+            ]);
+        }
+        
+        // Initialisation du footer
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            slogan: 'Exemple de composant footer réutilisable',
+            companyInfo: {
+                name: 'PD2i EXAMPLE',
+                address: '123 rue Example',
+                city: '75001 Paris',
+                phone: '+33 (0) 123 45 67 89',
+                email: 'example@pd2i.com'
+            }
+        });
         
         // Écouter les changements de langue
         document.addEventListener('languageChanged', (event) => {

@@ -42,6 +42,9 @@
     <!-- Header Component CSS -->
     <link rel="stylesheet" href="components/header.css">
     
+    <!-- Footer Component CSS -->
+    <link rel="stylesheet" href="components/footer.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -49,12 +52,31 @@
     <!-- Header sera généré automatiquement par le composant -->
 
     <!-- Main Content will be added here -->
-    <main>
+    <main class="min-h-screen">
         <!-- Content sections will be added in next steps -->
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-pd2i-black mb-8">Bienvenue sur PD2i</h1>
+                <p class="text-xl text-gray-600 mb-8">Your partner when it is all about performance</p>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-pd2i-black mb-4">Solutions PVD Coating</h2>
+                    <p class="text-gray-700">
+                        PD2i propose des solutions innovantes de revêtement PVD pour l'industrie de l'outillage.
+                        Nous nous spécialisons dans les technologies de pointe pour améliorer les performances
+                        et la durabilité de vos outils industriels.
+                    </p>
+                </div>
+            </div>
+        </div>
     </main>
+    
+    <!-- Footer sera généré automatiquement par le composant -->
 
     <!-- Header Component -->
     <script src="components/Header.js"></script>
+    
+    <!-- Footer Component -->
+    <script src="components/Footer.js"></script>
     
     <!-- Initialize Header -->
     <script>
@@ -95,6 +117,41 @@
         document.addEventListener('languageChanged', (event) => {
             console.log('Langue changée vers:', event.detail.language);
             // Ici vous pouvez ajouter la logique pour changer la langue du site
+        });
+        
+        // Initialisation du footer avec la configuration PD2i
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: '/about' },
+                { label: 'Services', href: '/services' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Downloads', href: '/downloads' },
+                { label: 'News', href: '/news' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: '/cookies' },
+                { label: 'Privacy policy', href: '/privacy' },
+                { label: 'Legal Informations', href: '/legal' }
+            ],
+            copyrightYear: 2025
         });
     </script>
     
