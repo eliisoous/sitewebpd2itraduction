@@ -332,6 +332,153 @@ button:focus {
     outline-offset: 2px;
 }
 
+/* Homepage Sections Styles */
+
+/* Hero Carousel */
+.hero-carousel {
+    margin-top: 0;
+}
+
+/* What we offer Section */
+.what-we-offer {
+    background-color: #f9fafb;
+}
+
+.what-we-offer h2 {
+    color: #000000;
+    margin-bottom: 3rem;
+}
+
+/* Process Flow Diagram */
+.process-flow {
+    background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.process-step {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    min-width: 200px;
+}
+
+.process-arrow {
+    color: #0083CA;
+    font-size: 2rem;
+}
+
+/* News Section */
+.news {
+    background-color: #ffffff;
+}
+
+.news h2 {
+    color: #000000;
+    margin-bottom: 3rem;
+}
+
+.news article {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.news article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.news article img {
+    transition: transform 0.3s ease;
+}
+
+.news article:hover img {
+    transform: scale(1.05);
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Our Customers Section */
+.our-customers {
+    background-color: #f9fafb;
+}
+
+.our-customers h2 {
+    color: #000000;
+    margin-bottom: 3rem;
+}
+
+.customer-logo {
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.customer-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.customer-logo img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.customer-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive adjustments for homepage */
+@media (max-width: 768px) {
+    .what-we-offer .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .process-flow .flex {
+        flex-direction: column;
+        space-y: 1rem;
+    }
+    
+    .process-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .news .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .our-customers .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .news .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .our-customers .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* Print Styles */
 @media print {
     header {
@@ -341,5 +488,17 @@ button:focus {
     .mobile-menu-btn,
     .language-dropdown {
         display: none;
+    }
+    
+    .hero-carousel,
+    .customer-logo:hover,
+    .news article:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .customer-logo img {
+        filter: none;
+        opacity: 1;
     }
 }

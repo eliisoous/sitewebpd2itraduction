@@ -45,29 +45,269 @@
     <!-- Footer Component CSS -->
     <link rel="stylesheet" href="components/footer.css">
     
+    <!-- Carousel Component CSS -->
+    <link rel="stylesheet" href="components/carousel.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
     <!-- Header sera généré automatiquement par le composant -->
 
-    <!-- Main Content will be added here -->
-    <main class="min-h-screen">
-        <!-- Content sections will be added in next steps -->
-        <div class="container mx-auto px-4 py-16">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold text-pd2i-black mb-8">Bienvenue sur PD2i</h1>
-                <p class="text-xl text-gray-600 mb-8">Your partner when it is all about performance</p>
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h2 class="text-2xl font-semibold text-pd2i-black mb-4">Solutions PVD Coating</h2>
-                    <p class="text-gray-700">
-                        PD2i propose des solutions innovantes de revêtement PVD pour l'industrie de l'outillage.
-                        Nous nous spécialisons dans les technologies de pointe pour améliorer les performances
-                        et la durabilité de vos outils industriels.
-                    </p>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Carousel Section -->
+        <section class="hero-carousel">
+            <div id="heroCarousel"></div>
+        </section>
+
+        <!-- What we offer Section -->
+        <section class="what-we-offer py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-12">What we offer</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                    <!-- PD2i Coating Equipments -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="assets/images/sections/coating-equipment.jpg" 
+                                 alt="PD2i Coating Equipment" 
+                                 class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-2xl font-bold mb-2">PD2i Coating Equipments</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PD2i Services & Consulting -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="assets/images/sections/services-consulting.png" 
+                                 alt="PD2i Services & Consulting" 
+                                 class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-2xl font-bold mb-2">PD2i Services & Consulting</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Flow Diagram -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                        <!-- PVD Technologies -->
+                        <div class="bg-pd2i-blue text-white px-6 py-4 rounded-lg text-center min-w-[200px]">
+                            <div class="space-y-1 text-sm">
+                                <div>PVD</div>
+                                <div>DLC</div>
+                                <div>Ta-C</div>
+                                <div>Plasma Nitriding</div>
+                                <div>Edge Prep.</div>
+                                <div>Turnkey-Solution</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div class="text-pd2i-blue">
+                            <svg class="w-8 h-8 md:w-12 md:h-12 transform rotate-90 md:rotate-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Applications -->
+                        <div class="bg-orange-500 text-white px-6 py-4 rounded-lg text-center min-w-[200px]">
+                            <div class="space-y-1 text-sm">
+                                <div>Cutting Tools</div>
+                                <div>Forming</div>
+                                <div>Molding</div>
+                                <div>Die Casting</div>
+                                <div>Medical Applications</div>
+                                <div>Precision components</div>
+                                <div>...</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div class="text-pd2i-blue">
+                            <svg class="w-8 h-8 md:w-12 md:h-12 transform rotate-90 md:rotate-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Services -->
+                        <div class="bg-blue-400 text-white px-6 py-4 rounded-lg text-center min-w-[200px]">
+                            <div class="space-y-1 text-sm">
+                                <div>Consulting and design</div>
+                                <div>Technology transfer and support</div>
+                                <div>Engineering</div>
+                                <div>Maintenance & Troubleshooting</div>
+                                <div>Audit & Training</div>
+                                <div>Market studies</div>
+                                <div>Retrofit of existing machines</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Us Button -->
+                <div class="text-center">
+                    <a href="/contact" class="inline-block bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200">
+                        Contact us
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-12">News</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Article 1 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/images/news/expanding-horizons.png" 
+                             alt="Expanding Horizons: DLC coating" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">Expanding Horizons: DLC coating</h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                PT Prima Nano Coating Pioneering Advanced Coating We...
+                            </p>
+                            <a href="#" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                Read More
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/images/news/nano4energy.png" 
+                             alt="Launches State-of-the energy" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">Launches State-of-the energy</h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                PD2i is proud to announce the inauguration of its cutting-edge...
+                            </p>
+                            <a href="#" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                Read More
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/images/news/new-pvd-coatings.png" 
+                             alt="New PVD Coatings" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">New PVD Coatings: we love colors, you too?</h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                Performance equals boring industrial design? The new PD2i...
+                            </p>
+                            <a href="#" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                Read More
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/images/news/imtex-2019.png" 
+                             alt="IMTEX 2019" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">IMTEX 2019: 24th January</h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                PD2i meet you in Indian machine and Tool Exhibition, Bangalore India PD2i the solution...
+                            </p>
+                            <a href="#" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                Read More
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Customer Section -->
+        <section class="our-customers py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-12">Our Customer</h2>
+                
+                <!-- Customer Logos Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    <!-- Row 1 -->
+                    <a href="https://dekracoat.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=dekracoat" alt="Dekracoat" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://eifeler.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="assets/images/clients/eifeler.jpg" alt="Eifeler" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://eifeler-coating.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=eifeler+coating" alt="Eifeler Coating" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://hirucoat.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=hirucoat" alt="Hirucoat" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://kapo.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=KAPO" alt="KAPO" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://nanocoating.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=nano+coating" alt="Nano Coating Indonesia" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    
+                    <!-- Row 2 -->
+                    <a href="https://novacoating.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=NOVA+coating" alt="Nova Coating" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://northstarfinishing.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=North+Star" alt="North Star Finishing" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://prioritycoating.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=PRIORITY+COATING" alt="Priority Coating Service" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://sts-coating.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=STS" alt="STS" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://surocoatec.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=surocoatec" alt="Surocoatec" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://tci-coatings.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=TCI" alt="TCI PVD Coatings" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    
+                    <!-- Row 3 -->
+                    <a href="https://sgdtools.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=SGD+TOOLS" alt="SGD Tools" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://thermi-lyon.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=THERMI-LYON" alt="Thermi-Lyon" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://schunk-group.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=SCHUNK+PRO+FINISH" alt="Schunk Pro Finish" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                    <a href="https://schunk-praezisionswerkzeuge.com" target="_blank" rel="noopener noreferrer" class="customer-logo">
+                        <img src="https://via.placeholder.com/150x80/666666/FFFFFF?text=SCHUNK+TOOLS" alt="Schunk Präzisionswerkzeuge" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer sera généré automatiquement par le composant -->
@@ -77,6 +317,9 @@
     
     <!-- Footer Component -->
     <script src="components/Footer.js"></script>
+    
+    <!-- Carousel Component -->
+    <script src="components/Carousel.js"></script>
     
     <!-- Initialize Header -->
     <script>
@@ -152,6 +395,46 @@
                 { label: 'Legal Informations', href: '/legal' }
             ],
             copyrightYear: 2025
+        });
+        
+        // Initialisation du carousel hero avec 4 slides
+        window.heroCarousel = new Carousel('heroCarousel', {
+            slides: [
+                {
+                    image: 'https://via.placeholder.com/1200x600/0083CA/FFFFFF?text=PVD+Coating+System',
+                    title: 'PVD Coating System to support the Tooling Industries',
+                    description: 'Innovation & Customization: We continuously advance our technologies and methods to lead the industry while delivering uniquely tailored solutions for each client\'s specific needs.',
+                    buttonText: 'Discover Our Solutions',
+                    buttonLink: '/solutions'
+                },
+                {
+                    image: 'https://via.placeholder.com/1200x600/4A90E2/FFFFFF?text=Advanced+Technology',
+                    title: 'Advanced Coating Technologies',
+                    description: 'PD2i, a unique combination of experience and expertise. We continue to innovate through experience we have gained.',
+                    buttonText: 'Learn More',
+                    buttonLink: '/technology'
+                },
+                {
+                    image: 'https://via.placeholder.com/1200x600/FF9800/FFFFFF?text=Global+Partnership',
+                    title: 'Your Partner When It Is All About Performance',
+                    description: 'Trusted by leading companies worldwide, we deliver excellence in every project and partnership.',
+                    buttonText: 'Our Customers',
+                    buttonLink: '/customers'
+                },
+                {
+                    image: 'https://via.placeholder.com/1200x600/9C27B0/FFFFFF?text=Innovation+Excellence',
+                    title: 'Innovation Meets Excellence',
+                    description: 'From cutting-edge research to practical applications, we bridge the gap between innovation and industrial success.',
+                    buttonText: 'Contact Us',
+                    buttonLink: '/contact'
+                }
+            ],
+            autoPlay: true,
+            autoPlayInterval: 6000,
+            showIndicators: true,
+            showArrows: true,
+            pauseOnHover: true,
+            loop: true
         });
     </script>
     
