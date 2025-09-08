@@ -452,7 +452,7 @@ button:focus {
     /* Mobile adjustments for arrow flows */
     .what-we-offer .flex .flex {
         height: auto !important;
-        min-height: 160px;
+        min-height: 200px;
     }
     
     .what-we-offer .flex .flex > div {
@@ -463,8 +463,8 @@ button:focus {
         gap: 0.25rem;
     }
     
-    .what-we-offer .flex .flex .text-xs {
-        font-size: 0.65rem;
+    .what-we-offer .flex .flex .text-sm {
+        font-size: 0.75rem;
         line-height: 1.2;
     }
     
@@ -482,11 +482,11 @@ button:focus {
 @media (min-width: 769px) and (max-width: 1024px) {
     /* Tablet adjustments for arrow flows */
     .what-we-offer .flex .flex {
-        height: 130px !important;
+        height: 170px !important;
     }
     
-    .what-we-offer .flex .flex .text-xs {
-        font-size: 0.7rem;
+    .what-we-offer .flex .flex .text-sm {
+        font-size: 0.8rem;
         line-height: 1.3;
     }
     

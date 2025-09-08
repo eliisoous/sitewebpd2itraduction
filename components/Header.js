@@ -81,8 +81,8 @@ class Header {
                     ${this.generateDesktopActions()}
                     
                     <!-- Mobile Menu Button -->
-                    <div class="lg:hidden">
-                        <button class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200" id="mobileMenuBtn">
+                    <div class="lg:hidden xl:hidden">
+                        <button class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 p-2" id="mobileMenuBtn">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
@@ -264,15 +264,8 @@ class Header {
     }
     
     attachEventListeners() {
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                this.toggleMobileMenu();
-            });
-        }
+        // Let the main.js handle mobile menu for better reliability
+        // We'll just handle language dropdowns here
         
         // Language Dropdowns
         this.attachLanguageListeners('languageBtn', 'languageDropdown');
@@ -335,6 +328,20 @@ class Header {
             } else {
                 icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
             }
+        }
+    }
+    
+    closeMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        
+        if (mobileMenu && mobileMenuBtn && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            this.isMenuOpen = false;
+            
+            // Reset hamburger icon
+            const icon = mobileMenuBtn.querySelector('svg');
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
         }
     }
     

@@ -157,6 +157,45 @@ nav a::after {
     display: block;
 }
 
+/* Mobile menu visibility */
+#mobileMenu {
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#mobileMenu.hidden {
+    display: none !important;
+}
+
+#mobileMenu:not(.hidden) {
+    display: block !important;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Force display for mobile menu when not hidden */
+@media (max-width: 1023px) {
+    #mobileMenu:not(.hidden) {
+        display: block !important;
+    }
+    
+    #mobileMenu.hidden {
+        display: none !important;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .mobile-menu-btn {
     background: none;
     border: none;
@@ -225,6 +264,16 @@ nav a::after {
 /* Responsive Styles */
 @media (max-width: 1023px) {
     .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Hide desktop navigation on mobile/tablet */
+    .hidden.lg\\:flex {
+        display: none !important;
+    }
+    
+    /* Show mobile menu button */
+    .lg\\:hidden {
         display: block;
     }
 }
