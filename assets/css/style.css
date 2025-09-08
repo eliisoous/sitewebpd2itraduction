@@ -1,7 +1,23 @@
-/* Custom CSS for PD2i Website */
+/* ================================
+   PD2i Website - Optimized CSS
+   ================================ */
+
+/* CSS Variables for consistency */
+:root {
+    --pd2i-blue: #0083CA;
+    --pd2i-black: #000000;
+    --pd2i-white: #FFFFFF;
+    --pd2i-gray-light: #f9fafb;
+    --pd2i-gray-border: #e5e7eb;
+    --transition-base: 0.3s ease;
+    --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
 
 /* Reset and Base Styles */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,8 +26,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #000000;
-    background-color: #FFFFFF;
+    color: var(--pd2i-black);
+    background-color: var(--pd2i-white);
+    font-display: swap;
 }
 
 /* Header Specific Styles */

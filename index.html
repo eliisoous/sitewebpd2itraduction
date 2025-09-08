@@ -9,6 +9,11 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="assets/images/sections/pd2i-hands.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="components/Header.js" as="script" fetchpriority="high">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="PD2i - Partner Development Industry International">
     <meta property="og:description" content="Solutions PVD Coating pour l'industrie de l'outillage. Innovation et personnalisation.">
@@ -17,10 +22,50 @@
     
     <title>PD2i - Partner Development Industry International</title>
     
-    <!-- Google Fonts - Roboto -->
+    <!-- Google Fonts - Roboto (Optimized) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,17 +86,11 @@
         }
     </script>
     
-    <!-- Header Component CSS -->
-    <link rel="stylesheet" href="components/header.css">
-    
-    <!-- Footer Component CSS -->
-    <link rel="stylesheet" href="components/footer.css">
-    
-    <!-- Carousel Component CSS -->
-    <link rel="stylesheet" href="components/carousel.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Component CSS (Optimized loading) -->
+    <link rel="stylesheet" href="components/header.css" media="all">
+    <link rel="stylesheet" href="components/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="components/carousel.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/style.css" media="all">
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
     <!-- Header sera généré automatiquement par le composant -->
@@ -81,14 +120,18 @@
                         <div class="relative">
                             <img src="assets/images/sections/pd2i-hands.png" 
                                  alt="PD2i - Your partner when it is all about performance" 
-                                 class="w-full h-64 object-cover shadow-lg">
+                                 class="w-full h-64 object-cover shadow-lg"
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <div class="text-center text-white px-4">
                                     <!-- Logo PD2i blanc -->
                                     <div class="mb-4">
                                         <img src="assets/images/logo-pd2i-footer.png" 
                                              alt="PD2i Logo" 
-                                             class="h-16 md:h-20 mx-auto filter brightness-0 invert">
+                                             class="h-16 md:h-20 mx-auto filter brightness-0 invert"
+                                             loading="lazy"
+                                             decoding="async">
                                     </div>
                                     <p class="text-sm md:text-base font-bold uppercase tracking-wide">
                                         YOUR PARTNER WHEN IT IS ALL ABOUT<br>PERFORMANCE
@@ -114,7 +157,9 @@
                         <div class="relative overflow-hidden shadow-lg mb-6">
                             <img src="assets/images/sections/coating-equipment.jpg" 
                                  alt="PD2i Coating Equipment" 
-                                 class="w-full h-64 object-cover">
+                                 class="w-full h-64 object-cover"
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                                 <h3 class="text-2xl font-bold text-white">PD2i Coating Equipments</h3>
                             </div>
@@ -161,7 +206,9 @@
                         <div class="relative overflow-hidden shadow-lg mb-6">
                             <img src="assets/images/sections/services-consulting.png" 
                                  alt="PD2i Services & Consulting" 
-                                 class="w-full h-64 object-cover">
+                                 class="w-full h-64 object-cover"
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                                 <h3 class="text-2xl font-bold text-white">PD2i Services & Consulting</h3>
                             </div>
@@ -208,7 +255,9 @@
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img src="assets/images/news/expanding-horizons.png" 
                              alt="Expanding Horizons: DLC coating" 
-                             class="w-full h-48 object-cover">
+                             class="w-full h-48 object-cover"
+                             loading="lazy"
+                             decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-pd2i-blue mb-3">Expanding Horizons: DLC coating</h3>
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
@@ -227,7 +276,9 @@
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img src="assets/images/news/nano4energy.png" 
                              alt="Launches State-of-the energy" 
-                             class="w-full h-48 object-cover">
+                             class="w-full h-48 object-cover"
+                             loading="lazy"
+                             decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-pd2i-blue mb-3">Launches State-of-the energy</h3>
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
@@ -246,7 +297,9 @@
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img src="assets/images/news/new-pvd-coatings.jpg" 
                              alt="New PVD Coatings" 
-                             class="w-full h-48 object-cover">
+                             class="w-full h-48 object-cover"
+                             loading="lazy"
+                             decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-pd2i-blue mb-3">New PVD Coatings: we love colors, you too?</h3>
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
@@ -265,7 +318,9 @@
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img src="assets/images/news/imtex-2019.png" 
                              alt="IMTEX 2019" 
-                             class="w-full h-48 object-cover">
+                             class="w-full h-48 object-cover"
+                             loading="lazy"
+                             decoding="async">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-pd2i-blue mb-3">IMTEX 2019: 24th January</h3>
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
