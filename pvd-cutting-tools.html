@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PVD Technology for Cutting Tools - High Performance PVD Coating Equipment. Solutions avancées pour outils de coupe avec expertise en processus de revêtement.">
+    <meta name="keywords" content="PVD Technology, Cutting Tools, PVD Coating, High Performance Equipment, Coating Process">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image" type="image/png" fetchpriority="high">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PVD Technology for Cutting Tools - PD2i">
+    <meta property="og:description" content="High Performance PVD Coating Equipment for Cutting Tools. Solutions avancées avec expertise en processus de revêtement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pd2i.com/pvd-cutting-tools">
+    
+    <title>PVD Technology for Cutting Tools - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        .tools-background {
+            background: linear-gradient(135deg, #4A90E2 0%, #1976d2 100%);
+            position: relative;
+        }
+        
+        .tools-background::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 60%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><g fill="rgba(255,255,255,0.2)"><circle cx="50" cy="50" r="15"/><rect x="100" y="40" width="40" height="8" rx="4"/><polygon points="200,30 240,50 200,70 180,50"/><circle cx="300" cy="80" r="12"/><rect x="80" y="120" width="35" height="6" rx="3"/><polygon points="300,150 330,165 300,180 285,165"/></g></svg>') repeat;
+        }
+        
+        .process-chart {
+            background: linear-gradient(to right, 
+                #87CEEB 0%, #87CEEB 19.4%, 
+                #1976d2 19.4%, #1976d2 27.8%, 
+                #424242 27.8%, #424242 72.2%, 
+                #1976d2 72.2%, #1976d2 80.6%, 
+                #87CEEB 80.6%, #87CEEB 100%);
+            height: 60px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .process-label {
+            position: absolute;
+            top: -25px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .process-time {
+            position: absolute;
+            bottom: -25px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .vacuum-heating { left: 9.7%; }
+        .etching { left: 23.6%; }
+        .coating { left: 50%; }
+        .cooling { left: 76.4%; }
+        
+        .coating-types-chart {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .coating-type {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .coating-type.active {
+            border-color: #0083CA;
+            background: #f0f9ff;
+        }
+        
+        .coating-type h4 {
+            font-weight: bold;
+            color: #0083CA;
+            margin-bottom: 0.5rem;
+            font-size: 14px;
+        }
+        
+        .coating-type p {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .coating-types-chart {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 2px solid #f3f4f6;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            border-color: #0083CA;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,131,202,0.1);
+        }
+        
+        .benefits-section {
+            background: linear-gradient(135deg, #0083CA 0%, #1976d2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .benefit-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .turnkey-section {
+            background: #f8fafc;
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .package-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 2px solid #f3f4f6;
+        }
+        
+        .package-item h4 {
+            color: #0083CA;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .package-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .package-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .package-features li:before {
+            content: '✓';
+            color: #0083CA;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1976d2 0%, #0083CA 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #0083CA;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body class="font-roboto">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Simple Title Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-pd2i-black">PVD Technology for Tooling</h1>
+            </div>
+        </section>
+
+        <!-- High Performance PVD Section -->
+        <section class="tools-background text-white py-16">
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left side: Cutting Tools Image -->
+                    <div>
+                        <img src="assets/images/ pvd-cutting-tools/Cutting Tools Image.jpg" 
+                             alt="Cutting Tools with PVD Coating" 
+                             class="w-full h-80 object-cover rounded-lg shadow-lg"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
+                    
+                    <!-- Right side: Content -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">High Performance PVD Coating Equipment for Cutting Tools</h2>
+                        <p class="text-xl mb-6">We offer Expertise : coating process in relation of machining processes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-pd2i-black mb-4">We help you to build your own customize coatings</h2>
+                </div>
+                
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="w-20 h-20 mx-auto mb-4">
+                            <img src="assets/images/ pvd-cutting-tools/Surface Analysis.png" 
+                                 alt="Surface Analysis" 
+                                 class="w-full h-full object-contain"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <h3 class="font-medium text-sm">Step 1</h3>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="w-20 h-20 mx-auto mb-4">
+                            <img src="assets/images/ pvd-cutting-tools/Tool Design.png" 
+                                 alt="Tool Design" 
+                                 class="w-full h-full object-contain"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <h3 class="font-medium text-sm">Step 2</h3>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="w-20 h-20 mx-auto mb-4">
+                            <img src="assets/images/ pvd-cutting-tools/Performance.png" 
+                                 alt="Coating Process" 
+                                 class="w-full h-full object-contain"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <h3 class="font-medium text-sm">Step 3</h3>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="w-20 h-20 mx-auto mb-4">
+                            <img src="assets/images/ pvd-cutting-tools/Quality Control.png" 
+                                 alt="Quality Control" 
+                                 class="w-full h-full object-contain"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <h3 class="font-medium text-sm">Step 4</h3>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="w-20 h-20 mx-auto mb-4">
+                            <img src="assets/images/ pvd-cutting-tools/Performance.png" 
+                                 alt="Performance" 
+                                 class="w-full h-full object-contain"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                        <h3 class="font-medium text-sm">Step 5</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High Speed Coating System Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-pd2i-black mb-6">High Speed Coating System</h2>
+                        <p class="text-lg text-gray-700 mb-8">Advanced PVD coating technology designed for maximum efficiency and precision in cutting tool applications.</p>
+                        <a href="#" class="inline-block bg-pd2i-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Get MPC Series Brochures</a>
+                    </div>
+                    <div>
+                        <img src="assets/images/ pvd-cutting-tools/High Speed Coating Equipment Image.png" 
+                             alt="High Speed Coating Equipment" 
+                             class="w-full h-80 object-cover rounded-lg shadow-lg"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Timeline Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-pd2i-black text-center mb-12">Coating Process Timeline</h2>
+                
+                <!-- Process Chart -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="process-chart">
+                        <div class="process-label vacuum-heating">Vacuum & Heating</div>
+                        <div class="process-label etching">Etching</div>
+                        <div class="process-label coating">Coating</div>
+                        <div class="process-label cooling">Fast Cooling</div>
+                        
+                        <div class="process-time vacuum-heating">0-70min</div>
+                        <div class="process-time etching">70-100min</div>
+                        <div class="process-time coating">100-260min</div>
+                        <div class="process-time cooling">260-300min</div>
+                    </div>
+                </div>
+
+                <!-- Coating Types -->
+                <div class="max-w-4xl mx-auto mt-12">
+                    <h3 class="text-2xl font-bold text-pd2i-black text-center mb-8">Available Coating Types</h3>
+                    <div class="coating-types-chart">
+                        <div class="coating-type active">
+                            <h4>TiAlN</h4>
+                            <p>High-performance coating</p>
+                        </div>
+                        <div class="coating-type">
+                            <h4>TiN</h4>
+                            <p>Standard coating</p>
+                        </div>
+                        <div class="coating-type">
+                            <h4>CrN</h4>
+                            <p>Corrosion resistant</p>
+                        </div>
+                        <div class="coating-type">
+                            <h4>AlCrN</h4>
+                            <p>Heat resistant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features and Benefits Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Left: Features List -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-pd2i-black mb-8">Key Features</h2>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center">
+                                <span class="text-pd2i-blue mr-3">✓</span>
+                                Advanced PVD coating technology
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-pd2i-blue mr-3">✓</span>
+                                High-precision process control
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-pd2i-blue mr-3">✓</span>
+                                Multiple coating options
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-pd2i-blue mr-3">✓</span>
+                                Fast cycle times
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-pd2i-blue mr-3">✓</span>
+                                Energy-efficient operation
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Benefits Box -->
+                    <div class="benefits-section">
+                        <h3 class="text-2xl font-bold mb-6">Benefits</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">+300%</div>
+                                <div>
+                                    <h4 class="font-semibold">Tool Life</h4>
+                                    <p class="text-sm opacity-90">Extended cutting tool durability</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">+200%</div>
+                                <div>
+                                    <h4 class="font-semibold">Performance</h4>
+                                    <p class="text-sm opacity-90">Improved cutting efficiency</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">-50%</div>
+                                <div>
+                                    <h4 class="font-semibold">Downtime</h4>
+                                    <p class="text-sm opacity-90">Reduced maintenance needs</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">+150%</div>
+                                <div>
+                                    <h4 class="font-semibold">ROI</h4>
+                                    <p class="text-sm opacity-90">Better return on investment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coating Layer Diagram -->
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl font-bold text-pd2i-black mb-8">Coating Layer Structure</h3>
+                    <div class="max-w-2xl mx-auto">
+                        <img src="assets/images/ pvd-cutting-tools/Coating Layer Diagram.jpg" 
+                             alt="Coating Layer Diagram" 
+                             class="w-full h-auto rounded-lg shadow-lg"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Turnkey Section -->
+        <section class="turnkey-section">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-pd2i-black mb-4">Turnkey Solutions</h2>
+                    <p class="text-xl text-gray-700">Complete coating solutions from design to implementation</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Content -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-pd2i-black mb-6">Complete Package Solutions</h3>
+                        
+                        <div class="package-grid">
+                            <div class="package-item">
+                                <h4>Basic Package</h4>
+                                <ul class="package-features">
+                                    <li>Equipment installation</li>
+                                    <li>Basic training</li>
+                                    <li>1-year warranty</li>
+                                    <li>Technical support</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="package-item">
+                                <h4>Advanced Package</h4>
+                                <ul class="package-features">
+                                    <li>Complete turnkey solution</li>
+                                    <li>Advanced training program</li>
+                                    <li>2-year extended warranty</li>
+                                    <li>Process optimization</li>
+                                    <li>24/7 support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Process Cycle Image -->
+                    <div class="text-center">
+                        <img src="assets/images/ pvd-cutting-tools/Turnkey Process Cycle.png" 
+                             alt="Turnkey Process Cycle" 
+                             class="w-full h-auto max-w-md mx-auto"
+                             loading="lazy"
+                             decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="cta-section">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Enhance Your Cutting Tools?</h2>
+                <p class="text-xl mb-8">Contact our experts to discuss your specific coating requirements and discover how our PVD technology can transform your operations.</p>
+                <a href="#" class="cta-button">Contact Our Experts</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Initialize Components -->
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script>
+        // Initialize Header with navigation items
+        const headerConfig = {
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            navigationItems: [
+                { text: 'Home', url: 'index.html', isActive: false },
+                { text: 'Coating Equipments', url: 'coating-equipments.html', isActive: false },
+                { text: 'Edge Preparation', url: '#', isActive: false },
+                { text: 'Turnkey', url: '#', isActive: false },
+                { text: 'Plasma Nitriding', url: '#', isActive: false },
+                { text: 'Services', url: '#', isActive: false },
+                { text: 'About us', url: '#', isActive: false }
+            ],
+            dropdownItems: [
+                { text: 'PVD Technology for Tooling', url: 'pvd-cutting-tools.html', isActive: true }
+            ]
+        };
+        
+        // Initialize header
+        const header = new Header('header', headerConfig);
+        header.render();
+        
+        // Initialize footer
+        const footer = new Footer('footer');
+        footer.render();
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

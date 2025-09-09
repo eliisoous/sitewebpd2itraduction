@@ -6,7 +6,7 @@
     <meta name="description" content="PD2i - Partner Development Industry International. Solutions PVD Coating pour l'industrie de l'outillage. Innovation et personnalisation.">
     <meta name="keywords" content="PVD Coating, Plasma Nitriding, Industry, Tooling, Innovation">
     <meta name="author" content="PD2i">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <!-- Preload critical resources -->
@@ -22,11 +22,7 @@
     
     <title>PD2i - Partner Development Industry International</title>
     
-    <!-- Google Fonts - Roboto (Optimized) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700;900&display=swap" rel="stylesheet"></noscript>
+    <!-- Utilisation de polices système pour éviter les erreurs CORS -->
     
     <!-- Hide Tailwind CDN Warning -->
     <script>
@@ -79,18 +75,18 @@
                         'pd2i-white': '#FFFFFF'
                     },
                     fontFamily: {
-                        'roboto': ['Roboto', 'sans-serif']
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
                     }
                 }
             }
         }
     </script>
     
-    <!-- Component CSS (Optimized loading) -->
-    <link rel="stylesheet" href="components/header.css" media="all">
-    <link rel="stylesheet" href="components/footer.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="components/carousel.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/style.css" media="all">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="components/carousel.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
     <!-- Header sera généré automatiquement par le composant -->
@@ -430,8 +426,12 @@
                 {
                     label: 'Coating Equipments',
                     labelCompact: 'Coating',
-                    href: 'coating-equipments.html',
-                    type: 'link'
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: '#' },
+                        { label: 'DLC for Tribological Coatings', href: '#' }
+                    ]
                 },
                 { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: '#', type: 'link' },
                 {
