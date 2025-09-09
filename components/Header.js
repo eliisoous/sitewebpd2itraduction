@@ -133,7 +133,7 @@ class Header {
         
         return `
             <div class="relative group">
-                <a href="#" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center ${textSize}">
+                <a href="${item.href || '#'}" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center ${textSize}">
                     ${isTablet ? (item.labelCompact || item.label) : item.label}
                     <svg class="${iconSize} ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -230,12 +230,14 @@ class Header {
         
         return `
             <div class="mobile-dropdown">
-                <button class="w-full flex items-center justify-between px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-left" onclick="toggleMobileDropdown('${dropdownId}')">
-                    ${item.label}
-                    <svg class="w-4 h-4 transform transition-transform duration-200" id="${arrowId}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
+                <div class="w-full flex items-center justify-between">
+                    <a href="${item.href || '#'}" class="flex-1 px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">${item.label}</a>
+                    <button class="px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200" onclick="toggleMobileDropdown('${dropdownId}')">
+                        <svg class="w-4 h-4 transform transition-transform duration-200" id="${arrowId}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
                 <div class="hidden pl-6 space-y-1" id="${dropdownId}">
                     ${item.items.map(subItem => 
                         `<a href="${subItem.href}" class="block px-3 py-2 text-sm text-pd2i-black hover:text-pd2i-blue transition-colors duration-200">${subItem.label}</a>`
