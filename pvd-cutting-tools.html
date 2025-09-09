@@ -93,35 +93,57 @@
         /* Customization Section */
         .customization-section {
             background: white;
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
         
-        .customization-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
+        .customization-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 0 auto;
             padding: 0 2rem;
+            gap: 3rem;
+        }
+        
+        .customization-left,
+        .customization-right {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .customization-center {
+            flex: 1;
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        .customization-center h2 {
+            line-height: 1.2;
+        }
+        
+        .customization-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .customization-item img {
-            width: 100%;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
         }
         
         /* High Speed Coating Section */
         .coating-system-section {
-            background: linear-gradient(135deg, #8DAAD1 0%, #5F8BB8 100%);
             color: white;
             padding: 4rem 0;
             position: relative;
-            background-image: 
-                linear-gradient(135deg, rgba(141, 170, 209, 0.9) 0%, rgba(95, 139, 184, 0.9) 100%),
-                url('assets/images/pvd-cutting-tools/High Speed Coating Equipment Image.png');
-            background-size: cover;
+            background-image: url('assets/images/pvd-cutting-tools/High Speed Coating Equipment Image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
+            min-height: 400px;
         }
         
         .coating-content {
@@ -131,20 +153,32 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 400px;
+            padding-bottom: 3rem;
         }
         
         .coating-content h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-transform: none;
         }
         
         .coating-content p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            line-height: 1.4;
         }
         
         .btn-primary {
@@ -166,7 +200,7 @@
         /* Process Timeline Section */
         .process-section {
             background: white;
-            padding: 4rem 0;
+            padding: 2.5rem 0;
         }
         
         .process-container {
@@ -177,10 +211,10 @@
         
         .features-list {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
             align-items: start;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .features-left ul {
@@ -206,69 +240,241 @@
         .process-chart {
             background: white;
             border-radius: 0.5rem;
-            padding: 2rem;
+            padding: 1rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: visible;
+            width: 100%;
         }
         
-        .timeline-bar {
-            height: 60px;
-            border-radius: 4px;
+        .timeline-chart {
+            width: 100%;
+            background: white;
+            padding: 10px;
+            min-width: 500px;
+        }
+        
+        .timeline-header {
+            display: flex;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .header-empty {
+            width: 120px;
+            flex-shrink: 0;
+        }
+        
+        .header-labels {
+            flex: 1;
             display: flex;
             position: relative;
-            margin: 2rem 0;
-            background: linear-gradient(to right, 
-                #87CEEB 0%, #87CEEB 19.4%, 
-                #1976d2 19.4%, #1976d2 27.8%, 
-                #424242 27.8%, #424242 72.2%, 
-                #1976d2 72.2%, #1976d2 80.6%, 
-                #87CEEB 80.6%, #87CEEB 100%);
+            min-width: 350px;
+            height: 40px;
         }
         
-        .timeline-label {
+        .header-label {
             position: absolute;
-            top: -30px;
             font-size: 14px;
             font-weight: 600;
-            color: #666;
-        }
-        
-        .timeline-time {
-            position: absolute;
-            bottom: -25px;
-            font-size: 12px;
-            color: #999;
-        }
-        
-        .vacuum-heating { left: 9.7%; }
-        .etching { left: 23.6%; }
-        .coating { left: 50%; }
-        .cooling { left: 76.4%; }
-        
-        .coating-types {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .coating-type {
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 0.5rem;
             text-align: center;
-            border: 2px solid #e2e8f0;
-            font-size: 14px;
+            top: 0;
+            padding: 4px;
         }
         
-        .coating-type.active {
-            border-color: #0083CA;
-            background: #f0f9ff;
+        .header-label.vacuum {
+            color: #4A90E2;
+            left: 0;
+            width: 19.4%;
+        }
+        
+        .header-label.etching {
+            color: #4A90E2;
+            left: 19.4%;
+            width: 8.3%;
+        }
+        
+        .header-label.coating {
+            color: #333;
+            left: 27.7%;
+            width: 45.6%;
+        }
+        
+        .header-label.cooling {
+            color: #4A90E2;
+            left: 73.3%;
+            width: 21.1%;
+        }
+        
+        .header-time-total {
+            width: 40px;
+            flex-shrink: 0;
+        }
+        
+        .coating-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+            height: 35px;
+        }
+        
+        .coating-label {
+            width: 120px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            padding-right: 5px;
+            flex-shrink: 0;
+        }
+        
+        .coating-row.hardmill .coating-label {
+            color: #bf8548;
+        }
+        
+        .coating-row.tin .coating-label {
+            color: #f0e68c;
+        }
+        
+        .timeline-container {
+            flex: 1;
+            position: relative;
+            height: 100%;
+            min-width: 350px;
+        }
+        
+        .timeline-segments {
+            display: flex;
+            height: 100%;
+            position: relative;
+            align-items: stretch;
+        }
+        
+        .segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            height: 100%;
+            line-height: 1;
+        }
+        
+        .segment.vacuum {
+            background-color: #8cbce4;
+            width: 19.4%; /* 35/180 * 100 */
+        }
+        
+        .segment.etching {
+            background-color: #1584c8;
+            width: 8.3%; /* 15/180 * 100 */
+        }
+        
+        .segment.cooling {
+            background-color: #1367a9;
+            width: 21.1%; /* 38/180 * 100 */
+        }
+        
+        /* Barres proportionnelles au temps total */
+        .hardmill .timeline-segments {
+            width: 98.9%; /* 178/180 * 100 */
+        }
+        
+        .hardmill .segment.coating {
+            background-color: #bf8548;
+            width: 45.6%; /* 82/180 * 100 */
+        }
+        
+        .altin .timeline-segments {
+            width: 87.8%; /* 158/180 * 100 */
+        }
+        
+        .altin .segment.coating {
+            background-color: #7f7f7f;
+            width: 34.4%; /* 62/180 * 100 */
+        }
+        
+        .alticrn .timeline-segments {
+            width: 86.7%; /* 156/180 * 100 */
+        }
+        
+        .alticrn .segment.coating {
+            background-color: #a6a6a6;
+            width: 33.3%; /* 60/180 * 100 */
+        }
+        
+        .alcrn .timeline-segments {
+            width: 82.2%; /* 148/180 * 100 */
+        }
+        
+        .alcrn .segment.coating {
+            background-color: #d1d1d1;
+            color: #333;
+            width: 28.9%; /* 52/180 * 100 */
+        }
+        
+        .tin .timeline-segments {
+            width: 80.0%; /* 144/180 * 100 */
+        }
+        
+        .tin .segment.coating {
+            background-color: #f0e68c;
+            color: #333;
+            width: 26.7%; /* 48/180 * 100 */
+        }
+        
+        .total-time {
+            width: 40px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            flex-shrink: 0;
+        }
+        
+        .time-axis-container {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .time-axis {
+            flex: 1;
+            position: relative;
+            margin-left: 120px;
+            margin-right: 40px;
+        }
+        
+        .axis-line {
+            height: 2px;
+            background-color: #333;
+            position: relative;
+            width: 100%;
+        }
+        
+        .axis-line::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #333;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .axis-label {
+            position: absolute;
+            right: -5px;
+            bottom: -25px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
         }
         
         /* High Performance Coating Section */
         .performance-section {
             background: white;
-            padding: 4rem 0;
+            padding: 2.5rem 0;
         }
         
         .performance-container {
@@ -280,7 +486,7 @@
         .performance-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
         
@@ -333,7 +539,7 @@
         /* Turnkey Section */
         .turnkey-section {
             background: white;
-            padding: 4rem 0;
+            padding: 2.5rem 0;
         }
         
         .turnkey-container {
@@ -345,7 +551,7 @@
         .turnkey-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
         
@@ -402,7 +608,7 @@
         /* Expertise Section */
         .expertise-section {
             background: white;
-            padding: 4rem 0;
+            padding: 2.5rem 0;
             text-align: center;
         }
         
@@ -447,9 +653,33 @@
                 padding: 0.5rem 1rem;
             }
             
-            .customization-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .customization-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .customization-left,
+            .customization-right {
+                justify-content: center;
                 gap: 1rem;
+            }
+            
+            .customization-center {
+                order: 2;
+                max-width: 100%;
+            }
+            
+            .customization-left {
+                order: 1;
+            }
+            
+            .customization-right {
+                order: 3;
+            }
+            
+            .customization-item img {
+                width: 100px;
+                height: 100px;
             }
             
             .features-list,
@@ -477,9 +707,9 @@
     <!-- Main Content -->
     <main>
         <!-- Title Section on white background -->
-        <section class="bg-white py-16">
+        <section class="bg-white py-8">
             <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-pd2i-black">PVD Technology for Tooling</h1>
+                <h1 class="text-2xl font-bold text-pd2i-black">PVD Technology for Tooling</h1>
             </div>
         </section>
 
@@ -493,23 +723,29 @@
 
         <!-- Customization Section -->
         <section class="customization-section">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-pd2i-black mb-8">We help you to build your own customize coatings</h2>
-                <div class="customization-grid">
+            <div class="customization-container">
+                <!-- Images de gauche -->
+                <div class="customization-left">
                     <div class="customization-item">
                         <img src="assets/images/pvd-cutting-tools/Surface Analysis.png" alt="Surface Analysis">
                     </div>
                     <div class="customization-item">
                         <img src="assets/images/pvd-cutting-tools/Tool Design.png" alt="Tool Design">
                     </div>
+                </div>
+                
+                <!-- Texte central -->
+                <div class="customization-center">
+                    <h2 class="text-2xl font-bold text-pd2i-black">We help you to build your own customize coatings</h2>
+                </div>
+                
+                <!-- Images de droite -->
+                <div class="customization-right">
                     <div class="customization-item">
                         <img src="assets/images/pvd-cutting-tools/Performance.png" alt="Coating Process">
                     </div>
                     <div class="customization-item">
                         <img src="assets/images/pvd-cutting-tools/Quality Control.png" alt="Quality Control">
-                    </div>
-                    <div class="customization-item">
-                        <img src="assets/images/pvd-cutting-tools/Performance.png" alt="Performance Analysis">
                     </div>
                 </div>
             </div>
@@ -518,8 +754,8 @@
         <!-- High Speed Coating System Section -->
         <section class="coating-system-section">
             <div class="coating-content">
-                <h2>High Speed Coating System for Cutting Tools</h2>
-                <p>Our High Speed Coating System delivers exceptional efficiency and versatility with an optimized process for high performance coatings for cutting tools.</p>
+                <h2>High Speed Coating System<br>for Cutting Tools</h2>
+                <p>Our High Speed Coating System delivers exceptional efficiency<br>and versatility with an optimized process for high performance<br>coatings for cutting tools.</p>
                 <a href="#" class="btn-primary">Get MPC Series Brochures</a>
             </div>
         </section>
@@ -542,43 +778,93 @@
                         </ul>
                     </div>
                     
-                    <!-- Right: Process Chart -->
+                    <!-- Right: Process Timeline Chart -->
                     <div class="process-chart">
-                        <h3 class="text-xl font-bold mb-4 text-center">Process Timeline</h3>
-                        <div class="timeline-bar">
-                            <div class="timeline-label vacuum-heating">Vacuum & Heating</div>
-                            <div class="timeline-label etching">Etching</div>
-                            <div class="timeline-label coating">Coating</div>
-                            <div class="timeline-label cooling">Fast Cooling</div>
+                        <div class="timeline-chart">
+                            <!-- Header -->
+                            <div class="timeline-header">
+                                <div class="header-empty"></div>
+                                <div class="header-labels">
+                                    <div class="header-label vacuum">Vacuum &<br>Heating</div>
+                                    <div class="header-label etching">Etching</div>
+                                    <div class="header-label coating">Coating</div>
+                                    <div class="header-label cooling">Fast Cooling</div>
+                                </div>
+                                <div class="header-time-total"></div>
+                            </div>
                             
-                            <div class="timeline-time vacuum-heating">35</div>
-                            <div class="timeline-time etching">15</div>
-                            <div class="timeline-time coating">82</div>
-                            <div class="timeline-time cooling">38</div>
-                        </div>
-                        <div class="text-right text-sm text-gray-600">180 min</div>
-                        
-                        <!-- Coating Types -->
-                        <div class="coating-types">
-                            <div class="coating-type active">
-                                <strong>Hardmill - 2.5 µm</strong>
-                                <div class="text-xs mt-1">178</div>
+                            <!-- Coating Rows (ordered by total time, longest first) -->
+                            <div class="coating-row hardmill">
+                                <div class="coating-label">Hardmill - 2.5 μm</div>
+                                <div class="timeline-container">
+                                    <div class="timeline-segments">
+                                        <div class="segment vacuum">35</div>
+                                        <div class="segment etching">15</div>
+                                        <div class="segment coating">82</div>
+                                        <div class="segment cooling">38</div>
+                                    </div>
+                                </div>
+                                <div class="total-time">178</div>
                             </div>
-                            <div class="coating-type">
-                                <strong>AlTiN - 2.5 µm</strong>
-                                <div class="text-xs mt-1">158</div>
+                            
+                            <div class="coating-row altin">
+                                <div class="coating-label">AlTiN - 2.5 μm</div>
+                                <div class="timeline-container">
+                                    <div class="timeline-segments">
+                                        <div class="segment vacuum">35</div>
+                                        <div class="segment etching">15</div>
+                                        <div class="segment coating">62</div>
+                                        <div class="segment cooling">38</div>
+                                    </div>
+                                </div>
+                                <div class="total-time">158</div>
                             </div>
-                            <div class="coating-type">
-                                <strong>AlTiCrN - 2.5 µm</strong>
-                                <div class="text-xs mt-1">156</div>
+                            
+                            <div class="coating-row alticrn">
+                                <div class="coating-label">AlTiCrN - 2.5 μm</div>
+                                <div class="timeline-container">
+                                    <div class="timeline-segments">
+                                        <div class="segment vacuum">35</div>
+                                        <div class="segment etching">15</div>
+                                        <div class="segment coating">60</div>
+                                        <div class="segment cooling">38</div>
+                                    </div>
+                                </div>
+                                <div class="total-time">156</div>
                             </div>
-                            <div class="coating-type">
-                                <strong>AlCrN - 2.5 µm</strong>
-                                <div class="text-xs mt-1">143</div>
+                            
+                            <div class="coating-row alcrn">
+                                <div class="coating-label">AlCrN - 2.5 μm</div>
+                                <div class="timeline-container">
+                                    <div class="timeline-segments">
+                                        <div class="segment vacuum">35</div>
+                                        <div class="segment etching">15</div>
+                                        <div class="segment coating">52</div>
+                                        <div class="segment cooling">38</div>
+                                    </div>
+                                </div>
+                                <div class="total-time">148</div>
                             </div>
-                            <div class="coating-type">
-                                <strong>TiN - 2.5 µm</strong>
-                                <div class="text-xs mt-1">134</div>
+                            
+                            <div class="coating-row tin">
+                                <div class="coating-label">TiN - 2.5 μm</div>
+                                <div class="timeline-container">
+                                    <div class="timeline-segments">
+                                        <div class="segment vacuum">35</div>
+                                        <div class="segment etching">15</div>
+                                        <div class="segment coating">48</div>
+                                        <div class="segment cooling">38</div>
+                                    </div>
+                                </div>
+                                <div class="total-time">144</div>
+                            </div>
+                            
+                            <!-- Time axis -->
+                            <div class="time-axis-container">
+                                <div class="time-axis">
+                                    <div class="axis-line"></div>
+                                    <div class="axis-label">180 min</div>
+                                </div>
                             </div>
                         </div>
                     </div>
