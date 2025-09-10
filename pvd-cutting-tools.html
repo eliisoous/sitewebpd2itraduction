@@ -93,7 +93,7 @@
         /* Customization Section */
         .customization-section {
             background: white;
-            padding: 2rem 0;
+            padding: 1rem 0 0.5rem 0;
         }
         
         .customization-container {
@@ -102,14 +102,14 @@
             justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-            gap: 3rem;
+            padding: 0 1.5rem;
+            gap: 1.5rem;
         }
         
         .customization-left,
         .customization-right {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
         }
         
         .customization-center {
@@ -137,28 +137,25 @@
         /* High Speed Coating Section */
         .coating-system-section {
             color: white;
-            padding: 4rem 0;
+            padding: 2rem 0;
             position: relative;
             background-image: url('assets/images/pvd-cutting-tools/High Speed Coating Equipment Image.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            min-height: 400px;
+            min-height: 500px;
+            display: flex;
+            align-items: flex-end;
         }
         
         .coating-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 2rem 3rem 2rem;
             text-align: center;
             position: relative;
             z-index: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            min-height: 400px;
-            padding-bottom: 3rem;
+            width: 100%;
         }
         
         .coating-content h2 {
@@ -501,6 +498,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             margin-bottom: 1.5rem;
+            text-align: center;
         }
         
         .benefits-list {
@@ -694,7 +692,54 @@
             }
             
             .coating-content h2 {
-                font-size: 2rem;
+                font-size: 1.5rem;
+                line-height: 1.3;
+                margin-bottom: 1rem;
+            }
+            
+            .coating-content p {
+                font-size: 0.95rem;
+                line-height: 1.4;
+                margin-bottom: 1.5rem;
+                padding: 0 1rem;
+            }
+            
+            .coating-system-section {
+                min-height: 350px;
+                padding: 1rem 0;
+                background-size: contain;
+                background-position: center;
+            }
+            
+            .coating-content {
+                padding: 0 1rem 2rem 1rem;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .coating-content h2 {
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .coating-content p {
+                font-size: 0.9rem;
+                padding: 0 0.5rem;
+            }
+            
+            .btn-primary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .coating-system-section {
+                min-height: 280px;
+                padding: 0.5rem 0;
+            }
+            
+            .coating-content {
+                padding: 0 0.5rem 1.5rem 0.5rem;
             }
         }
     </style>
@@ -795,14 +840,11 @@
         <!-- High Performance Coating Section -->
         <section class="performance-section">
             <div class="performance-container">
-                <h2 class="text-3xl font-bold text-center mb-8">High Performance Coating</h2>
                 <div class="performance-grid">
                     <!-- Left: Diagram -->
                     <div class="diagram-container">
                         <img src="assets/images/pvd-cutting-tools/Coating Layer Diagram.jpg" alt="Coating Layer Diagram">
-                        <div class="text-center mt-4">
-                            <strong>+/- 0.1 µm</strong>
-                        </div>
+
                     </div>
                     
                     <!-- Right: Benefits -->
