@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Low cost Plasma Nitriding - HPPN High Pulsed Plasma Nitriding Solutions by PD2i">
+    <meta name="keywords" content="Plasma Nitriding, HPPN, High Pulsed Plasma Nitriding, Low Cost, PD2i">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    
+    <title>Plasma Nitriding - HPPN Solutions - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 50%, #1976D2 100%);
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+        
+        .hero-text {
+            flex: 1;
+            color: white;
+            padding-right: 2rem;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-text h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .hero-image {
+            flex: 0 0 auto;
+            max-width: 400px;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Special Process Section */
+        .special-process {
+            margin-top: 2rem;
+        }
+        
+        .special-process h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .process-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .process-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .process-list li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #00BCD4, #0097A7);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(135deg, #0097A7, #00695C);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Advantages Section */
+        .advantages-section {
+            background: #f5f5f5;
+            padding: 3rem 0;
+        }
+        
+        .advantages-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            gap: 3rem;
+        }
+        
+        .advantages-content {
+            flex: 1;
+        }
+        
+        .advantages-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .advantages-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .advantages-list li {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #555;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .advantages-list li::before {
+            content: "•";
+            color: #0083CA;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .advantages-image {
+            flex: 1;
+        }
+        
+        .advantages-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Standard Sizes Section */
+        .standard-sizes-section {
+            background: white;
+            padding: 3rem 0;
+        }
+        
+        .standard-sizes-container {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            gap: 3rem;
+        }
+        
+        .sizes-diagram {
+            flex: 1;
+        }
+        
+        .sizes-diagram img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .sizes-content {
+            flex: 1;
+        }
+        
+        .sizes-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0083CA;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sizes-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sizes-list li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: #333;
+        }
+        
+        .note {
+            font-style: italic;
+            color: #666;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.5rem;
+            }
+            
+            .advantages-container,
+            .standard-sizes-container {
+                flex-direction: column;
+            }
+            
+            .advantages-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .sizes-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-white text-pd2i-black">
+    <!-- Header sera généré automatiquement par le composant -->
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Low cost Plasma Nitriding</h1>
+                    <h2>HPPN – High Pulsed Plasma Nitriding</h2>
+                    <p>
+                        HPPN nitriding is a very low cost effective way to improve fatigue resistance, resistance on hertz pressure and hot hardness.
+                        This process is the most cost efficient treatment for molds and dies for forming, die casting, forging, aluminium extrusion,
+                        plastic molding, and various precision components. It offers excellent control for the structure of nitride layers that is
+                        required when combining these thermo chemical treatments with PVD and PECVD coating.
+                    </p>
+                    
+                    <div class="special-process">
+                        <h3>Special process</h3>
+                        <ul class="process-list">
+                            <li>Nitriding Stainless steels : S Phase</li>
+                            <li>HPPN Technology for High Polish Molds</li>
+                        </ul>
+                        
+                        <a href="#" class="download-btn">Download Plasma Nitriding</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <!-- Placeholder for plasma nitriding equipment image -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZjVmNWY1Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iODAiIGZpbGw9IiNlMGUwZTAiLz4KPGV4dCB4PSIyMDAiIHk9IjE1NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QbGFzbWEgTml0cmlkaW5nPC90ZXh0Pgo8dGV4dCB4PSIyMDAiIHk9IjE3MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FcXVpcG1lbnQ8L3RleHQ+Cjwvc3ZnPgo=" alt="Plasma Nitriding Equipment" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages Section -->
+        <section class="advantages-section">
+            <div class="advantages-container">
+                <div class="advantages-content">
+                    <h2>Advantages of Plasma Nitriding</h2>
+                    <ul class="advantages-list">
+                        <li>Extremely low running cost (low energy and gas consumption)</li>
+                        <li>Flexible and robust process</li>
+                        <li>Effective control of metallurgical structures</li>
+                        <li>Special Nitriding process suitable for PVD for dies and molds</li>
+                        <li>Precision components</li>
+                    </ul>
+                </div>
+                
+                <div class="advantages-image">
+                    <!-- Placeholder for industrial facility image -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCA0IDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZjBmMGYwIi8+CjxyZWN0IHg9IjUwIiB5PSIxMDAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZGRkIiBzdHJva2U9IiNiYmIiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSIxMDAiIHk9IjUwIiB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIGZpbGw9IiNjY2MiLz4KPHA+dGV4dCB4PSIyNTAiIHk9IjE1NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbmR1c3RyaWFsIEZhY2lsaXR5PC90ZXh0Pgo8L3N2Zz4K" alt="Industrial Facility" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Standard Sizes Section -->
+        <section class="standard-sizes-section">
+            <div class="standard-sizes-container">
+                <div class="sizes-diagram">
+                    <!-- Placeholder for technical diagram -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlZWUiLz4KPHJlY3QgeD0iMTAwIiB5PSI1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjEyMCIgeT0iMTAwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjEiLz4KPHA+dGV4dCB4PSIyMDAiIHk9IjM4MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UZWNobmljYWwgRGlhZ3JhbTwvdGV4dD4KPC9zdmc+Cg==" alt="Technical Diagram" />
+                </div>
+                
+                <div class="sizes-content">
+                    <h2>Standard sizes</h2>
+                    <ul class="sizes-list">
+                        <li>Bell furnace HPPN 600 x 1000</li>
+                        <li>Bell furnace HPPN 1000 x 1000</li>
+                        <li>Bell furnace HPPN 1200 x 1500</li>
+                    </ul>
+                    
+                    <p class="note">Individual sizes can be realized.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer sera généré automatiquement par le composant -->
+
+    <!-- Scripts -->
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Initialize Components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Header
+            window.headerInstance = new Header();
+            
+            // Initialize Footer
+            const footer = new Footer();
+            
+            console.log('Plasma Nitriding page loaded successfully');
+        });
+    </script>
+</body>
+</html>

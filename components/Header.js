@@ -40,7 +40,7 @@ class Header {
                     { label: 'Greenclean Ultrasonic Cleaning', href: '#' }
                 ]
             },
-            { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: '#', type: 'link' },
+            { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
             { label: 'Services', href: '#', type: 'link' },
             { label: 'About us', labelCompact: 'About', href: '#', type: 'link' }
         ];
