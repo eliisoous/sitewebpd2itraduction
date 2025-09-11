@@ -37,7 +37,7 @@ class Header {
                 type: 'dropdown',
                 items: [
                     { label: 'Turnkey Solutions', href: '#' },
-                    { label: 'Greenclean Ultrasonic Cleaning', href: '#' }
+                    { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
                 ]
             },
             { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
