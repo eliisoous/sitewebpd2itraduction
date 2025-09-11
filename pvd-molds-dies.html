@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PVD Coating System for Molds & Dies - High Performance PVD Coating Equipment for Forming and Molding Applications">
+    <meta name="keywords" content="PVD Coating System, Molds, Dies, Forming, Molding, PVD Technology">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    
+    <title>PVD Coating System for Molds & Dies - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('assets/images/pvd-molds-and-dies/desert.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        
+        /* Innovative Coating Section */
+        .innovative-coating {
+            background: white;
+            padding: 3rem 0;
+        }
+        
+        .coating-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        
+        .coating-text h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            text-align: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: nowrap;
+        }
+        
+        .coating-text p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        /* Surface Images Grid */
+        .surface-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem auto;
+            max-width: 1600px;
+            padding: 0 2rem;
+        }
+        
+        .surface-image {
+            width: 320px;
+            height: 280px;
+            background: #f0f0f0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin: 0 20px;
+        }
+        
+        .surface-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .surface-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* PD2i Duplex Section */
+        .duplex-section {
+            background: white;
+            padding: 3rem 0;
+        }
+        
+        .duplex-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .duplex-content {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .duplex-content h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+        
+        .duplex-content p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        
+        .duplex-diagram {
+            position: relative;
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .duplex-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .sample-image {
+            width: 100%;
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+        
+        .pyramid-diagram {
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pyramid {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid #4A90E2;
+        }
+        
+        .pyramid-layer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .layer-surface {
+            top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .layer-nitriding {
+            top: 50px;
+            background: #0083CA;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+        
+        .layer-steels {
+            top: 90px;
+            background: #4A90E2;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .pyramid-labels {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .label-coating {
+            position: absolute;
+            left: -80px;
+            top: 20px;
+            background: #B8860B;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .label-nitriding {
+            position: absolute;
+            left: -80px;
+            top: 80px;
+            background: #0083CA;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .label-steels {
+            position: absolute;
+            left: -60px;
+            top: 140px;
+            background: #4A7C59;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .mold-image {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+        
+        /* Performance Section */
+        .performance-section {
+            padding: 4rem 0;
+        }
+        
+        .performance-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .performance-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .performance-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .athlete-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Properties Section */
+        .properties-section {
+            background: white;
+            padding: 4rem 0;
+        }
+        
+        .properties-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .properties-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .property-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .property-card:hover {
+            border-color: #0083CA;
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .property-card h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #0083CA;
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Specialized Properties Section */
+        .specialized-section {
+            background: #0083CA;
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .specialized-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .specialized-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .specialized-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .specialized-properties {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .specialized-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .specialized-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Mold Images Section */
+        .mold-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mold-sample {
+            background: #f0f0f0;
+            border-radius: 1rem;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        
+        .mold-sample img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Considerations Section */
+        .considerations-section {
+            background: white;
+            padding: 3rem 0;
+        }
+        
+        .considerations-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .considerations-list {
+            background: #f9fafb;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .considerations-list h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+        
+        .considerations-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .considerations-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #333;
+        }
+        
+        .considerations-list li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: #0083CA;
+            font-weight: bold;
+        }
+        
+        .portfolio-text {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            background: #0083CA;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #006ba3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .surface-images {
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 100%;
+            }
+            
+            .surface-image {
+                width: 200px;
+                height: 180px;
+                margin: 10px;
+            }
+            
+            .duplex-diagram .grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .duplex-diagram .grid > div {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            
+            .pyramid {
+                border-left-width: 120px;
+                border-right-width: 120px;
+                border-bottom-width: 160px;
+            }
+            
+            .properties-grid,
+            .specialized-properties {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .mold-images {
+                grid-template-columns: 1fr;
+            }
+            
+            .coating-text h2,
+            .duplex-content h2,
+            .performance-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .performance-section .grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .properties-title {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .surface-images {
+                justify-content: center;
+            }
+            
+            .surface-image {
+                width: 260px;
+                height: 220px;
+                margin: 15px;
+            }
+            
+            .properties-grid,
+            .specialized-properties {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mold-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-roboto">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Title Section on white background -->
+        <section class="bg-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-2xl font-bold text-pd2i-black">PVD Coating System for Molds & Dies</h1>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Image du désert seulement, sans texte -->
+        </section>
+
+        <!-- Surface Images Grid Section -->
+        <section class="innovative-coating">
+            <div class="coating-text">
+                <!-- Texte directement sur fond blanc, sans rectangle -->
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-pd2i-black mb-4">Innovative coating processes for high performance molds and dies applications</h2>
+                    <p class="text-base text-gray-700">We design the coatings for your molds or dies applications and we transfer the know-how for the entire processes</p>
+                </div>
+                
+                <div class="surface-images">
+                    <!-- Surface images -->
+                    <div class="surface-image">
+                        <img src="assets/images/pvd-molds-and-dies/Im1.jpg" alt="Surface coating sample 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="surface-image">
+                        <img src="assets/images/pvd-molds-and-dies/Im2.png" alt="Surface coating sample 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="surface-image">
+                        <img src="assets/images/pvd-molds-and-dies/Im3.png" alt="Surface coating sample 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="surface-image">
+                        <img src="assets/images/pvd-molds-and-dies/Im4.png" alt="Surface coating sample 4" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PD2i Duplex Coating Section -->
+        <section class="duplex-section">
+            <div class="duplex-container">
+                <div class="duplex-content">
+                    <h2>PD2i Duplex Coating</h2>
+                    <p>Plasma Nitriding + Hard PVD Coating</p>
+                </div>
+
+                <div class="duplex-diagram">
+                    <!-- Triangle central seulement -->
+                    <div class="flex justify-center">
+                        <img src="assets/images/pvd-molds-and-dies/Triangle.png" alt="PD2i Duplex Coating Pyramid Diagram" class="max-w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High Performance Coatings Hero Section -->
+        <section class="relative min-h-[400px] bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('assets/images/pvd-molds-and-dies/athlete-performance-coating.png');">
+            <!-- Blue gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-pd2i-blue/80 to-pd2i-blue/95"></div>
+            
+            <!-- Content overlay -->
+            <div class="relative z-10 flex items-center min-h-[400px]">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left side: Empty space for athlete image -->
+                        <div class="hidden lg:block"></div>
+                        
+                        <!-- Right side: Text content -->
+                        <div class="text-white">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6">High Performance Coatings for Forming and Molding</h2>
+                            <p class="text-lg leading-relaxed">PD2i has engineered an optimum solution for every application. Deep drawing, trimming, punching, blanking, cold forming, hot stamping, hot forging, powder pressing, nonferrous metal forming and Aluminum die casting all require different surface properties to perform properly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left side: Text content -->
+                    <div>
+                        <p class="text-gray-700 mb-6 leading-relaxed">Improving the mechanical properties in the supporting structure underneath the coatings has proven to dramatically improve the coatings ability to perform longer. The Nitriding layer provides a graded interface, which is harder and less likely to micro crack under the stresses of forming, than a surface without the Nitride layer. When nitride and coating processes are performed in a single step (in-situ) within the chamber, this combination provides superior surface properties.</p>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">The PD2i coating equipment for forming and molding applications is engineered with our unique device and process to make the Nitriding process in the PVD coater.</p>
+                        
+                        <p class="text-gray-700 mb-6 leading-relaxed">Heavy forming, hot forging and aluminum die casting require an improvement of the mechanical properties of the under layer to get a hardness gradient from the core hardness to the hard coating. The Nitriding layer increases the compressive strength, the hot hardness and the mechanical and thermal fatigue properties.</p>
+                        
+                        <p class="text-gray-700 font-semibold text-center mb-8">PD2i offers experienced technical assistance to guide you in matching your application parameters to the best coating choice.</p>
+                        
+                        <div class="text-center">
+                            <a href="#" class="btn-primary">Download Forming and Molding Portfolio</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side: Data Table -->
+                    <div class="flex flex-col items-center">
+                        <img src="assets/images/pvd-molds-and-dies/Download tableau.png" alt="Forming and Molding Data Table - Click to enlarge" class="max-w-full h-auto cursor-pointer hover:scale-105 transition-transform duration-300">
+                        <p class="text-sm text-gray-500 mt-2 italic">Click to enlarge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Properties Grid Section -->
+        <section class="properties-section">
+            <div class="properties-container">
+                <h1 class="properties-title">Designing a successful coating is achieved by balancing the following six properties within the thin film</h1>
+                
+                <div class="properties-grid">
+                    <div class="property-card">
+                        <h3>High Hardness</h3>
+                        <p>For wear resistance</p>
+                    </div>
+                    <div class="property-card">
+                        <h3>Hot Hardness</h3>
+                        <p>For hot applications</p>
+                    </div>
+                    <div class="property-card">
+                        <h3>High Toughness</h3>
+                        <p>For high strength metal forming</p>
+                    </div>
+                    <div class="property-card">
+                        <h3>Low Friction Coefficient</h3>
+                        <p>To reduce adhesive wear and micro welding</p>
+                    </div>
+                    <div class="property-card">
+                        <h3>Heat Resistance</h3>
+                        <p>For thermal stability and thermal fatigue</p>
+                    </div>
+                    <div class="property-card">
+                        <h3>Oxidation Resistance</h3>
+                        <p>For hot forging, hot stamping and Aluminum die casting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Properties Section -->
+        <section class="specialized-section">
+            <div class="specialized-container">
+                <h2>Specialized Properties for Plastic Injection Molding</h2>
+                <p>For mold cavities, cores, and injector runner systems, additional properties are required</p>
+                
+                <div class="specialized-properties">
+                    <div class="specialized-card">
+                        <h3>Corrosion Resistance</h3>
+                    </div>
+                    <div class="specialized-card">
+                        <h3>Scratch Resistance</h3>
+                    </div>
+                    <div class="specialized-card">
+                        <h3>Improve Mold Filling and Mold Release</h3>
+                    </div>
+                </div>
+
+                <!-- Mold sample images -->
+                <div class="mold-images">
+                    <div class="mold-sample">
+                        <img src="assets/images/pvd-molds-and-dies/mold1.jpg" alt="Mold sample 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mold-sample">
+                        <img src="assets/images/pvd-molds-and-dies/moulding-2-1.jpg" alt="Mold sample 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mold-sample">
+                        <img src="assets/images/pvd-molds-and-dies/moulding-3.jpg" alt="Mold sample 3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Considerations Section -->
+        <section class="considerations-section">
+            <div class="considerations-container">
+                <div class="considerations-list">
+                    <h3>Additional considerations for coating can be dependent on the substrate and application conditions:</h3>
+                    <ul>
+                        <li>Substrate Material – Tool Steel, Carbide, Non Ferous, Surface Cleanliness, etc.</li>
+                        <li>Heat Treatment – Critical Quench and Temper conditions.</li>
+                        <li>Workpiece Temperature – Cold forming, hot forming, die casting, forging, etc.</li>
+                        <li>Tool Failure – Abrasive wear, chemical wear, chipping, heat checking, edge wear, oxidation, welding, etc</li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <p class="portfolio-text">The PD2i coating portfolio offers the optimum balance of properties for each application.</p>
+                    <a href="#" class="btn-primary">Contact us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Initialize Components -->
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script>
+        // Initialize Header with navigation items
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: '#' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: '#', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: '#' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: '#', type: 'link' },
+                { label: 'Services', href: '#', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: '#', type: 'link' }
+            ]
+        });
+        
+        // Initialisation du footer avec la configuration PD2i
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: '/about' },
+                { label: 'Services', href: '/services' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Downloads', href: '/downloads' },
+                { label: 'News', href: '/news' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: '/cookies' },
+                { label: 'Privacy policy', href: '/privacy' },
+                { label: 'Legal Informations', href: '/legal' }
+            ],
+            copyrightYear: 2025
+        });
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
