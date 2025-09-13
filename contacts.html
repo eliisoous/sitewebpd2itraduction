@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact PD2i - Get in touch with our team of experts in PVD coating technology and solutions.">
+    <meta name="keywords" content="Contact PD2i, PVD Coating Contact, Technical Support, Sales Contact">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    
+    <title>Contact Us - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-in-left': 'slideInLeft 0.7s ease-out',
+                        'slide-in-right': 'slideInRight 0.7s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.8' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* Contact Form Styles */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #0083CA;
+            box-shadow: 0 0 0 3px rgba(0, 131, 202, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        .form-input:hover {
+            border-color: #0083CA;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        /* Contact Cards */
+        .contact-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+        
+        .contact-name {
+            color: #0083CA;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        .contact-info strong {
+            color: #374151;
+        }
+        
+        /* Hero Section Background */
+        .hero-background {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        /* Job Opportunity Section */
+        .job-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+        }
+        
+        .job-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-form {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .form-input {
+                padding: 0.875rem;
+            }
+            
+            .btn-primary {
+                padding: 0.875rem 1.5rem;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-form {
+                margin: 0.5rem;
+                padding: 1rem;
+            }
+            
+            .contact-card {
+                padding: 1rem;
+            }
+        }
+        
+        /* Earth Container 3D Effect */
+        .earth-container {
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            transform-style: preserve-3d;
+        }
+        
+        .earth-container:hover {
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+        }
+        
+        /* Animation delays for staggered effects */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="font-roboto bg-gray-50">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Contact Form -->
+        <section class="hero-background py-16 lg:py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Side: Title and Description -->
+                    <div class="text-white animate-slide-in-left">
+                        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 animate-fade-in">Contact Us</h1>
+                        <p class="text-xl lg:text-2xl opacity-90 leading-relaxed animate-fade-in delay-200">
+                            Get in touch with our team of experts for all your PVD coating technology needs
+                        </p>
+                        <div class="mt-8 animate-fade-in delay-400">
+                            <div class="inline-block animate-float">
+                                <!-- Rotating Earth with Continents and 3D Effect -->
+                                <div class="w-20 h-20 relative earth-container">
+                                    <svg class="w-20 h-20 text-white opacity-90 animate-spin-slow" fill="currentColor" viewBox="0 0 100 100">
+                                        <!-- Shadow/Base circle -->
+                                        <circle cx="52" cy="52" r="46" fill="currentColor" opacity="0.1"/>
+                                        
+                                        <!-- Earth main circle with gradient -->
+                                        <defs>
+                                            <radialGradient id="earthGradient" cx="40%" cy="40%">
+                                                <stop offset="0%" style="stop-color:currentColor;stop-opacity:0.6" />
+                                                <stop offset="70%" style="stop-color:currentColor;stop-opacity:0.4" />
+                                                <stop offset="100%" style="stop-color:currentColor;stop-opacity:0.2" />
+                                            </radialGradient>
+                                            <radialGradient id="continentGradient" cx="30%" cy="30%">
+                                                <stop offset="0%" style="stop-color:currentColor;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:currentColor;stop-opacity:0.7" />
+                                            </radialGradient>
+                                        </defs>
+                                        <circle cx="50" cy="50" r="45" fill="url(#earthGradient)"/>
+                                        
+                                        <!-- Continents with better shapes -->
+                                        <!-- North America -->
+                                        <path d="M22 28 Q28 22 35 26 Q42 24 45 32 Q43 38 38 40 Q32 42 28 38 Q24 34 22 28" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- South America -->
+                                        <path d="M28 42 Q32 38 36 44 Q39 50 38 58 Q36 65 32 64 Q28 60 26 52 Q26 46 28 42" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- Europe -->
+                                        <path d="M44 22 Q48 18 54 22 Q58 24 57 28 Q55 32 52 33 Q48 34 45 30 Q42 26 44 22" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- Africa -->
+                                        <path d="M46 32 Q52 28 58 34 Q62 42 60 52 Q58 62 54 64 Q48 62 44 54 Q42 44 46 32" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- Asia -->
+                                        <path d="M58 24 Q66 20 74 26 Q78 32 76 38 Q72 44 66 45 Q60 43 58 36 Q56 30 58 24" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- Australia -->
+                                        <path d="M64 46 Q68 43 74 47 Q78 50 76 54 Q73 58 68 57 Q64 55 62 50 Q62 48 64 46" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- Antarctica -->
+                                        <path d="M20 70 Q35 68 50 70 Q65 68 80 70 Q75 75 50 78 Q25 75 20 70" fill="url(#continentGradient)"/>
+                                        
+                                        <!-- Grid lines (latitude/longitude) -->
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+                                        <ellipse cx="50" cy="50" rx="45" ry="22" fill="none" stroke="currentColor" stroke-width="0.2" opacity="0.3"/>
+                                        <ellipse cx="50" cy="50" rx="45" ry="35" fill="none" stroke="currentColor" stroke-width="0.2" opacity="0.3"/>
+                                        <line x1="5" y1="50" x2="95" y2="50" stroke="currentColor" stroke-width="0.3" opacity="0.3"/>
+                                        <line x1="50" y1="5" x2="50" y2="95" stroke="currentColor" stroke-width="0.3" opacity="0.3"/>
+                                        
+                                        <!-- Highlight/shine effect -->
+                                        <ellipse cx="42" cy="35" rx="15" ry="10" fill="currentColor" opacity="0.1" transform="rotate(-25 42 35)"/>
+                                    </svg>
+                                    
+                                    <!-- Orbital rings for extra effect -->
+                                    <div class="absolute inset-0 animate-spin-slow" style="animation-duration: 12s; animation-direction: reverse;">
+                                        <svg class="w-20 h-20 text-white opacity-20" fill="none" stroke="currentColor" viewBox="0 0 100 100">
+                                            <ellipse cx="50" cy="50" rx="55" ry="20" stroke-width="0.5" transform="rotate(30 50 50)"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <div class="absolute inset-0 animate-spin-slow" style="animation-duration: 15s;">
+                                        <svg class="w-20 h-20 text-white opacity-15" fill="none" stroke="currentColor" viewBox="0 0 100 100">
+                                            <ellipse cx="50" cy="50" rx="60" ry="15" stroke-width="0.3" transform="rotate(-45 50 50)"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side: Contact Form -->
+                    <div class="animate-slide-in-right">
+                        <form class="contact-form p-8 animate-slide-up delay-300">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Send us a message</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Your first name">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Your last name">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject of your message">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project or inquiry..."></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn-primary">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Contact Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Our Contact</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Connect with our global team of experts across different regions
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Dr. Pierre Collignon - France -->
+                    <div class="contact-card scroll-animate delay-100">
+                        <div class="contact-name">Dr. Pierre Collignon</div>
+                        <div class="contact-info">
+                            <strong>86 bd Malesherbes</strong><br>
+                            75008 Paris, France<br>
+                            <strong>+33 6 76 33 25 98</strong><br>
+                            <a href="mailto:pierre.collignon@pd2i.com" class="text-pd2i-blue hover:underline transition-colors">
+                                pierre.collignon@pd2i.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Engr. Kemal Tokmanoglu - Turkey -->
+                    <div class="contact-card scroll-animate delay-200">
+                        <div class="contact-name">Engr. Kemal Tokmanoglu</div>
+                        <div class="contact-info">
+                            <strong>Mevlana Atasehir</strong><br>
+                            Istanbul – TURKEY<br>
+                            <strong>+ 90 216 466 4478</strong><br>
+                            <a href="mailto:kemal@pd2i.com" class="text-pd2i-blue hover:underline transition-colors">
+                                kemal@pd2i.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mr. Leong Sai Yeong - Malaysia -->
+                    <div class="contact-card scroll-animate delay-300">
+                        <div class="contact-name">Mr. Leong Sai Yeong</div>
+                        <div class="contact-info">
+                            <strong>11, Jalan Perusahaan, Seksyen 3 Fortune Park</strong><br>
+                            Bandar Sri Pinang 11600 Penang – MALAYSIA<br>
+                            <strong>+ 60 19 308 1913</strong><br>
+                            <a href="mailto:syleong@pd2i.com" class="text-pd2i-blue hover:underline transition-colors">
+                                syleong@pd2i.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mr. Marko Vukasinovic - USA -->
+                    <div class="contact-card scroll-animate delay-400">
+                        <div class="contact-name">Mr. Marko Vukasinovic</div>
+                        <div class="contact-info">
+                            <strong>40 W Baseline, Suite 202, Mesa AZ</strong><br>
+                            85210 USA<br>
+                            <strong>+1224-622-8641</strong><br>
+                            <a href="mailto:marko@apexcoatingsystems.com" class="text-pd2i-blue hover:underline transition-colors">
+                                marko@apexcoatingsystems.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Looking for a Job Opportunity Section -->
+        <section class="job-section py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto scroll-animate">
+                    <div class="job-card text-center">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-blue mb-6">
+                            Looking for a new job opportunity?
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                            We are searching engineers, service technicians and sales representatives. 
+                            Call us or send us your request.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="mailto:admin@pd2i.com" 
+                               class="btn-primary inline-flex items-center hover:scale-105 transition-transform">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                admin@pd2i.com
+                            </a>
+                            <span class="text-gray-500">or</span>
+                            <a href="tel:+33153754505" 
+                               class="text-pd2i-blue hover:text-pd2i-black transition-colors font-semibold flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                +33 (0) 153 75 45 05
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Initialize Components -->
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script>
+        // Initialize Header with navigation items
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: '#' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: '#', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                { label: 'Services', href: '#', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: '#', type: 'link' }
+            ]
+        });
+        
+        // Initialize Footer with configuration
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: '/about' },
+                { label: 'Services', href: '/services' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Downloads', href: '/downloads' },
+                { label: 'News', href: '/news' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: '/cookies' },
+                { label: 'Privacy policy', href: '/privacy' },
+                { label: 'Legal Informations', href: '/legal' }
+            ],
+            copyrightYear: 2025
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handler (static for now)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Add success animation
+            const button = this.querySelector('.btn-primary');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Message Sent!';
+            button.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'linear-gradient(135deg, #0083CA 0%, #0066A3 100%)';
+                this.reset();
+            }, 3000);
+        });
+
+        // Add hover effects to form inputs
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
