@@ -154,7 +154,7 @@ class Header {
         return `
             <!-- Tablet Contacts & Language (1024px - 1279px) -->
             <div class="hidden lg:flex xl:hidden items-center space-x-3">
-                <a href="#" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-4 py-1 text-sm font-medium">
+                <a href="contacts.html" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-4 py-1 text-sm font-medium">
                     Contacts
                 </a>
                 ${this.generateLanguageSelector('tablet')}
@@ -166,7 +166,7 @@ class Header {
         return `
             <!-- Desktop Contacts & Language Selector -->
             <div class="hidden xl:flex items-center space-x-4">
-                <a href="#" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
+                <a href="contacts.html" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
                     Contacts
                 </a>
                 ${this.generateLanguageSelector('desktop')}
@@ -212,7 +212,7 @@ class Header {
                     }).join('')}
                     
                     <div class="px-3 py-2">
-                        <a href="#" class="inline-block bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
+                        <a href="contacts.html" class="inline-block bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
                             Contacts
                         </a>
                     </div>
