@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Article PD2i - Découvrez nos actualités et innovations dans le domaine des revêtements PVD et solutions industrielles.">
+    <meta name="keywords" content="PVD Coating, Innovation, Technology, PD2i Article">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="components/Header.js" as="script" fetchpriority="high">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Article PD2i">
+    <meta property="og:description" content="Découvrez nos actualités et innovations dans le domaine des revêtements PVD et solutions industrielles.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pd2i.com/article">
+    
+    <title id="pageTitle">Article - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Article Page Specific Styles */
+        .article-hero {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/coating-equipments/coating-machine-workshop.jpg') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .article-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            color: #0083CA;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .article-content h3 {
+            color: #374151;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            color: #4b5563;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-badge {
+            background: rgba(0, 131, 202, 0.1);
+            color: #0083CA;
+            border: 1px solid rgba(0, 131, 202, 0.2);
+        }
+        
+        .breadcrumb {
+            color: #6b7280;
+        }
+        
+        .breadcrumb a:hover {
+            color: #0083CA;
+        }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-4px);
+        }
+        
+        .share-button {
+            transition: all 0.3s ease;
+        }
+        
+        .share-button:hover {
+            background-color: #0083CA;
+            color: white;
+        }
+        
+        .related-article {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .related-article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .article-hero {
+                padding: 2rem 0;
+            }
+            
+            .article-hero-content {
+                padding: 0 1rem;
+            }
+            
+            .article-hero h1 {
+                font-size: 1.875rem !important;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 0.5rem;
+            }
+            
+            .article-meta span {
+                font-size: 0.875rem;
+            }
+            
+            .back-button {
+                font-size: 0.875rem;
+                margin-bottom: 1rem;
+            }
+            
+            .article-badge {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.75rem;
+            }
+            
+            .article-content {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+            
+            .article-content h2 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 0.75rem 0;
+            }
+            
+            .article-content h3 {
+                font-size: 1.125rem;
+                margin: 1rem 0 0.5rem 0;
+            }
+            
+            .share-button {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .related-article h3 {
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+            
+            /* Sidebar adjustments - Move before content on mobile */
+            .lg\\:col-span-1 {
+                order: -1;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+            
+            .lg\\:col-span-3 {
+                order: 1;
+            }
+            
+            /* Grid adjustments */
+            .grid.grid-cols-1.lg\\:grid-cols-4 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            /* Featured image */
+            #articleImage {
+                height: 12rem;
+                border-radius: 0.5rem;
+            }
+            
+            /* Contact CTA */
+            .bg-pd2i-blue.text-white.p-6 {
+                padding: 1.5rem;
+                margin-top: 1.5rem;
+            }
+            
+            /* Table of contents */
+            .bg-gray-50.p-6 {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .article-hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .grid.grid-cols-1.lg\\:grid-cols-4 {
+                grid-template-columns: 2fr 1fr;
+                gap: 2rem;
+            }
+            
+            .article-content {
+                font-size: 1.125rem;
+            }
+            
+            #articleImage {
+                height: 20rem;
+            }
+            
+            /* Reset order for tablet */
+            .lg\\:col-span-1 {
+                order: 2;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            .lg\\:col-span-3 {
+                order: 1;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            /* Reset order for desktop */
+            .lg\\:col-span-1 {
+                order: 2;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            .lg\\:col-span-3 {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .article-hero {
+                padding: 1.5rem 0;
+            }
+            
+            .article-hero h1 {
+                font-size: 1.5rem !important;
+                margin-bottom: 0.75rem;
+            }
+            
+            .article-meta {
+                font-size: 0.75rem;
+            }
+            
+            .back-button {
+                font-size: 0.75rem;
+            }
+            
+            .article-badge {
+                font-size: 0.625rem;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .share-button {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.75rem;
+            }
+            
+            .flex.gap-4 {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            #articleImage {
+                height: 10rem;
+            }
+            
+            .related-article img {
+                height: 8rem;
+            }
+            
+            .related-article .p-4 {
+                padding: 1rem;
+            }
+            
+            .related-article h3 {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-white text-pd2i-black">
+    <!-- Header sera généré automatiquement par le composant -->
+
+    <!-- Main Content -->
+    <main>
+        <!-- Article Hero Section -->
+        <section class="article-hero py-12 text-white">
+            <div class="container mx-auto px-4">
+                <div class="article-hero-content max-w-4xl mx-auto">
+                    
+                    <!-- Back Button -->
+                    <div class="mb-6">
+                        <a href="news.html" class="back-button inline-flex items-center text-white hover:text-blue-200 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            Retour aux actualités
+                        </a>
+                    </div>
+                    
+                    <!-- Article Meta -->
+                    <div class="mb-4">
+                        <span class="article-badge px-3 py-1 rounded text-sm font-semibold uppercase" id="articleCategory">
+                            Technology
+                        </span>
+                    </div>
+                    
+                    <!-- Article Title -->
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4" id="articleTitle">
+                        Titre de l'article
+                    </h1>
+                    
+                    <!-- Article Meta Info -->
+                    <div class="article-meta flex flex-wrap items-center gap-2 md:gap-4 text-sm opacity-90" id="articleMeta">
+                        <span>15 Mars 2024</span>
+                        <span class="hidden sm:inline">•</span>
+                        <span>5 min de lecture</span>
+                        <span class="hidden sm:inline">•</span>
+                        <span>Par PD2i Team</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- Main Content -->
+                        <div class="lg:col-span-3">
+                            <!-- Featured Image -->
+                            <div class="mb-6 md:mb-8">
+                                <img id="articleImage" 
+                                     src="assets/images/news/new-pvd-coatings.jpg" 
+                                     alt="Article Image" 
+                                     class="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-lg"
+                                     loading="lazy"
+                                     decoding="async">
+                            </div>
+                            
+                            <!-- Article Content -->
+                            <div class="article-content prose max-w-none" id="articleContent">
+                                <p>Contenu de l'article en cours de chargement...</p>
+                            </div>
+                            
+                            <!-- Share Section -->
+                            <div class="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-200">
+                                <h3 class="text-base md:text-lg font-semibold mb-4">Partager cet article</h3>
+                                <div class="flex flex-wrap gap-2 md:gap-4">
+                                    <button class="share-button px-3 md:px-4 py-2 border border-gray-300 rounded text-xs md:text-sm font-medium" onclick="shareArticle('linkedin')">
+                                        LinkedIn
+                                    </button>
+                                    <button class="share-button px-3 md:px-4 py-2 border border-gray-300 rounded text-xs md:text-sm font-medium" onclick="shareArticle('twitter')">
+                                        Twitter
+                                    </button>
+                                    <button class="share-button px-3 md:px-4 py-2 border border-gray-300 rounded text-xs md:text-sm font-medium" onclick="shareArticle('email')">
+                                        Email
+                                    </button>
+                                    <button class="share-button px-3 md:px-4 py-2 border border-gray-300 rounded text-xs md:text-sm font-medium" onclick="copyLink()">
+                                        Copier le lien
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sidebar -->
+                        <div class="lg:col-span-1">
+                            <!-- Table of Contents -->
+                            <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                                <h3 class="text-lg font-semibold mb-4">Sommaire</h3>
+                                <ul class="space-y-2 text-sm" id="tableOfContents">
+                                    <li><a href="#introduction" class="text-pd2i-blue hover:underline">Introduction</a></li>
+                                    <li><a href="#technology" class="text-pd2i-blue hover:underline">Technologie</a></li>
+                                    <li><a href="#applications" class="text-pd2i-blue hover:underline">Applications</a></li>
+                                    <li><a href="#conclusion" class="text-pd2i-blue hover:underline">Conclusion</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Contact CTA -->
+                            <div class="bg-pd2i-blue text-white p-6 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3">Besoin d'informations ?</h3>
+                                <p class="text-sm mb-4 opacity-90">
+                                    Contactez nos experts pour en savoir plus sur nos solutions PVD.
+                                </p>
+                                <a href="contacts.html" class="inline-block bg-white text-pd2i-blue px-4 py-2 rounded font-medium text-sm hover:bg-gray-100 transition-colors">
+                                    Nous contacter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">Articles similaires</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="relatedArticles">
+                        <!-- Related articles will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer sera généré automatiquement par le composant -->
+
+    <!-- Header Component -->
+    <script src="components/Header.js"></script>
+    
+    <!-- Footer Component -->
+    <script src="components/Footer.js"></script>
+    
+    <!-- Initialize Header -->
+    <script>
+        // Initialisation du header avec la configuration PD2i
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: '#' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: '#', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                { label: 'Services', href: '#', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: '#', type: 'link' }
+            ]
+        });
+        
+        // Initialisation du footer avec la configuration PD2i
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: '/about' },
+                { label: 'Services', href: '/services' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Downloads', href: '/downloads' },
+                { label: 'News', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: '/cookies' },
+                { label: 'Privacy policy', href: '/privacy' },
+                { label: 'Legal Informations', href: '/legal' }
+            ],
+            copyrightYear: 2025
+        });
+    </script>
+
+    <!-- Article Page JavaScript -->
+    <script>
+        // Articles data
+        const articlesData = {
+            'new-pvd-coatings': {
+                title: 'New PVD Coatings: we love colors, you too?',
+                category: 'Innovation',
+                date: '15 Mars 2024',
+                readTime: '5 min',
+                author: 'PD2i Team',
+                image: 'assets/images/news/new-pvd-coatings.jpg',
+                content: `
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Performance equals boring industrial design? The new PD2i decorative PVD coatings prove the opposite. Discover our innovative color solutions that combine exceptional performance with aesthetic appeal, revolutionizing the way we think about industrial coating applications.</p>
+                    
+                    <p>Dans un monde où l'esthétique et la performance doivent coexister, PD2i repousse les limites de ce qui est possible avec les revêtements PVD. Nos nouvelles solutions colorées offrent non seulement une protection exceptionnelle, mais transforment également l'apparence des composants industriels.</p>
+                    
+                    <h2 id="technology">Technologie Révolutionnaire</h2>
+                    <p>Nos revêtements PVD colorés utilisent une technologie de pointe qui permet d'obtenir une large gamme de couleurs tout en maintenant les propriétés mécaniques exceptionnelles des revêtements traditionnels.</p>
+                    
+                    <h3>Avantages clés :</h3>
+                    <ul>
+                        <li>Résistance à l'usure exceptionnelle</li>
+                        <li>Stabilité des couleurs dans le temps</li>
+                        <li>Compatibilité avec diverses applications industrielles</li>
+                        <li>Respect de l'environnement</li>
+                    </ul>
+                    
+                    <h2 id="applications">Applications Industrielles</h2>
+                    <p>Ces nouveaux revêtements colorés trouvent leur application dans de nombreux secteurs :</p>
+                    
+                    <ul>
+                        <li><strong>Outillage de précision</strong> : Identification visuelle des outils</li>
+                        <li><strong>Composants automobiles</strong> : Esthétique et performance</li>
+                        <li><strong>Dispositifs médicaux</strong> : Codage couleur pour la sécurité</li>
+                        <li><strong>Électronique</strong> : Design et protection</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">Conclusion</h2>
+                    <p>Les nouveaux revêtements PVD colorés de PD2i marquent une révolution dans l'industrie des traitements de surface. En combinant performance technique et esthétique, nous ouvrons de nouvelles possibilités pour nos clients dans tous les secteurs d'activité.</p>
+                    
+                    <p>Contactez nos experts pour découvrir comment ces innovations peuvent transformer vos applications industrielles.</p>
+                `
+            },
+            'expanding-horizons': {
+                title: 'Expanding Horizons: DLC coating',
+                category: 'Technology',
+                date: '10 Mars 2024',
+                readTime: '3 min',
+                author: 'PD2i Team',
+                image: 'assets/images/news/expanding-horizons.png',
+                content: `
+                    <h2 id="introduction">Introduction au DLC</h2>
+                    <p>PT Prima Nano Coating pionnier des revêtements avancés. Nous explorons les nouvelles frontières du revêtement DLC (Diamond-Like Carbon) et ses applications innovantes dans l'industrie moderne.</p>
+                    
+                    <p>Le revêtement DLC représente une technologie révolutionnaire qui ouvre de nouveaux horizons dans le domaine des traitements de surface industriels.</p>
+                    
+                    <h2 id="technology">Qu'est-ce que le DLC ?</h2>
+                    <p>Le Diamond-Like Carbon (DLC) est un revêtement amorphe qui combine les propriétés exceptionnelles du diamant avec la flexibilité du carbone graphite.</p>
+                    
+                    <h3>Propriétés remarquables :</h3>
+                    <ul>
+                        <li>Dureté exceptionnelle proche du diamant</li>
+                        <li>Coefficient de friction ultra-faible</li>
+                        <li>Résistance chimique excellente</li>
+                        <li>Biocompatibilité</li>
+                    </ul>
+                    
+                    <h2 id="applications">Applications Innovantes</h2>
+                    <p>Le revêtement DLC trouve des applications dans de nombreux domaines :</p>
+                    
+                    <ul>
+                        <li><strong>Industrie automobile</strong> : Composants moteur haute performance</li>
+                        <li><strong>Médical</strong> : Implants et instruments chirurgicaux</li>
+                        <li><strong>Horlogerie</strong> : Composants de précision</li>
+                        <li><strong>Aérospatiale</strong> : Pièces critiques</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">L'Avenir avec PD2i</h2>
+                    <p>Chez PD2i, nous continuons à développer et perfectionner la technologie DLC pour répondre aux défis industriels de demain. Nos solutions DLC représentent l'avenir des revêtements haute performance.</p>
+                `
+            },
+            'nano4energy': {
+                title: 'Launches State-of-the-art Energy Solutions',
+                category: 'Innovation',
+                date: '5 Mars 2024',
+                readTime: '4 min',
+                author: 'PD2i Team',
+                image: 'assets/images/news/nano4energy.png',
+                content: `
+                    <h2 id="introduction">Innovation Énergétique</h2>
+                    <p>PD2i est fier d'annoncer l'inauguration de sa solution énergétique de pointe. Une innovation majeure qui révolutionne l'efficacité énergétique dans les processus de revêtement industriel.</p>
+                    
+                    <p>Cette nouvelle technologie réduit significativement l'empreinte carbone de nos équipements tout en améliorant leurs performances.</p>
+                    
+                    <h2 id="technology">Technologie Avancée</h2>
+                    <p>Nos nouvelles solutions énergétiques intègrent des technologies de pointe pour optimiser la consommation d'énergie :</p>
+                    
+                    <h3>Innovations clés :</h3>
+                    <ul>
+                        <li>Systèmes de récupération d'énergie</li>
+                        <li>Contrôle intelligent de la consommation</li>
+                        <li>Optimisation des cycles de production</li>
+                        <li>Monitoring en temps réel</li>
+                    </ul>
+                    
+                    <h2 id="applications">Impact Environnemental</h2>
+                    <p>Ces solutions permettent de :</p>
+                    
+                    <ul>
+                        <li><strong>Réduire la consommation énergétique</strong> jusqu'à 30%</li>
+                        <li><strong>Diminuer les émissions CO2</strong> de manière significative</li>
+                        <li><strong>Optimiser les coûts opérationnels</strong> pour nos clients</li>
+                        <li><strong>Améliorer la durabilité</strong> des processus industriels</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">Engagement Durable</h2>
+                    <p>Avec ces innovations, PD2i réaffirme son engagement envers le développement durable et l'excellence technologique. Nous continuons à développer des solutions qui allient performance et respect de l'environnement.</p>
+                `
+            },
+            'imtex-2019': {
+                title: 'IMTEX 2019: 24th January',
+                category: 'Événement',
+                date: '24 Janvier 2019',
+                readTime: '2 min',
+                author: 'PD2i Team',
+                image: 'assets/images/news/imtex-2019.png',
+                content: `
+                    <h2 id="introduction">Rencontre à IMTEX 2019</h2>
+                    <p>PD2i vous rencontre au salon Indian Machine and Tool Exhibition, Bangalore Inde. PD2i, la solution pour vos besoins en revêtement industriel.</p>
+                    
+                    <p>Découvrez nos dernières innovations et technologies sur notre stand lors de cet événement majeur de l'industrie.</p>
+                    
+                    <h2 id="technology">Nos Présentations</h2>
+                    <p>Lors de ce salon, nous avons présenté :</p>
+                    
+                    <h3>Technologies exposées :</h3>
+                    <ul>
+                        <li>Équipements PVD dernière génération</li>
+                        <li>Solutions de revêtement pour l'outillage</li>
+                        <li>Innovations en matière de productivité</li>
+                        <li>Services de support technique</li>
+                    </ul>
+                    
+                    <h2 id="applications">Rencontres Clients</h2>
+                    <p>IMTEX 2019 a été l'occasion de rencontrer de nombreux clients et partenaires :</p>
+                    
+                    <ul>
+                        <li><strong>Fabricants d'outils</strong> : Solutions spécialisées</li>
+                        <li><strong>Industriels locaux</strong> : Adaptation aux besoins régionaux</li>
+                        <li><strong>Distributeurs</strong> : Expansion du réseau</li>
+                        <li><strong>Centres de recherche</strong> : Collaborations techniques</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">Succès de l'Événement</h2>
+                    <p>IMTEX 2019 a été un succès majeur pour PD2i, renforçant notre présence sur le marché indien et ouvrant de nouvelles opportunités de collaboration dans la région.</p>
+                `
+            },
+            'industry-4-0': {
+                title: 'Intégration Industrie 4.0 dans nos Solutions PVD',
+                category: 'Industrie',
+                date: '1 Mars 2024',
+                readTime: '6 min',
+                author: 'PD2i Team',
+                image: 'assets/images/coating-equipments/pvd-coating-chamber-3d.jpg',
+                content: `
+                    <h2 id="introduction">L'Industrie 4.0 chez PD2i</h2>
+                    <p>L'avenir de l'industrie passe par la digitalisation. Découvrez comment PD2i intègre les technologies de l'Industrie 4.0 dans ses équipements de revêtement PVD pour une production plus intelligente et plus efficace.</p>
+                    
+                    <p>Cette révolution technologique transforme nos processus de fabrication et offre de nouvelles possibilités à nos clients.</p>
+                    
+                    <h2 id="technology">Technologies Intégrées</h2>
+                    <p>Nos équipements PVD nouvelle génération intègrent des technologies avancées :</p>
+                    
+                    <h3>Innovations clés :</h3>
+                    <ul>
+                        <li>IoT (Internet des Objets) pour la connectivité</li>
+                        <li>Intelligence artificielle pour l'optimisation</li>
+                        <li>Analyse prédictive pour la maintenance</li>
+                        <li>Interface utilisateur intuitive</li>
+                    </ul>
+                    
+                    <h2 id="applications">Avantages Concrets</h2>
+                    <p>L'intégration de l'Industrie 4.0 apporte de nombreux bénéfices :</p>
+                    
+                    <ul>
+                        <li><strong>Productivité accrue</strong> : Optimisation automatique des paramètres</li>
+                        <li><strong>Qualité constante</strong> : Contrôle en temps réel</li>
+                        <li><strong>Maintenance prédictive</strong> : Réduction des arrêts non planifiés</li>
+                        <li><strong>Traçabilité complète</strong> : Suivi de chaque étape</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">L'Avenir de la Production</h2>
+                    <p>Avec l'Industrie 4.0, PD2i ouvre la voie vers une production plus intelligente, plus efficace et plus durable. Nos clients bénéficient d'une technologie de pointe qui transforme leurs processus industriels.</p>
+                `
+            },
+            'performance-analytics': {
+                title: 'Analytics Avancés de Performance',
+                category: 'Technology',
+                date: '25 Février 2024',
+                readTime: '5 min',
+                author: 'PD2i Team',
+                image: 'assets/images/pvd-cutting-tools/Performance.png',
+                content: `
+                    <h2 id="introduction">Révolution des Analytics</h2>
+                    <p>Les nouveaux outils d'analyse de performance PD2i permettent un suivi en temps réel de la qualité des revêtements. Une innovation qui garantit une qualité constante et optimise les processus de production.</p>
+                    
+                    <p>Cette technologie transforme la façon dont nous surveillons et optimisons nos processus de revêtement.</p>
+                    
+                    <h2 id="technology">Technologie d'Analyse</h2>
+                    <p>Nos outils d'analytics intègrent des technologies de pointe :</p>
+                    
+                    <h3>Fonctionnalités avancées :</h3>
+                    <ul>
+                        <li>Surveillance en temps réel des paramètres</li>
+                        <li>Analyse statistique avancée</li>
+                        <li>Alertes automatiques en cas de dérive</li>
+                        <li>Rapports détaillés et personnalisables</li>
+                    </ul>
+                    
+                    <h2 id="applications">Applications Pratiques</h2>
+                    <p>Ces outils trouvent leur application dans de nombreux domaines :</p>
+                    
+                    <ul>
+                        <li><strong>Contrôle qualité</strong> : Détection précoce des anomalies</li>
+                        <li><strong>Optimisation process</strong> : Amélioration continue</li>
+                        <li><strong>Maintenance prédictive</strong> : Anticipation des besoins</li>
+                        <li><strong>Certification</strong> : Documentation complète</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">Performance Optimisée</h2>
+                    <p>Avec ces nouveaux outils d'analytics, PD2i offre à ses clients une visibilité sans précédent sur leurs processus de revêtement, garantissant une qualité constante et une productivité maximale.</p>
+                `
+            },
+            'sustainable-coatings': {
+                title: 'Solutions de Revêtement Durables',
+                category: 'Innovation',
+                date: '20 Février 2024',
+                readTime: '4 min',
+                author: 'PD2i Team',
+                image: 'assets/images/pvd-molds-and-dies/Triangle.png',
+                content: `
+                    <h2 id="introduction">Engagement Environnemental</h2>
+                    <p>L'engagement environnemental de PD2i se traduit par des solutions de revêtement plus durables et respectueuses de l'environnement. Découvrez nos innovations en matière de développement durable.</p>
+                    
+                    <p>Nous développons des technologies qui allient performance exceptionnelle et respect de l'environnement.</p>
+                    
+                    <h2 id="technology">Technologies Vertes</h2>
+                    <p>Nos solutions durables intègrent des innovations écologiques :</p>
+                    
+                    <h3>Innovations environnementales :</h3>
+                    <ul>
+                        <li>Réduction de la consommation énergétique</li>
+                        <li>Élimination des substances nocives</li>
+                        <li>Recyclage des matériaux</li>
+                        <li>Optimisation des ressources</li>
+                    </ul>
+                    
+                    <h2 id="applications">Impact Positif</h2>
+                    <p>Nos solutions durables offrent de nombreux avantages :</p>
+                    
+                    <ul>
+                        <li><strong>Réduction CO2</strong> : Diminution de l'empreinte carbone</li>
+                        <li><strong>Économies d'énergie</strong> : Processus plus efficaces</li>
+                        <li><strong>Durabilité accrue</strong> : Revêtements plus résistants</li>
+                        <li><strong>Conformité réglementaire</strong> : Respect des normes environnementales</li>
+                    </ul>
+                    
+                    <h2 id="conclusion">Avenir Durable</h2>
+                    <p>Avec ces innovations, PD2i démontre qu'il est possible de concilier performance industrielle et responsabilité environnementale. Nous construisons ensemble un avenir plus durable pour l'industrie.</p>
+                `
+            }
+        };
+
+        // Get article ID from URL parameters
+        function getArticleId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id') || 'new-pvd-coatings';
+        }
+
+        // Load article content
+        function loadArticle() {
+            const articleId = getArticleId();
+            const article = articlesData[articleId];
+            
+            if (!article) {
+                // Redirect to news page if article not found
+                window.location.href = 'news.html';
+                return;
+            }
+            
+            // Update page title
+            document.getElementById('pageTitle').textContent = article.title + ' - PD2i';
+            document.title = article.title + ' - PD2i';
+            
+            // Update meta description
+            document.querySelector('meta[name="description"]').content = article.title + ' - ' + article.content.substring(0, 150) + '...';
+            
+            
+            // Update article content
+            document.getElementById('articleCategory').textContent = article.category;
+            document.getElementById('articleTitle').textContent = article.title;
+            document.getElementById('articleMeta').innerHTML = `
+                <span>${article.date}</span>
+                <span>•</span>
+                <span>${article.readTime} de lecture</span>
+                <span>•</span>
+                <span>Par ${article.author}</span>
+            `;
+            document.getElementById('articleImage').src = article.image;
+            document.getElementById('articleImage').alt = article.title;
+            document.getElementById('articleContent').innerHTML = article.content;
+            
+            // Update category badge color
+            const categoryElement = document.getElementById('articleCategory');
+            const categoryColors = {
+                'Technology': 'bg-green-100 text-green-800 border-green-200',
+                'Innovation': 'bg-purple-100 text-purple-800 border-purple-200',
+                'Événement': 'bg-orange-100 text-orange-800 border-orange-200',
+                'Industrie': 'bg-blue-100 text-blue-800 border-blue-200'
+            };
+            
+            categoryElement.className = `article-badge px-3 py-1 rounded text-sm font-semibold uppercase ${categoryColors[article.category] || 'bg-gray-100 text-gray-800 border-gray-200'}`;
+            
+            // Load related articles
+            loadRelatedArticles(articleId);
+        }
+
+        // Load related articles
+        function loadRelatedArticles(currentArticleId) {
+            const relatedContainer = document.getElementById('relatedArticles');
+            const allArticles = Object.keys(articlesData).filter(id => id !== currentArticleId);
+            const relatedArticles = allArticles.slice(0, 3); // Show 3 related articles
+            
+            relatedContainer.innerHTML = relatedArticles.map(articleId => {
+                const article = articlesData[articleId];
+                return `
+                    <article class="related-article bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="${article.image}" 
+                             alt="${article.title}" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <div class="text-xs text-gray-500 mb-2">${article.category} • ${article.date}</div>
+                            <h3 class="text-lg font-semibold mb-2 line-clamp-2">${article.title}</h3>
+                            <a href="article.html?id=${articleId}" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                Lire l'article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // Share functions
+        function shareArticle(platform) {
+            const url = window.location.href;
+            const title = document.getElementById('articleTitle').textContent;
+            
+            switch(platform) {
+                case 'linkedin':
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+                    break;
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank');
+                    break;
+                case 'email':
+                    window.location.href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent('Découvrez cet article : ' + url)}`;
+                    break;
+            }
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Lien copié dans le presse-papiers !');
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadArticle();
+            
+            // Smooth scroll for table of contents
+            document.querySelectorAll('#tableOfContents a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
