@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services PD2i - Consulting & Services, Formation client et transfert de savoir-faire. Solutions personnalisées pour l'industrie PVD.">
+    <meta name="keywords" content="PD2i Services, Consulting, Formation PVD, Transfert technologique, Support technique, Training">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="components/Header.js" as="script" fetchpriority="high">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Services PD2i - Consulting & Support">
+    <meta property="og:description" content="PD2i, a unique combination of experience and expertise. Consulting, training and technology transfer services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pd2i.com/services">
+    
+    <title>Services - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* Hero Section Background */
+        .hero-services {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+        
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+        
+        /* Coating Placeholder */
+        .coating-placeholder {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #dee2e6;
+            transition: all 0.3s ease;
+        }
+        
+        .coating-placeholder:hover {
+            border-color: #0083CA;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+        }
+        
+        .placeholder-content {
+            max-width: 400px;
+        }
+        
+        .placeholder-icon {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .coating-placeholder:hover .placeholder-icon {
+            color: #0083CA;
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .placeholder-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        
+        .placeholder-text {
+            font-size: 1rem;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .placeholder-note {
+            color: #adb5bd;
+            font-style: italic;
+        }
+        
+        /* Training Section Styles */
+        .training-section {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            color: white;
+        }
+        
+        .training-content {
+            padding: 3rem 2rem;
+        }
+        
+        .training-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .training-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            border: 3px solid rgba(255,255,255,0.2);
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 131, 202, 0.3);
+        }
+        
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: white;
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.2);
+        }
+        
+        .quote-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.95);
+            line-height: 1.6;
+            margin-top: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        /* Optimize Success Section */
+        .optimize-section {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .optimize-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .optimize-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .training-title,
+            .optimize-title {
+                font-size: 2rem;
+            }
+            
+            .coating-placeholder {
+                padding: 2rem 1rem;
+                min-height: 250px;
+            }
+            
+            .placeholder-title {
+                font-size: 1.25rem;
+            }
+            
+            .placeholder-text {
+                font-size: 0.9rem;
+            }
+            
+            .placeholder-icon svg {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .quote-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .training-title,
+            .optimize-title {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+            
+            .coating-placeholder {
+                padding: 1.5rem 0.75rem;
+                min-height: 200px;
+            }
+            
+            .placeholder-title {
+                font-size: 1.1rem;
+            }
+            
+            .placeholder-text {
+                font-size: 0.85rem;
+            }
+            
+            .placeholder-icon svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-roboto bg-gray-50">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-services py-16 lg:py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center text-white relative z-10">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6">Consulting & Services</h1>
+                    <p class="text-xl lg:text-2xl opacity-90 leading-relaxed max-w-4xl mx-auto mb-8">
+                        PD2i, a unique combination of experience and expertise
+                    </p>
+                    <div class="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                        <p class="text-lg font-medium uppercase tracking-wide">
+                            YOUR PARTNER WHEN IT IS ALL ABOUT PERFORMANCE
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Tribological Solutions Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                        <!-- Left Column: Text Content -->
+                        <div class="scroll-animate">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+                                Advanced Tribological and<br>
+                                Functional Coatings Solutions
+                            </h2>
+                            <h3 class="text-xl text-amber-600 font-semibold mb-8">
+                                Introducing Our Madrid Competence Center
+                            </h3>
+                            
+                            <div class="bg-gray-100 p-6 rounded-lg mb-8">
+                                <h4 class="text-lg font-bold text-gray-800 mb-4">
+                                    From application knowledge to effective and efficient solutions
+                                </h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Everything at PD2i starts with an in-depth analysis of the application. Once the requirements are 
+                                    completely understood, PD2i starts developing the best solution for the specific case from 
+                                    individual machines to complete turnkey operations.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column: Coating Diagram -->
+                        <div class="scroll-animate delay-200">
+                            <div class="service-card">
+                                <h3 class="text-xl font-bold text-amber-600 mb-6 text-center">
+                                    We Built up your Coating
+                                </h3>
+                                
+                                <div class="coating-placeholder">
+                                    <div class="placeholder-content">
+                                        <div class="placeholder-icon">
+                                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                                <polyline points="7.5,4.21 12,6.81 16.5,4.21"/>
+                                                <polyline points="7.5,19.79 7.5,14.6 3,12"/>
+                                                <polyline points="21,12 16.5,14.6 16.5,19.79"/>
+                                            </svg>
+                                        </div>
+                                        <h4 class="placeholder-title">Coating Build-up Diagram</h4>
+                                        <p class="placeholder-text">
+                                            Interactive 3D visualization showing the relationship between input parameters and coating variables
+                                        </p>
+                                        <div class="placeholder-note">
+                                            <small>Diagram will be implemented here</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Section -->
+        <section class="training-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <!-- Left Column: Training Content -->
+                        <div class="training-content scroll-animate">
+                            <h2 class="training-title">
+                                CUSTOMER<br>
+                                TRAINING AND KNOW<br>
+                                HOW TRANSFER
+                            </h2>
+                            <p class="training-text">
+                                Comprehensive training and documentation is part of each single PD2i equipment build and 
+                                transferred to customer. The first training takes place at PD2i's facility in Germany. The second 
+                                training is carried out at our customer's production site after installation.
+                            </p>
+                            <p class="training-text">
+                                The training includes operating the machine as well as application specific knowledge.
+                            </p>
+                            <p class="training-text">
+                                Training for turnkey operations include all pre- and post treatment processes, quality control, 
+                                workflow and administration, as well as coating development.
+                            </p>
+                            <p class="training-text">
+                                <strong>Guaranteed communication:</strong> We offer training in a variety of languages including English, 
+                                German, French, Chinese or Korean.
+                            </p>
+                        </div>
+                        
+                        <!-- Right Column: Quote -->
+                        <div class="scroll-animate delay-300">
+                            <div class="quote-section">
+                                <h3 class="quote-title">OPTIMIZE SUCCESS</h3>
+                                <p class="quote-text">
+                                    "Give a man a fish and he will eat for a day. Teach him to fish and 
+                                    he will eat for a lifetime."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optimize Success Section -->
+        <section class="optimize-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center scroll-animate">
+                    <h2 class="optimize-title mb-6">
+                        OPTIMIZE SUCCESS
+                    </h2>
+                    <p class="optimize-text">
+                        We strive for the perfect solution which will offer our customers the decisive, added value 
+                        for themselves and their product
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center scroll-animate">
+                    <div class="service-card">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-blue mb-6">
+                            Ready to Optimize Your Success?
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            Experience the PD2i difference with our comprehensive consulting and training services. 
+                            Let us help you achieve exceptional performance with our proven expertise and personalized approach.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="contacts.html" 
+                               class="bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:transform hover:scale-105">
+                                Contact Our Experts
+                            </a>
+                            <a href="index.html" 
+                               class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white font-semibold px-8 py-3 rounded transition-all duration-200">
+                                Explore Our Solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Initialize Components -->
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script>
+        // Initialize Header with navigation items
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: '#' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: '#', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                { label: 'Services', href: 'services.html', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+            ]
+        });
+        
+        // Initialize Footer with configuration
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: 'about-us.html' },
+                { label: 'Services', href: 'services.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Downloads', href: '/downloads' },
+                { label: 'News', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: '/cookies' },
+                { label: 'Privacy policy', href: '/privacy' },
+                { label: 'Legal Informations', href: '/legal' }
+            ],
+            copyrightYear: 2025
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Language change listener
+        document.addEventListener('languageChanged', (event) => {
+            console.log('Language changed to:', event.detail.language);
+        });
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
