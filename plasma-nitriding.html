@@ -53,7 +53,7 @@
     <style>
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 50%, #1976D2 100%);
+            background: url('assets/images/plasma-nitriding/plasma.png') center center / cover no-repeat;
             min-height: 400px;
             position: relative;
             display: flex;
@@ -100,7 +100,8 @@
         
         .hero-image {
             flex: 0 0 auto;
-            max-width: 400px;
+            max-width: 500px;
+            
         }
         
         .hero-image img {
@@ -140,22 +141,22 @@
         }
         
         .download-btn {
-            background: linear-gradient(135deg, #00BCD4, #0097A7);
+            background: #0083CA;                    /* Couleur PD2i bleue */
             color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 0.375rem;
+            padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
+            border-radius: 0.5rem;                 /* Border-radius comme btn-primary */
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
             display: inline-block;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 2rem;                      /* Espacement ajouté */
         }
-        
+
         .download-btn:hover {
-            background: linear-gradient(135deg, #0097A7, #00695C);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background: #006ba3;                   /* Couleur hover */
+            transform: translateY(-2px);           /* Effet de levée */
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
         }
         
         /* Advantages Section */
@@ -178,11 +179,11 @@
         }
         
         .advantages-content h2 {
+            color: #0083CA;           /* Bleu PD2i */
+            text-align: left;         /* Alignement à gauche */
+            margin-bottom: 2rem;
             font-size: 2rem;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 1.5rem;
-            text-align: center;
         }
         
         .advantages-list {
@@ -226,7 +227,7 @@
         
         .standard-sizes-container {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -238,8 +239,9 @@
         }
         
         .sizes-diagram img {
-            width: 100%;
+            width: 80%;
             height: auto;
+            max-width: 350px;
         }
         
         .sizes-content {
@@ -337,7 +339,7 @@
                 
                 <div class="hero-image">
                     <!-- Placeholder for plasma nitriding equipment image -->
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZjVmNWY1Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iODAiIGZpbGw9IiNlMGUwZTAiLz4KPGV4dCB4PSIyMDAiIHk9IjE1NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QbGFzbWEgTml0cmlkaW5nPC90ZXh0Pgo8dGV4dCB4PSIyMDAiIHk9IjE3MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FcXVpcG1lbnQ8L3RleHQ+Cjwvc3ZnPgo=" alt="Plasma Nitriding Equipment" />
+                    <img src="assets/images/plasma-nitriding/plasma-nitriding-equipment.png" alt="Plasma Nitriding Equipment" />
                 </div>
             </div>
         </section>
@@ -358,7 +360,7 @@
                 
                 <div class="advantages-image">
                     <!-- Placeholder for industrial facility image -->
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCA0IDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZjBmMGYwIi8+CjxyZWN0IHg9IjUwIiB5PSIxMDAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZGRkIiBzdHJva2U9IiNiYmIiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSIxMDAiIHk9IjUwIiB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIGZpbGw9IiNjY2MiLz4KPHA+dGV4dCB4PSIyNTAiIHk9IjE1NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbmR1c3RyaWFsIEZhY2lsaXR5PC90ZXh0Pgo8L3N2Zz4K" alt="Industrial Facility" />
+                    <img src="assets/images/plasma-nitriding/industrial-facility.jpeg" alt="Industrial Facility" />
                 </div>
             </div>
         </section>
@@ -368,7 +370,7 @@
             <div class="standard-sizes-container">
                 <div class="sizes-diagram">
                     <!-- Placeholder for technical diagram -->
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlZWUiLz4KPHJlY3QgeD0iMTAwIiB5PSI1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjEyMCIgeT0iMTAwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjEiLz4KPHA+dGV4dCB4PSIyMDAiIHk9IjM4MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UZWNobmljYWwgRGlhZ3JhbTwvdGV4dD4KPC9zdmc+Cg==" alt="Technical Diagram" />
+                    <img src="assets/images/plasma-nitriding/technical-diagram.png" alt="Technical Diagram" />
                 </div>
                 
                 <div class="sizes-content">
@@ -396,7 +398,39 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize Header
-            window.headerInstance = new Header();
+            window.headerInstance = new Header({
+                logoSrc: 'assets/images/logo-pd2i.png',
+                logoAlt: 'PD2i Logo',
+                currentLang: 'EN',
+                languages: ['EN', 'FR'],
+                navigationItems: [
+                    { label: 'Home', href: 'index.html', type: 'link' },
+                    {
+                        label: 'Coating Equipments',
+                        labelCompact: 'Coating',
+                        href: 'coating-equipments.html',
+                        type: 'dropdown',
+                        items: [
+                            { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                            { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                            { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                        ]
+                    },
+                    { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+                    {
+                        label: 'Turnkey',
+                        type: 'dropdown',
+                        items: [
+                            { label: 'Turnkey Solutions', href: '#' },
+                            { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                        ]
+                    },
+                    { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                    { label: 'Services', href: 'services.html', type: 'link' },
+                    { label: 'News', href: 'news.html', type: 'link' },
+                    { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+                ]
+            });
             
             // Initialize Footer
             const footer = new Footer();

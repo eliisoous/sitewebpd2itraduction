@@ -20,7 +20,7 @@ class Header {
     
     getDefaultNavigation() {
         return [
-            { label: 'Home', href: '#', type: 'link' },
+            { label: 'Home', href: 'index.html', type: 'link' },
             {
                 label: 'Coating Equipments',
                 labelCompact: 'Coating',
@@ -41,8 +41,9 @@ class Header {
                 ]
             },
             { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
-            { label: 'Services', href: '#', type: 'link' },
-            { label: 'About us', labelCompact: 'About', href: '#', type: 'link' }
+            { label: 'Services', href: 'services.html', type: 'link' },
+            { label: 'News', href: 'news.html', type: 'link' },
+            { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
         ];
     }
     
