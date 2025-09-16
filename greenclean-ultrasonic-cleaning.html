@@ -326,12 +326,32 @@
         }
         
         /* Animation delays */
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
+        .delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; transition-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; transition-delay: 0.6s; }
+        
+        /* Download button - same as Plasma Nitriding */
+        .download-btn {
+            background: #0083CA;                    /* Couleur PD2i bleue */
+            color: white;
+            padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
+            border-radius: 0.5rem;                 /* Border-radius comme btn-primary */
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 2rem;                      /* Espacement ajouté */
+        }
+
+        .download-btn:hover {
+            background: #006ba3;                   /* Couleur hover */
+            transform: translateY(-2px);           /* Effet de levée */
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
+        }
         
         
         /* Responsive Design */
@@ -717,9 +737,7 @@
         <!-- Download Section -->
         <section class="py-12 text-center bg-white">
             <div class="scroll-animate delay-300">
-                <a href="#" class="bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:transform hover:scale-105 inline-block">
-                    Download Greenclean Ultrasonic Cleaning
-                </a>
+                <a href="#" class="download-btn">Download Greenclean Ultrasonic Cleaning</a>
             </div>
         </section>
     </main>
@@ -769,8 +787,40 @@
                 ]
             });
             
-            // Initialize Footer
-            const footer = new Footer();
+            // Initialize Footer with complete configuration
+            window.footerInstance = new Footer({
+                logoSrc: 'assets/images/logo-pd2i-footer.png',
+                logoAlt: 'PD2i Logo',
+                slogan: 'Your partner when it is all about performance',
+                companyInfo: {
+                    name: 'PD2i FRANCE',
+                    address: '86, bd Malesherbes',
+                    city: '75008 Paris',
+                    phone: '+33 (0) 153 75 45 05',
+                    email: 'admin@pd2i.com'
+                },
+                navigationLinks: [
+                    { label: 'About us', href: 'about-us.html' },
+                    { label: 'Services', href: 'services.html' },
+                    { label: 'Contact', href: 'contacts.html' },
+                    { label: 'Downloads', href: '/downloads' },
+                    { label: 'News', href: 'news.html' }
+                ],
+                socialLinks: [
+                    { 
+                        platform: 'linkedin', 
+                        href: 'https://linkedin.com/company/pd2i',
+                        icon: 'linkedin',
+                        label: 'Follow us'
+                    }
+                ],
+                bottomLinks: [
+                    { label: 'Cookies', href: '/cookies' },
+                    { label: 'Privacy policy', href: '/privacy' },
+                    { label: 'Legal Informations', href: '/legal' }
+                ],
+                copyrightYear: 2025
+            });
             
             console.log('Greenclean Ultrasonic Cleaning page loaded successfully');
             
