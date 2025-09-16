@@ -305,7 +305,9 @@
             .sizes-content h2 {
                 font-size: 1.5rem;
             }
+            
         }
+
     </style>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
@@ -398,42 +400,42 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize Header
-            window.headerInstance = new Header({
-                logoSrc: 'assets/images/logo-pd2i.png',
-                logoAlt: 'PD2i Logo',
-                currentLang: 'EN',
-                languages: ['EN', 'FR'],
-                navigationItems: [
-                    { label: 'Home', href: 'index.html', type: 'link' },
-                    {
-                        label: 'Coating Equipments',
-                        labelCompact: 'Coating',
-                        href: 'coating-equipments.html',
-                        type: 'dropdown',
-                        items: [
-                            { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
-                            { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
-                            { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
-                        ]
-                    },
-                    { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
-                    {
-                        label: 'Turnkey',
-                        type: 'dropdown',
-                        items: [
-                            { label: 'Turnkey Solutions', href: '#' },
-                            { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
-                        ]
-                    },
-                    { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
-                    { label: 'Services', href: 'services.html', type: 'link' },
-                    { label: 'News', href: 'news.html', type: 'link' },
-                    { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
-                ]
-            });
+            window.headerInstance = new Header();
             
-            // Initialize Footer
-            const footer = new Footer();
+            // Initialize Footer with complete configuration
+            window.footerInstance = new Footer({
+                logoSrc: 'assets/images/logo-pd2i-footer.png',
+                logoAlt: 'PD2i Logo',
+                slogan: 'Your partner when it is all about performance',
+                companyInfo: {
+                    name: 'PD2i FRANCE',
+                    address: '86, bd Malesherbes',
+                    city: '75008 Paris',
+                    phone: '+33 (0) 153 75 45 05',
+                    email: 'admin@pd2i.com'
+                },
+                navigationLinks: [
+                    { label: 'About us', href: 'about-us.html' },
+                    { label: 'Services', href: 'services.html' },
+                    { label: 'Contact', href: 'contacts.html' },
+                    { label: 'Downloads', href: '/downloads' },
+                    { label: 'News', href: 'news.html' }
+                ],
+                socialLinks: [
+                    { 
+                        platform: 'linkedin', 
+                        href: 'https://linkedin.com/company/pd2i',
+                        icon: 'linkedin',
+                        label: 'Follow us'
+                    }
+                ],
+                bottomLinks: [
+                    { label: 'Cookies', href: '/cookies' },
+                    { label: 'Privacy policy', href: '/privacy' },
+                    { label: 'Legal Informations', href: '/legal' }
+                ],
+                copyrightYear: 2025
+            });
             
             console.log('Plasma Nitriding page loaded successfully');
         });
