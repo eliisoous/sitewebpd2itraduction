@@ -308,6 +308,26 @@
             
         }
 
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+
     </style>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
@@ -318,7 +338,7 @@
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text scroll-animate">
                     <h1>Low cost Plasma Nitriding</h1>
                     <h2>HPPN – High Pulsed Plasma Nitriding</h2>
                     <p>
@@ -339,7 +359,7 @@
                     </div>
                 </div>
                 
-                <div class="hero-image">
+                <div class="hero-image scroll-animate delay-200">
                     <!-- Placeholder for plasma nitriding equipment image -->
                     <img src="assets/images/plasma-nitriding/plasma-nitriding-equipment.png" alt="Plasma Nitriding Equipment" />
                 </div>
@@ -349,7 +369,7 @@
         <!-- Advantages Section -->
         <section class="advantages-section">
             <div class="advantages-container">
-                <div class="advantages-content">
+                <div class="advantages-content scroll-animate">
                     <h2>Advantages of Plasma Nitriding</h2>
                     <ul class="advantages-list">
                         <li>Extremely low running cost (low energy and gas consumption)</li>
@@ -360,7 +380,7 @@
                     </ul>
                 </div>
                 
-                <div class="advantages-image">
+                <div class="advantages-image scroll-animate delay-300">
                     <!-- Placeholder for industrial facility image -->
                     <img src="assets/images/plasma-nitriding/industrial-facility.jpeg" alt="Industrial Facility" />
                 </div>
@@ -370,12 +390,12 @@
         <!-- Standard Sizes Section -->
         <section class="standard-sizes-section">
             <div class="standard-sizes-container">
-                <div class="sizes-diagram">
+                <div class="sizes-diagram scroll-animate delay-200">
                     <!-- Placeholder for technical diagram -->
                     <img src="assets/images/plasma-nitriding/technical-diagram.png" alt="Technical Diagram" />
                 </div>
                 
-                <div class="sizes-content">
+                <div class="sizes-content scroll-animate delay-400">
                     <h2>Standard sizes</h2>
                     <ul class="sizes-list">
                         <li>Bell furnace HPPN 600 x 1000</li>
@@ -436,8 +456,27 @@
                 ],
                 copyrightYear: 2025
             });
+
+            // Scroll animations - same as Services page
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all scroll-animate elements
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
             
-            console.log('Plasma Nitriding page loaded successfully');
+            console.log('Plasma Nitriding page loaded successfully with scroll animations');
         });
     </script>
 </body>

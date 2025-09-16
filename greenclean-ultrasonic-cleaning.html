@@ -53,12 +53,54 @@
     <style>
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #00BCD4 0%, #0097A7 50%, #00695C 100%);
-            min-height: 500px;
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 20%, #66BB6A 40%, #81C784 60%, #A5D6A7 80%, #00BCD4 100%);
+            min-height: 400px;
             position: relative;
             display: flex;
             align-items: center;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
+            background-size: 400% 400%;
+            animation: cleanGradient 8s ease-in-out infinite;
+        }
+        
+        @keyframes cleanGradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        /* Clean bubbles effect */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.08) 3px, transparent 3px),
+                radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.12) 2px, transparent 2px),
+                radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.14) 2.5px, transparent 2.5px);
+            background-size: 100px 100px, 150px 150px, 200px 200px, 180px 180px, 120px 120px, 160px 160px;
+            animation: bubbleFloat 15s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes bubbleFloat {
+            0%, 100% {
+                transform: translateY(0px);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
         }
         
         .hero-content {
@@ -70,6 +112,8 @@
             padding: 0 2rem;
             width: 100%;
             gap: 3rem;
+            position: relative;
+            z-index: 2;
         }
         
         .hero-text {
@@ -78,22 +122,33 @@
         }
         
         .hero-text h1 {
-            font-size: 2.5rem;
+            font-size: 1.875rem;
             font-weight: bold;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
         
         .hero-text h2 {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             margin-bottom: 2rem;
             line-height: 1.4;
             opacity: 0.95;
         }
         
+        /* Responsive font sizes to match News page */
+        @media (min-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.25rem;
+            }
+        }
+        
         .hero-image {
             flex: 1;
-            max-width: 500px;
+            max-width: 650px;
         }
         
         .hero-image img {
@@ -102,10 +157,12 @@
             border-radius: 0.5rem;
         }
         
+        
+        
         /* Process Steps Section */
         .process-steps {
             background: white;
-            padding: 3rem 0;
+            padding: 3rem 0 0 0;
         }
         
         .steps-container {
@@ -222,30 +279,6 @@
             color: #0277BD;
         }
         
-        .download-section {
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        .download-btn {
-            background: linear-gradient(135deg, #0083CA, #0277BD);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.375rem;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1.125rem;
-        }
-        
-        .download-btn:hover {
-            background: linear-gradient(135deg, #0277BD, #01579B);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
         
         /* Responsive Design */
         
@@ -269,8 +302,8 @@
         /* Regular tablets (1024px and below) */
         @media (max-width: 1024px) {
             .hero-section {
-                min-height: 400px;
-                padding: 1.5rem 0;
+                min-height: 350px;
+                padding: 1.25rem 0;
             }
             
             .hero-content {
@@ -279,13 +312,8 @@
                 gap: 1.5rem;
             }
             
-            .hero-text h1 {
-                font-size: 2.25rem;
-            }
             
-            .hero-text h2 {
-                font-size: 1.125rem;
-            }
+            
             
             .steps-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -322,7 +350,7 @@
         /* Small tablets and large phones (768px and below) */
         @media (max-width: 768px) {
             .hero-section {
-                min-height: 350px;
+                min-height: 300px;
                 padding: 1rem 0;
             }
             
@@ -339,18 +367,11 @@
             
             .hero-image {
                 order: 2;
-                max-width: 400px;
+                max-width: 500px;
             }
             
-            .hero-text h1 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
             
-            .hero-text h2 {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
+            
             
             .process-steps {
                 padding: 2rem 0;
@@ -430,18 +451,9 @@
             }
             
             .hero-image {
-                max-width: 320px;
+                max-width: 400px;
             }
             
-            .hero-text h1 {
-                font-size: 1.75rem;
-                line-height: 1.1;
-            }
-            
-            .hero-text h2 {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
-            }
             
             .steps-container {
                 padding: 0 0.75rem;
@@ -504,16 +516,9 @@
         
         /* Very small phones (360px and below) */
         @media (max-width: 360px) {
-            .hero-text h1 {
-                font-size: 1.5rem;
-            }
-            
-            .hero-text h2 {
-                font-size: 0.8rem;
-            }
             
             .hero-image {
-                max-width: 280px;
+                max-width: 350px;
             }
             
             .step-card {
@@ -560,8 +565,8 @@
                 </div>
                 
                 <div class="hero-image">
-                    <!-- Equipment image placeholder -->
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDUwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZjVmNWY1Ii8+CjxyZWN0IHg9IjUwIiB5PSIxMDAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZGRkIiBzdHJva2U9IiNiYmIiIHN0cm9rZS13aWR0aD0iMyIgcng9IjEwIi8+CjxyZWN0IHg9IjEwMCIgeT0iMTUwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwQkNENCIgb3BhY2l0eT0iMC4zIiByeD0iNSIvPgo8Y2lyY2xlIGN4PSIyNTAiIGN5PSIyMDAiIHI9IjMwIiBmaWxsPSIjMDA4M0NBIiBvcGFjaXR5PSIwLjciLz4KPHA+dGV4dCB4PSIyNTAiIHk9IjM1MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iYm9sZCI+R3JlZW5jbGVhbiBVbHRyYXNvbmljIEVxdWlwbWVudDwvdGV4dD4KPC9zdmc+Cg==" alt="Greenclean Ultrasonic Equipment" />
+                    <!-- GreenClean Ultrasonic equipment -->
+                    <img src="assets/images/clean-green/Clean Green 450H.png" alt="GreenClean Ultrasonic Equipment - Clean Green 450H" />
                 </div>
             </div>
         </section>
@@ -592,48 +597,74 @@
                     </div>
                 </div>
                 
-                <div class="text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Achieve Required Technical Cleanliness – Consistently, Reliably, Cost-Effectively</h2>
-                </div>
             </div>
         </section>
 
-        <!-- Greenclean Advantage Section -->
-        <section class="content-section">
-            <div class="content-container">
-                <div class="content-text">
-                    <h2>THE GREENCLEAN ADVANTAGE</h2>
-                    <p class="text-lg text-gray-700 mb-4">Transform your cleaning process with proven technology that delivers:</p>
-                    <ul class="advantages-list">
-                        <li>Consistent, reliable results</li>
-                        <li>Lower running costs</li>
-                        <li>Better cleaning for complex components</li>
-                        <li>Reduced labor requirements</li>
-                        <li>Enhanced environmental compliance</li>
-                    </ul>
-                    
-                    <div class="special-note">
-                        <strong>* Direct CNC pallet processing</strong> - no need to transfer tools into cleaning baskets, saving time and reducing handling
-                    </div>
+        <!-- Advantage & Models Section -->
+        <section class="bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl font-bold text-black mb-4">
+                        Achieve Required Technical Cleanliness – Consistently, Reliably, Cost-Effectively
+                    </h2>
                 </div>
                 
-                <div class="content-text">
-                    <h2>AVAILABLE MODELS</h2>
-                    <ul class="models-list">
-                        <li>Standard 450: 300x450x300mm</li>
-                        <li>Version L: 450x450x300mm</li>
-                        <li>Version H: 300x450x450mm</li>
-                        <li>Version 600: 450x600x450mm</li>
-                    </ul>
+                <!-- Two Column Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- The Greenclean Advantage -->
+                    <div class="bg-white border-l-8 border-[#0083CA] p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+                        <h3 class="text-2xl font-bold text-black mb-6 uppercase">THE GREENCLEAN ADVANTAGE</h3>
+                        <p class="text-gray-700 mb-6">Transform your cleaning process with proven technology that delivers:</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <span class="text-[#0083CA] mr-3 text-lg">•</span>
+                                <span class="text-gray-700">Consistent, reliable results</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#0083CA] mr-3 text-lg">•</span>
+                                <span class="text-gray-700">Lower running costs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#0083CA] mr-3 text-lg">•</span>
+                                <span class="text-gray-700">Better cleaning for complex components</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#0083CA] mr-3 text-lg">•</span>
+                                <span class="text-gray-700">Reduced labor requirements</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#0083CA] mr-3 text-lg">•</span>
+                                <span class="text-gray-700">Enhanced environmental compliance</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="special-note">
+                            <strong>* Direct CNC pallet processing</strong> - no need to transfer tools into cleaning baskets, saving time and reducing handling
+                        </div>
+                    </div>
                     
-                    <p class="text-sm text-gray-600 mt-4 italic">Individual sizes can be realized according to customer requirements.</p>
+                    <!-- Available Models -->
+                    <div class="bg-white border-l-8 border-[#0083CA] p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+                        <h3 class="text-2xl font-bold text-black mb-6 uppercase">AVAILABLE MODELS</h3>
+                        <ul class="space-y-4 mb-8">
+                            <li class="text-gray-800 font-medium">Standard 450: 300x450x300mm</li>
+                            <li class="text-gray-800 font-medium">Version L: 450x450x300mm</li>
+                            <li class="text-gray-800 font-medium">Version H: 300x450x450mm</li>
+                            <li class="text-gray-800 font-medium">Version 600: 450x600x450mm</li>
+                        </ul>
+                        
+                        <p class="text-sm text-gray-600 italic">Individual sizes can be realized according to customer requirements.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Download Section -->
-        <section class="download-section">
-            <a href="#" class="download-btn">Download Greenclean Ultrasonic Cleaning</a>
+        <section class="py-12 text-center bg-white">
+            <a href="#" class="bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:transform hover:scale-105 inline-block">
+                Download Greenclean Ultrasonic Cleaning
+            </a>
         </section>
     </main>
 
