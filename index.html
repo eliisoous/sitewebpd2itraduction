@@ -87,6 +87,51 @@
     <link rel="stylesheet" href="components/footer.css">
     <link rel="stylesheet" href="components/carousel.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Download button - same style as Greenclean Ultrasonic Cleaning */
+        .download-btn {
+            background: #0083CA;                    /* Couleur PD2i bleue */
+            color: white;
+            padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
+            border-radius: 0.5rem;                 /* Border-radius comme btn-primary */
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 2rem;                      /* Espacement ajouté */
+        }
+
+        .download-btn:hover {
+            background: #006ba3;                   /* Couleur hover */
+            transform: translateY(-2px);           /* Effet de levée */
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .download-btn {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .download-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .download-btn {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
     <!-- Header sera généré automatiquement par le composant -->
@@ -150,7 +195,7 @@
                     <!-- Left Column: PD2i Coating Equipments -->
                     <div class="flex flex-col">
                         <!-- PD2i Coating Equipments Image -->
-                        <div class="relative overflow-hidden shadow-lg mb-6">
+                        <a href="coating-equipments.html" class="relative overflow-hidden shadow-lg mb-6 block transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             <img src="assets/images/sections/coating-equipment.jpg" 
                                  alt="PD2i Coating Equipment" 
                                  class="w-full h-64 object-cover"
@@ -159,7 +204,7 @@
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                                 <h3 class="text-2xl font-bold text-white">PD2i Coating Equipments</h3>
                             </div>
-                        </div>
+                        </a>
                         
                         <!-- Arrow Flow for Coating Equipments -->
                         <div class="w-full">
@@ -199,7 +244,7 @@
                     <!-- Right Column: PD2i Services & Consulting -->
                     <div class="flex flex-col">
                         <!-- PD2i Services & Consulting Image -->
-                        <div class="relative overflow-hidden shadow-lg mb-6">
+                        <a href="services.html" class="relative overflow-hidden shadow-lg mb-6 block transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             <img src="assets/images/sections/services-consulting.png" 
                                  alt="PD2i Services & Consulting" 
                                  class="w-full h-64 object-cover"
@@ -208,7 +253,7 @@
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                                 <h3 class="text-2xl font-bold text-white">PD2i Services & Consulting</h3>
                             </div>
-                        </div>
+                        </a>
                         
                         <!-- Arrow Flow for Services & Consulting -->
                         <div class="w-full">
@@ -234,7 +279,7 @@
 
                 <!-- Contact Us Button -->
                 <div class="text-center">
-                    <a href="contacts.html" class="inline-block bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200">
+                    <a href="contacts.html" class="download-btn">
                         Contact us
                     </a>
                 </div>
@@ -484,9 +529,9 @@
                 }
             ],
             bottomLinks: [
-                { label: 'Cookies', href: '/cookies' },
-                { label: 'Privacy policy', href: '/privacy' },
-                { label: 'Legal Informations', href: '/legal' }
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Privacy policy', href: 'privacy.html' },
+                { label: 'Legal Informations', href: 'legal.html' }
             ],
             copyrightYear: 2025
         });

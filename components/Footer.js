@@ -49,9 +49,9 @@ class Footer {
     
     getDefaultBottomLinks() {
         return [
-            { label: 'Cookies', href: '/cookies' },
-            { label: 'Privacy policy', href: '/privacy' },
-            { label: 'Legal Informations', href: '/legal' }
+            { label: 'Cookies', href: 'cookies.html' },
+            { label: 'Privacy policy', href: 'privacy.html' },
+            { label: 'Legal Informations', href: 'legal.html' }
         ];
     }
     

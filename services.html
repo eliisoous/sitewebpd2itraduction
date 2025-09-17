@@ -308,6 +308,48 @@
         .delay-500 { animation-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; }
         
+        /* Download button - same style as Greenclean */
+        .download-btn {
+            background: #0083CA;                    /* Couleur PD2i bleue */
+            color: white;
+            padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
+            border-radius: 0.5rem;                 /* Border-radius comme btn-primary */
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 2rem;                      /* Espacement ajouté */
+        }
+
+        .download-btn:hover {
+            background: #006ba3;                   /* Couleur hover */
+            transform: translateY(-2px);           /* Effet de levée */
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
+        }
+        
+        /* Secondary button - outline style */
+        .secondary-btn {
+            background: transparent;
+            color: #0083CA;
+            border: 2px solid #0083CA;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .secondary-btn:hover {
+            background: #0083CA;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .service-card {
@@ -340,6 +382,16 @@
             .quote-text {
                 font-size: 1.1rem;
             }
+            
+            .download-btn {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-btn {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
         }
         
         @media (max-width: 640px) {
@@ -365,6 +417,18 @@
             .placeholder-icon svg {
                 width: 50px;
                 height: 50px;
+            }
+            
+            .download-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+            
+            .secondary-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
             }
         }
     </style>
@@ -486,7 +550,6 @@
                         <!-- Right Column: Quote -->
                         <div class="scroll-animate delay-300">
                             <div class="quote-section">
-                                <h3 class="quote-title">OPTIMIZE SUCCESS</h3>
                                 <p class="quote-text">
                                     "Give a man a fish and he will eat for a day. Teach him to fish and 
                                     he will eat for a lifetime."
@@ -525,13 +588,11 @@
                             Experience the PD2i difference with our comprehensive consulting and training services. 
                             Let us help you achieve exceptional performance with our proven expertise and personalized approach.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="contacts.html" 
-                               class="bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:transform hover:scale-105">
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
+                            <a href="contacts.html" class="download-btn">
                                 Contact Our Experts
                             </a>
-                            <a href="index.html" 
-                               class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white font-semibold px-8 py-3 rounded transition-all duration-200">
+                            <a href="index.html" class="secondary-btn">
                                 Explore Our Solutions
                             </a>
                         </div>
@@ -611,9 +672,9 @@
                 }
             ],
             bottomLinks: [
-                { label: 'Cookies', href: '/cookies' },
-                { label: 'Privacy policy', href: '/privacy' },
-                { label: 'Legal Informations', href: '/legal' }
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Privacy policy', href: 'privacy.html' },
+                { label: 'Legal Informations', href: 'legal.html' }
             ],
             copyrightYear: 2025
         });

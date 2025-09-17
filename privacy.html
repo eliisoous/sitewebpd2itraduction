@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PD2i Privacy Policy - Learn how we collect, use, and protect your personal data in accordance with GDPR and privacy regulations.">
+    <meta name="keywords" content="Privacy Policy, Personal Data, GDPR, Data Protection, PD2i">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    
+    <title>Privacy Policy - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-in-left': 'slideInLeft 0.7s ease-out',
+                        'slide-in-right': 'slideInRight 0.7s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.8' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* Hero Section Background */
+        .hero-background {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        /* Content Cards */
+        .privacy-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .privacy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .privacy-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .privacy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+        
+        /* Privacy icons */
+        .privacy-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+        }
+        
+        /* Info boxes */
+        .info-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid #0083CA;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box.warning {
+            background: linear-gradient(135deg, #fef3cd 0%, #fde68a 100%);
+            border-left-color: #f59e0b;
+        }
+        
+        .info-box.success {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left-color: #10b981;
+        }
+        
+        .info-box.important {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+            border-left-color: #ef4444;
+        }
+        
+        /* Contact button */
+        .contact-btn {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .contact-btn:hover::before {
+            left: 100%;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+        }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        
+        /* Table of contents */
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            color: #0083CA;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #0066A3;
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .privacy-card {
+                padding: 1.5rem;
+            }
+            
+            .privacy-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .info-box {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-roboto bg-gray-50">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-background py-12 text-white flex items-center min-h-[300px]">
+            <div class="container mx-auto px-4">
+                <div class="text-center text-white relative z-10">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Privacy Policy</h1>
+                    <p class="text-lg md:text-xl mb-6 opacity-90 leading-relaxed max-w-4xl mx-auto animate-fade-in delay-200">
+                        How we collect, use, and protect your personal data
+                    </p>
+                    <div class="mt-8 animate-fade-in delay-400">
+                        <div class="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                            <p class="text-lg font-medium">
+                                🔒 Your privacy is our priority
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="py-8 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="toc scroll-animate">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Table of Contents</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <li><a href="#who-we-are">1. Who we are</a></li>
+                            <li><a href="#data-collection">2. What personal data we collect</a></li>
+                            <li><a href="#data-usage">3. How we use your data</a></li>
+                            <li><a href="#data-retention">4. Data retention</a></li>
+                            <li><a href="#data-sharing">5. Data sharing</a></li>
+                            <li><a href="#your-rights">6. Your rights</a></li>
+                            <li><a href="#security">7. Data security</a></li>
+                            <li><a href="#contact">8. Contact information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section id="who-we-are" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <div class="privacy-icon">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">Who we are</h2>
+                        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                            PD2i (Partner Development Industry International) is a company specializing in PVD coating 
+                            technology and industrial solutions. Our website address is: <strong>https://pd2i.com</strong>
+                        </p>
+                        <div class="info-box">
+                            <p class="text-sm">
+                                <strong>Data Controller:</strong> PD2i France<br>
+                                <strong>Address:</strong> 86, bd Malesherbes – 75008 Paris – France<br>
+                                <strong>Contact:</strong> admin@pd2i.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Collection Section -->
+        <section id="data-collection" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-200">
+                        <div class="privacy-icon">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">What personal data we collect and why</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Forms</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    When you contact us through our contact forms, we collect:
+                                </p>
+                                <ul class="space-y-2 text-gray-700 ml-4">
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        Your name and email address
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        Your message content
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        IP address and timestamp for security purposes
+                                    </li>
+                                </ul>
+                                <p class="text-gray-700 leading-relaxed mt-4">
+                                    <strong>Purpose:</strong> To respond to your inquiries and provide customer support.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Media Uploads</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    If you upload images to the website, you should avoid uploading images with embedded 
+                                    location data (EXIF GPS) included. Visitors to the website can download and extract 
+                                    any location data from images on the website.
+                                </p>
+                                <div class="info-box warning">
+                                    <p class="text-sm font-medium">
+                                        ⚠️ Please remove location data from images before uploading to protect your privacy.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Cookies</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    We use cookies to enhance your browsing experience. If you leave a comment or contact us, 
+                                    you may opt-in to saving your name, email address in cookies for your convenience. 
+                                    These cookies will last for one year.
+                                </p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    For detailed information about our cookie usage, please see our 
+                                    <a href="cookies.html" class="text-pd2i-blue hover:underline">Cookie Policy</a>.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Website Analytics</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    We collect basic website analytics data to understand how visitors use our site:
+                                </p>
+                                <ul class="space-y-2 text-gray-700 ml-4">
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        Pages visited and time spent on site
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        Browser type and device information
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-pd2i-blue mr-2">•</span>
+                                        General geographic location (country/city level)
+                                    </li>
+                                </ul>
+                                <p class="text-gray-700 leading-relaxed mt-4">
+                                    <strong>Purpose:</strong> To improve our website performance and user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Embedded Content Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-300">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Embedded content from other websites</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Articles on this site may include embedded content (e.g. videos, images, articles, etc.). 
+                            Embedded content from other websites behaves in the exact same way as if the visitor has 
+                            visited the other website.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            These websites may collect data about you, use cookies, embed additional third-party tracking, 
+                            and monitor your interaction with that embedded content, including tracking your interaction 
+                            with the embedded content if you have an account and are logged in to that website.
+                        </p>
+                        <div class="info-box important">
+                            <p class="text-sm font-medium">
+                                🔴 <strong>Important:</strong> We cannot control the privacy practices of embedded third-party content. 
+                                Please review the privacy policies of these external services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Usage Section -->
+        <section id="data-usage" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-400">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">How we use your data</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">Legitimate purposes:</h3>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Responding to customer inquiries
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Providing technical support
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Improving our services
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Website security and fraud prevention
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        Legal compliance
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">We do NOT:</h3>
+                                <ul class="space-y-2 text-gray-700 text-sm">
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        Sell your data to third parties
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        Use data for marketing without consent
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        Share personal data unnecessarily
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">✗</span>
+                                        Track you across other websites
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Retention Section -->
+        <section id="data-retention" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-500">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Data retention</h2>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">Contact form data</h3>
+                                <p class="text-gray-700 text-sm">Retained for 3 years or until you request deletion</p>
+                            </div>
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">Website analytics</h3>
+                                <p class="text-gray-700 text-sm">Anonymized data retained for 25 months</p>
+                            </div>
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">Cookies</h3>
+                                <p class="text-gray-700 text-sm">Up to 12 months or until manually deleted</p>
+                            </div>
+                            <div class="border-l-4 border-pd2i-blue pl-4">
+                                <h3 class="font-bold text-gray-800 mb-2">Legal obligations</h3>
+                                <p class="text-gray-700 text-sm">Some data may be retained longer for legal compliance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Your Rights Section -->
+        <section id="your-rights" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate delay-600">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Your rights under GDPR</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">You have the right to:</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">📄</span>
+                                        <div>
+                                            <strong>Access</strong> - Request a copy of your personal data
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-500 mr-2">✏️</span>
+                                        <div>
+                                            <strong>Rectification</strong> - Correct inaccurate data
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-red-500 mr-2">🗑️</span>
+                                        <div>
+                                            <strong>Erasure</strong> - Request deletion of your data
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-orange-500 mr-2">⏸️</span>
+                                        <div>
+                                            <strong>Restriction</strong> - Limit how we process your data
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-purple-500 mr-2">📦</span>
+                                        <div>
+                                            <strong>Portability</strong> - Receive your data in a structured format
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-gray-500 mr-2">🚫</span>
+                                        <div>
+                                            <strong>Object</strong> - Opt out of certain data processing
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-4">How to exercise your rights:</h3>
+                                <p class="text-gray-700 text-sm mb-4">
+                                    Contact us at <a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a> 
+                                    with your request. We will respond within 30 days.
+                                </p>
+                                <div class="info-box success">
+                                    <p class="text-sm font-medium">
+                                        ✅ All requests are processed free of charge unless they are excessive or repetitive.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Data security</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            We implement appropriate technical and organizational measures to protect your personal data:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-2">Encryption</h3>
+                                <p class="text-gray-600 text-sm">SSL/TLS encryption for data transmission</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-2">Access Control</h3>
+                                <p class="text-gray-600 text-sm">Limited access to authorized personnel</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-2">Secure Storage</h3>
+                                <p class="text-gray-600 text-sm">Secure hosting with regular backups</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="privacy-card scroll-animate">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Questions about our privacy policy?</h2>
+                        <p class="text-gray-700 leading-relaxed mb-8">
+                            If you have questions about our privacy policy, want to exercise your rights, 
+                            or need to report a data protection concern, please contact us.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="contacts.html" class="contact-btn">
+                                Contact us
+                            </a>
+                            <div class="text-gray-600">
+                                <p class="text-sm">Or by email: <a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-box mt-6">
+                            <p class="text-sm">
+                                <strong>Data Protection Officer:</strong> For serious privacy concerns, you can also contact 
+                                the French data protection authority (CNIL) at <a href="https://www.cnil.fr" class="text-pd2i-blue hover:underline">www.cnil.fr</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Last Updated -->
+        <section class="py-8 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4">
+                <div class="text-center text-gray-600 text-sm">
+                    <p>Last updated: January 2025</p>
+                    <p class="mt-2">This privacy policy may be updated from time to time. We will notify you of any significant changes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Initialize Components -->
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script>
+        // Initialize Header with navigation items
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                { label: 'Services', href: 'services.html', type: 'link' },
+                { label: 'News', href: 'news.html', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+            ]
+        });
+        
+        // Initialize Footer with configuration
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: 'about-us.html' },
+                { label: 'Services', href: 'services.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Downloads', href: '/downloads' },
+                { label: 'News', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Privacy policy', href: 'privacy.html' },
+                { label: 'Legal Informations', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Language change listener
+        document.addEventListener('languageChanged', (event) => {
+            console.log('Language changed to:', event.detail.language);
+        });
+
+        console.log('Privacy Policy page loaded successfully');
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
