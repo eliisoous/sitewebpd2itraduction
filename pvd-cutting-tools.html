@@ -615,7 +615,7 @@
         /* High Performance Coating Section */
         .performance-section {
             background: white;
-            padding: 2.5rem 0;
+            padding: 1.5rem 0;
         }
         
         .performance-container {
@@ -713,9 +713,10 @@
         }
         
         .turnkey-box h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             margin-bottom: 1.5rem;
+            text-align: center;
         }
         
         .turnkey-list {
@@ -978,6 +979,26 @@
                 font-size: 0.85rem;
             }
         }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
     </style>
 </head>
 
@@ -989,7 +1010,7 @@
     <main>
         <!-- Hero Section with background image -->
         <section class="hero-section">
-            <div class="hero-content">
+            <div class="hero-content scroll-animate">
                 <h1 class="hero-main-title">PVD Technology for Tooling</h1>
                 <h2 class="hero-subtitle">High Performance PVD Coating Equipment for Cutting Tools</h2>
                 <p>We offer Expertise : coating process in relation of machining processes</p>
@@ -998,7 +1019,7 @@
 
         <!-- Customization Section -->
         <section class="customization-section">
-            <div class="customization-container">
+            <div class="customization-container scroll-animate">
                 <!-- Images de gauche -->
                 <div class="customization-left">
                     <div class="customization-item">
@@ -1028,7 +1049,7 @@
 
         <!-- High Speed Coating System Section - Desktop -->
         <section class="coating-system-section">
-            <div class="coating-content">
+            <div class="coating-content scroll-animate delay-200">
                 <h2>High Speed Coating System<br>for Cutting Tools</h2>
                 <p>Our High Speed Coating System delivers exceptional efficiency<br>and versatility with an optimized process for high performance<br>coatings for cutting tools.</p>
                 <a href="#" class="btn-primary">Get MPC Series Brochures</a>
@@ -1050,7 +1071,7 @@
 
         <!-- Process Timeline & Features Section -->
         <section class="process-section">
-            <div class="process-container">
+            <div class="process-container scroll-animate delay-300">
                 <div class="features-list">
                     <!-- Left: Features -->
                     <div class="features-left">
@@ -1082,11 +1103,11 @@
 
         <!-- High Performance Coating Section -->
         <section class="performance-section">
-            <div class="performance-container">
+            <div class="performance-container scroll-animate delay-400">
                 <div class="performance-grid">
                     <!-- Left: Diagram -->
                     <div class="diagram-container">
-                        <img src="assets/images/pvd-cutting-tools/Coating Layer Diagram.jpg" alt="Coating Layer Diagram">
+                        <img src="assets/images/pvd-cutting-tools/Coating Layer Diagram.png" alt="Coating Layer Diagram">
 
                     </div>
                     
@@ -1113,7 +1134,7 @@
 
         <!-- Turnkey Section -->
         <section class="turnkey-section">
-            <div class="turnkey-container">
+            <div class="turnkey-container scroll-animate delay-500">
                 <div class="turnkey-grid">
                     <!-- Left: Content -->
                     <div class="turnkey-content">
@@ -1144,7 +1165,7 @@
 
         <!-- Expertise Section -->
         <section class="expertise-section">
-            <div class="expertise-container">
+            <div class="expertise-container scroll-animate delay-600">
                 <h2>Expertise tailored to offer the most effective solutions</h2>
                 <p>At PD2i everything starts with an in-depth understanding of the application. Once the requirements for an application are completely understood, PD2i starts finding the best solution for the specific application from individual machines to complete turnkey operations.</p>
                 <a href="#" class="btn-primary">Contact us</a>
@@ -1227,6 +1248,25 @@
                 { label: 'Legal Informations', href: 'legal.html' }
             ],
             copyrightYear: 2025
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
         });
     </script>
 
