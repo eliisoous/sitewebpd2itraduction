@@ -73,8 +73,16 @@
             z-index: 2;
         }
         
-        .hero-content h1 {
-            font-size: 2rem;
+        .hero-content .hero-main-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .hero-content .hero-subtitle {
+            font-size: 1.8rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
             line-height: 1.2;
@@ -93,7 +101,7 @@
         /* Customization Section */
         .customization-section {
             background: white;
-            padding: 1rem 0 0.5rem 0;
+            padding: 1rem 0;
         }
         
         .customization-container {
@@ -102,20 +110,26 @@
             justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
-            gap: 1.5rem;
+            padding: 0 2rem;
+            gap: 2rem;
+            min-height: 150px;
         }
         
         .customization-left,
         .customization-right {
             display: flex;
             gap: 1rem;
+            align-items: center;
+            justify-content: center;
         }
         
         .customization-center {
             flex: 1;
             text-align: center;
-            max-width: 400px;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .customization-center h2 {
@@ -137,25 +151,155 @@
         /* High Speed Coating Section */
         .coating-system-section {
             color: white;
-            padding: 2rem 0;
+            padding: 0;
             position: relative;
             background-image: url('assets/images/pvd-cutting-tools/High Speed Coating Equipment Image.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            min-height: 500px;
+            min-height: 400px;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Version responsive avec texte en dessous */
+        .coating-system-responsive {
+            display: none;
+        }
+        
+        /* iPad Pro (12.9 pouces) - 1024x1366 */
+        @media (max-width: 1366px) and (min-width: 1025px) {
+            .coating-system-section {
+                min-height: 0px;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            
+            .coating-content {
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 15px;
+                padding: 2rem;
+                margin: 0 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                width: auto;
+                max-width: 1200px;
+            }
+            
+            .coating-content h2 {
+                font-size: 1.9rem;
+                margin-bottom: 1.2rem;
+                line-height: 1.2;
+            }
+            
+            .coating-content p {
+                font-size: 1rem;
+                margin-bottom: 1.8rem;
+                max-width: 650px;
+                line-height: 1.4;
+            }
+        }
+        
+        /* iPad Air / iPad Pro (11 pouces) - 820x1180 */
+        @media (max-width: 1024px) and (min-width: 821px) {
+            .coating-system-section {
+                min-height: 0px;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            
+            .coating-content {
+                background: rgba(0, 0, 0, 0.35);
+                border-radius: 12px;
+                padding: 1.8rem;
+                margin: 0 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                width: auto;
+                max-width: 1200px;
+            }
+            
+            .coating-content h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+                line-height: 1.2;
+            }
+            
+            .coating-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+                max-width: 550px;
+                line-height: 1.4;
+            }
+        }
+        
+        /* iPad standard / iPad Mini - 768x1024 */
+        @media (max-width: 820px) and (min-width: 769px) {
+            .coating-system-section {
+                min-height: 320px;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            
+            .coating-content {
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin: 0 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                width: auto;
+                max-width: 1200px;
+            }
+            
+            .coating-content h2 {
+                font-size: 1.4rem;
+                margin-bottom: 0.8rem;
+                line-height: 1.2;
+            }
+            
+            .coating-content p {
+                font-size: 0.9rem;
+                margin-bottom: 1.2rem;
+                max-width: 480px;
+                line-height: 1.3;
+            }
         }
         
         .coating-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem 3rem 2rem;
+            padding: 2rem;
             text-align: center;
             position: relative;
             z-index: 2;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .coating-content h2 {
@@ -633,10 +777,81 @@
             color: #555;
         }
         
-        /* Responsive */
+        /* Version responsive avec image et texte séparés */
+        .coating-system-responsive {
+            display: none;
+            background: white;
+        }
+        
+        .coating-image-container {
+            background-image: url('assets/images/pvd-cutting-tools/High Speed Coating Equipment Image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 200px;
+            width: 100%;
+        }
+        
+        .coating-text-container {
+            background: linear-gradient(135deg, #4A90E2 0%, #1976d2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .coating-text-container h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .coating-text-container p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+        
+        /* iPad responsive styles */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .hero-content .hero-main-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .customization-container {
+                gap: 2.5rem;
+                padding: 0 2rem;
+                min-height: 180px;
+            }
+            
+            .customization-item img {
+                width: 110px;
+                height: 110px;
+            }
+            
+            .features-list,
+            .performance-grid,
+            .turnkey-grid {
+                gap: 2.5rem;
+            }
+        }
+        
+        /* Mobile responsive */
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 1.4rem;
+            .hero-content .hero-main-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-content .hero-subtitle {
+                font-size: 1.2rem;
             }
             
             .hero-content p {
@@ -654,10 +869,13 @@
             .customization-container {
                 flex-direction: column;
                 gap: 2rem;
+                min-height: auto;
+                padding: 0 1rem;
             }
             
             .customization-left,
             .customization-right {
+                flex-direction: row;
                 justify-content: center;
                 gap: 1rem;
             }
@@ -691,55 +909,73 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .coating-content h2 {
-                font-size: 1.5rem;
-                line-height: 1.3;
-                margin-bottom: 1rem;
-            }
-            
-            .coating-content p {
-                font-size: 0.95rem;
-                line-height: 1.4;
-                margin-bottom: 1.5rem;
-                padding: 0 1rem;
-            }
-            
+            /* Pour mobile, gardons la version desktop avec overlay mais adaptée */
             .coating-system-section {
-                min-height: 350px;
-                padding: 1rem 0;
-                background-size: contain;
-                background-position: center;
+                min-height: 280px;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                display: flex;
             }
             
             .coating-content {
-                padding: 0 1rem 2rem 1rem;
+                padding: 1rem;
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+                margin: 0 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                width: auto;
+                max-width: 1200px;
+            }
+            
+            .coating-content h2 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+                line-height: 1.2;
+            }
+            
+            .coating-content p {
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
+                line-height: 1.3;
+            }
+            
+            /* Masquer la version responsive sur mobile aussi */
+            .coating-system-responsive {
+                display: none;
             }
         }
         
         /* Extra small screens */
         @media (max-width: 480px) {
-            .coating-content h2 {
-                font-size: 1.25rem;
-                margin-bottom: 0.75rem;
+            .coating-image-container {
+                min-height: 150px;
             }
             
-            .coating-content p {
-                font-size: 0.9rem;
-                padding: 0 0.5rem;
+            .coating-text-container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .coating-text-container h2 {
+                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .coating-text-container p {
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
+                line-height: 1.3;
             }
             
             .btn-primary {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .coating-system-section {
-                min-height: 280px;
-                padding: 0.5rem 0;
-            }
-            
-            .coating-content {
-                padding: 0 0.5rem 1.5rem 0.5rem;
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -751,17 +987,11 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Title Section on white background -->
-        <section class="bg-white py-8">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-2xl font-bold text-pd2i-black">PVD Technology for Tooling</h1>
-            </div>
-        </section>
-
         <!-- Hero Section with background image -->
         <section class="hero-section">
             <div class="hero-content">
-                <h1>High Performance PVD Coating Equipment for Cutting Tools</h1>
+                <h1 class="hero-main-title">PVD Technology for Tooling</h1>
+                <h2 class="hero-subtitle">High Performance PVD Coating Equipment for Cutting Tools</h2>
                 <p>We offer Expertise : coating process in relation of machining processes</p>
             </div>
         </section>
@@ -796,11 +1026,24 @@
             </div>
         </section>
 
-        <!-- High Speed Coating System Section -->
+        <!-- High Speed Coating System Section - Desktop -->
         <section class="coating-system-section">
             <div class="coating-content">
                 <h2>High Speed Coating System<br>for Cutting Tools</h2>
                 <p>Our High Speed Coating System delivers exceptional efficiency<br>and versatility with an optimized process for high performance<br>coatings for cutting tools.</p>
+                <a href="#" class="btn-primary">Get MPC Series Brochures</a>
+            </div>
+        </section>
+
+        <!-- High Speed Coating System Section - Mobile Responsive -->
+        <section class="coating-system-responsive">
+            <!-- Image en haut -->
+            <div class="coating-image-container"></div>
+            
+            <!-- Texte en bas -->
+            <div class="coating-text-container">
+                <h2>High Speed Coating System for Cutting Tools</h2>
+                <p>Our High Speed Coating System delivers exceptional efficiency and versatility with an optimized process for high performance coatings for cutting tools.</p>
                 <a href="#" class="btn-primary">Get MPC Series Brochures</a>
             </div>
         </section>
