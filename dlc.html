@@ -365,112 +365,118 @@
             </div>
         </section>
 
-        <!-- Benefits / Advantages Section - Maquette Style -->
-        <section class="benefits-advantages-section relative py-0 overflow-hidden">
-            <!-- Fond bleu uni avec image de l'athlète intégrée -->
-            <div class="relative min-h-[460px] overflow-hidden bg-blue-600">
-                <!-- Image de l'athlète en arrière-plan avec effet de fondu sur les bords -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <img src="assets/images/dlc_for_tribological_coatings/Running guy.png" 
-                         alt="Running Athlete Performance" 
-                         class="h-full w-auto object-contain"
-                         style="mask: radial-gradient(ellipse 70% 80% at center, black 40%, transparent 80%); 
-                                -webkit-mask: radial-gradient(ellipse 70% 80% at center, black 40%, transparent 80%);">
-                </div>
-                
-                <!-- Contenu principal -->
-                <div class="container mx-auto px-4 relative z-10">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[460px] py-8">
-                        <!-- Left: Benefits List -->
-                        <div class="text-white">
-                            <h2 class="text-3xl md:text-4xl font-bold mb-8">Benefits / Advantages</h2>
-                            <ul class="space-y-4 text-lg leading-relaxed">
-                                <li class="flex items-start">
-                                    <span class="mr-3 text-white">•</span>
-                                    <span>Low running costs</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-3 text-white">•</span>
-                                    <span>Adjustable processes</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-3 text-white">•</span>
-                                    <span>Open source recipe editor</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-3 text-white">•</span>
-                                    <span>Full technology & service support</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-3 text-white">•</span>
-                                    <span>Scalable technologies</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Right: Portfolio -->
-                        <div class="text-white text-right">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-8">4 coatings Portfolio in 1 coater</h3>
-                            <ul class="space-y-4 text-lg leading-relaxed">
-                                <li class="flex items-start justify-end">
-                                    <span>One for components</span>
-                                    <span class="ml-3 text-white">•</span>
-                                </li>
-                                <li class="flex items-start justify-end">
-                                    <span>One for forming cutting tools</span>
-                                    <span class="ml-3 text-white">•</span>
-                                </li>
-                                <li class="flex items-start justify-end">
-                                    <span>One for plastic molding</span>
-                                    <span class="ml-3 text-white">•</span>
-                                </li>
-                                <li class="flex items-start justify-end">
-                                    <span>One for forming tools</span>
-                                    <span class="ml-3 text-white">•</span>
-                                </li>
-                            </ul>
-                        </div>
+        <!-- Section Benefits et Portfolio avec Running Guy en fond -->
+        <section class="benefits-portfolio-section py-12 relative" style="background-image: url('assets/images/dlc_for_tribological_coatings/Running guy.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #f9fafb;">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto px-4">
+                    
+                    <!-- Benefits / Advantages -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-pd2i-black mb-4 sm:mb-6 text-center">
+                            Benefits / Advantages
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Low running costs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Adjustable processes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Open source recipe editor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Full technology & service support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">Scalable technologies</span>
+                            </li>
+                        </ul>
                     </div>
+
+                    <!-- 4 coatings Portfolio -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-pd2i-black mb-4 sm:mb-6 text-center">
+                            4 coatings Portfolio in 1 coater
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">One for components</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">One for forming cutting tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">One for plastic molding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-700 font-medium">One for forming tools</span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
+        </section>
             
-            <!-- Bande d'outils en bas -->
-            <div class="bg-white py-6">
+            <!-- Bande d'outils selon la maquette Figma -->
+            <div class="bg-white pb-8">
                 <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-                        <!-- Outil 1 -->
-                        <div class="text-center">
-                            <div class="p-4 h-20 flex items-center justify-center">
+                    <div class="flex justify-center items-center">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 md:gap-16 lg:gap-24 max-w-6xl">
+                            <!-- Outil 1 -->
+                            <div class="flex items-center justify-center">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil1.png" 
-                                     alt="Outil 1" 
-                                     class="w-full h-full object-contain">
+                                     alt="Cutting Tool 1" 
+                                     class="h-20 sm:h-32 md:h-48 lg:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300">
                             </div>
-                        </div>
-                        
-                        <!-- Outil 2 -->
-                        <div class="text-center">
-                            <div class="p-4 h-20 flex items-center justify-center">
+                            
+                            <!-- Outil 2 -->
+                            <div class="flex items-center justify-center">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil2.png" 
-                                     alt="Outil 2" 
-                                     class="w-full h-full object-contain">
+                                     alt="Cutting Tool 2" 
+                                     class="h-20 sm:h-32 md:h-48 lg:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300">
                             </div>
-                        </div>
-                        
-                        <!-- Outil 3 -->
-                        <div class="text-center">
-                            <div class="p-4 h-20 flex items-center justify-center">
+                            
+                            <!-- Outil 3 -->
+                            <div class="flex items-center justify-center">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil3.png" 
-                                     alt="Outil 3" 
-                                     class="w-full h-full object-contain">
+                                     alt="Cutting Tool 3" 
+                                     class="h-20 sm:h-32 md:h-48 lg:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300">
                             </div>
-                        </div>
-                        
-                        <!-- Outil 4 -->
-                        <div class="text-center">
-                            <div class="p-4 h-20 flex items-center justify-center">
+                            
+                            <!-- Outil 4 -->
+                            <div class="flex items-center justify-center">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil4.png" 
-                                     alt="Outil 4" 
-                                     class="w-full h-full object-contain">
+                                     alt="Cutting Tool 4" 
+                                     class="h-20 sm:h-32 md:h-48 lg:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300">
                             </div>
                         </div>
                     </div>
