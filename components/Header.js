@@ -267,8 +267,8 @@ class Header {
     }
     
     attachEventListeners() {
-        // Let the main.js handle mobile menu for better reliability
-        // We'll just handle language dropdowns here
+        // Handle mobile menu directly in header component
+        this.attachMobileMenuListeners();
         
         // Language Dropdowns
         this.attachLanguageListeners('languageBtn', 'languageDropdown');
@@ -282,6 +282,31 @@ class Header {
                 this.selectLanguage(e.target.getAttribute('data-lang'));
             }
         });
+    }
+    
+    attachMobileMenuListeners() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            // Remove any existing listeners by cloning
+            const newBtn = mobileMenuBtn.cloneNode(true);
+            mobileMenuBtn.parentNode.replaceChild(newBtn, mobileMenuBtn);
+            
+            // Add click event listener
+            newBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.toggleMobileMenu();
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!newBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    this.closeMobileMenu();
+                }
+            });
+        }
     }
     
     attachLanguageListeners(btnId, dropdownId) {
