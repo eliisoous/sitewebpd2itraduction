@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download all PD2i brochures - PVD Coating Equipment, Plasma Nitriding, Greenclean Ultrasonic Cleaning solutions.">
+    <meta name="keywords" content="PD2i brochures, PVD coating, download, plasma nitriding, ultrasonic cleaning">
+    <meta name="author" content="PD2i">
+    
+    <title>Downloads - PD2i Brochures</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Hero Section with Modern Background */
+        .hero-download {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+        }
+        
+        .hero-download::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+
+        /* Download Cards with Advanced Effects */
+        .download-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2, #87CEEB);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .download-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .download-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 131, 202, 0.2);
+        }
+
+        /* Modern Icon Containers */
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(0, 131, 202, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #0083CA, #4A90E2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .download-card:hover .icon-container::before {
+            opacity: 0.1;
+        }
+        
+        .icon-container svg {
+            width: 40px;
+            height: 40px;
+            color: #0083CA;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .download-card:hover .icon-container svg {
+            color: #4A90E2;
+            transform: scale(1.1);
+        }
+
+        /* Modern Download Button */
+        .download-btn-modern {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .download-btn-modern:hover::before {
+            left: 100%;
+        }
+        
+        .download-btn-modern:hover {
+            background: linear-gradient(135deg, #4A90E2 0%, #0083CA 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 131, 202, 0.4);
+        }
+
+        /* Category Sections */
+        .category-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .category-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .category-subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* File Info Tags */
+        .file-info {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 131, 202, 0.1);
+            color: #0083CA;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        /* Special Sections */
+        .all-downloads-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 2rem;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .all-downloads-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 131, 202, 0.05) 0%, transparent 50%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+
+
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stats Counter Animation */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-download {
+                min-height: 50vh;
+            }
+            
+            .category-title {
+                font-size: 2rem;
+            }
+            
+            .download-card {
+                padding: 1.5rem;
+            }
+            
+            .all-downloads-section,
+            .contact-section {
+                padding: 2rem;
+                border-radius: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-50 text-pd2i-black">
+
+    <!-- Header sera généré automatiquement par le composant -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-download flex items-center justify-center text-white relative z-10">
+            <div class="container mx-auto px-4 text-center relative z-20">
+                <div class="max-w-4xl mx-auto scroll-animate">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Download Center
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        Access our complete technical documentation library
+                    </p>
+                    <p class="text-lg opacity-80 max-w-2xl mx-auto mb-8">
+                        Discover comprehensive information about our PVD coating equipment, 
+                        plasma nitriding systems, cleaning solutions and edge preparation technologies
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item scroll-animate" style="animation-delay: 0.2s;">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Technical Brochures</span>
+                        </div>
+                        <div class="stat-item scroll-animate" style="animation-delay: 0.4s;">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Pages of Documentation</span>
+                        </div>
+                        <div class="stat-item scroll-animate" style="animation-delay: 0.6s;">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Technology Categories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Downloads Section -->
+        <section class="py-20 relative">
+            <div class="container mx-auto px-4 max-w-7xl">
+                
+                <!-- PVD Coating Equipment -->
+                <div class="mb-20 scroll-animate">
+                    <div class="category-header">
+                        <h2 class="category-title">PVD Coating Equipment</h2>
+                        <p class="category-subtitle">
+                            Advanced Physical Vapor Deposition systems for industrial coating applications
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- PVD Cutting Tools -->
+                        <div class="download-card scroll-animate" style="animation-delay: 0.1s;">
+                            <div class="icon-container">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="file-info">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                PDF • 2.3 MB • 16 pages
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">PVD Technology for Tooling</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Complete technical guide for PVD coating solutions in cutting tools. 
+                                Features C Series specifications, process optimization, and performance benchmarks.
+                            </p>
+                            
+                            <a href="pvd-cutting-tools.html" class="download-btn-modern">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Download C Series Brochures
+                            </a>
+                        </div>
+
+                        <!-- PVD Molds & Dies -->
+                        <div class="download-card scroll-animate" style="animation-delay: 0.2s;">
+                            <div class="icon-container">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="file-info">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                PDF • 1.8 MB • 12 pages
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">PVD Coating for Molds & Dies</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Specialized coating solutions for forming, molding, die casting, and forging. 
+                                Includes mechanical property data and application guidelines.
+                            </p>
+                            
+                            <a href="pvd-molds-dies.html" class="download-btn-modern">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Download Forming Portfolio
+                            </a>
+                        </div>
+
+                        <!-- DLC Coatings -->
+                        <div class="download-card scroll-animate" style="animation-delay: 0.3s;">
+                            <div class="icon-container">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="file-info">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                PDF • 2.1 MB • 14 pages
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">DLC Tribological Coatings</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Diamond-Like Carbon coating technology for advanced tribological applications. 
+                                Comprehensive material properties and industry case studies.
+                            </p>
+                            
+                            <a href="dlc.html" class="download-btn-modern">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Download DLC Brochure
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surface Treatment -->
+                <div class="mb-20 scroll-animate">
+                    <div class="category-header">
+                        <h2 class="category-title">Surface Treatment</h2>
+                        <p class="category-subtitle">
+                            Advanced surface modification technologies for enhanced material properties
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Plasma Nitriding -->
+                        <div class="download-card scroll-animate" style="animation-delay: 0.1s;">
+                            <div class="icon-container">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="file-info">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                PDF • 1.5 MB • 10 pages
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Plasma Nitriding</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Cost-efficient plasma nitriding solutions for precision components. Features S Phase technology, 
+                                HPPN processes, and comprehensive treatment guidelines.
+                            </p>
+                            
+                            <a href="plasma-nitriding.html" class="download-btn-modern">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Download Plasma Nitriding
+                            </a>
+                        </div>
+
+                        <!-- Edge Preparation -->
+                        <div class="download-card scroll-animate" style="animation-delay: 0.2s;">
+                            <div class="icon-container">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="file-info">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                PDF • 1.2 MB • 8 pages
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Edge Preparation</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Stream and Drag finishing technology for precision edge preparation. 
+                                Equipment specifications, process parameters, and quality control methods.
+                            </p>
+                            
+                            <a href="edge-preparation.html" class="download-btn-modern">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Download Stream & Drag
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cleaning Solutions -->
+                <div class="mb-20 scroll-animate">
+                    <div class="category-header">
+                        <h2 class="category-title">Cleaning Solutions</h2>
+                        <p class="category-subtitle">
+                            Advanced ultrasonic cleaning technology for precision industrial applications
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="download-card scroll-animate" style="animation-delay: 0.1s;">
+                            <div class="icon-container">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="file-info">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                PDF • 2.8 MB • 18 pages
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Greenclean Ultrasonic</h3>
+                            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                                Advanced 5-step ultrasonic cleaning process. Multiple configurations available 
+                                with direct CNC pallet processing capabilities for maximum efficiency.
+                            </p>
+                            
+                            <a href="greenclean-ultrasonic-cleaning.html" class="download-btn-modern">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                Download Greenclean
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download All Section -->
+                <div class="all-downloads-section mb-20 scroll-animate">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Complete Documentation Package</h2>
+                        <p class="text-gray-600 mb-8 text-lg">
+                            Get all our technical brochures in one comprehensive download. 
+                            Perfect for offline reference and team sharing.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+                            <div class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"/>
+                                </svg>
+                                15+ Brochures
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                15.2 MB Total
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                200+ Pages
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="download-btn-modern text-lg px-12 py-4 max-w-md mx-auto">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+                            </svg>
+                            Download Complete Package
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="scroll-animate">
+                    <div class="download-card">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-blue mb-6 text-center">
+                            Need Expert Guidance?
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            Our technical specialists are ready to help you select the optimal solution for your specific application requirements.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="contacts.html" 
+                               class="bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:transform hover:scale-105">
+                                Contact Our Experts
+                            </a>
+                            <a href="coating-equipments.html" 
+                               class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white font-semibold px-8 py-3 rounded transition-all duration-200">
+                                Explore Our Solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Le footer sera inséré automatiquement par le composant -->
+
+    <!-- Header Component -->
+    <script src="components/Header.js"></script>
+    
+    <!-- Footer Component -->
+    <script src="components/Footer.js"></script>
+    
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Initialize Header
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                { label: 'Services', href: 'services.html', type: 'link' },
+                { label: 'News', href: 'news.html', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+            ]
+        });
+        
+        // Initialize Footer
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: 'about-us.html' },
+                { label: 'Services', href: 'services.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Downloads', href: 'download.html' },
+                { label: 'News', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Downloads', href: 'download.html' },
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Privacy policy', href: 'privacy.html' },
+                { label: 'Legal Informations', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
+        });
+    </script>
+</body>
+</html>
