@@ -93,7 +93,7 @@
         <section class="productivity-green-section py-0 relative">
             <!-- Centered main title overlay -->
             <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none px-4">
-                <div class="bg-black bg-opacity-60 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-lg text-center max-w-4xl mx-auto">
+                <div class="bg-black bg-opacity-60 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-lg text-center max-w-4xl mx-auto scroll-animate">
                     <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
                         DLC for Tribological Coatings
                     </h1>
@@ -105,13 +105,13 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <!-- High Productivity (Left) -->
-                <div class="relative h-64 sm:h-72 md:h-80 lg:h-80 flex items-center justify-center overflow-hidden">
+                <div class="relative h-64 sm:h-72 md:h-80 lg:h-80 flex items-center justify-center overflow-hidden scroll-animate delay-100">
                     <!-- High Productivity Background Image -->
                     <img src="assets/images/dlc_for_tribological_coatings/High_Productivity.png" 
                          alt="High Productivity" 
                          class="absolute inset-0 w-full h-full object-cover">
                     <!-- High Productivity title -->
-                    <div class="absolute inset-0 flex items-center md:items-end justify-center pb-0 md:pb-8 z-10">
+                    <div class="absolute inset-0 flex items-center lg:items-end justify-center pb-0 lg:pb-8 z-10">
                         <h2 class="text-2xl md:text-3xl font-bold text-white drop-shadow-lg text-center px-4">
                             High Productivity
                         </h2>
@@ -119,13 +119,13 @@
                 </div>
 
                 <!-- Green Technology (Right) -->
-                <div class="relative h-64 sm:h-72 md:h-80 lg:h-80 flex items-center justify-center overflow-hidden">
+                <div class="relative h-64 sm:h-72 md:h-80 lg:h-80 flex items-center justify-center overflow-hidden scroll-animate delay-200">
                     <!-- Green Technology Background Image -->
                     <img src="assets/images/dlc_for_tribological_coatings/Green_Technology.png" 
                          alt="Green Technology" 
                          class="absolute inset-0 w-full h-full object-cover">
                     <!-- Green Technology title -->
-                    <div class="absolute inset-0 flex items-center md:items-end justify-center pb-0 md:pb-8 z-10">
+                    <div class="absolute inset-0 flex items-center lg:items-end justify-center pb-0 lg:pb-8 z-10">
                         <h2 class="text-2xl md:text-3xl font-bold text-white drop-shadow-lg text-center px-4">
                             Green Technology
                         </h2>
@@ -137,7 +137,7 @@
         <!-- Tailor-made Solution Section -->
         <section class="tailor-made-section pt-8 pb-16 bg-gray-50">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 scroll-animate">
                     <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black mb-4">
                         The Tailor-made solution for Hard and Tribological coatings
                     </h2>
@@ -147,11 +147,29 @@
                 </div>
 
                 <!-- Equipment and Properties -->
-                <div class="flex flex-col lg:flex-row items-stretch justify-center gap-6 lg:gap-8 mb-12">
+                <div class="flex flex-col xl:flex-row items-stretch justify-center gap-6 xl:gap-8 mb-12">
+                    <!-- Left: Application Flow -->
+                    <div class="w-full xl:w-[300px] scroll-animate delay-100">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="application-box application-flow scroll-animate delay-100">
+                                Precision<br>components
+                            </div>
+                            <div class="application-box application-flow scroll-animate delay-200">
+                                Plastic<br>molding
+                            </div>
+                            <div class="application-box application-flow scroll-animate delay-300">
+                                Cutting Tools
+                            </div>
+                            <div class="application-box application-flow scroll-animate delay-400">
+                                Forming
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Center: Equipment Image -->
-                    <div class="flex-shrink-0 flex justify-center">
+                    <div class="flex-shrink-0 flex justify-center scroll-animate delay-500">
                         <!-- MpC Series Equipment Image -->
-                        <div class="w-full max-w-[400px] sm:max-w-[450px] lg:w-[500px] h-[300px] sm:h-[350px] lg:h-[400px] flex items-center justify-center shadow-lg bg-white rounded-lg">
+                        <div class="w-full max-w-[400px] sm:max-w-[450px] lg:w-[500px] h-[300px] sm:h-[350px] lg:h-[400px] flex items-center justify-center shadow-lg bg-white rounded-lg equipment-pulse equipment-hover">
                             <img src="assets/images/dlc_for_tribological_coatings/MpC Series.png" 
                                  alt="MpC Series Coating Equipment" 
                                  class="max-w-full max-h-full object-contain rounded-lg p-4">
@@ -159,59 +177,59 @@
                     </div>
 
                     <!-- Right: Properties Optimization -->
-                    <div class="w-full lg:w-[500px]">
-                        <div class="bg-green-600 text-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-lg min-h-[300px] sm:min-h-[350px] lg:h-[400px] flex flex-col justify-center">
+                    <div class="w-full xl:w-[500px] scroll-animate delay-600">
+                        <div class="bg-green-600 text-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-lg min-h-[300px] sm:min-h-[350px] lg:h-[400px] flex flex-col justify-center properties-glow">
                             <h3 class="text-xl font-bold mb-6 text-center">Properties Optimization</h3>
                             <ul class="space-y-2 text-lg">
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>High hardness</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Low coefficient of friction (0.02 – 0.15)</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>High corrosion resistance</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Great adhesion to substrate material</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Fretting resistance</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Adhesive wear resistance</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Self-lubrication in dry wear conditions</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     <span>Excellent release properties</span>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
@@ -223,7 +241,7 @@
                 </div>
 
                 <!-- Download Button -->
-                <div class="text-center">
+                <div class="text-center scroll-animate delay-400">
                     <a href="#" class="download-btn">
                         Download DLC Coating Portfolio
                     </a>
@@ -234,7 +252,7 @@
         <!-- Our Equipment Section -->
         <section class="equipment-section py-16 bg-white">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 scroll-animate">
                     <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black">
                         Our Equipment
                     </h2>
@@ -243,7 +261,7 @@
                 <!-- Equipment Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8">
                     <!-- MPC 1000 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 scroll-animate delay-100">
                         <div class="p-4 sm:p-6 h-48 sm:h-56 md:h-64 flex items-center justify-center">
                             <img src="assets/images/dlc_for_tribological_coatings/MPC1000.png" 
                                  alt="MPC 1000 Equipment" 
@@ -255,7 +273,7 @@
                     </div>
 
                     <!-- MPC 800 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 scroll-animate delay-200">
                         <div class="p-4 sm:p-6 h-48 sm:h-56 md:h-64 flex items-center justify-center">
                             <img src="assets/images/dlc_for_tribological_coatings/MPC800.png" 
                                  alt="MPC 800 Equipment" 
@@ -267,7 +285,7 @@
                     </div>
 
                     <!-- MPC 700 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 scroll-animate delay-300">
                         <div class="p-4 sm:p-6 h-48 sm:h-56 md:h-64 flex items-center justify-center">
                             <img src="assets/images/dlc_for_tribological_coatings/MPC700.png" 
                                  alt="MPC 700 Equipment" 
@@ -280,7 +298,7 @@
                 </div>
 
                 <!-- Equipment Specifications Table -->
-                <div class="mb-16">
+                <div class="mb-16 scroll-animate delay-400">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                         <!-- Mobile/Tablet View: Stacked Cards -->
                         <div class="block lg:hidden">
@@ -495,7 +513,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
                     
                     <!-- Benefits / Advantages -->
-                    <div class="bg-white bg-opacity-95 sm:bg-opacity-100 rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+                    <div class="bg-white bg-opacity-95 sm:bg-opacity-100 rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 backdrop-blur-sm scroll-animate delay-100">
                         <h3 class="text-xl font-bold text-pd2i-black mb-6 text-center">
                             Benefits / Advantages
                         </h3>
@@ -534,7 +552,7 @@
                     </div>
 
                     <!-- 4 coatings Portfolio -->
-                    <div class="bg-white bg-opacity-95 sm:bg-opacity-100 rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+                    <div class="bg-white bg-opacity-95 sm:bg-opacity-100 rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 backdrop-blur-sm scroll-animate delay-200">
                         <h3 class="text-xl font-bold text-pd2i-black mb-6 text-center">
                             4 coatings Portfolio in 1 coater
                         </h3>
@@ -576,28 +594,28 @@
                     <div class="flex justify-center items-center">
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 md:gap-12 lg:gap-20 xl:gap-24 max-w-7xl w-full">
                             <!-- Outil 1 -->
-                            <div class="flex items-center justify-center p-2">
+                            <div class="flex items-center justify-center p-2 scroll-animate delay-100">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil1.png" 
                                      alt="Cutting Tool 1" 
                                      class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
                             </div>
                             
                             <!-- Outil 2 -->
-                            <div class="flex items-center justify-center p-2">
+                            <div class="flex items-center justify-center p-2 scroll-animate delay-200">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil2.png" 
                                      alt="Cutting Tool 2" 
                                      class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
                             </div>
                             
                             <!-- Outil 3 -->
-                            <div class="flex items-center justify-center p-2">
+                            <div class="flex items-center justify-center p-2 scroll-animate delay-300">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil3.png" 
                                      alt="Cutting Tool 3" 
                                      class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
                             </div>
                             
                             <!-- Outil 4 -->
-                            <div class="flex items-center justify-center p-2">
+                            <div class="flex items-center justify-center p-2 scroll-animate delay-400">
                                 <img src="assets/images/dlc_for_tribological_coatings/Outil4.png" 
                                      alt="Cutting Tool 4" 
                                      class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
@@ -658,6 +676,25 @@
         document.addEventListener('languageChanged', (event) => {
             console.log('Langue changée vers:', event.detail.language);
         });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
         
         // Initialisation du footer avec la configuration PD2i
         window.footerInstance = new Footer({
@@ -717,13 +754,215 @@
             box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
         }
         
-        /* Responsive adjustments for placeholders */
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        
+        /* Tailor-made section animations */
+        .arrow-flow {
+            animation: arrowFlow 3s ease-in-out infinite;
+        }
+        
+        .arrow-flow-delayed {
+            animation: arrowFlow 3s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        
+        .equipment-pulse {
+            animation: equipmentPulse 4s ease-in-out infinite;
+        }
+        
+        .properties-glow {
+            animation: propertiesGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes arrowFlow {
+            0%, 100% {
+                transform: translateX(0) scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateX(10px) scale(1.05);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes equipmentPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 20px 40px rgba(0, 131, 202, 0.2);
+            }
+        }
+        
+        @keyframes propertiesGlow {
+            0%, 100% {
+                box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            }
+            50% {
+                box-shadow: 0 20px 40px rgba(34, 197, 94, 0.5);
+            }
+        }
+        
+        /* Individual property list item animations */
+        .property-item {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+        
+        .property-item:nth-child(1) { animation-delay: 0.1s; }
+        .property-item:nth-child(2) { animation-delay: 0.2s; }
+        .property-item:nth-child(3) { animation-delay: 0.3s; }
+        .property-item:nth-child(4) { animation-delay: 0.4s; }
+        .property-item:nth-child(5) { animation-delay: 0.5s; }
+        .property-item:nth-child(6) { animation-delay: 0.6s; }
+        .property-item:nth-child(7) { animation-delay: 0.7s; }
+        .property-item:nth-child(8) { animation-delay: 0.8s; }
+        .property-item:nth-child(9) { animation-delay: 0.9s; }
+        .property-item:nth-child(10) { animation-delay: 1.0s; }
+        
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Hover effects for the equipment */
+        .equipment-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            transition: all 0.3s ease;
+        }
+        
+        /* Application flow arrows - animated workflow */
+        .application-flow {
+            position: relative;
+        }
+        
+        .application-flow::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: translateY(-50%);
+            animation: flowPulse 2s ease-in-out infinite;
+            border-radius: 2px;
+        }
+        
+        .application-flow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #4A90E2;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            transform: translateY(-50%);
+            animation: arrowPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes flowPulse {
+            0%, 100% {
+                opacity: 0.6;
+                transform: translateY(-50%) scaleX(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-50%) scaleX(1.1);
+            }
+        }
+        
+        @keyframes arrowPulse {
+            0%, 100% {
+                opacity: 0.6;
+                transform: translateY(-50%) translateX(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-50%) translateX(5px);
+            }
+        }
+        
+        /* Application boxes styling */
+        .application-box {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 131, 202, 0.3);
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .application-box:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 131, 202, 0.4);
+        }
+        
+        .application-box:nth-child(1) { animation-delay: 0s; }
+        .application-box:nth-child(2) { animation-delay: 0.5s; }
+        .application-box:nth-child(3) { animation-delay: 1s; }
+        .application-box:nth-child(4) { animation-delay: 1.5s; }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1279px) {
+            .application-flow::after,
+            .application-flow::before {
+                display: none;
+            }
+            
+            .application-box {
+                margin: 0.5rem 0;
+            }
+        }
+        
         @media (max-width: 768px) {
             .download-btn {
                 padding: 0.875rem 2rem;
                 font-size: 1rem;
                 width: 100%;
                 text-align: center;
+            }
+            
+            .application-box {
+                padding: 0.75rem;
+                font-size: 0.9rem;
             }
         }
         
