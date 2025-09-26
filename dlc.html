@@ -148,24 +148,6 @@
 
                 <!-- Equipment and Properties -->
                 <div class="flex flex-col xl:flex-row items-stretch justify-center gap-6 xl:gap-8 mb-12">
-                    <!-- Left: Application Flow -->
-                    <div class="w-full xl:w-[300px] scroll-animate delay-100">
-                        <div class="grid grid-cols-1 gap-4">
-                            <div class="application-box application-flow scroll-animate delay-100">
-                                Precision<br>components
-                            </div>
-                            <div class="application-box application-flow scroll-animate delay-200">
-                                Plastic<br>molding
-                            </div>
-                            <div class="application-box application-flow scroll-animate delay-300">
-                                Cutting Tools
-                            </div>
-                            <div class="application-box application-flow scroll-animate delay-400">
-                                Forming
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Center: Equipment Image -->
                     <div class="flex-shrink-0 flex justify-center scroll-animate delay-500">
                         <!-- MpC Series Equipment Image -->
@@ -592,33 +574,41 @@
             <div class="bg-white pb-6 sm:pb-8">
                 <div class="container mx-auto px-4">
                     <div class="flex justify-center items-center">
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 md:gap-12 lg:gap-20 xl:gap-24 max-w-7xl w-full">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-6xl w-full">
                             <!-- Outil 1 -->
-                            <div class="flex items-center justify-center p-2 scroll-animate delay-100">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil1.png" 
-                                     alt="Cutting Tool 1" 
-                                     class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
+                            <div class="flex items-center justify-center p-4 scroll-animate delay-100">
+                                <div class="tool-container w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-100">
+                                    <img src="assets/images/dlc_for_tribological_coatings/Outil1.png" 
+                                         alt="Cutting Tool 1" 
+                                         class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300">
+                                </div>
                             </div>
                             
                             <!-- Outil 2 -->
-                            <div class="flex items-center justify-center p-2 scroll-animate delay-200">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil2.png" 
-                                     alt="Cutting Tool 2" 
-                                     class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
+                            <div class="flex items-center justify-center p-4 scroll-animate delay-200">
+                                <div class="tool-container w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-100">
+                                    <img src="assets/images/dlc_for_tribological_coatings/Outil2.png" 
+                                         alt="Cutting Tool 2" 
+                                         class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300">
+                                </div>
                             </div>
                             
                             <!-- Outil 3 -->
-                            <div class="flex items-center justify-center p-2 scroll-animate delay-300">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil3.png" 
-                                     alt="Cutting Tool 3" 
-                                     class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
+                            <div class="flex items-center justify-center p-4 scroll-animate delay-300">
+                                <div class="tool-container w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-100">
+                                    <img src="assets/images/dlc_for_tribological_coatings/Outil3.png" 
+                                         alt="Cutting Tool 3" 
+                                         class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300">
+                                </div>
                             </div>
                             
                             <!-- Outil 4 -->
-                            <div class="flex items-center justify-center p-2 scroll-animate delay-400">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil4.png" 
-                                     alt="Cutting Tool 4" 
-                                     class="h-16 sm:h-24 md:h-36 lg:h-48 xl:h-56 w-auto object-contain hover:scale-105 transition-transform duration-300 max-w-full">
+                            <div class="flex items-center justify-center p-4 scroll-animate delay-400">
+                                <div class="tool-container w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-100">
+                                    <img src="assets/images/dlc_for_tribological_coatings/Outil4.png" 
+                                         alt="Cutting Tool 4" 
+                                         class="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -775,32 +765,12 @@
         .delay-600 { animation-delay: 0.6s; }
         
         /* Tailor-made section animations */
-        .arrow-flow {
-            animation: arrowFlow 3s ease-in-out infinite;
-        }
-        
-        .arrow-flow-delayed {
-            animation: arrowFlow 3s ease-in-out infinite;
-            animation-delay: 0.5s;
-        }
-        
         .equipment-pulse {
             animation: equipmentPulse 4s ease-in-out infinite;
         }
         
         .properties-glow {
             animation: propertiesGlow 3s ease-in-out infinite;
-        }
-        
-        @keyframes arrowFlow {
-            0%, 100% {
-                transform: translateX(0) scale(1);
-                opacity: 0.8;
-            }
-            50% {
-                transform: translateX(10px) scale(1.05);
-                opacity: 1;
-            }
         }
         
         @keyframes equipmentPulse {
@@ -854,103 +824,18 @@
             transition: all 0.3s ease;
         }
         
-        /* Application flow arrows - animated workflow */
-        .application-flow {
-            position: relative;
+        /* Tool images hover effects */
+        .tool-container {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .application-flow::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -20px;
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(90deg, #0083CA, #4A90E2);
-            transform: translateY(-50%);
-            animation: flowPulse 2s ease-in-out infinite;
-            border-radius: 2px;
-        }
-        
-        .application-flow::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -25px;
-            width: 0;
-            height: 0;
-            border-left: 8px solid #4A90E2;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            transform: translateY(-50%);
-            animation: arrowPulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes flowPulse {
-            0%, 100% {
-                opacity: 0.6;
-                transform: translateY(-50%) scaleX(1);
-            }
-            50% {
-                opacity: 1;
-                transform: translateY(-50%) scaleX(1.1);
-            }
-        }
-        
-        @keyframes arrowPulse {
-            0%, 100% {
-                opacity: 0.6;
-                transform: translateY(-50%) translateX(0);
-            }
-            50% {
-                opacity: 1;
-                transform: translateY(-50%) translateX(5px);
-            }
-        }
-        
-        /* Application boxes styling */
-        .application-box {
-            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            font-weight: 600;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 131, 202, 0.3);
-            transition: all 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .application-box:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 131, 202, 0.4);
-        }
-        
-        .application-box:nth-child(1) { animation-delay: 0s; }
-        .application-box:nth-child(2) { animation-delay: 0.5s; }
-        .application-box:nth-child(3) { animation-delay: 1s; }
-        .application-box:nth-child(4) { animation-delay: 1.5s; }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
+        .tool-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 131, 202, 0.2);
         }
         
         /* Responsive adjustments */
-        @media (max-width: 1279px) {
-            .application-flow::after,
-            .application-flow::before {
-                display: none;
-            }
-            
-            .application-box {
-                margin: 0.5rem 0;
-            }
-        }
         
         @media (max-width: 768px) {
             .download-btn {
@@ -958,11 +843,6 @@
                 font-size: 1rem;
                 width: 100%;
                 text-align: center;
-            }
-            
-            .application-box {
-                padding: 0.75rem;
-                font-size: 0.9rem;
             }
         }
         

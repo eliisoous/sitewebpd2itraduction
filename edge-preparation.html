@@ -88,88 +88,60 @@
                     <p class="text-xl opacity-90">Edge preparation & post-treatment for High Performance Cutting Tools</p>
                 </div>
                 
-                <!-- Layout selon la maquette Figma: machines petites aux extrêmes + cadre central blanc -->
+                <!-- Layout selon la maquette Figma: ProEdge - Schema - Drag Finish -->
                 <div class="relative w-full max-w-7xl mx-auto">
-                    <!-- Desktop Layout: machines aux extrêmes + cadre central -->
-                    <div class="hidden lg:flex lg:items-center lg:justify-between lg:w-full lg:gap-8">
-                        <!-- Left Machine: Edge Prep - Petite, extrême gauche -->
-                        <div class="w-40 bg-white rounded-xl p-4 shadow-lg flex-shrink-0">
-                            <div class="w-full h-20 bg-pd2i-blue rounded-lg flex items-center justify-center mb-3">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 3a1 1 0 000 2h6a1 1 0 100-2H7z"/>
-                                </svg>
-                            </div>
-                            <p class="text-sm text-center text-gray-700 font-medium">Edge Prep Machine</p>
+                    <!-- Desktop Layout: disposition horizontale selon maquette Figma -->
+                    <div class="hidden lg:flex lg:items-center lg:justify-center lg:w-full lg:gap-8">
+                        <!-- Left Machine: ProEdge - Machine bleue -->
+                        <div class="flex-shrink-0">
+                            <img src="assets/images/edge-prep/ProEdge.png" 
+                                 alt="Pro Edge Machine" 
+                                 class="h-64 w-auto object-contain">
                         </div>
                         
-                        <!-- Center: Build Your High-Performance Cutting Edge - Grand cadre blanc -->
-                        <div class="bg-white rounded-xl p-8 shadow-lg flex-1 max-w-3xl mx-8">
-                            <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Build Your High-Performance Cutting Edge</h3>
-                            <div class="flex items-center justify-center space-x-4">
-                                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-md">
-                                    <span class="text-black font-bold text-lg">◄</span>
-                                </div>
-                                <div class="text-orange-500 text-2xl font-bold">→</div>
-                                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-md">
-                                    <span class="text-black font-bold text-lg">◄</span>
-                                </div>
-                                <div class="text-orange-500 text-2xl font-bold">→</div>
-                                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-md">
-                                    <span class="text-black font-bold text-lg">◄</span>
-                                </div>
+                        <!-- Center: Schema avec titre -->
+                        <div class="flex-1 max-w-2xl mx-8 text-center">
+                            <h3 class="text-3xl font-bold text-white mb-8">Build Your High-Performance Cutting Edge</h3>
+                            <div class="flex items-center justify-center">
+                                <img src="assets/images/edge-prep/schema.png" 
+                                     alt="Edge Preparation Process Schema" 
+                                     class="max-w-full h-auto">
                             </div>
                         </div>
                         
-                        <!-- Right Machine: Polishing - Petite, extrême droite -->
-                        <div class="w-40 bg-white rounded-xl p-4 shadow-lg flex-shrink-0">
-                            <div class="w-full h-20 bg-red-600 rounded-lg flex items-center justify-center mb-3">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <circle cx="10" cy="10" r="8"/>
-                                </svg>
-                            </div>
-                            <p class="text-sm text-center text-gray-700 font-medium">Polishing Machine</p>
+                        <!-- Right Machine: Drag Finish - Machine rouge -->
+                        <div class="flex-shrink-0">
+                            <img src="assets/images/edge-prep/Drag finish.png" 
+                                 alt="Drag Finish Machine" 
+                                 class="h-64 w-auto object-contain">
                         </div>
                     </div>
                     
-                    <!-- Mobile Layout: Empilé -->
+                    <!-- Mobile Layout: Version mobile adaptée -->
                     <div class="lg:hidden">
-                        <!-- Center content first on mobile -->
-                        <div class="bg-white rounded-xl p-6 shadow-lg mb-8">
-                            <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Build Your High-Performance Cutting Edge</h3>
-                            <div class="flex items-center justify-center space-x-3">
-                                <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                                    <span class="text-black font-bold">◄</span>
-                                </div>
-                                <div class="text-orange-500 text-xl font-bold">→</div>
-                                <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                                    <span class="text-black font-bold">◄</span>
-                                </div>
-                                <div class="text-orange-500 text-xl font-bold">→</div>
-                                <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
-                                    <span class="text-black font-bold">◄</span>
-                                </div>
-                            </div>
+                        <!-- Titre centré -->
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-white mb-6">Build Your High-Performance Cutting Edge</h3>
                         </div>
                         
-                        <!-- Machines below on mobile -->
+                        <!-- Schema centré -->
+                        <div class="flex justify-center mb-8">
+                            <img src="assets/images/edge-prep/schema.png" 
+                                 alt="Edge Preparation Process Schema" 
+                                 class="max-w-full h-auto">
+                        </div>
+                        
+                        <!-- Machines en dessous sur mobile -->
                         <div class="flex justify-center gap-6">
-                            <div class="w-36 bg-white rounded-xl p-4 shadow-lg">
-                                <div class="w-full h-16 bg-pd2i-blue rounded-lg flex items-center justify-center mb-2">
-                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 3a1 1 0 000 2h6a1 1 0 100-2H7z"/>
-                                    </svg>
-                                </div>
-                                <p class="text-xs text-center text-gray-700 font-medium">Edge Prep Machine</p>
+                            <div class="flex-shrink-0">
+                                <img src="assets/images/edge-prep/ProEdge.png" 
+                                     alt="Pro Edge Machine" 
+                                     class="h-32 w-auto object-contain">
                             </div>
-                            <div class="w-36 bg-white rounded-xl p-4 shadow-lg">
-                                <div class="w-full h-16 bg-red-600 rounded-lg flex items-center justify-center mb-2">
-                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <circle cx="10" cy="10" r="8"/>
-                                    </svg>
-                                </div>
-                                <p class="text-xs text-center text-gray-700 font-medium">Polishing Machine</p>
+                            <div class="flex-shrink-0">
+                                <img src="assets/images/edge-prep/Drag finish.png" 
+                                     alt="Drag Finish Machine" 
+                                     class="h-32 w-auto object-contain">
                             </div>
                         </div>
                     </div>
@@ -211,18 +183,25 @@
                         </a>
                     </div>
                     
-                    <!-- Product Image -->
+                    <!-- Product Images -->
                     <div class="order-1 lg:order-2">
-                        <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
-                            <div class="w-full h-80 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                                <div class="text-center p-8">
-                                    <div class="w-24 h-24 bg-pd2i-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-gray-700 mb-2">Innovative Pro Edge PL 24</h3>
-                                    <p class="text-sm text-gray-600">with cutting tools</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- ProEdge Machine -->
+                            <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                                <img src="assets/images/edge-prep/ProEdge.png" 
+                                     alt="Innovative Pro Edge PL 24 - Edge preparation equipment" 
+                                     class="w-full h-80 object-cover">
+                                <div class="p-3 bg-white">
+                                    <p class="text-sm text-center text-gray-700 font-medium">Pro Edge PL 24</p>
+                                </div>
+                            </div>
+                            <!-- Cutting Tools -->
+                            <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                                <img src="assets/images/edge-prep/cutting tools.png" 
+                                     alt="High Performance Cutting Tools" 
+                                     class="w-full h-80 object-cover">
+                                <div class="p-3 bg-white">
+                                    <p class="text-sm text-center text-gray-700 font-medium">Cutting Tools</p>
                                 </div>
                             </div>
                         </div>
@@ -255,15 +234,12 @@
                     
                     <!-- Video Card 2 - Surface Analysis -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="h-80 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                            <div class="text-center p-6">
-                                <div class="w-20 h-20 bg-gray-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 3a1 1 0 000 2h6a1 1 0 100-2H7z"/>
-                                    </svg>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-700">Surface Analysis Display</h3>
+                        <div class="h-80 relative">
+                            <img src="assets/images/edge-prep/surface-analysis-display.png" 
+                                 alt="Surface Analysis Display Equipment" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded">Surface Analysis Display</h3>
                             </div>
                         </div>
                     </div>
@@ -289,28 +265,24 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <!-- Machine 1 -->
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div class="w-full h-80 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                                    <div class="text-center p-6">
-                                        <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
-                                            <svg class="w-8 h-8 text-pd2i-blue" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-                                            </svg>
-                                        </div>
-                                        <h3 class="text-lg font-bold text-white">Stream & Drag Machine 1</h3>
+                                <div class="w-full h-80 relative">
+                                    <img src="assets/images/edge-prep/Drag finish.png" 
+                                         alt="Stream & Drag Finish Machine" 
+                                         class="w-full h-full object-cover">
+                                    <div class="absolute bottom-4 left-4 right-4">
+                                        <h3 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded text-center">Stream & Drag Machine</h3>
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- Machine 2 -->
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div class="w-full h-80 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                                    <div class="text-center p-6">
-                                        <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
-                                            <svg class="w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <rect width="16" height="10" x="2" y="5" rx="2"/>
-                                            </svg>
-                                        </div>
-                                        <h3 class="text-lg font-bold text-white">Stream & Drag Machine 2</h3>
+                                <div class="w-full h-80 relative">
+                                    <img src="assets/images/edge-prep/cutting tools.png" 
+                                         alt="High Performance Cutting Tools" 
+                                         class="w-full h-full object-cover">
+                                    <div class="absolute bottom-4 left-4 right-4">
+                                        <h3 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded text-center">Cutting Tools</h3>
                                     </div>
                                 </div>
                             </div>
@@ -356,17 +328,15 @@
                         </div>
                     </div>
                     
-                    <!-- Machine 3 Image Right -->
+                    <!-- Process Schema Image Right -->
                     <div class="order-1 lg:order-2 flex justify-center">
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-md">
-                            <div class="w-full h-80 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                                <div class="text-center p-6">
-                                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
-                                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                                            <polygon points="10,2 18,16 2,16" fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-white">Stream & Drag Machine 3</h3>
+                            <div class="w-full h-80 relative">
+                                <img src="assets/images/edge-prep/schema.png" 
+                                     alt="Edge Preparation Process Schema" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h3 class="text-lg font-bold text-white bg-black bg-opacity-50 p-2 rounded text-center">Process Schema</h3>
                                 </div>
                             </div>
                         </div>
