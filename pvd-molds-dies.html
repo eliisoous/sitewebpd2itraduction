@@ -65,17 +65,15 @@
         }
         
         .hero-content {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
             color: white;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            position: relative;
             z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100%;
+            width: 100%;
+            padding: 0 1rem;
         }
 
         .hero-content h1 {
@@ -97,8 +95,8 @@
                 min-height: 350px;
             }
             .hero-content {
-                padding: 1.5rem;
-                max-width: 1200px;
+                top: 8%;
+                padding: 0 1.5rem;
             }
             .hero-content h1 {
                 font-size: 2rem;
@@ -114,7 +112,8 @@
                 min-height: 400px;
             }
             .hero-content {
-                padding: 2rem;
+                top: 10%;
+                padding: 0 2rem;
             }
             .hero-content h1 {
                 font-size: 2.5rem;
