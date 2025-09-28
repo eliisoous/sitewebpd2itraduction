@@ -40,7 +40,7 @@ class Carousel {
         }
         
         container.innerHTML = `
-            <div class="carousel-wrapper relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-lg">
+            <div class="carousel-wrapper relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden shadow-lg">
                 <!-- Slides Container -->
                 <div class="carousel-slides relative w-full h-full">
                     ${this.generateSlidesHTML()}
