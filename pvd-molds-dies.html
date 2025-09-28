@@ -69,15 +69,18 @@
             color: white;
             max-width: 100%;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 2rem 1rem;
             position: relative;
             z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
         }
-        
+
         .hero-content h1 {
-            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             font-weight: bold;
-            margin-bottom: 1rem;
             line-height: 1.2;
         }
         
@@ -282,7 +285,8 @@
         /* PD2i Duplex Section */
         .duplex-section {
             background: white;
-            padding: 2rem 0;
+            padding: 0 0 2rem 0;
+            margin-top: -4rem;  /* Tire encore plus la section vers le haut */
         }
         
         .duplex-container {
@@ -980,6 +984,26 @@
             }
         }
         
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+
         /* Additional Responsive Utilities */
         @media (max-width: 480px) {
             /* Extra small mobile adjustments */
@@ -1005,28 +1029,26 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Title Section on white background -->
-        <section class="bg-white py-8">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-2xl font-bold text-pd2i-black">PVD Coating System for Molds & Dies</h1>
-            </div>
-        </section>
+
+
 
         <!-- Hero Section -->
         <section class="hero-section">
-            <!-- Image du désert seulement, sans texte -->
+            <div class="hero-content">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center">PVD Coating System for Molds & Dies</h1>
+            </div>
         </section>
 
         <!-- Surface Images Grid Section -->
         <section class="innovative-coating">
             <div class="coating-text">
                 <!-- Texte directement sur fond blanc, sans rectangle -->
-                <div class="text-center mb-6 md:mb-8">
+                <div class="text-center mb-6 md:mb-8 scroll-animate">
                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-pd2i-black mb-3 md:mb-4 px-4">Innovative coating processes for high performance molds and dies applications</h2>
                     <p class="text-sm md:text-base lg:text-lg text-gray-700 px-4">We design the coatings for your molds or dies applications and we transfer the know-how for the entire processes</p>
                 </div>
                 
-                <div class="surface-images">
+                <div class="surface-images scroll-animate delay-200">
                     <!-- Surface images -->
                     <div class="surface-image">
                         <img src="assets/images/pvd-molds-and-dies/Im1.jpg" alt="Surface coating sample 1" class="w-full h-full object-cover">
@@ -1047,17 +1069,13 @@
         <!-- PD2i Duplex Coating Section -->
         <section class="duplex-section">
             <div class="duplex-container">
-                <div class="duplex-content">
+                <div class="duplex-content scroll-animate">
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">PD2i Duplex Coating</h2>
                     <p class="text-base md:text-lg lg:text-xl text-center">Plasma Nitriding + Hard PVD Coating</p>
                 </div>
 
-                <div class="duplex-diagram">
-                    <!-- Triangle central seulement -->
-                    <div class="flex justify-center px-4">
-                        <img src="assets/images/pvd-molds-and-dies/Triangle.png" alt="PD2i Duplex Coating Pyramid Diagram" class="max-w-full h-auto w-full max-w-md md:max-w-lg lg:max-w-xl">
-                    </div>
-                </div>
+                <div class="flex justify-center px-4 scroll-animate delay-200" style="background: transparent;">
+                    <img src="assets/images/pvd-molds-and-dies/Triangle.png" alt="PD2i Duplex Coating Pyramid Diagram" class="max-w-full h-auto w-full max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl">                </div>
             </div>
         </section>
 
@@ -1075,7 +1093,7 @@
                         <div class="hidden lg:block"></div>
                         
                         <!-- Right side: Text content -->
-                        <div class="text-white text-center lg:text-left px-4 lg:px-0">
+                        <div class="text-white text-center lg:text-left px-4 lg:px-0 scroll-animate">
                             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">High Performance Coatings for Forming and Molding</h2>
                             <p class="text-base md:text-lg lg:text-xl leading-relaxed">PD2i has engineered an optimum solution for every application. Deep drawing, trimming, punching, blanking, cold forming, hot stamping, hot forging, powder pressing, nonferrous metal forming and Aluminum die casting all require different surface properties to perform properly.</p>
                         </div>
@@ -1089,7 +1107,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
                     <!-- Left side: Text content -->
-                    <div class="order-2 lg:order-1">
+                    <div class="order-2 lg:order-1 scroll-animate">
                         <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">Improving the mechanical properties in the supporting structure underneath the coatings has proven to dramatically improve the coatings ability to perform longer. The Nitriding layer provides a graded interface, which is harder and less likely to micro crack under the stresses of forming, than a surface without the Nitride layer. When nitride and coating processes are performed in a single step (in-situ) within the chamber, this combination provides superior surface properties.</p>
                         
                         <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">The PD2i coating equipment for forming and molding applications is engineered with our unique device and process to make the Nitriding process in the PVD coater.</p>
@@ -1104,7 +1122,7 @@
                     </div>
                     
                     <!-- Right side: Data Table -->
-                    <div class="flex flex-col items-center order-1 lg:order-2 mb-6 lg:mb-0">
+                    <div class="flex flex-col items-center order-1 lg:order-2 mb-6 lg:mb-0 scroll-animate delay-200">
                         <img src="assets/images/pvd-molds-and-dies/Download tableau.png" alt="Forming and Molding Data Table - Click to enlarge" class="max-w-full h-auto cursor-pointer hover:scale-105 transition-transform duration-300 w-full max-w-md lg:max-w-full">
                         <p class="text-xs md:text-sm text-gray-500 mt-2 italic">Click to enlarge</p>
                     </div>
@@ -1115,9 +1133,9 @@
         <!-- Properties Grid Section -->
         <section class="properties-section">
             <div class="properties-container">
-                <h1 class="properties-title text-lg md:text-xl lg:text-2xl px-4">Designing a successful coating is achieved by balancing the following six properties within the thin film</h1>
+                <h1 class="properties-title text-lg md:text-xl lg:text-2xl px-4 scroll-animate">Designing a successful coating is achieved by balancing the following six properties within the thin film</h1>
                 
-                <div class="properties-grid">
+                <div class="properties-grid scroll-animate delay-200">
                     <div class="property-card">
                         <h3 class="text-lg md:text-xl">High Hardness</h3>
                         <p class="text-sm md:text-base">For wear resistance</p>
@@ -1149,10 +1167,10 @@
         <!-- Specialized Properties Section -->
         <section class="specialized-section">
             <div class="specialized-container">
-                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6">Specialized Properties for Plastic Injection Molding</h2>
-                <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8">For mold cavities, cores, and injector runner systems, additional properties are required</p>
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6 scroll-animate">Specialized Properties for Plastic Injection Molding</h2>
+                <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 scroll-animate delay-100">For mold cavities, cores, and injector runner systems, additional properties are required</p>
                 
-                <div class="specialized-properties">
+                <div class="specialized-properties scroll-animate delay-200">
                     <div class="specialized-card-white">
                         <h3 class="text-base md:text-lg">Corrosion Resistance</h3>
                     </div>
@@ -1169,7 +1187,7 @@
         <!-- Mold Images Section -->
         <section class="bg-white py-6 md:py-8">
             <div class="container mx-auto px-4">
-                <div class="mold-images">
+                <div class="mold-images scroll-animate">
                     <div class="mold-sample">
                         <img src="assets/images/pvd-molds-and-dies/mold1.jpg" alt="Mold sample 1" class="w-full h-full object-cover">
                     </div>
@@ -1186,7 +1204,7 @@
         <!-- Additional Considerations Section -->
         <section class="considerations-section">
             <div class="considerations-container">
-                <div class="considerations-list">
+                <div class="considerations-list scroll-animate">
                     <h3 class="text-lg md:text-xl font-bold">Additional considerations for coating can be dependent on the substrate and application conditions:</h3>
                     <ul class="mt-4">
                         <li class="text-sm md:text-base">Substrate Material – Tool Steel, Carbide, Non Ferous, Surface Cleanliness, etc.</li>
@@ -1196,7 +1214,7 @@
                     </ul>
                 </div>
 
-                <div class="text-center px-4">
+                <div class="text-center px-4 scroll-animate delay-200">
                     <p class="portfolio-text text-base md:text-lg">The PD2i coating portfolio offers the optimum balance of properties for each application.</p>
                     <a href="#" class="btn-primary">Contact us</a>
                 </div>
@@ -1279,6 +1297,25 @@
                 { label: 'Legal Informations', href: 'legal.html' }
             ],
             copyrightYear: 2025
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
         });
     </script>
 
