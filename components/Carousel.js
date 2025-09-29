@@ -65,9 +65,10 @@ class Carousel {
     generateSlidesHTML() {
         return this.options.slides.map((slide, index) => {
             // Pour le 2ème slide (index 1 = Im2.png), alignement à droite
+            // Pour le 3ème slide (index 2 = Im3.png), alignement à droite
             // Pour le 4ème slide (index 3 = Im4.png), alignement à gauche
             const isLeftAligned = index === 3;
-            const isRightAligned = index === 1;
+            const isRightAligned = index === 1 || index === 2;
             
             let containerClasses, textClasses;
             
