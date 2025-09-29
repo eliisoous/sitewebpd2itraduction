@@ -70,15 +70,25 @@ class Carousel {
             const isLeftAligned = index === 3;
             const isRightAligned = index === 1 || index === 2;
             
+        
+            const isFirstSlide = index === 0;  // Nouvelle condition pour Im1
+
             let containerClasses, textClasses;
-            
-            if (isLeftAligned) {
+
+            if (isFirstSlide) {
+                // Im1 - Texte TRÈS TRÈS haut
+                containerClasses = "absolute inset-0 flex items-start justify-center pt-8 md:pt-12 lg:pt-16";
+                textClasses = "text-center text-white px-4 max-w-4xl";
+            } else if (isLeftAligned) {
+                // Im4 - Texte à gauche, centré verticalement
                 containerClasses = "absolute inset-0 flex items-center justify-start pl-8 md:pl-16 lg:pl-24";
                 textClasses = "text-left text-white px-4 max-w-2xl";
             } else if (isRightAligned) {
+                // Im2 et Im3 - Texte à droite, centré verticalement
                 containerClasses = "absolute inset-0 flex items-center justify-end pr-8 md:pr-16 lg:pr-24";
                 textClasses = "text-right text-white px-4 max-w-2xl";
             } else {
+                // Par défaut - centré verticalement
                 containerClasses = "absolute inset-0 flex items-center justify-center";
                 textClasses = "text-center text-white px-4 max-w-4xl";
             }

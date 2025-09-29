@@ -144,7 +144,7 @@
         </section>
 
         <!-- Tailor-made Solution Section -->
-        <section class="tailor-made-section pt-8 pb-16 bg-gray-50">
+        <section class="tailor-made-section pt-8 pb-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12 scroll-animate delay-300">
                     <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black mb-4">
@@ -155,16 +155,23 @@
                     </p>
                 </div>
 
+                
                 <!-- Equipment and Properties -->
-                <div class="flex flex-col xl:flex-row items-stretch justify-center gap-6 xl:gap-8 mb-12">
+                <div class="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-8 mb-12">
                     <!-- Center: Equipment Image -->
                     <div class="flex-shrink-0 flex justify-center scroll-animate delay-500">
                         <!-- MpC Series Equipment Image -->
-                        <div class="w-full max-w-[400px] sm:max-w-[450px] lg:w-[500px] h-[300px] sm:h-[350px] lg:h-[400px] flex items-center justify-center shadow-lg bg-white rounded-lg equipment-pulse equipment-hover">
-                            <img src="assets/images/dlc_for_tribological_coatings/MpC Series.png" 
-                                 alt="MpC Series Coating Equipment" 
-                                 class="max-w-full max-h-full object-contain rounded-lg p-4">
+                        <div class="w-full max-w-[400px] sm:max-w-[450px] lg:w-[500px] h-[300px] sm:h-[350px] lg:h-[400px] flex items-center justify-center equipment-pulse equipment-hover">                            <img src="assets/images/dlc_for_tribological_coatings/MpC Series.png" 
+                                alt="MpC Series Coating Equipment" 
+                                class="max-w-full max-h-full object-contain p-4">
                         </div>
+                    </div>
+
+                    <!-- Arrow between image and properties (hidden on mobile) -->
+                    <div class="hidden xl:flex items-center justify-center scroll-animate delay-550">
+                        <svg class="w-16 h-16 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                        </svg>
                     </div>
 
                     <!-- Right: Properties Optimization -->
