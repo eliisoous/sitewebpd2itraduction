@@ -98,15 +98,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* Download button - same style as Plasma Nitriding */
+        /* Download button - same style as Services page */
         .download-btn {
             background: #0083CA;                    /* Couleur PD2i bleue */
             color: white;
             padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
             border-radius: 0.5rem;                 /* Border-radius comme btn-primary */
             text-decoration: none;
-            font-weight: bold;
             display: inline-block;
+            font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.9rem;
             margin-top: 2rem;                      /* Espacement ajouté */
@@ -116,6 +116,28 @@
             background: #006ba3;                   /* Couleur hover */
             transform: translateY(-2px);           /* Effet de levée */
             box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
+        }
+        
+        /* Secondary button - outline style (same as Services page) */
+        .secondary-btn {
+            background: transparent;
+            color: #0083CA;
+            border: 2px solid #0083CA;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .secondary-btn:hover {
+            background: #0083CA;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
         }
         
         /* Scroll animations - same as Services page */
@@ -138,9 +160,14 @@
         .delay-500 { animation-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; }
         
-        /* Responsive adjustments */
+        /* Responsive adjustments - same as Services page */
         @media (max-width: 768px) {
             .download-btn {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-btn {
                 padding: 0.875rem 2rem;
                 font-size: 1rem;
             }
@@ -152,12 +179,11 @@
                 font-size: 0.9rem;
                 width: 100%;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .download-btn {
-                padding: 0.625rem 1.25rem;
-                font-size: 0.85rem;
+            
+            .secondary-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
             }
         }
     </style>
@@ -173,46 +199,47 @@
         </section>
 
         <!-- PD2i Experience Section -->
-        <section class="pd2i-experience py-12 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
-                    <!-- Text Content -->
-                    <div class="order-2 lg:order-1 scroll-animate">
-                        <div class="bg-gray-100 p-8 h-64 flex flex-col justify-center shadow-lg">
-                            <p class="text-lg text-gray-800 leading-relaxed">
-                                PD2i, a unique combination of experience and expertise. We continue to innovate through experience we have gained.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Image Content -->
-                    <div class="order-1 lg:order-2 scroll-animate delay-200">
-                        <div class="relative">
-                            <img src="assets/images/sections/pd2i-hands.png" 
-                                 alt="PD2i - Your partner when it is all about performance" 
-                                 class="w-full h-64 object-cover shadow-lg"
-                                 loading="lazy"
-                                 decoding="async">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-center text-white px-4">
-                                    <!-- Logo PD2i blanc -->
-                                    <div class="mb-4">
-                                        <img src="assets/images/logo-pd2i-footer.png" 
-                                             alt="PD2i Logo" 
-                                             class="h-16 md:h-20 mx-auto filter brightness-0 invert"
-                                             loading="lazy"
-                                             decoding="async">
-                                    </div>
-                                    <p class="text-sm md:text-base font-bold uppercase tracking-wide">
-                                        YOUR PARTNER WHEN IT IS ALL ABOUT<br>PERFORMANCE
-                                    </p>
-                                </div>
+        <!-- PD2i Experience Section - Sans animations -->
+<section class="pd2i-experience py-12 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+            <!-- Text Content -->
+            <div class="order-2 lg:order-1">
+                <div class="bg-gray-100 p-8 h-64 flex flex-col justify-center shadow-lg">
+                    <p class="text-lg text-gray-800 leading-relaxed">
+                        PD2i, a unique combination of experience and expertise. We continue to innovate through experience we have gained.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="order-1 lg:order-2">
+                <div class="relative">
+                    <img src="assets/images/sections/pd2i-hands.png" 
+                         alt="PD2i - Your partner when it is all about performance" 
+                         class="w-full h-64 object-cover shadow-lg"
+                         loading="lazy"
+                         decoding="async">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <!-- Logo PD2i blanc -->
+                            <div class="mb-4">
+                                <img src="assets/images/logo-pd2i-footer.png" 
+                                     alt="PD2i Logo" 
+                                     class="h-16 md:h-20 mx-auto filter brightness-0 invert"
+                                     loading="lazy"
+                                     decoding="async">
                             </div>
+                            <p class="text-sm md:text-base font-bold uppercase tracking-wide">
+                                YOUR PARTNER WHEN IT IS ALL ABOUT<br>PERFORMANCE
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- What we offer Section -->
         <section class="what-we-offer py-12 bg-gray-50">
