@@ -48,6 +48,29 @@ nav a::after {
     transition: transform 0.3s ease;
 }
 
+/* Active Navigation State */
+nav a.nav-active {
+    color: #0083CA !important;
+    font-weight: 600;
+}
+
+nav a.nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #0083CA;
+    transform: scaleX(1);
+}
+
+/* Active state for dropdown links */
+.group a.nav-active {
+    color: #0083CA !important;
+    font-weight: 600;
+}
+
 /* Contacts Button Styles */
 .contacts-btn {
     border: 2px solid #0083CA;
@@ -155,6 +178,20 @@ nav a::after {
 
 .mobile-menu.show {
     display: block;
+}
+
+/* Mobile Navigation Active State */
+#mobileMenu a.nav-active {
+    color: #0083CA !important;
+    font-weight: 600;
+    background-color: #f0f8ff;
+}
+
+/* Mobile Dropdown Active State */
+.mobile-dropdown a.nav-active {
+    color: #0083CA !important;
+    font-weight: 600;
+    background-color: #f0f8ff;
 }
 
 /* Mobile menu visibility */

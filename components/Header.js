@@ -8,6 +8,8 @@ class Header {
         this.options = {
             logoSrc: options.logoSrc || 'assets/images/logo-pd2i.png',
             logoAlt: options.logoAlt || 'PD2i Logo',
+            logoLink: options.logoLink || 'index.html',
+            currentPage: options.currentPage || null,
             currentLang: options.currentLang || 'EN',
             languages: options.languages || ['EN', 'FR'],
             navigationItems: options.navigationItems || this.getDefaultNavigation(),
@@ -20,31 +22,51 @@ class Header {
     
     getDefaultNavigation() {
         return [
-            { label: 'Home', href: 'index.html', type: 'link' },
+            { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
             {
                 label: 'Coating Equipments',
                 labelCompact: 'Coating',
                 type: 'dropdown',
+                pageId: 'coating-equipments',
                 items: [
-                    { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
-                    { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
-                    { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                    { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                    { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                    { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' }
                 ]
             },
-            { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+            { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
             {
                 label: 'Turnkey',
                 type: 'dropdown',
+                pageId: 'turnkey',
                 items: [
-                    { label: 'Turnkey Solutions', href: '#' },
-                    { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    { label: 'Turnkey Solutions', href: '#', pageId: 'turnkey-solutions' },
+                    { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html', pageId: 'greenclean-ultrasonic-cleaning' }
                 ]
             },
-            { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
-            { label: 'Services', href: 'services.html', type: 'link' },
-            { label: 'News', href: 'news.html', type: 'link' },
-            { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+            { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+            { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+            { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
+            { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
         ];
+    }
+    
+    isLinkActive(item) {
+        return this.options.currentPage && item.pageId === this.options.currentPage;
+    }
+    
+    isDropdownActive(item) {
+        // Vérifie si le dropdown lui-même est actif
+        if (this.isLinkActive(item)) {
+            return true;
+        }
+        
+        // Vérifie si un des sous-éléments est actif
+        if (item.items && item.items.length > 0) {
+            return item.items.some(subItem => subItem.pageId && subItem.pageId === this.options.currentPage);
+        }
+        
+        return false;
     }
     
     init() {
@@ -71,7 +93,7 @@ class Header {
                 <div class="flex items-center justify-between h-24">
                     <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="#" class="flex items-center">
+                        <a href="${this.options.logoLink}" class="flex items-center">
                             <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" class="h-16 w-auto">
                         </a>
                     </div>
@@ -104,7 +126,9 @@ class Header {
                     if (item.type === 'dropdown') {
                         return this.generateDropdown(item, 'tablet');
                     }
-                    return `<a href="${item.href}" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium text-sm">${item.labelCompact || item.label}</a>`;
+                    const isActive = this.isLinkActive(item);
+                    const activeClass = isActive ? 'text-pd2i-blue nav-active' : 'text-pd2i-black hover:text-pd2i-blue';
+                    return `<a href="${item.href}" class="${activeClass} transition-colors duration-200 font-medium text-sm">${item.labelCompact || item.label}</a>`;
                 }).join('')}
             </nav>
         `;
@@ -118,7 +142,9 @@ class Header {
                     if (item.type === 'dropdown') {
                         return this.generateDropdown(item, 'desktop');
                     }
-                    return `<a href="${item.href}" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">${item.label}</a>`;
+                    const isActive = this.isLinkActive(item);
+                    const activeClass = isActive ? 'text-pd2i-blue nav-active' : 'text-pd2i-black hover:text-pd2i-blue';
+                    return `<a href="${item.href}" class="${activeClass} transition-colors duration-200 font-medium">${item.label}</a>`;
                 }).join('')}
             </nav>
         `;
@@ -132,9 +158,12 @@ class Header {
         const itemTextSize = isTablet ? 'text-xs' : 'text-sm';
         const itemPadding = isTablet ? 'px-3 py-2' : 'px-4 py-2';
         
+        const isActive = this.isDropdownActive(item);
+        const activeClass = isActive ? 'text-pd2i-blue nav-active' : 'text-pd2i-black hover:text-pd2i-blue';
+        
         return `
             <div class="relative group">
-                <a href="${item.href || '#'}" class="text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium flex items-center ${textSize}">
+                <a href="${item.href || '#'}" class="${activeClass} transition-colors duration-200 font-medium flex items-center ${textSize}">
                     ${isTablet ? (item.labelCompact || item.label) : item.label}
                     <svg class="${iconSize} ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -209,7 +238,9 @@ class Header {
                         if (item.type === 'dropdown') {
                             return this.generateMobileDropdown(item);
                         }
-                        return `<a href="${item.href}" class="block px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">${item.label}</a>`;
+                        const isActive = this.isLinkActive(item);
+                        const activeClass = isActive ? 'text-pd2i-blue nav-active' : 'text-pd2i-black hover:text-pd2i-blue';
+                        return `<a href="${item.href}" class="block px-3 py-2 ${activeClass} transition-colors duration-200 font-medium">${item.label}</a>`;
                     }).join('')}
                     
                     <div class="px-3 py-2">
@@ -229,10 +260,13 @@ class Header {
         const dropdownId = item.label.toLowerCase().replace(/\s+/g, '') + 'Dropdown';
         const arrowId = item.label.toLowerCase().replace(/\s+/g, '') + 'Arrow';
         
+        const isActive = this.isDropdownActive(item);
+        const activeClass = isActive ? 'text-pd2i-blue nav-active' : 'text-pd2i-black hover:text-pd2i-blue';
+        
         return `
             <div class="mobile-dropdown">
                 <div class="w-full flex items-center justify-between">
-                    <a href="${item.href || '#'}" class="flex-1 px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium">${item.label}</a>
+                    <a href="${item.href || '#'}" class="flex-1 px-3 py-2 ${activeClass} transition-colors duration-200 font-medium">${item.label}</a>
                     <button class="px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200" onclick="toggleMobileDropdown('${dropdownId}')">
                         <svg class="w-4 h-4 transform transition-transform duration-200" id="${arrowId}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>

@@ -318,17 +318,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 scroll-animate delay-200">
                     <!-- Article 1 -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <img src="assets/images/news/expanding-horizons.png" 
-                             alt="Expanding Horizons: DLC coating" 
+                        <img src="assets/images/news/nano4energy.png" 
+                             alt="PD2i Launches State-of-the-Art Tribological Competence Center in Madrid" 
                              class="w-full h-48 object-cover"
                              loading="lazy"
                              decoding="async">
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">Expanding Horizons: DLC coating</h3>
+                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">PD2i Launches State-of-the-Art Tribological Competence Center in Madrid</h3>
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                PT Prima Nano Coating Pioneering Advanced Coating We...
+                                PD2i is proud to announce the inauguration of its cutting-edge Competence Center for Tribological and Functional Coatings in Madrid, Spain...
                             </p>
-                            <a href="#" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                            <a href="art-competence-center.html?id=nano4energy-madrid" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
                                 Read More
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -339,17 +339,17 @@
 
                     <!-- Article 2 -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <img src="assets/images/news/nano4energy.png" 
-                             alt="Launches State-of-the energy" 
+                        <img src="assets/images/news/HS Coating System.jpeg" 
+                             alt="High Speed Coating System" 
                              class="w-full h-48 object-cover"
                              loading="lazy"
                              decoding="async">
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">Launches State-of-the energy</h3>
+                            <h3 class="text-lg font-bold text-pd2i-blue mb-3">High Speed Coating System</h3>
                             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                PD2i is proud to announce the inauguration of its cutting-edge...
+                                Our High Speed Coating System delivers exceptional efficiency and versatility with an optimized process for high performance coatings...
                             </p>
-                            <a href="#" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                            <a href="art-news-edgeprep.html" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
                                 Read More
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -488,34 +488,38 @@
         window.headerInstance = new Header({
             logoSrc: 'assets/images/logo-pd2i.png',
             logoAlt: 'PD2i Logo',
+            logoLink: 'index.html',
+            currentPage: 'home',
             currentLang: 'EN',
             languages: ['EN', 'FR'],
             navigationItems: [
-                { label: 'Home', href: 'index.html', type: 'link' },
+                { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
                 {
                     label: 'Coating Equipments',
                     labelCompact: 'Coating',
                     href: 'coating-equipments.html',
                     type: 'dropdown',
+                    pageId: 'coating-equipments',
                     items: [
-                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
-                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
-                        { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' }
                     ]
                 },
-                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
                 {
                     label: 'Turnkey',
                     type: 'dropdown',
+                    pageId: 'turnkey',
                     items: [
-                        { label: 'Turnkey Solutions', href: '#' },
-                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                        { label: 'Turnkey Solutions', href: '#', pageId: 'turnkey-solutions' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html', pageId: 'greenclean-ultrasonic-cleaning' }
                     ]
                 },
-                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
-                { label: 'Services', href: 'services.html', type: 'link' },
-                { label: 'News', href: 'news.html', type: 'link' },
-                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
             ]
         });
         

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="High Speed Coating System - PD2i delivers exceptional efficiency and versatility with optimized process for high performance coatings for cutting tools.">
+    <meta name="keywords" content="High Speed Coating, PVD Coating, Cutting Tools, PD2i Technology">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Favicon Configuration -->
+    <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0083CA">
+    <meta name="theme-color" content="#0083CA">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="components/Header.js" as="script" fetchpriority="high">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="High Speed Coating System - PD2i">
+    <meta property="og:description" content="Exceptional efficiency and versatility with optimized process for high performance coatings for cutting tools.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pd2i.com/art-news-edgeprep">
+    
+    <title id="pageTitle">High Speed Coating System - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Article Page Specific Styles */
+        .article-hero {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/coating-equipments/coating-machine-workshop.jpg') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .article-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            color: #0083CA;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .article-content h3 {
+            color: #374151;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            color: #4b5563;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-badge {
+            background: rgba(0, 131, 202, 0.1);
+            color: #0083CA;
+            border: 1px solid rgba(0, 131, 202, 0.2);
+        }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-4px);
+        }
+        
+        .related-article {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .related-article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-roboto bg-white text-pd2i-black">
+    <!-- Header sera généré automatiquement par le composant -->
+
+    <!-- Main Content -->
+    <main>
+        <!-- Article Hero Section -->
+        <section class="article-hero py-12 text-white">
+            <div class="container mx-auto px-4">
+                <div class="article-hero-content max-w-4xl mx-auto">
+                    
+                    <!-- Back Button -->
+                    <div class="mb-6">
+                        <a href="news.html" class="back-button inline-flex items-center text-white hover:text-blue-200 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            Back to news
+                        </a>
+                    </div>
+                    
+                    <!-- Article Meta -->
+                    <div class="mb-4">
+                        <span class="article-badge px-3 py-1 rounded text-sm font-semibold uppercase">
+                            Technology
+                        </span>
+                    </div>
+                    
+                    <!-- Article Title -->
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">
+                        High Speed Coating System
+                    </h1>
+                    
+                    <!-- Article Meta Info -->
+                    <div class="article-meta flex flex-wrap items-center gap-2 md:gap-4 text-sm opacity-90">
+                        <span>March 15, 2024</span>
+                        <span class="hidden sm:inline">•</span>
+                        <span>By PD2i Team</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <!-- Main Content -->
+                        <div class="lg:col-span-3">
+                            <!-- Featured Image -->
+                            <div class="mb-6 md:mb-8">
+                                <img src="assets/images/news/HS Coating System.jpeg" 
+                                     alt="High Speed Coating System" 
+                                     class="w-full h-auto object-contain rounded-lg shadow-lg bg-gray-50"
+                                     loading="lazy"
+                                     decoding="async">
+                            </div>
+                            
+                            <!-- Article Content -->
+                            <div class="article-content prose max-w-none">
+                                <h2 id="introduction">Exceptional Efficiency and Versatility</h2>
+                                <p>Our High Speed Coating System delivers exceptional efficiency and versatility with an optimized process for high performance coatings for cutting tools.</p>
+                                
+                                <p>We provide customized coating solutions with dedicated customer support and turn-key implementation. Experience fast return on investment with our economical and environmentally-friendly coating solution.</p>
+                                
+                                <h2 id="key-features">Key Features and Benefits</h2>
+                                <p>The High Speed Coating System is designed to maximize productivity while maintaining the highest quality standards:</p>
+                                
+                                <ul>
+                                    <li>• <strong>Produce 6 batches per day</strong> - Maximize your production capacity</li>
+                                    <li>• <strong>Easy target material exchange</strong> - Only 10 minutes per target for quick changeovers</li>
+                                    <li>• <strong>Capability to produce 6 different coatings in a single day</strong> - Ultimate flexibility</li>
+                                    <li>• <strong>Very low running costs</strong> - Economical operation for better ROI</li>
+                                    <li>• <strong>Extensive coating portfolio</strong> - Wide range of coating options</li>
+                                </ul>
+                                
+                                <h2 id="applications">Applications and Industries</h2>
+                                <p>The High Speed Coating System is ideal for various cutting tool applications across multiple industries:</p>
+                                
+                                <h3>Cutting Tool Manufacturing</h3>
+                                <p>Perfect for high-volume production of coated cutting tools with consistent quality and performance.</p>
+                                
+                                <h3>Tool Reconditioning Services</h3>
+                                <p>Ideal for service providers who need to handle multiple coating types and quick turnaround times.</p>
+                                
+                                <h2 id="technology">Advanced Technology</h2>
+                                <p>Our system incorporates the latest PVD coating technology to ensure superior performance:</p>
+                                
+                                <ul>
+                                    <li>• Advanced process control for consistent results</li>
+                                    <li>• Environmentally-friendly coating processes</li>
+                                    <li>• Energy-efficient operation</li>
+                                    <li>• User-friendly interface for easy operation</li>
+                                </ul>
+                                
+                                <h2 id="conclusion">Investment Benefits</h2>
+                                <p>The High Speed Coating System represents a smart investment for companies looking to enhance their coating capabilities while maintaining cost-effectiveness. With its combination of speed, versatility, and reliability, it delivers exceptional value for cutting tool manufacturers and service providers.</p>
+                                
+                                <p>Contact our experts to learn more about how the High Speed Coating System can transform your production capabilities.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Sidebar -->
+                        <div class="lg:col-span-1">
+                            <!-- Table of Contents -->
+                            <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                                <h3 class="text-lg font-semibold mb-4">Table of Contents</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#introduction" class="text-pd2i-blue hover:underline">Exceptional Efficiency</a></li>
+                                    <li><a href="#key-features" class="text-pd2i-blue hover:underline">Key Features</a></li>
+                                    <li><a href="#applications" class="text-pd2i-blue hover:underline">Applications</a></li>
+                                    <li><a href="#technology" class="text-pd2i-blue hover:underline">Advanced Technology</a></li>
+                                    <li><a href="#conclusion" class="text-pd2i-blue hover:underline">Investment Benefits</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Contact CTA -->
+                            <div class="bg-pd2i-blue text-white p-6 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3">Need information?</h3>
+                                <p class="text-sm mb-4 opacity-90">
+                                    Contact our experts to learn more about our High Speed Coating System.
+                                </p>
+                                <a href="contacts.html" class="inline-block bg-white text-pd2i-blue px-4 py-2 rounded font-medium text-sm hover:bg-gray-100 transition-colors">
+                                    Contact us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">Related articles</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Related articles will be populated by JavaScript -->
+                        <article class="related-article bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="assets/images/news/nano4energy.png" 
+                                 alt="Madrid Competence Center" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <div class="text-xs text-gray-500 mb-2">Innovation • April 29, 2026</div>
+                                <h3 class="text-lg font-semibold mb-2 line-clamp-2">PD2i Launches State-of-the-Art Tribological Competence Center in Madrid</h3>
+                                <a href="art-competence-center.html?id=nano4energy-madrid" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                    Read the full article
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="related-article bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="assets/images/news/expanding-horizons.png" 
+                                 alt="DLC Coating" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <div class="text-xs text-gray-500 mb-2">Technology • March 10, 2024</div>
+                                <h3 class="text-lg font-semibold mb-2 line-clamp-2">Expanding Horizons: DLC coating</h3>
+                                <a href="art-competence-center.html?id=expanding-horizons" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
+                                    Read the full article
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer sera généré automatiquement par le composant -->
+
+    <!-- Header Component -->
+    <script src="components/Header.js"></script>
+    
+    <!-- Footer Component -->
+    <script src="components/Footer.js"></script>
+    
+    <!-- Initialize Header -->
+    <script>
+        // Initialisation du header avec la configuration PD2i
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    items: [
+                        { label: 'Turnkey Solutions', href: '#' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
+                { label: 'Services', href: 'services.html', type: 'link' },
+                { label: 'News', href: 'news.html', type: 'link' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+            ]
+        });
+        
+        // Initialisation du footer avec la configuration PD2i
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: 'about-us.html' },
+                { label: 'Services', href: '/services' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Downloads', href: 'download.html' },
+                { label: 'News', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Privacy policy', href: 'privacy.html' },
+                { label: 'Legal Informations', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
+        });
+    </script>
+
+    <!-- Smooth scroll for table of contents -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for table of contents
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

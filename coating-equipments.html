@@ -304,34 +304,38 @@
         window.headerInstance = new Header({
             logoSrc: 'assets/images/logo-pd2i.png',
             logoAlt: 'PD2i Logo',
+            logoLink: 'index.html',
+            currentPage: 'coating-equipments',
             currentLang: 'EN',
             languages: ['EN', 'FR'],
             navigationItems: [
-                { label: 'Home', href: 'index.html', type: 'link' },
+                { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
                 {
                     label: 'Coating Equipments',
                     labelCompact: 'Coating',
                     href: 'coating-equipments.html',
                     type: 'dropdown',
+                    pageId: 'coating-equipments',
                     items: [
-                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html' },
-                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html' },
-                        { label: 'DLC for Tribological Coatings', href: 'dlc.html' }
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' }
                     ]
                 },
-                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link' },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
                 {
                     label: 'Turnkey',
                     type: 'dropdown',
+                    pageId: 'turnkey',
                     items: [
-                        { label: 'Turnkey Solutions', href: '#' },
-                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html' }
+                        { label: 'Turnkey Solutions', href: '#', pageId: 'turnkey-solutions' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html', pageId: 'greenclean-ultrasonic-cleaning' }
                     ]
                 },
-                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link' },
-                { label: 'Services', href: 'services.html', type: 'link' },
-                { label: 'News', href: 'news.html', type: 'link' },
-                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link' }
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
             ]
         });
         
