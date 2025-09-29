@@ -63,14 +63,33 @@ class Carousel {
     }
     
     generateSlidesHTML() {
-        return this.options.slides.map((slide, index) => `
+        return this.options.slides.map((slide, index) => {
+            // Pour le 2ème slide (index 1 = Im2.png), alignement à droite
+            // Pour le 4ème slide (index 3 = Im4.png), alignement à gauche
+            const isLeftAligned = index === 3;
+            const isRightAligned = index === 1;
+            
+            let containerClasses, textClasses;
+            
+            if (isLeftAligned) {
+                containerClasses = "absolute inset-0 flex items-center justify-start pl-8 md:pl-16 lg:pl-24";
+                textClasses = "text-left text-white px-4 max-w-2xl";
+            } else if (isRightAligned) {
+                containerClasses = "absolute inset-0 flex items-center justify-end pr-8 md:pr-16 lg:pr-24";
+                textClasses = "text-right text-white px-4 max-w-2xl";
+            } else {
+                containerClasses = "absolute inset-0 flex items-center justify-center";
+                textClasses = "text-center text-white px-4 max-w-4xl";
+            }
+            
+            return `
             <div class="carousel-slide absolute inset-0 transition-all duration-500 ease-in-out ${index === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}" data-slide="${index}">
                 <div class="relative w-full h-full">
                     <img src="${slide.image}" alt="${slide.alt || `Slide ${index + 1}`}" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMDA4M0NBIi8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UEQyaTwvdGV4dD4KPHN2Zz4=';">
                     <div class="absolute inset-0 bg-black bg-opacity-30"></div>
                     ${slide.title || slide.description ? `
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="text-center text-white px-4 max-w-4xl">
+                        <div class="${containerClasses}">
+                            <div class="${textClasses}">
                                 ${slide.title ? `<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">${slide.title}</h2>` : ''}
                                 ${slide.description ? `<p class="text-lg md:text-xl mb-6 leading-relaxed">${slide.description}</p>` : ''}
                                 ${slide.buttonText && slide.buttonLink ? `
@@ -83,7 +102,8 @@ class Carousel {
                     ` : ''}
                 </div>
             </div>
-        `).join('');
+        `;
+        }).join('');
     }
     
     generateArrowsHTML() {
