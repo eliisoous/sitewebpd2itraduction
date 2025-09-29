@@ -98,15 +98,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* Download button - same style as Greenclean Ultrasonic Cleaning */
+        /* Download button - same style as Plasma Nitriding */
         .download-btn {
             background: #0083CA;                    /* Couleur PD2i bleue */
             color: white;
             padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
             border-radius: 0.5rem;                 /* Border-radius comme btn-primary */
             text-decoration: none;
+            font-weight: bold;
             display: inline-block;
-            font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.9rem;
             margin-top: 2rem;                      /* Espacement ajouté */
@@ -117,6 +117,26 @@
             transform: translateY(-2px);           /* Effet de levée */
             box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
         }
+        
+        /* Scroll animations - same as Services page */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -157,7 +177,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
                     <!-- Text Content -->
-                    <div class="order-2 lg:order-1">
+                    <div class="order-2 lg:order-1 scroll-animate">
                         <div class="bg-gray-100 p-8 h-64 flex flex-col justify-center shadow-lg">
                             <p class="text-lg text-gray-800 leading-relaxed">
                                 PD2i, a unique combination of experience and expertise. We continue to innovate through experience we have gained.
@@ -166,7 +186,7 @@
                     </div>
                     
                     <!-- Image Content -->
-                    <div class="order-1 lg:order-2">
+                    <div class="order-1 lg:order-2 scroll-animate delay-200">
                         <div class="relative">
                             <img src="assets/images/sections/pd2i-hands.png" 
                                  alt="PD2i - Your partner when it is all about performance" 
@@ -197,12 +217,12 @@
         <!-- What we offer Section -->
         <section class="what-we-offer py-12 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-8">What we offer</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-8 scroll-animate">What we offer</h2>
                 
                 <!-- Two Main Sections with Aligned Arrow Flows -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                     <!-- Left Column: PD2i Coating Equipments -->
-                    <div class="flex flex-col">
+                    <div class="flex flex-col scroll-animate delay-200">
                         <!-- PD2i Coating Equipments Image -->
                         <a href="coating-equipments.html" class="relative overflow-hidden shadow-lg mb-6 block transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             <img src="assets/images/sections/coating-equipment.jpg" 
@@ -251,7 +271,7 @@
                     </div>
                     
                     <!-- Right Column: PD2i Services & Consulting -->
-                    <div class="flex flex-col">
+                    <div class="flex flex-col scroll-animate delay-300">
                         <!-- PD2i Services & Consulting Image -->
                         <a href="services.html" class="relative overflow-hidden shadow-lg mb-6 block transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             <img src="assets/images/sections/services-consulting.png" 
@@ -287,7 +307,7 @@
                 </div>
 
                 <!-- Contact Us Button -->
-                <div class="text-center">
+                <div class="text-center scroll-animate delay-400">
                     <a href="contacts.html" class="download-btn">
                         Contact us
                     </a>
@@ -298,9 +318,9 @@
         <!-- News Section -->
         <section class="news py-12 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-8">News</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-8 scroll-animate">News</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 scroll-animate delay-200">
                     <!-- Article 1 -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img src="assets/images/news/expanding-horizons.png" 
@@ -391,10 +411,10 @@
         <!-- Our Customers Section -->
         <section class="our-customers py-12 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-8">Our Customers</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-8 scroll-animate">Our Customers</h2>
                 
                 <!-- Customer Logos Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center scroll-animate delay-200">
                     <!-- Row 1 -->
                     <a href="https://www.dekracoat.nl/" target="_blank" rel="noopener noreferrer" class="customer-logo">
                         <img src="assets/images/clients/dekracoat.png" alt="Dekracoat" class="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300">
@@ -583,6 +603,25 @@
             showArrows: true,
             pauseOnHover: true,
             loop: true
+        });
+        
+        // Scroll animations - same as Services page
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
         });
     </script>
     
