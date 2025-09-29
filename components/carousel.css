@@ -36,18 +36,15 @@
     object-position: center;
 }
 
-/* Slide Content Overlay */
-.carousel-slide .absolute.inset-0.flex {
-    background: rgba(0, 0, 0, 0.1);
-}
+/* Slide Content Overlay - Removed */
 
 .carousel-slide h2 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 1px 1px 4px rgba(0, 0, 0, 0.9);
     margin-bottom: 1rem;
 }
 
 .carousel-slide p {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(0, 0, 0, 0.9);
     margin-bottom: 1.5rem;
 }
 

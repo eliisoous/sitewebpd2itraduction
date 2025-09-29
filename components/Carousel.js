@@ -86,14 +86,14 @@ class Carousel {
             <div class="carousel-slide absolute inset-0 transition-all duration-500 ease-in-out ${index === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}" data-slide="${index}">
                 <div class="relative w-full h-full">
                     <img src="${slide.image}" alt="${slide.alt || `Slide ${index + 1}`}" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMDA4M0NBIi8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UEQyaTwvdGV4dD4KPHN2Zz4=';">
-                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                    
                     ${slide.title || slide.description ? `
                         <div class="${containerClasses}">
                             <div class="${textClasses}">
                                 ${slide.title ? `<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">${slide.title}</h2>` : ''}
                                 ${slide.description ? `<p class="text-lg md:text-xl mb-6 leading-relaxed">${slide.description}</p>` : ''}
                                 ${slide.buttonText && slide.buttonLink ? `
-                                    <a href="${slide.buttonLink}" class="inline-block bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200">
+                                    <a href="${slide.buttonLink}" class="inline-block bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">
                                         ${slide.buttonText}
                                     </a>
                                 ` : ''}
