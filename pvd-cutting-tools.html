@@ -13,7 +13,7 @@
     <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <!-- <link rel="manifest" href="assets/images/favicon/site.webmanifest"> -->
     <meta name="msapplication-TileColor" content="#0083CA">
     <meta name="theme-color" content="#0083CA">
     
@@ -707,11 +707,13 @@
             align-items: center;
         }
         
-        .turnkey-content h2 {
+        .turnkey-main-title {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 2rem;
             color: #000;
+            white-space: nowrap;
+            text-align: center;
         }
         
         .turnkey-box {
@@ -761,7 +763,7 @@
         /* Expertise Section */
         .expertise-section {
             background: white;
-            padding: 2.5rem 0;
+            padding: 0 0 2.5rem 0;
             text-align: center;
         }
         
@@ -1100,7 +1102,7 @@
                         </ul>
                     </div>
                     
-                    <!-- Right: Process Timeline Chart -->
+                    <!-- Right: Process Timeline Chart with Wide Range Coating Portfolio -->
                     <div class="process-chart">
                         <div class="text-center">
                             <img src="assets/images/pvd-cutting-tools/Tableau.png" 
@@ -1109,410 +1111,62 @@
                                  loading="lazy"
                                  decoding="async">
                         </div>
+                        
+                        <!-- Wide Range Coating Portfolio - Positioned right below the chart -->
+                        <div style="margin-top: 2rem;">
+                            <div style="background: linear-gradient(135deg, #4A90E2 0%, #1976d2 100%); color: white; padding: 2rem; border-radius: 0.5rem; text-align: center;">
+                                <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: white;">Wide Range Coating Portfolio:</h3>
+                                <p style="font-size: 1.2rem; line-height: 1.4; font-weight: 500;">Monolayers – Multilayers – Gradient layers – Nano layers</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </div>
-        </section>
 
-        <!-- Technology Configuration and Coating Portfolio Section -->
-        <section class="coating-portfolio-section scroll-animate delay-350" style="background: white; padding: 2rem 0;">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                    <!-- Left Column: Available Technology Configurations -->
-                    <div style="background: #f9fafb; padding: 2rem; border-radius: 0.5rem;">
-                        <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #000;">Available Technology Configurations:</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 500;">
-                                <span style="width: 8px; height: 8px; background: #0083CA; border-radius: 50%; margin-right: 1rem;"></span>
+                <!-- Available Technology Configurations - Separate section -->
+                <div style="margin-top: 2rem;">
+                    <div style="padding: 2rem; max-width: 600px; margin: 0 auto; text-align: center;">
+                        <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; color: #000; text-align: center;">Available Technology Configurations:</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
+                            <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500;">
+                                <span style="width: 8px; height: 8px; background: #0083CA; border-radius: 50%; margin-right: 0.5rem;"></span>
                                 Arc
                             </li>
-                            <li style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 500;">
-                                <span style="width: 8px; height: 8px; background: #0083CA; border-radius: 50%; margin-right: 1rem;"></span>
+                            <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500;">
+                                <span style="width: 8px; height: 8px; background: #0083CA; border-radius: 50%; margin-right: 0.5rem;"></span>
                                 Sputtering
                             </li>
                             <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500;">
-                                <span style="width: 8px; height: 8px; background: #0083CA; border-radius: 50%; margin-right: 1rem;"></span>
+                                <span style="width: 8px; height: 8px; background: #0083CA; border-radius: 50%; margin-right: 0.5rem;"></span>
                                 Hybrid Arc / Sputtering
                             </li>
                         </ul>
                     </div>
-
-                    <!-- Right Column: Wide Range Coating Portfolio -->
-                    <div style="background: #0083CA; color: white; padding: 2rem; border-radius: 0.5rem; text-align: center;">
-                        <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: white;">Wide Range Coating Portfolio:</h3>
-                        <p style="font-size: 1.2rem; line-height: 1.4; font-weight: 500;">Monolayers – Multilayers – Gradient layers – Nano layers</p>
+                    
+                    <!-- Coaters Image -->
+                    <div style="text-align: center; margin-top: 2rem; display: flex; justify-content: center;">
+                        <img src="assets/images/pvd-cutting-tools/coaters.png" 
+                             alt="PVD Coaters Equipment" 
+                             style="max-width: 80%; height: auto;"
+                             loading="lazy"
+                             decoding="async">
                     </div>
-                </div>
-
-                <!-- Responsive design for mobile -->
-                <style>
-                    @media (max-width: 768px) {
-                        .coating-portfolio-section div[style*="grid-template-columns"] {
-                            grid-template-columns: 1fr !important;
-                            gap: 2rem !important;
-                        }
-                    }
-                </style>
-            </div>
-        </section>
-
-        <!-- MpC Equipment Specifications Table -->
-        <section class="mpc-table-section py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <!-- Equipment Specifications Table -->
-                <div class="mb-16 scroll-animate delay-400">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <!-- Mobile/Tablet View: Stacked Cards -->
-                        <div class="block lg:hidden">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
-                                <!-- MpC500 Card -->
-                                <div class="bg-gray-50 rounded-lg p-4">
-                                    <div class="bg-pd2i-blue text-white rounded-lg px-3 py-2 text-center mb-4">
-                                        <span class="text-lg font-bold">MpC 500</span>
-                                    </div>
-                                    <div class="space-y-2 text-base">
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Useful Volume:</span>
-                                            <span class="font-semibold">⌀ 350 x 550</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Homogeneous coating:</span>
-                                            <span class="font-semibold">⌀ 350 x 480</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Load:</span>
-                                            <span class="font-semibold">150 kg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Cycle time:</span>
-                                            <span class="font-semibold">3.5 h</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Nb of Sources:</span>
-                                            <span class="font-semibold">2</span>
-                                        </div>
-                                        <div class="mt-3 pt-2 border-t border-gray-200">
-                                            <span class="font-medium text-gray-600 block mb-2">TECHNOLOGY:</span>
-                                            <div class="text-center">
-                                                <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-semibold">Arc +</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- MpC501 Card -->
-                                <div class="bg-gray-50 rounded-lg p-4">
-                                    <div class="bg-pd2i-blue text-white rounded-lg px-3 py-2 text-center mb-4">
-                                        <span class="text-lg font-bold">MpC 501</span>
-                                    </div>
-                                    <div class="space-y-2 text-base">
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Useful Volume:</span>
-                                            <span class="font-semibold">⌀ 350 x 550</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Homogeneous coating:</span>
-                                            <span class="font-semibold">⌀ 350 x 480</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Load:</span>
-                                            <span class="font-semibold">150 kg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Cycle time:</span>
-                                            <span class="font-semibold">3 h</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Nb of Sources:</span>
-                                            <span class="font-semibold">3</span>
-                                        </div>
-                                        <div class="mt-3 pt-2 border-t border-gray-200">
-                                            <span class="font-medium text-gray-600 block mb-2">TECHNOLOGY:</span>
-                                            <div class="text-center">
-                                                <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-semibold">Arc +</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- MpC600 Card -->
-                                <div class="bg-gray-50 rounded-lg p-4">
-                                    <div class="bg-pd2i-blue text-white rounded-lg px-3 py-2 text-center mb-4">
-                                        <span class="text-lg font-bold">MpC 600</span>
-                                    </div>
-                                    <div class="space-y-2 text-base">
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Useful Volume:</span>
-                                            <span class="font-semibold">⌀ 450 x 550</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Homogeneous coating:</span>
-                                            <span class="font-semibold">⌀ 450 x 480</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Load:</span>
-                                            <span class="font-semibold">400 kg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Cycle time:</span>
-                                            <span class="font-semibold">4 h</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Nb of Sources:</span>
-                                            <span class="font-semibold">4</span>
-                                        </div>
-                                        <div class="mt-3 pt-2 border-t border-gray-200">
-                                            <span class="font-medium text-gray-600 block mb-2">TECHNOLOGY:</span>
-                                            <div class="text-center">
-                                                <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-semibold">Arc +</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- MpC601 Hybrid Card -->
-                                <div class="bg-gray-50 rounded-lg p-4">
-                                    <div class="bg-pd2i-blue text-white rounded-lg px-3 py-2 text-center mb-4">
-                                        <span class="text-lg font-bold">MpC 601 Hybrid</span>
-                                    </div>
-                                    <div class="space-y-2 text-base">
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Useful Volume:</span>
-                                            <span class="font-semibold">⌀ 450 x 550</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Homogeneous coating:</span>
-                                            <span class="font-semibold">⌀ 450 x 480</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Load:</span>
-                                            <span class="font-semibold">400 kg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Cycle time:</span>
-                                            <span class="font-semibold">4 h</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Nb of Sources:</span>
-                                            <span class="font-semibold">4</span>
-                                        </div>
-                                        <div class="mt-3 pt-2 border-t border-gray-200">
-                                            <span class="font-medium text-gray-600 block mb-2">TECHNOLOGY:</span>
-                                            <div class="text-center space-y-1">
-                                                <div><span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-semibold">Arc +</span></div>
-                                                <div><span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-semibold">Magnetron sputtering +</span></div>
-                                                <div><span class="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-semibold">Arc/Magnetron +</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- MpC1000 Card -->
-                                <div class="bg-gray-50 rounded-lg p-4">
-                                    <div class="bg-pd2i-blue text-white rounded-lg px-3 py-2 text-center mb-4">
-                                        <span class="text-lg font-bold">MpC 1000</span>
-                                    </div>
-                                    <div class="space-y-2 text-base">
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Useful Volume:</span>
-                                            <span class="font-semibold">⌀ 650 x 550</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Homogeneous coating:</span>
-                                            <span class="font-semibold">⌀ 650 x 480</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Load:</span>
-                                            <span class="font-semibold">1000 kg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Cycle time:</span>
-                                            <span class="font-semibold">5 h</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Nb of Sources:</span>
-                                            <span class="font-semibold">4</span>
-                                        </div>
-                                        <div class="mt-3 pt-2 border-t border-gray-200">
-                                            <span class="font-medium text-gray-600 block mb-2">TECHNOLOGY:</span>
-                                            <div class="text-center">
-                                                <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-semibold">Arc +</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- MpC800 Hybrid Card -->
-                                <div class="bg-gray-50 rounded-lg p-4">
-                                    <div class="bg-pd2i-blue text-white rounded-lg px-3 py-2 text-center mb-4">
-                                        <span class="text-lg font-bold">MpC 800 Hybrid</span>
-                                    </div>
-                                    <div class="space-y-2 text-base">
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Useful Volume:</span>
-                                            <span class="font-semibold">⌀ 650 x 550</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Homogeneous coating:</span>
-                                            <span class="font-semibold">⌀ 650 x 480</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Load:</span>
-                                            <span class="font-semibold">1000 kg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Cycle time:</span>
-                                            <span class="font-semibold">5 h</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span class="font-medium text-gray-600">Nb of Sources:</span>
-                                            <span class="font-semibold">4</span>
-                                        </div>
-                                        <div class="mt-3 pt-2 border-t border-gray-200">
-                                            <span class="font-medium text-gray-600 block mb-2">TECHNOLOGY:</span>
-                                            <div class="text-center space-y-1">
-                                                <div><span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-semibold">Arc +</span></div>
-                                                <div><span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-semibold">Magnetron sputtering +</span></div>
-                                                <div><span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm font-semibold">PVD/PeCVD +</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    
+                    <!-- Coating Images - Side by side below coaters -->
+                    <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div style="flex: 1; max-width: 45%; text-align: center;">
+                            <img src="assets/images/pvd-cutting-tools/coating.png" 
+                                 alt="Coating Process" 
+                                 style="max-width: 100%; height: auto;"
+                                 loading="lazy"
+                                 decoding="async">
                         </div>
-                        
-                        <!-- Desktop View: Traditional Table -->
-                        <div class="hidden lg:block overflow-x-auto">
-                            <table class="w-full">
-                                <thead>
-                                    <tr class="bg-gray-50">
-                                        <th class="px-4 xl:px-6 py-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider"></th>
-                                        <th class="px-3 xl:px-6 py-4 text-center">
-                                            <div class="bg-pd2i-blue text-white rounded-lg px-2 xl:px-4 py-2 inline-block">
-                                                <span class="text-lg font-bold">MpC 500</span>
-                                            </div>
-                                        </th>
-                                        <th class="px-3 xl:px-6 py-4 text-center">
-                                            <div class="bg-pd2i-blue text-white rounded-lg px-2 xl:px-4 py-2 inline-block">
-                                                <span class="text-lg font-bold">MpC 501</span>
-                                            </div>
-                                        </th>
-                                        <th class="px-3 xl:px-6 py-4 text-center">
-                                            <div class="bg-pd2i-blue text-white rounded-lg px-2 xl:px-4 py-2 inline-block">
-                                                <span class="text-lg font-bold">MpC 600</span>
-                                            </div>
-                                        </th>
-                                        <th class="px-3 xl:px-6 py-4 text-center">
-                                            <div class="bg-pd2i-blue text-white rounded-lg px-2 xl:px-4 py-2 inline-block">
-                                                <span class="text-lg font-bold">MpC 601 Hybrid</span>
-                                            </div>
-                                        </th>
-                                        <th class="px-3 xl:px-6 py-4 text-center">
-                                            <div class="bg-pd2i-blue text-white rounded-lg px-2 xl:px-4 py-2 inline-block">
-                                                <span class="text-lg font-bold">MpC 1000</span>
-                                            </div>
-                                        </th>
-                                        <th class="px-3 xl:px-6 py-4 text-center">
-                                            <div class="bg-pd2i-blue text-white rounded-lg px-2 xl:px-4 py-2 inline-block">
-                                                <span class="text-lg font-bold">MpC 800 Hybrid</span>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Useful volume</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 350 x 550</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 350 x 550</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 450 x 550</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 450 x 550</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 650 x 550</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 650 x 550</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Homogeneous coating</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 350 x 480</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 350 x 480</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 450 x 480</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 450 x 480</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 650 x 480</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">⌀ 650 x 480</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Load</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">150 kg</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">150 kg</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">400 kg</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">400 kg</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">1000 kg</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">1000 kg</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Cycle time</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">3.5 h</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">3 h</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">4 h</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">4 h</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">5 h</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">5 h</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Nb of Sources</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">2</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">3</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">4</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">4</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">4</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-semibold">4</td>
-                                    </tr>
-                                    <tr class="bg-gray-100">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-700 uppercase">TECHNOLOGY</td>
-                                        <td class="px-3 xl:px-6 py-4 text-sm text-gray-900 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 text-sm text-gray-900 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 text-sm text-gray-900 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 text-sm text-gray-900 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 text-sm text-gray-900 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 text-sm text-gray-900 text-center font-semibold"></td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Arc</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Magnetron sputtering</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">Arc / Magnetron</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-4 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">PVD / PeCVD</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-400 text-center font-semibold"></td>
-                                        <td class="px-3 xl:px-6 py-4 whitespace-nowrap text-sm text-gray-900 text-center font-bold text-2xl">+</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div style="flex: 1; max-width: 45%; text-align: center;">
+                            <img src="assets/images/pvd-cutting-tools/coating properties.png" 
+                                 alt="Coating Properties" 
+                                 style="max-width: 100%; height: auto;"
+                                 loading="lazy"
+                                 decoding="async">
                         </div>
                     </div>
                 </div>
@@ -1541,11 +1195,9 @@
                             <li>Toughness for shock resistance</li>
                             <li>Smooth surface for chip removal</li>
                         </ul>
+                        
+                        <a href="#" class="btn-primary" style="background: white; color: #0083CA;">Download Coating Portfolio</a>
                     </div>
-                </div>
-                
-                <div class="download-section">
-                    <a href="#" class="btn-primary">Download Coating Portfolio</a>
                 </div>
             </div>
         </section>
@@ -1554,11 +1206,10 @@
         <!-- Turnkey Section -->
         <section class="turnkey-section">
             <div class="turnkey-container scroll-animate delay-500">
+                <h2 class="turnkey-main-title">Turnkey for High Speed Coating System</h2>
                 <div class="turnkey-grid">
                     <!-- Left: Content -->
                     <div class="turnkey-content">
-                        <h2>Turn Key for High Speed Coating System</h2>
-                        
                         <div class="turnkey-box">
                             <h3>Turnkey packages consist of:</h3>
                             <ul class="turnkey-list">
