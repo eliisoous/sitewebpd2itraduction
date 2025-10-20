@@ -134,6 +134,109 @@
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; }
+        
+        /* Features Box - same style as pvd-cutting-tools.html */
+        .features-box {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, rgb(207, 24, 24), rgb(250, 3, 3));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .features-box:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .features-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgb(207, 24, 24);
+        }
+        
+        .features-box h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(207, 24, 24);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .features-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features-box li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        
+        .features-box li::before {
+            content: '✓';
+            color: rgb(207, 24, 24);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        
+        /* Responsive adjustments for features box */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .features-box {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-box {
+                padding: 1.5rem;
+            }
+            
+            .features-box h3 {
+                font-size: 1.3rem;
+            }
+            
+            .features-box li {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .features-box {
+                padding: 1rem;
+            }
+            
+            .features-box h3 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .features-box li {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
@@ -176,7 +279,7 @@
                     
                     <!-- Colonne 3: Drag Finish Machine -->
                     <div class="flex justify-center items-center transform translate-x-6 scroll-animate delay-300">
-                        <img src="assets/images/edge-prep/Drag finish.png" 
+                        <img src="assets/images/edge-prep/edgeprep.png" 
                             alt="Drag Finish Machine" 
                             class="h-80 xl:h-96 w-auto object-contain">
                     </div>
@@ -206,7 +309,7 @@
                                 class="h-36 md:h-48 w-auto object-contain">
                         </div>
                         <div class="flex justify-center">
-                            <img src="assets/images/edge-prep/Drag finish.png" 
+                            <img src="assets/images/edge-prep/edgeprep.png" 
                                 alt="Drag Finish Machine" 
                                 class="h-36 md:h-48 w-auto object-contain">
                         </div>
@@ -237,7 +340,7 @@
                                 class="h-28 sm:h-36 w-auto object-contain max-w-full">
                         </div>
                         <div class="flex justify-center">
-                            <img src="assets/images/edge-prep/Drag finish.png" 
+                            <img src="assets/images/edge-prep/edgeprep.png" 
                                 alt="Drag Finish Machine" 
                                 class="h-28 sm:h-36 w-auto object-contain max-w-full">
                         </div>
@@ -318,7 +421,7 @@
                     <!-- Video Card 2 - Surface Analysis -->
                     <div class="bg-white shadow-lg overflow-hidden rounded-lg scroll-animate delay-200">
                         <div class="h-48 md:h-64 lg:h-80 relative">
-                            <img src="assets/images/edge-prep/Im.png" 
+                            <img src="assets/images/edge-prep/edgeprep.png" 
                                  alt="Surface Analysis Display Equipment" 
                                  class="w-full h-full object-cover">
                         </div>
@@ -357,50 +460,20 @@
                     
                     <!-- Benefits Text Right -->
                     <div class="order-2 px-4 md:px-0 scroll-animate delay-300">
-                        <div class="space-y-4 md:space-y-6">
-                            <div class="flex items-start">
-                                <span class="text-red-600 font-bold mr-3 md:mr-4 text-base md:text-lg">✓</span>
-                                <span class="text-gray-700 font-medium text-base md:text-lg">Machines specifically designed for cutting tools</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-red-600 font-bold mr-3 md:mr-4 text-base md:text-lg">✓</span>
-                                <span class="text-gray-700 font-medium text-base md:text-lg">Quick tool changeover</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-red-600 font-bold mr-3 md:mr-4 text-base md:text-lg">✓</span>
-                                <span class="text-gray-700 font-medium text-base md:text-lg">High productivity, low costs</span>
-                            </div>
+                        <div class="features-box">
+                            <h3>Key Features & Benefits</h3>
+                            <ul>
+                                <li>Machines specifically designed for cutting tools</li>
+                                <li>Quick tool changeover</li>
+                                <li>High productivity, low costs</li>
+                                <li>Rounding of cutting edges based on applications and polishing for very high performance</li>
+                                <li>Forest honing for greater reproducibility and high performance</li>
+                                <li>Polishing after PVD coating to reduce cutting effort</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Second Row: Text Left, Image Right -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center mb-8 md:mb-10 lg:mb-12">
-                    <!-- Additional Benefits Text Left -->
-                    <div class="order-2 lg:order-1 px-4 md:px-0 scroll-animate delay-400">
-                        <div class="space-y-4 md:space-y-6">
-                            <div class="flex items-start">
-                                <span class="text-red-600 font-bold mr-3 md:mr-4 text-base md:text-lg">✓</span>
-                                <span class="text-gray-700 text-base md:text-lg">Rounding of cutting edges based on applications and polishing for very high performance</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-red-600 font-bold mr-3 md:mr-4 text-base md:text-lg">✓</span>
-                                <span class="text-gray-700 text-base md:text-lg">Forest honing for greater reproducibility and high performance</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-red-600 font-bold mr-3 md:mr-4 text-base md:text-lg">✓</span>
-                                <span class="text-gray-700 text-base md:text-lg">Polishing after PVD coating to reduce cutting effort</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Robots -->
-                    <div class="order-1 lg:order-2 flex justify-center px-4 md:px-0 scroll-animate delay-500">
-                        <img src="assets/images/edge-prep/robot pardus.png" 
-                                     alt="Pardus Robot" 
-                            class="w-full max-w-xs md:max-w-sm h-auto object-contain">
-                    </div>
-                </div>
                 
                 <!-- Download Button -->
                 <div class="text-center px-4 scroll-animate delay-600">

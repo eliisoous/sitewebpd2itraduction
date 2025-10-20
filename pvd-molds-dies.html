@@ -60,6 +60,40 @@
     
     <!-- Page specific styles -->
     <style>
+        /* About Card Style - Same as About Us page */
+        .about-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -136,7 +170,7 @@
         /* Innovative Coating Section */
         .innovative-coating {
             background: white;
-            padding: 2rem 0;
+            padding: 2rem 0 0 0;
         }
         
         .coating-text {
@@ -168,7 +202,7 @@
         
         @media (min-width: 768px) {
             .innovative-coating {
-                padding: 2.5rem 0;
+                padding: 2.5rem 0 0 0;
             }
             .coating-text {
                 max-width: 800px;
@@ -186,7 +220,7 @@
         
         @media (min-width: 1024px) {
             .innovative-coating {
-                padding: 3rem 0;
+                padding: 3rem 0 0 0;
             }
             .coating-text {
                 padding: 0 2rem;
@@ -695,7 +729,7 @@
         .specialized-section {
             background: #0083CA;
             color: white;
-            padding: 2rem 0;
+            padding: 2rem 0 2rem 0;
         }
         
         .specialized-container {
@@ -716,23 +750,10 @@
             margin-bottom: 1.5rem;
         }
         
-        .specialized-properties {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        @media (min-width: 640px) {
-            .specialized-properties {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-        }
         
         @media (min-width: 768px) {
             .specialized-section {
-                padding: 2.5rem 0;
+                padding: 2.5rem 0 2.5rem 0;
             }
             .specialized-container {
                 max-width: 800px;
@@ -746,15 +767,11 @@
                 font-size: 1.05rem;
                 margin-bottom: 1.8rem;
             }
-            .specialized-properties {
-                gap: 1.8rem;
-                margin-bottom: 2.5rem;
-            }
         }
         
         @media (min-width: 1024px) {
             .specialized-section {
-                padding: 3rem 0;
+                padding: 3rem 0 3rem 0;
             }
             .specialized-container {
                 max-width: 1200px;
@@ -767,11 +784,6 @@
             .specialized-section p {
                 font-size: 1.1rem;
                 margin-bottom: 2rem;
-            }
-            .specialized-properties {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
-                margin-bottom: 3rem;
             }
         }
         
@@ -788,25 +800,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .specialized-card-white {
-            background: white;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            /* Ajout du centrage vertical */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 80px; /* Hauteur minimale pour un meilleur effet visuel */
-        }
-        
-        .specialized-card-white h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333;
-            margin: 0;
-        }
         
         /* Mold Images Section */
         .mold-images {
@@ -1080,35 +1073,28 @@
         </section>
 
         <!-- PD2i Duplex Coating Section -->
-        <section class="duplex-section">
-            <div class="duplex-container">
-                <div class="duplex-content scroll-animate">
-                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center">PD2i Duplex Coating</h2>
-                    <p class="text-base md:text-lg lg:text-xl text-center">Plasma Nitriding + Hard PVD Coating</p>
+        <section class="bg-white pt-2 pb-4 md:pt-3 md:pb-6">
+            <div class="container mx-auto px-4">
+                <!-- Title Section -->
+                <div class="text-center mb-4 md:mb-6 scroll-animate">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-3">PD2i Duplex Coating</h2>
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600">Plasma Nitriding + Hard PVD Coating</p>
                 </div>
-
-                <div class="flex justify-center px-4 scroll-animate delay-200" style="background: transparent;">
-                    <img src="assets/images/pvd-molds-and-dies/Triangle.png" alt="PD2i Duplex Coating Pyramid Diagram" class="max-w-full h-auto w-full max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl">                </div>
-            </div>
-        </section>
-
-        <!-- High Performance Coatings Hero Section -->
-        <section class="relative min-h-[300px] md:min-h-[400px] bg-cover bg-center bg-no-repeat" 
-                 style="background-image: url('assets/images/pvd-molds-and-dies/athlete-performance-coating.png');">
-            <!-- Blue gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-pd2i-blue/80 to-pd2i-blue/95"></div>
-            
-            <!-- Content overlay -->
-            <div class="relative z-10 flex items-center min-h-[300px] md:min-h-[400px]">
-                <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
-                        <!-- Left side: Empty space for athlete image on desktop -->
-                        <div class="hidden lg:block"></div>
-                        
-                        <!-- Right side: Text content -->
-                        <div class="text-white text-center lg:text-left px-4 lg:px-0 scroll-animate">
-                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">High Performance Coatings for Forming and Molding</h2>
-                            <p class="text-base md:text-lg lg:text-xl leading-relaxed">PD2i has engineered an optimum solution for every application. Deep drawing, trimming, punching, blanking, cold forming, hot stamping, hot forging, powder pressing, nonferrous metal forming and Aluminum die casting all require different surface properties to perform properly.</p>
+                
+                <!-- Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center">
+                    <!-- Left side: Image (larger) -->
+                    <div class="lg:col-span-2 scroll-animate delay-200">
+                        <img src="assets/images/pvd-molds-and-dies/Triangle.png" 
+                             alt="PD2i Duplex Coating Pyramid Diagram" 
+                             class="w-full h-auto">
+                    </div>
+                    
+                    <!-- Right side: Text content (smaller) -->
+                    <div class="lg:col-span-1 scroll-animate delay-400">
+                        <div class="about-card">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-gray-800 leading-tight">High Performance Coatings for Forming and Molding</h3>
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed">PD2i has engineered an optimum solution for every application. Deep drawing, trimming, punching, blanking, cold forming, hot stamping, hot forging, powder pressing, nonferrous metal forming and Aluminum die casting all require different surface properties to perform properly.</p>
                         </div>
                     </div>
                 </div>
@@ -1121,16 +1107,18 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
                     <!-- Left side: Text content -->
                     <div class="order-2 lg:order-1 scroll-animate">
-                        <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">Improving the mechanical properties in the supporting structure underneath the coatings has proven to dramatically improve the coatings ability to perform longer. The Nitriding layer provides a graded interface, which is harder and less likely to micro crack under the stresses of forming, than a surface without the Nitride layer. When nitride and coating processes are performed in a single step (in-situ) within the chamber, this combination provides superior surface properties.</p>
-                        
-                        <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">The PD2i coating equipment for forming and molding applications is engineered with our unique device and process to make the Nitriding process in the PVD coater.</p>
-                        
-                        <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">Heavy forming, hot forging and aluminum die casting require an improvement of the mechanical properties of the under layer to get a hardness gradient from the core hardness to the hard coating. The Nitriding layer increases the compressive strength, the hot hardness and the mechanical and thermal fatigue properties.</p>
-                        
-                        <p class="text-gray-700 font-semibold text-center mb-6 md:mb-8 text-sm md:text-base">PD2i offers experienced technical assistance to guide you in matching your application parameters to the best coating choice.</p>
-                        
-                        <div class="text-center">
-                            <a href="#" class="btn-primary inline-block">Download Forming and Molding Portfolio</a>
+                        <div class="about-card">
+                            <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">Improving the mechanical properties in the supporting structure underneath the coatings has proven to dramatically improve the coatings ability to perform longer. The Nitriding layer provides a graded interface, which is harder and less likely to micro crack under the stresses of forming, than a surface without the Nitride layer. When nitride and coating processes are performed in a single step (in-situ) within the chamber, this combination provides superior surface properties.</p>
+                            
+                            <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">The PD2i coating equipment for forming and molding applications is engineered with our unique device and process to make the Nitriding process in the PVD coater.</p>
+                            
+                            <p class="text-gray-700 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">Heavy forming, hot forging and aluminum die casting require an improvement of the mechanical properties of the under layer to get a hardness gradient from the core hardness to the hard coating. The Nitriding layer increases the compressive strength, the hot hardness and the mechanical and thermal fatigue properties.</p>
+                            
+                            <p class="text-gray-700 font-semibold text-center mb-6 md:mb-8 text-sm md:text-base">PD2i offers experienced technical assistance to guide you in matching your application parameters to the best coating choice.</p>
+                            
+                            <div class="text-center">
+                                <a href="#" class="btn-primary inline-block">Download Forming and Molding Portfolio</a>
+                            </div>
                         </div>
                     </div>
                     
@@ -1183,16 +1171,21 @@
                 <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6 scroll-animate">Specialized Properties for Plastic Injection Molding</h2>
                 <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 scroll-animate delay-100">For mold cavities, cores, and injector runner systems, additional properties are required</p>
                 
-                <div class="specialized-properties scroll-animate delay-200">
-                    <div class="specialized-card-white">
-                        <h3 class="text-base md:text-lg">Corrosion Resistance</h3>
-                    </div>
-                    <div class="specialized-card-white">
-                        <h3 class="text-base md:text-lg">Scratch Resistance</h3>
-                    </div>
-                    <div class="specialized-card-white">
-                        <h3 class="text-base md:text-lg">Improve Mold Filling and Mold Release</h3>
-                    </div>
+                <div class="scroll-animate delay-200" style="padding: 2rem; max-width: 1200px; margin: 0 auto; text-align: center;">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: nowrap; gap: 3rem; white-space: nowrap;">
+                        <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500; color: white;">
+                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 0.5rem;"></span>
+                            Corrosion Resistance
+                        </li>
+                        <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500; color: white;">
+                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 0.5rem;"></span>
+                            Scratch Resistance
+                        </li>
+                        <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500; color: white;">
+                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 0.5rem;"></span>
+                            Improve Mold Filling and Mold Release
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -1217,17 +1210,29 @@
         <!-- Additional Considerations Section -->
         <section class="considerations-section">
             <div class="considerations-container">
-                <div class="considerations-list scroll-animate">
-                    <h3 class="text-lg md:text-xl font-bold">Additional considerations for coating can be dependent on the substrate and application conditions:</h3>
-                    <ul class="mt-4">
-                        <li class="text-sm md:text-base">Substrate Material – Tool Steel, Carbide, Non Ferous, Surface Cleanliness, etc.</li>
-                        <li class="text-sm md:text-base">Heat Treatment – Critical Quench and Temper conditions.</li>
-                        <li class="text-sm md:text-base">Workpiece Temperature – Cold forming, hot forming, die casting, forging, etc.</li>
-                        <li class="text-sm md:text-base">Tool Failure – Abrasive wear, chemical wear, chipping, heat checking, edge wear, oxidation, welding, etc</li>
+                <div class="about-card scroll-animate">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4">Additional considerations for coating can be dependent on the substrate and application conditions:</h3>
+                    <ul class="space-y-3">
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>Substrate Material – Tool Steel, Carbide, Non Ferous, Surface Cleanliness, etc.</span>
+                        </li>
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>Heat Treatment – Critical Quench and Temper conditions.</span>
+                        </li>
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>Workpiece Temperature – Cold forming, hot forming, die casting, forging, etc.</span>
+                        </li>
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>Tool Failure – Abrasive wear, chemical wear, chipping, heat checking, edge wear, oxidation, welding, etc</span>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="text-center px-4 scroll-animate delay-200">
+                <div class="text-center px-4 scroll-animate delay-200 mt-8">
                     <p class="portfolio-text text-base md:text-lg">The PD2i coating portfolio offers the optimum balance of properties for each application.</p>
                     <a href="#" class="btn-primary">Contact us</a>
                 </div>

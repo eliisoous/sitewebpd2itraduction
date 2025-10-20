@@ -99,6 +99,40 @@
     
     <!-- Page specific styles -->
     <style>
+        /* About Card Style - Same as PVD Molds & Dies page */
+        .about-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+
         /* Scroll animations */
         .scroll-animate {
             opacity: 0;
@@ -146,6 +180,40 @@
         
         a.text-decoration-none:hover {
             text-decoration: none !important;
+        }
+        
+        /* Features Box - same style as pvd-cutting-tools.html */
+        .features-box {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .features-box:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .features-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
         }
     </style>
 </head>
@@ -206,68 +274,49 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- PVD Machine with Benefits Cycle - Centered -->
-                <div class="text-center mb-6 scroll-animate delay-300">
-                    <div class="relative max-w-2xl mx-auto">
-                        <img src="assets/images/coating-equipments/pvd-machine-benefits-cycle.png" 
-                             alt="PVD Machine with Benefits Cycle" 
-                             class="w-full h-auto object-contain"
-                             loading="lazy"
-                             decoding="async">
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- Benefits & Advantages Section -->
-        <section class="benefits py-12 text-white relative overflow-hidden min-h-[500px]" 
-                 style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 131, 202, 0.8) 50%, rgba(0, 131, 202, 0.95) 100%), url('assets/images/coating-equipments/athlete-performance-coating.png'); 
-                        background-size: cover; 
-                        background-position: left center; 
-                        background-repeat: no-repeat;">
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center min-h-[400px]">
-                    <!-- Left side: Empty space for image background -->
-                    <div class="hidden lg:block"></div>
+        <section class="bg-white pb-8 md:pb-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <!-- Left side: Image -->
+                    <div class="order-2 lg:order-1 scroll-animate">
+                        <img src="assets/images/coating-equipments/pvd-machine-benefits-cycle.png" 
+                             alt="PVD Machine Benefits Cycle" 
+                             class="w-full h-auto object-contain">
+                    </div>
                     
                     <!-- Right side: Benefits Content -->
-                    <div class="p-8 lg:pl-12 scroll-animate delay-400">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-8">Benefits & Advantages</h2>
-                        <p class="text-xl mb-8">Our equipment is designed to provide:</p>
-                        
-                        <ul class="space-y-4 text-lg">
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Low Running Costs
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Adjustable Processes
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Open Source Recipe Editor
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Full Technology & Service Support
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Scalable Technologies
-                            </li>
-                        </ul>
+                    <div class="order-1 lg:order-2 scroll-animate delay-200">
+                        <div class="about-card">
+                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-gray-800 leading-tight">Benefits & Advantages</h2>
+                            <p class="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">Our equipment is designed to provide:</p>
+                            
+                            <ul class="space-y-3 text-sm md:text-base">
+                                <li class="flex items-start">
+                                    <span class="text-pd2i-blue font-bold mr-2">•</span>
+                                    <span class="text-gray-700">Low Running Costs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-pd2i-blue font-bold mr-2">•</span>
+                                    <span class="text-gray-700">Adjustable Processes</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-pd2i-blue font-bold mr-2">•</span>
+                                    <span class="text-gray-700">Open Source Recipe Editor</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-pd2i-blue font-bold mr-2">•</span>
+                                    <span class="text-gray-700">Full Technology & Service Support</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-pd2i-blue font-bold mr-2">•</span>
+                                    <span class="text-gray-700">Scalable Technologies</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -276,14 +325,20 @@
         <!-- High Performance Coating Equipment Section -->
         <section class="coating-equipment py-12 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-pd2i-black mb-4 scroll-animate delay-400">High Performance Coating Equipment</h2>
-                <p class="text-xl text-center text-gray-600 mb-6 scroll-animate delay-500">Ready to revolutionize your surface treatment processes?</p>
-                
-                <!-- Contact Us Button -->
-                <div class="text-center scroll-animate delay-600">
-                    <a href="/contact" class="download-btn">
-                        Contact us
-                    </a>
+                <div class="max-w-6xl mx-auto text-center scroll-animate delay-400">
+                    <div class="features-box">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-blue mb-6">
+                            High Performance Coating Equipment
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            Ready to revolutionize your surface treatment processes?
+                        </p>
+                        <div class="flex justify-center">
+                            <a href="/contact" class="download-btn">
+                                Contact us
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

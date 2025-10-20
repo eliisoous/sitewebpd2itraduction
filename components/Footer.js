@@ -76,8 +76,8 @@ class Footer {
     
     generateHTML() {
         return `
-            <div class="container mx-auto px-4 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="container mx-auto px-4 py-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     ${this.generateLogoSection()}
                     ${this.generateContactSection()}
                     ${this.generateNavigationSection()}
@@ -91,9 +91,9 @@ class Footer {
     generateLogoSection() {
         return `
             <div class="lg:col-span-1">
-                <div class="mb-6">
-                    <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" class="h-16 w-auto mb-4 filter brightness-0 invert">
-                    <p class="text-white text-lg font-medium leading-relaxed">
+                <div class="mb-3">
+                    <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" class="h-14 w-auto mb-2 filter brightness-0 invert">
+                    <p class="text-white text-base font-medium leading-snug">
                         ${this.options.slogan}
                     </p>
                 </div>
@@ -105,12 +105,12 @@ class Footer {
         const { companyInfo } = this.options;
         return `
             <div class="lg:col-span-1">
-                <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
-                <div class="space-y-2 text-white">
+                <h3 class="text-white font-semibold text-base mb-2">Contact</h3>
+                <div class="space-y-1 text-white text-sm">
                     <p class="font-medium">${companyInfo.name}</p>
                     <p>${companyInfo.address}</p>
                     <p>${companyInfo.city}</p>
-                    <p class="mt-3">Tel : ${companyInfo.phone}</p>
+                    <p class="mt-1.5">Tel : ${companyInfo.phone}</p>
                     <a href="mailto:${companyInfo.email}" class="text-white hover:text-blue-200 transition-colors duration-200 underline">
                         ${companyInfo.email}
                     </a>
@@ -122,11 +122,11 @@ class Footer {
     generateNavigationSection() {
         return `
             <div class="lg:col-span-1">
-                <h3 class="text-white font-semibold text-lg mb-4">Navigation</h3>
-                <ul class="space-y-3">
+                <h3 class="text-white font-semibold text-base mb-2">Navigation</h3>
+                <ul class="space-y-1.5">
                     ${this.options.navigationLinks.map(link => `
                         <li>
-                            <a href="${link.href}" class="text-white hover:text-blue-200 transition-colors duration-200">
+                            <a href="${link.href}" class="text-white hover:text-blue-200 transition-colors duration-200 text-sm">
                                 ${link.label}
                             </a>
                         </li>
@@ -139,13 +139,13 @@ class Footer {
     generateSocialSection() {
         return `
             <div class="lg:col-span-1">
-                <h3 class="text-white font-semibold text-lg mb-4">Follow us</h3>
+                <h3 class="text-white font-semibold text-base mb-2">Follow us</h3>
                 <div class="flex space-x-4">
                     ${this.options.socialLinks.map(social => `
                         <a href="${social.href}" 
                            target="_blank" 
                            rel="noopener noreferrer"
-                           class="text-white hover:text-blue-200 transition-colors duration-200 flex items-center"
+                           class="text-white hover:text-blue-200 transition-colors duration-200 flex items-center text-sm"
                            aria-label="${social.platform}">
                             ${this.getSocialIcon(social.icon)}
                             <span class="ml-2">${social.label}</span>
@@ -181,7 +181,7 @@ class Footer {
     generateBottomSection() {
         return `
             <div class="border-t border-blue-400 bg-pd2i-blue">
-                <div class="container mx-auto px-4 py-4">
+                <div class="container mx-auto px-4 py-2">
                     <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <div class="text-white text-sm">
                             PD2i ${this.options.copyrightYear} © All rights reserved

@@ -111,7 +111,7 @@
         /* Customization Section */
         .customization-section {
             background: white;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
         }
         
         .customization-container {
@@ -153,9 +153,14 @@
         }
         
         .customization-item img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             object-fit: contain;
+        }
+        
+        .surface-analysis-img {
+            width: 250px !important;
+            height: 250px !important;
         }
         
         /* High Speed Coating Section */
@@ -364,7 +369,7 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 2rem;
-            align-items: start;
+            align-items: stretch;
             margin-bottom: 0;
         }
         
@@ -388,13 +393,107 @@
             font-size: 1.2rem;
         }
         
+        /* Features Box - same style as about-us.html */
+        .features-box {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .features-box:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .features-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+        
+        .features-box h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0083CA;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .features-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features-box li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        
+        .features-box li::before {
+            content: '✓';
+            color: #0083CA;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        
         .process-chart {
             background: white;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: visible;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
             width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .process-chart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .process-chart:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .process-chart:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
         }
         
         .timeline-chart {
@@ -760,34 +859,25 @@
             height: auto;
         }
         
-        /* Expertise Section */
-        .expertise-section {
-            background: white;
-            padding: 0 0 2.5rem 0;
-            text-align: center;
+        /* Button styles - same as services.html */
+        .btn-secondary {
+            background: transparent;
+            color: #0083CA;
+            border: 2px solid #0083CA;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
-        
-        .expertise-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .expertise-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            color: #000;
-        }
-        
-        .expertise-section p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #555;
+
+        .btn-secondary:hover {
+            background: #0083CA;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
         }
         
         /* Version responsive avec image et texte séparés */
@@ -825,7 +915,7 @@
             line-height: 1.4;
         }
         
-        /* iPad responsive styles */
+        /* Tablet responsive styles */
         @media (max-width: 1024px) and (min-width: 769px) {
             .hero-content .hero-main-title {
                 font-size: 2.2rem;
@@ -840,48 +930,75 @@
             }
             
             .customization-container {
-                gap: 2.5rem;
+                gap: 2rem;
                 padding: 0 2rem;
-                min-height: 180px;
+                min-height: 160px;
             }
             
             .customization-item img {
-                width: 110px;
-                height: 110px;
+                width: 125px;
+                height: 125px;
             }
             
-            .features-list,
+            .surface-analysis-img {
+                width: 200px !important;
+                height: 200px !important;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
             .performance-grid,
             .turnkey-grid {
-                gap: 2.5rem;
+                gap: 2rem;
+            }
+            
+            .turnkey-main-title {
+                font-size: 2rem;
+                white-space: normal;
+                text-align: center;
+            }
+            
+            .features-box,
+            .process-chart {
+                padding: 1.5rem;
+            }
+            
+            .timeline-chart {
+                padding: 5px;
+                min-width: 400px;
             }
         }
         
         /* Mobile responsive */
         @media (max-width: 768px) {
             .hero-content .hero-main-title {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
+                line-height: 1.1;
             }
             
             .hero-content .hero-subtitle {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
+                line-height: 1.2;
             }
             
             .hero-content p {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
             
             .hero-section {
-                min-height: 200px;
+                min-height: 250px;
             }
             
             .hero-content {
-                padding: 0.5rem 1rem;
+                padding: 1rem;
             }
             
             .customization-container {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1.5rem;
                 min-height: auto;
                 padding: 0 1rem;
             }
@@ -898,6 +1015,11 @@
                 max-width: 100%;
             }
             
+            .customization-center h2 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
             .customization-left {
                 order: 1;
             }
@@ -911,84 +1033,198 @@
                 height: 100px;
             }
             
+            .surface-analysis-img {
+                width: 160px !important;
+                height: 160px !important;
+            }
+            
             .features-list,
             .performance-grid,
             .turnkey-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
             
-            .coating-types {
-                grid-template-columns: repeat(2, 1fr);
+            .features-box,
+            .process-chart {
+                padding: 1.5rem;
             }
             
-            /* Pour mobile, gardons la version desktop avec overlay mais adaptée */
+            .features-box h3 {
+                font-size: 1.3rem;
+            }
+            
+            .features-box li {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .timeline-chart {
+                padding: 5px;
+                min-width: 300px;
+                overflow-x: auto;
+            }
+            
+            /* Amélioration des images sur mobile */
+            .diagram-container img,
+            .cycle-diagram img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Amélioration des sections avec images côte à côte */
+            .coating-images-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .coating-images-container > div {
+                max-width: 100% !important;
+            }
+            
             .coating-system-section {
-                min-height: 280px;
+                min-height: 300px;
                 padding: 0;
-                align-items: center;
-                justify-content: center;
-                display: flex;
             }
             
             .coating-content {
-                padding: 1rem;
+                padding: 1.5rem;
                 background: rgba(0, 0, 0, 0.4);
                 border-radius: 10px;
                 margin: 0 1rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                position: relative;
-                z-index: 2;
-                width: auto;
-                max-width: 1200px;
             }
             
             .coating-content h2 {
-                font-size: 1.2rem;
-                margin-bottom: 0.8rem;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
                 line-height: 1.2;
             }
             
             .coating-content p {
-                font-size: 0.85rem;
-                margin-bottom: 1rem;
-                line-height: 1.3;
+                font-size: 0.9rem;
+                margin-bottom: 1.2rem;
+                line-height: 1.4;
             }
             
-            /* Masquer la version responsive sur mobile aussi */
-            .coating-system-responsive {
-                display: none;
+            .turnkey-main-title {
+                font-size: 1.8rem;
+                white-space: normal;
+                line-height: 1.2;
+            }
+            
+            .turnkey-box h3 {
+                font-size: 1.4rem;
+            }
+            
+            .turnkey-list li {
+                font-size: 0.9rem;
+                margin-bottom: 0.4rem;
+            }
+            
+            .benefits-box h3 {
+                font-size: 1.4rem;
+            }
+            
+            .benefits-list li {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .btn-primary {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
             }
         }
         
         /* Extra small screens */
         @media (max-width: 480px) {
-            .coating-image-container {
-                min-height: 150px;
+            .hero-content .hero-main-title {
+                font-size: 1.5rem;
             }
             
-            .coating-text-container {
-                padding: 1.5rem 1rem;
-            }
-            
-            .coating-text-container h2 {
+            .hero-content .hero-subtitle {
                 font-size: 1.1rem;
-                margin-bottom: 0.6rem;
             }
             
-            .coating-text-container p {
-                font-size: 0.85rem;
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            
+            .hero-section {
+                min-height: 220px;
+            }
+            
+            .customization-center h2 {
+                font-size: 1.2rem;
+            }
+            
+            .customization-item img {
+                width: 85px;
+                height: 85px;
+            }
+            
+            .surface-analysis-img {
+                width: 140px !important;
+                height: 140px !important;
+            }
+            
+            .features-box,
+            .process-chart {
+                padding: 1rem;
+            }
+            
+            .features-box h3 {
+                font-size: 1.1rem;
                 margin-bottom: 1rem;
-                line-height: 1.3;
+            }
+            
+            .features-box li {
+                font-size: 0.85rem;
+            }
+            
+            .timeline-chart {
+                min-width: 280px;
+                font-size: 0.8rem;
+            }
+            
+            .coating-content {
+                padding: 1rem;
+                margin: 0 0.5rem;
+            }
+            
+            .coating-content h2 {
+                font-size: 1.1rem;
+            }
+            
+            .coating-content p {
+                font-size: 0.8rem;
+            }
+            
+            .turnkey-main-title {
+                font-size: 1.4rem;
+            }
+            
+            .turnkey-box,
+            .benefits-box {
+                padding: 1.5rem;
+            }
+            
+            .turnkey-box h3,
+            .benefits-box h3 {
+                font-size: 1.2rem;
             }
             
             .btn-primary {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.85rem;
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .process-container,
+            .performance-container,
+            .turnkey-container {
+                padding: 0 1rem;
             }
         }
         
@@ -1036,7 +1272,7 @@
                 <!-- Images de gauche -->
                 <div class="customization-left">
                     <div class="customization-item">
-                        <img src="assets/images/pvd-cutting-tools/Surface Analysis.png" alt="Surface Analysis">
+                        <img src="assets/images/pvd-cutting-tools/Surface Analysis.png" alt="Surface Analysis" class="surface-analysis-img">
                     </div>
                     <div class="customization-item">
                         <img src="assets/images/pvd-cutting-tools/Tool Design.png" alt="Tool Design">
@@ -1088,35 +1324,40 @@
                 <div class="features-list">
                     <!-- Left: Features -->
                     <div class="features-left">
-                        <ul>
-                            <li>HPIES High Performances Ion Etching System</li>
-                            <li>High Efficiency & Flexibility</li>
-                            <li>Flexible</li>
-                            <li>Low running costs</li>
-                            <li>Easy to operate</li>
-                            <li>Fast and Easy target exchange</li>
-                            <li>Tight thickness tolerances +/-0,1 µm</li>
-                            <li>Local support</li>
-                            <li>Customized configuration</li>
-                            <li>Coating process up to 4 different targets material</li>
-                        </ul>
+                        <div class="features-box">
+                            <h3>Key Features & Benefits</h3>
+                            <ul>
+                                <li>HPIES High Performances Ion Etching System</li>
+                                <li>High Efficiency & Flexibility</li>
+                                <li>Flexible</li>
+                                <li>Low running costs</li>
+                                <li>Easy to operate</li>
+                                <li>Fast and Easy target exchange</li>
+                                <li>Tight thickness tolerances +/-0,1 µm</li>
+                                <li>Local support</li>
+                                <li>Customized configuration</li>
+                                <li>Coating process up to 4 different targets material</li>
+                            </ul>
+                        </div>
                     </div>
                     
                     <!-- Right: Process Timeline Chart with Wide Range Coating Portfolio -->
                     <div class="process-chart">
-                        <div class="text-center">
-                            <img src="assets/images/pvd-cutting-tools/Tableau.png" 
-                                 alt="Process Timeline Chart" 
-                                 class="max-w-full h-auto"
-                                 loading="lazy"
-                                 decoding="async">
-                        </div>
-                        
-                        <!-- Wide Range Coating Portfolio - Positioned right below the chart -->
-                        <div style="margin-top: 2rem;">
-                            <div style="background: linear-gradient(135deg, #4A90E2 0%, #1976d2 100%); color: white; padding: 2rem; border-radius: 0.5rem; text-align: center;">
-                                <h3 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: white;">Wide Range Coating Portfolio:</h3>
-                                <p style="font-size: 1.2rem; line-height: 1.4; font-weight: 500;">Monolayers – Multilayers – Gradient layers – Nano layers</p>
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div class="text-center flex-1 flex items-center justify-center">
+                                <img src="assets/images/pvd-cutting-tools/Tableau.png" 
+                                     alt="Process Timeline Chart" 
+                                     class="max-w-full h-auto"
+                                     loading="lazy"
+                                     decoding="async">
+                            </div>
+                            
+                            <!-- Wide Range Coating Portfolio - Positioned at bottom -->
+                            <div class="mt-auto pt-4">
+                                <div style="background: linear-gradient(135deg, #4A90E2 0%, #1976d2 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; text-align: center;">
+                                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.75rem; color: white;">Wide Range Coating Portfolio:</h3>
+                                    <p style="font-size: 1.1rem; line-height: 1.4; font-weight: 500; margin: 0;">Monolayers – Multilayers – Gradient layers – Nano layers</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1152,18 +1393,11 @@
                              decoding="async">
                     </div>
                     
-                    <!-- Coating Images - Side by side below coaters -->
-                    <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                        <div style="flex: 1; max-width: 45%; text-align: center;">
+                    <!-- Coating Image - Centered and enlarged -->
+                    <div class="coating-images-container" style="margin-top: 2rem; display: flex; justify-content: center;">
+                        <div style="max-width: 70%; text-align: center;">
                             <img src="assets/images/pvd-cutting-tools/coating.png" 
                                  alt="Coating Process" 
-                                 style="max-width: 100%; height: auto;"
-                                 loading="lazy"
-                                 decoding="async">
-                        </div>
-                        <div style="flex: 1; max-width: 45%; text-align: center;">
-                            <img src="assets/images/pvd-cutting-tools/coating properties.png" 
-                                 alt="Coating Properties" 
                                  style="max-width: 100%; height: auto;"
                                  loading="lazy"
                                  decoding="async">
@@ -1213,11 +1447,10 @@
                         <div class="turnkey-box">
                             <h3>Turnkey packages consist of:</h3>
                             <ul class="turnkey-list">
-                                <li>PVD/PeCVD coating equipment</li>
-                                <li>Cleaning equipment (solvent as well as aqueous)</li>
-                                <li>De-coating equipment</li>
-                                <li>Honing machinery (microblasting and drag finishing)</li>
-                                <li>Quality control packages (calo tester, XRF, microscopes, hardness/scratch tester, and devices to measure edge rounding)</li>
+                                <li>PVD coating equipment</li>
+                                <li>Green Cleaning equipment</li>
+                                <li>Edge Preparation and Post Treatment Equipment</li>
+                                <li>Quality control packages</li>
                                 <li>Fixturing</li>
                             </ul>
                             
@@ -1234,11 +1467,23 @@
         </section>
 
         <!-- Expertise Section -->
-        <section class="expertise-section">
-            <div class="expertise-container scroll-animate delay-600">
-                <h2>Expertise tailored to offer the most effective solutions</h2>
-                <p>At PD2i everything starts with an in-depth understanding of the application. Once the requirements for an application are completely understood, PD2i starts finding the best solution for the specific application from individual machines to complete turnkey operations.</p>
-                <a href="#" class="btn-primary">Contact us</a>
+        <section class="pb-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto text-center scroll-animate delay-600">
+                    <div class="features-box">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-blue mb-6">
+                            Expertise tailored to offer the most effective solutions
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            At PD2i everything starts with an in-depth understanding of the application. Once the requirements for an application are completely understood, PD2i starts finding the best solution for the specific application from individual machines to complete turnkey operations.
+                        </p>
+                        <div class="flex justify-center">
+                            <a href="contacts.html" class="btn-primary">
+                                Contact us
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

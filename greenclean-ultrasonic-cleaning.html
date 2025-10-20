@@ -239,7 +239,7 @@
         .step-number {
             font-size: 2rem;
             font-weight: bold;
-            color: #333;
+            color: #333333;
             margin-bottom: 0.5rem;
         }
         
@@ -342,6 +342,40 @@
         .delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; transition-delay: 0.6s; }
         
+        /* About card styles - same as About Us page */
+        .about-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+
         /* Download button - same as Plasma Nitriding */
         .download-btn {
             background: #0083CA;                    /* Couleur PD2i bleue */
@@ -519,6 +553,10 @@
                 padding: 0.875rem 2rem;
                 font-size: 1rem;
             }
+            
+            .about-card {
+                padding: 1.5rem;
+            }
         }
         
         /* Regular phones (480px and below) */
@@ -595,6 +633,10 @@
                 width: 100%;
                 max-width: 280px;
             }
+            
+            .about-card {
+                padding: 1rem;
+            }
         }
         
         /* Very small phones (360px and below) */
@@ -630,6 +672,10 @@
             .download-btn {
                 padding: 0.625rem 1.25rem;
                 font-size: 0.85rem;
+            }
+            
+            .about-card {
+                padding: 0.75rem;
             }
         }
     </style>
@@ -696,8 +742,8 @@
                 <!-- Two Column Layout -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <!-- The Greenclean Advantage -->
-                    <div class="bg-white border-l-8 border-[#0083CA] p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105 scroll-animate delay-200">
-                        <h3 class="text-2xl font-bold text-black mb-6 uppercase">THE GREENCLEAN ADVANTAGE</h3>
+                    <div class="about-card scroll-animate delay-200">
+                        <h3 class="text-2xl font-bold text-black mb-6 ">Greenclean advantage</h3>
                         <p class="text-gray-700 mb-6">Transform your cleaning process with proven technology that delivers:</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-start">
@@ -727,17 +773,11 @@
                         </div>
                     </div>
                     
-                    <!-- Available Models -->
-                    <div class="bg-white border-l-8 border-[#0083CA] p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105 scroll-animate delay-400">
-                        <h3 class="text-2xl font-bold text-black mb-6 uppercase">AVAILABLE MODELS</h3>
-                        <ul class="space-y-4 mb-8">
-                            <li class="text-gray-800 font-medium">Standard 450: 300x450x300mm</li>
-                            <li class="text-gray-800 font-medium">Version L: 450x450x300mm</li>
-                            <li class="text-gray-800 font-medium">Version H: 300x450x450mm</li>
-                            <li class="text-gray-800 font-medium">Version 600: 450x600x450mm</li>
-                        </ul>
-                        
-                        <p class="text-sm text-gray-600 italic">Individual sizes can be realized according to customer requirements.</p>
+                    <!-- Palette Image -->
+                    <div class="about-card scroll-animate delay-400">
+                        <div class="text-center">
+                            <img src="assets/images/clean-green/Palette.png" alt="Greenclean Ultrasonic Cleaning Palette" class="w-full h-auto rounded-lg" />
+                        </div>
                     </div>
                 </div>
             </div>
