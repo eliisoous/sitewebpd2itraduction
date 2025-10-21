@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turnkey Solutions - Complete PVD coating and surface treatment solutions for industrial applications">
+    <meta name="keywords" content="Turnkey Solutions, PVD coating, Surface treatment, Industrial solutions, Complete systems">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Favicon Configuration -->
+    <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0083CA">
+    <meta name="theme-color" content="#0083CA">
+    
+    <title>Turnkey Solutions - PD2i</title>
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* Download Button Styles */
+        .download-btn {
+            background: #0083CA;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        .download-btn:hover {
+            background: #006ba3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
+        }
+        
+        /* Responsive adjustments for buttons */
+        @media (max-width: 768px) {
+            .download-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+                margin-top: 1.5rem;
+            }
+        }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        
+        /* Solution Cards */
+        .solution-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #0083CA);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .solution-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+        
+        .solution-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0083CA;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .solution-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .solution-card li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        
+        .solution-card li::before {
+            content: '✓';
+            color: #0083CA;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .solution-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .solution-card {
+                padding: 1.5rem;
+            }
+            
+            .solution-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .solution-card li {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .solution-card {
+                padding: 1rem;
+            }
+            
+            .solution-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .solution-card li {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-white text-pd2i-black">
+    <!-- Header sera généré automatiquement par le composant -->
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="w-full">
+            <img src="assets/images/turnkey solution/backgroung.png" 
+                 alt="Turnkey Solutions Background" 
+                 class="w-full h-auto object-contain">
+        </section>
+
+        <!-- Solutions Overview Section -->
+        <section class="py-12 md:py-16 lg:py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pd2i-black mb-6 scroll-animate">
+                        THIS PAGE IS A DRAFT Our Turnkey Solutions
+                    </h2>
+                    <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto scroll-animate delay-200">
+                        We offer complete end-to-end solutions that cover every aspect of your PVD coating and surface treatment needs
+                    </p>
+                </div>
+
+                <!-- Solutions Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Solution 1: PVD Coating Systems -->
+                    <div class="scroll-animate delay-300">
+                        <div class="solution-card">
+                            <h3>PVD Coating Systems</h3>
+                            <ul>
+                                <li>Complete PVD coating equipment installation</li>
+                                <li>Process optimization and parameter setting</li>
+                                <li>Operator training and certification</li>
+                                <li>Maintenance and service contracts</li>
+                                <li>Quality control and testing protocols</li>
+                                <li>Technical support and troubleshooting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Solution 2: Edge Preparation Systems -->
+                    <div class="scroll-animate delay-400">
+                        <div class="solution-card">
+                            <h3>Edge Preparation Systems</h3>
+                            <ul>
+                                <li>Pro Edge PL 24 machine installation</li>
+                                <li>Stream & Drag Finish technology setup</li>
+                                <li>Tool preparation workflow optimization</li>
+                                <li>Process parameter configuration</li>
+                                <li>Operator training programs</li>
+                                <li>Performance monitoring systems</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Solution 3: Plasma Nitriding Systems -->
+                    <div class="scroll-animate delay-500">
+                        <div class="solution-card">
+                            <h3>Plasma Nitriding Systems</h3>
+                            <ul>
+                                <li>Industrial plasma nitriding equipment</li>
+                                <li>Process chamber design and installation</li>
+                                <li>Gas control and monitoring systems</li>
+                                <li>Temperature and pressure optimization</li>
+                                <li>Safety systems and protocols</li>
+                                <li>Maintenance and calibration services</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Solution 4: Cleaning Systems -->
+                    <div class="scroll-animate delay-600">
+                        <div class="solution-card">
+                            <h3>Cleaning Systems</h3>
+                            <ul>
+                                <li>Greenclean ultrasonic cleaning systems</li>
+                                <li>Pre-treatment cleaning protocols</li>
+                                <li>Post-coating cleaning solutions</li>
+                                <li>Environmental compliance setup</li>
+                                <li>Waste treatment and disposal</li>
+                                <li>Process validation and documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Solution 5: Quality Control -->
+                    <div class="scroll-animate delay-700">
+                        <div class="solution-card">
+                            <h3>Quality Control Systems</h3>
+                            <ul>
+                                <li>Surface analysis equipment installation</li>
+                                <li>Coating thickness measurement systems</li>
+                                <li>Adhesion testing protocols</li>
+                                <li>Performance testing equipment</li>
+                                <li>Quality documentation systems</li>
+                                <li>Certification and compliance support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Solution 6: Process Integration -->
+                    <div class="scroll-animate delay-800">
+                        <div class="solution-card">
+                            <h3>Process Integration</h3>
+                            <ul>
+                                <li>Complete workflow design</li>
+                                <li>Equipment integration and automation</li>
+                                <li>Process monitoring and control</li>
+                                <li>Data logging and analysis systems</li>
+                                <li>Performance optimization</li>
+                                <li>Continuous improvement programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Flow Section -->
+        <section class="py-12 md:py-16 lg:py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pd2i-black mb-6 scroll-animate">
+                        Our Turnkey Process
+                    </h2>
+                    <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto scroll-animate delay-200">
+                        From initial consultation to final delivery, we ensure a seamless implementation process
+                    </p>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center scroll-animate delay-300">
+                        <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Consultation</h3>
+                        <p class="text-gray-700">Initial assessment of your requirements and technical specifications</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center scroll-animate delay-400">
+                        <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Design</h3>
+                        <p class="text-gray-700">Custom solution design tailored to your specific needs and constraints</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center scroll-animate delay-500">
+                        <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Implementation</h3>
+                        <p class="text-gray-700">Professional installation, configuration, and system integration</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="text-center scroll-animate delay-600">
+                        <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                            4
+                        </div>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Support</h3>
+                        <p class="text-gray-700">Ongoing training, maintenance, and technical support services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-16 lg:py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <!-- Benefits Content -->
+                    <div class="scroll-animate">
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pd2i-black mb-6">
+                            Why Choose Our Turnkey Solutions?
+                        </h2>
+                        <div class="space-y-4 md:space-y-6">
+                            <div class="flex items-start">
+                                <span class="font-bold mr-3 text-lg" style="color: #0083CA;">✓</span>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Single Point of Contact</h3>
+                                    <p class="text-gray-700">One partner for all your coating and surface treatment needs</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-bold mr-3 text-lg" style="color: #0083CA;">✓</span>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Proven Expertise</h3>
+                                    <p class="text-gray-700">Years of experience in industrial coating applications</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-bold mr-3 text-lg" style="color: #0083CA;">✓</span>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Custom Solutions</h3>
+                                    <p class="text-gray-700">Tailored solutions designed for your specific requirements</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-bold mr-3 text-lg" style="color: #0083CA;">✓</span>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Complete Support</h3>
+                                    <p class="text-gray-700">From installation to maintenance, we're with you every step</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="contacts.html" class="download-btn">
+                                Get Your Custom Solution
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Benefits Image -->
+                    <div class="scroll-animate delay-200">
+                        <div class="bg-gray-100 rounded-lg p-8 text-center">
+                            <img src="assets/images/sections/pd2i-hands.png" 
+                                 alt="PD2i Turnkey Solutions" 
+                                 class="w-full max-w-md mx-auto h-auto object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer sera généré automatiquement par le composant -->
+
+    <!-- Header Component -->
+    <script src="components/Header.js"></script>
+    
+    <!-- Footer Component -->
+    <script src="components/Footer.js"></script>
+    
+    <!-- Initialize Header -->
+    <script>
+        // Initialisation du header avec la configuration PD2i
+        window.headerInstance = new Header({
+            logoSrc: 'assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            logoLink: 'index.html',
+            currentPage: 'turnkey-solutions',
+            currentLang: 'EN',
+            languages: ['EN', 'FR'],
+            navigationItems: [
+                { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: 'coating-equipments.html',
+                    type: 'dropdown',
+                    pageId: 'coating-equipments',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' }
+                    ]
+                },
+                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                {
+                    label: 'Turnkey',
+                    type: 'dropdown',
+                    pageId: 'turnkey',
+                    items: [
+                        { label: 'Turnkey Solutions', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' },
+                        { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html', pageId: 'greenclean-ultrasonic-cleaning' }
+                    ]
+                },
+                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+            ]
+        });
+        
+        // Initialisation du footer avec la configuration PD2i
+        window.footerInstance = new Footer({
+            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: 'Your partner when it is all about performance',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'About us', href: 'about-us.html' },
+                { label: 'Services', href: 'services.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Downloads', href: 'download.html' },
+                { label: 'News', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Follow us'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Privacy policy', href: 'privacy.html' },
+                { label: 'Legal Informations', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
+        });
+    </script>
+    
+    <!-- Page specific JavaScript -->
+    <script>
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all scroll-animate elements
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+            
+            console.log('Turnkey Solutions page loaded with scroll animations');
+        });
+    </script>
+</body>
+</html>
