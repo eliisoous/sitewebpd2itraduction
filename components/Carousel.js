@@ -76,9 +76,9 @@ class Carousel {
             let containerClasses, textClasses;
 
             if (isFirstSlide) {
-                // Im1 - Texte centré avec fond gris transparent
+                // Im1 - Texte centré sans fond
                 containerClasses = "absolute inset-0 flex items-center justify-center";
-                textClasses = "text-center text-white px-6 py-8 max-w-4xl bg-gray-200 bg-opacity-40 rounded-lg backdrop-blur-sm";
+                textClasses = "text-center text-white px-6 py-8 max-w-4xl";
             } else if (isLeftAligned) {
                 // Im4 - Texte à gauche, centré verticalement
                 containerClasses = "absolute inset-0 flex items-center justify-start pl-8 md:pl-16 lg:pl-24";
