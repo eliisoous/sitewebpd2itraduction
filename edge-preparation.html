@@ -249,101 +249,83 @@
             <div class="container mx-auto px-4 py-5">
                 
                 <!-- Desktop Layout: Grille 3 colonnes -->
-                <div class="hidden lg:grid lg:grid-cols-3 lg:gap-4 xl:gap-6 lg:items-center lg:min-h-[400px]">
+                <div class="hidden lg:grid lg:grid-cols-3 lg:gap-6 xl:gap-8 lg:items-center lg:min-h-[400px]">
                     
                     <!-- Colonne 1: ProEdge Machine -->
-                    <div class="flex justify-center items-center transform -translate-x-6 scroll-animate delay-200">
+                    <div class="flex justify-center items-center scroll-animate delay-200">
                         <img src="assets/images/edge-prep/ProEdge.png" 
                             alt="Pro Edge Machine" 
                             class="h-80 xl:h-96 w-auto object-contain">
                     </div>
                     
-                    <!-- Colonne 2: Titres + Schema -->
-                    <div class="flex flex-col justify-center items-center text-center space-y-3 scroll-animate">
+                    <!-- Colonne 2: Texte -->
+                    <div class="flex flex-col justify-center items-center text-center space-y-4 scroll-animate delay-300">
                         <!-- Titre principal -->
-                        <h1 class="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-center whitespace-nowrap">Edge Prep & Polishing Equipments</h1>
-
+                        <h1 class="text-xl lg:text-2xl xl:text-3xl font-bold leading-tight text-center">Edge Prep & Polishing Equipments</h1>
                         
                         <!-- Sous-titre -->
-                        <p class="text-lg md:text-xl opacity-90">Edge preparation & post-treatment for High Performance Cutting Tools</p>
-                        <!-- Sous-sous-titre -->
-                        <h3 class="text-base md:text-lg font-normal">Build Your High-Performance Cutting Edge</h3>
+                        <p class="text-base lg:text-lg opacity-90">Edge preparation & post-treatment for High Performance Cutting Tools</p>
                         
-                        <!-- Image Schema -->
-                        <div class="flex justify-center pt-2">
-                            <img src="assets/images/edge-prep/schema.png" 
-                                alt="Edge Preparation Process Schema" 
-                                class="h-32 xl:h-40 w-auto object-contain">
-                        </div>
+                        <!-- Sous-sous-titre -->
+                        <h3 class="text-sm lg:text-base font-normal">Build Your High-Performance Cutting Edge</h3>
                     </div>
                     
-                    <!-- Colonne 3: Drag Finish Machine -->
-                    <div class="flex justify-center items-center transform translate-x-6 scroll-animate delay-300">
-                        <img src="assets/images/edge-prep/edgeprep.png" 
-                            alt="Drag Finish Machine" 
-                            class="h-80 xl:h-96 w-auto object-contain">
+                    <!-- Colonne 3: Schema -->
+                    <div class="flex justify-center items-center scroll-animate delay-400">
+                        <img src="assets/images/edge-prep/schema.png" 
+                            alt="Edge Preparation Process Schema" 
+                            class="h-32 xl:h-40 w-auto object-contain">
                     </div>
                 </div>
                 
                 <!-- Tablet Layout: Version adaptée tablette -->
                 <div class="hidden md:block lg:hidden">
-                    <!-- Titres pour tablette -->
-                    <div class="text-center mb-6 space-y-3 px-4 scroll-animate">
-                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">Edge Prep & Polishing Equipments</h1>
-                        <p class="text-lg md:text-xl opacity-90">Edge preparation & post-treatment for High Performance Cutting Tools</p>
-                        <h3 class="text-base md:text-lg font-normal">Build Your High-Performance Cutting Edge</h3>
-                    </div>
-                    
-                    <!-- Schema centré -->
-                    <div class="flex justify-center mb-8 scroll-animate delay-200">
-                        <img src="assets/images/edge-prep/schema.png" 
-                            alt="Edge Preparation Process Schema" 
-                            class="h-28 w-auto object-contain">
-                    </div>
-                    
-                    <!-- Machines côte à côte -->
-                    <div class="grid grid-cols-2 gap-4 md:gap-8 items-center px-4 scroll-animate delay-300">
-                        <div class="flex justify-center">
+                    <!-- Grille 2 colonnes pour tablette -->
+                    <div class="grid grid-cols-2 gap-6 md:gap-8 items-center">
+                        <!-- ProEdge Machine -->
+                        <div class="flex justify-center scroll-animate delay-200">
                             <img src="assets/images/edge-prep/ProEdge.png" 
                                 alt="Pro Edge Machine" 
-                                class="h-36 md:h-48 w-auto object-contain">
+                                class="h-48 md:h-64 w-auto object-contain">
                         </div>
-                        <div class="flex justify-center">
-                            <img src="assets/images/edge-prep/edgeprep.png" 
-                                alt="Drag Finish Machine" 
-                                class="h-36 md:h-48 w-auto object-contain">
+                        
+                        <!-- Titres + Schema -->
+                        <div class="text-center space-y-3 px-2 scroll-animate">
+                            <h1 class="text-xl md:text-2xl font-bold leading-tight">Edge Prep & Polishing Equipments</h1>
+                            <p class="text-base md:text-lg opacity-90">Edge preparation & post-treatment for High Performance Cutting Tools</p>
+                            <h3 class="text-sm md:text-base font-normal">[EN COURS DE MODIF]Build Your High-Performance Cutting Edge</h3>
+                            
+                            <!-- Schema -->
+                            <div class="flex justify-center pt-3">
+                                <img src="assets/images/edge-prep/schema.png" 
+                                    alt="Edge Preparation Process Schema" 
+                                    class="h-24 md:h-28 w-auto object-contain">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Mobile Layout: Version mobile -->
                 <div class="md:hidden">
+                    <!-- ProEdge Machine en premier -->
+                    <div class="flex justify-center mb-6 scroll-animate delay-200">
+                        <img src="assets/images/edge-prep/ProEdge.png" 
+                            alt="Pro Edge Machine" 
+                            class="h-32 sm:h-40 w-auto object-contain max-w-full">
+                    </div>
+                    
                     <!-- Titres pour mobile -->
                     <div class="text-center mb-4 space-y-2 px-4 scroll-animate">
-                        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">Edge Prep & Polishing Equipments</h1>
+                        <h1 class="text-xl sm:text-2xl font-bold leading-tight">Edge Prep & Polishing Equipments</h1>
                         <p class="text-base sm:text-lg opacity-90 leading-relaxed">Edge preparation & post-treatment for High Performance Cutting Tools</p>
-                        <h3 class="text-sm sm:text-base font-normal">Build Your High-Performance Cutting Edge</h3>
+                        <h3 class="text-sm sm:text-base font-normal">[EN COURS DE MODIF]Build Your High-Performance Cutting Edge</h3>
                     </div>
                     
                     <!-- Schema centré -->
-                    <div class="flex justify-center mb-6 scroll-animate delay-200">
+                    <div class="flex justify-center mb-6 scroll-animate delay-300">
                         <img src="assets/images/edge-prep/schema.png" 
                             alt="Edge Preparation Process Schema" 
                             class="h-20 sm:h-24 w-auto object-contain">
-                    </div>
-                    
-                    <!-- Machines empilées -->
-                    <div class="space-y-3 px-4 scroll-animate delay-300">
-                        <div class="flex justify-center">
-                            <img src="assets/images/edge-prep/ProEdge.png" 
-                                alt="Pro Edge Machine" 
-                                class="h-28 sm:h-36 w-auto object-contain max-w-full">
-                        </div>
-                        <div class="flex justify-center">
-                            <img src="assets/images/edge-prep/edgeprep.png" 
-                                alt="Drag Finish Machine" 
-                                class="h-28 sm:h-36 w-auto object-contain max-w-full">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -385,11 +367,26 @@
                     
                     <!-- Product Images -->
                     <div class="order-1 lg:order-2 px-4 md:px-0 scroll-animate delay-200">
-                        <div class="flex justify-center">
-                            <!-- Cutting Tools -->
-                            <img src="assets/images/edge-prep/cutting tools.png" 
-                                alt="High Performance Cutting Tools" 
-                                class="w-full max-w-xs md:max-w-sm h-auto object-contain">
+                        <div class="space-y-6">
+                            <!-- Edge Preparation Section -->
+                            <div class="text-center">
+                                <h3 class="text-xl md:text-2xl font-bold text-pd2i-black mb-4">Edge Preparation</h3>
+                                <div class="flex justify-center">
+                                    <img src="assets/images/edge-prep/tool edge prep.png" 
+                                        alt="Edge Preparation Tool" 
+                                        class="w-full max-w-xs md:max-w-sm h-auto object-contain">
+                                </div>
+                            </div>
+                            
+                            <!-- Post Treatment Section -->
+                            <div class="text-center">
+                                <h3 class="text-xl md:text-2xl font-bold text-pd2i-black mb-4">Post Treatment</h3>
+                                <div class="flex justify-center">
+                                    <img src="assets/images/edge-prep/tool post treat.png" 
+                                        alt="Post Treatment Tool" 
+                                        class="w-full max-w-xs md:max-w-sm h-auto object-contain">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
