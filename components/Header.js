@@ -28,22 +28,16 @@ class Header {
                 labelCompact: 'Coating',
                 type: 'dropdown',
                 pageId: 'coating-equipments',
+                href: '#', // Lien vers # pour éviter l'erreur 404
                 items: [
                     { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
                     { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
-                    { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' }
+                    { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' },
+                    { label: 'Turnkey Solutions', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
                 ]
             },
             { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
-            {
-                label: 'Turnkey',
-                type: 'dropdown',
-                pageId: 'turnkey',
-                items: [
-                    { label: 'Turnkey Solutions', href: '#', pageId: 'turnkey-solutions' },
-                    { label: 'Greenclean Ultrasonic Cleaning', href: 'greenclean-ultrasonic-cleaning.html', pageId: 'greenclean-ultrasonic-cleaning' }
-                ]
-            },
+            { label: 'Greenclean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
             { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
             { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
             { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
@@ -163,12 +157,12 @@ class Header {
         
         return `
             <div class="relative group">
-                <a href="${item.href || '#'}" class="${activeClass} transition-colors duration-200 font-medium flex items-center ${textSize}">
+                <span class="${activeClass} transition-colors duration-200 font-medium flex items-center ${textSize} cursor-pointer">
                     ${isTablet ? (item.labelCompact || item.label) : item.label}
                     <svg class="${iconSize} ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </a>
+                </span>
                 <div class="absolute left-0 mt-2 ${dropdownWidth} bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div class="py-2">
                         ${item.items.map(subItem => 
@@ -266,7 +260,7 @@ class Header {
         return `
             <div class="mobile-dropdown">
                 <div class="w-full flex items-center justify-between">
-                    <a href="${item.href || '#'}" class="flex-1 px-3 py-2 ${activeClass} transition-colors duration-200 font-medium">${item.label}</a>
+                    <span class="flex-1 px-3 py-2 ${activeClass} transition-colors duration-200 font-medium cursor-pointer">${item.label}</span>
                     <button class="px-3 py-2 text-pd2i-black hover:text-pd2i-blue transition-colors duration-200" onclick="toggleMobileDropdown('${dropdownId}')">
                         <svg class="w-4 h-4 transform transition-transform duration-200" id="${arrowId}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>

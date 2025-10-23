@@ -422,7 +422,7 @@
     <!-- Footer sera généré automatiquement par le composant -->
 
     <!-- Scripts -->
-    <script src="components/Header.js"></script>
+    <script src="components/Header.js?v=1.1"></script>
     <script src="components/Footer.js"></script>
     <script src="assets/js/main.js"></script>
     
@@ -439,22 +439,22 @@
                 languages: ['EN', 'FR'],
                 navigationItems: [
                     { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
-                    {
-                        label: 'Coating Equipments',
-                        labelCompact: 'Coating',
-                        href: 'coating-equipments.html',
-                        type: 'dropdown',
-                        pageId: 'coating-equipments',
-                        items: [
-                            { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
-                            { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
-                            { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' }
-                        ]
-                    },
+                {
+                    label: 'Coating Equipments',
+                    labelCompact: 'Coating',
+                    href: '#',
+                    type: 'dropdown',
+                    pageId: 'coating-equipments',
+                    items: [
+                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' },
+                        { label: 'Turnkey Solutions', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                    ]
+                },
                     { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
-                { label: 'Turnkey', href: 'turnkey-solutions.html', type: 'link', pageId: 'turnkey-solutions' },
+                { label: 'Greenclean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
                     { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
-                    { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
                     { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
                     { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
                 ]
@@ -474,7 +474,6 @@
                 },
                 navigationLinks: [
                     { label: 'About us', href: 'about-us.html' },
-                    { label: 'Services', href: 'services.html' },
                     { label: 'Contact', href: 'contacts.html' },
                     { label: 'Downloads', href: 'download.html' },
                     { label: 'News', href: 'news.html' }
