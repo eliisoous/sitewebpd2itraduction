@@ -337,20 +337,46 @@
             line-height: 1.4;
         }
         
+        /* Primary Button Style - same as contacts.html */
         .btn-primary {
-            background: #0083CA;
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
             color: white;
             padding: 1rem 2rem;
             border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
         }
         
         .btn-primary:hover {
-            background: #006ba3;
             transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+            color: white;
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
         }
         
         /* Process Timeline Section */
@@ -1329,14 +1355,13 @@
                             <ul>
                                 <li>HPIES High Performances Ion Etching System</li>
                                 <li>High Efficiency & Flexibility</li>
-                                <li>Flexible</li>
                                 <li>Low running costs</li>
                                 <li>Easy to operate</li>
                                 <li>Fast and Easy target exchange</li>
                                 <li>Tight thickness tolerances +/-0,1 µm</li>
                                 <li>Local support</li>
                                 <li>Customized configuration</li>
-                                <li>Coating process up to 4 different targets material</li>
+                                <li>Coating process with up to 4 different target materials</li>
                             </ul>
                         </div>
                     </div>
@@ -1356,7 +1381,7 @@
                             <div class="mt-auto pt-4">
                                 <div style="background: linear-gradient(135deg, #4A90E2 0%, #1976d2 100%); color: white; padding: 1.5rem; border-radius: 0.5rem; text-align: center;">
                                     <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.75rem; color: white;">Wide Range Coating Portfolio:</h3>
-                                    <p style="font-size: 1.1rem; line-height: 1.4; font-weight: 500; margin: 0;">Monolayers – Multilayers – Gradient layers – Nano layers</p>
+                                    <p style="font-size: 1.1rem; line-height: 1.4; font-weight: 500; margin: 0;">Monolayer – Multilayers – Gradient Layers – Nanolayers</p>
                                 </div>
                             </div>
                         </div>

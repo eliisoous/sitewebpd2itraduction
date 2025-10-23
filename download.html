@@ -295,6 +295,86 @@
             opacity: 0.9;
         }
 
+        /* Primary Button Style - same as contacts.html */
+        .btn-primary {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+            color: white;
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        /* Secondary Button Style */
+        .btn-secondary {
+            background: transparent;
+            color: #0083CA;
+            border: 2px solid #0083CA;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: #0083CA;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .btn-primary, .btn-secondary {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .btn-primary, .btn-secondary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-download {
@@ -618,12 +698,10 @@
                             Our technical specialists are ready to help you select the optimal solution for your specific application requirements.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="contacts.html" 
-                               class="bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-all duration-200 hover:transform hover:scale-105">
+                            <a href="contacts.html" class="btn-primary">
                                 Contact Our Experts
                             </a>
-                            <a href="coating-equipments.html" 
-                               class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white font-semibold px-8 py-3 rounded transition-all duration-200">
+                            <a href="coating-equipments.html" class="btn-secondary">
                                 Explore Our Solutions
                             </a>
                         </div>

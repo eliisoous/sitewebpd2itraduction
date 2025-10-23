@@ -104,7 +104,7 @@ class Carousel {
                                 ${slide.title ? `<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">${slide.title}</h2>` : ''}
                                 ${slide.description ? `<p class="text-lg md:text-xl mb-6 leading-relaxed">${slide.description}</p>` : ''}
                                 ${slide.buttonText && slide.buttonLink ? `
-                                    <a href="${slide.buttonLink}" class="inline-block bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">
+                                    <a href="${slide.buttonLink}" class="${slide.buttonClass || 'inline-block bg-pd2i-blue hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition-colors duration-200'}" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">
                                         ${slide.buttonText}
                                     </a>
                                 ` : ''}

@@ -94,23 +94,46 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* Download button - same style as Services page */
-        .download-btn {
-            background: #0083CA;                    /* Couleur PD2i bleue */
+        /* Primary Button Style - same as contacts.html */
+        .btn-primary {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
             color: white;
-            padding: 0.8rem 1.5rem;                /* Padding comme btn-primary */
-            border-radius: 8px;                     /* Border-radius harmonisé */
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
             text-decoration: none;
             display: inline-block;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
         }
-
-        .download-btn:hover {
-            background: #006ba3;                   /* Couleur hover */
-            transform: translateY(-2px);           /* Effet de levée */
-            box-shadow: 0 5px 15px rgba(0, 131, 202, 0.3); /* Ombre */
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+            color: white;
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
         }
         
         /* Secondary button - outline style (same as Services page) */
@@ -157,7 +180,7 @@
         
         /* Responsive adjustments - same as Services page */
         @media (max-width: 768px) {
-            .download-btn {
+            .btn-primary {
                 padding: 0.875rem 2rem;
                 font-size: 1rem;
             }
@@ -169,7 +192,7 @@
         }
         
         @media (max-width: 640px) {
-            .download-btn {
+            .btn-primary {
                 padding: 0.75rem 1.5rem;
                 font-size: 0.9rem;
                 width: 100%;
@@ -298,7 +321,7 @@
 
                 <!-- Contact Us Button -->
                 <div class="text-center scroll-animate delay-400">
-                    <a href="contacts.html" class="download-btn">
+                    <a href="contacts.html" class="btn-primary">
                         Contact us
                     </a>
                 </div>
@@ -559,28 +582,32 @@
                     title: 'PVD Coating System to support the Tooling Industries',
                     description: 'Innovation & Customization: We continuously advance <br> our technologies and methods to lead the industry while <br> delivering uniquely tailored solutions for each client\'s specific needs.',
                     buttonText: 'Discover Our Solutions',
-                    buttonLink: 'pvd-cutting-tools.html'
+                    buttonLink: 'pvd-cutting-tools.html',
+                    buttonClass: 'btn-primary'
                 },
                 {
                     image: 'assets/images/home/Im2.png',
                     title: 'Tribological Coating System',
                     description: 'A tailor-made solution for demanding applications: DLC, the low-friction coating that cuts energy use. Tribological thin films helping industries go greener',
                     buttonText: 'Discover Our Solutions',
-                    buttonLink: 'dlc.html'
+                    buttonLink: 'dlc.html',
+                    buttonClass: 'btn-primary'
                 },
                 {
                     image: 'assets/images/home/Im3.png',
                     title: 'Edge preparation & post-treatment for High Performance Cutting Tools',
                     description: 'Build your high-performance cutting edge',
                     buttonText: 'Discover Pro Edge PL24',
-                    buttonLink: 'edge-preparation.html'
+                    buttonLink: 'edge-preparation.html',
+                    buttonClass: 'btn-primary'
                 },
                 {
                     image: 'assets/images/home/Im4.png',
                     title: 'High Pulsed Plasma Nitriding',
                     description: 'The most cost-effective Plasma Nitriding Technology. Simple, efficient, and exactly as it should be.',
                     buttonText: 'Learn More',
-                    buttonLink: 'plasma-nitriding.html'
+                    buttonLink: 'plasma-nitriding.html',
+                    buttonClass: 'btn-primary'
                 }
             ],
             autoPlay: true,
