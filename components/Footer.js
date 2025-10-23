@@ -28,10 +28,9 @@ class Footer {
     
     getDefaultNavigation() {
         return [
-            { label: 'About us', href: '/about' },
-            { label: 'Services', href: '/services' },
+            { label: 'About us', href: 'about-us.html' },
             { label: 'Contact', href: 'contacts.html' },
-            { label: 'Downloads', href: '/downloads' },
+            { label: 'Downloads', href: 'download.html' },
             { label: 'News', href: 'news.html' }
         ];
     }
