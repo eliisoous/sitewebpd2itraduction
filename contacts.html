@@ -6,8 +6,7 @@
     <meta name="description" content="Contact PD2i - Get in touch with our team of experts in PVD coating technology and solutions.">
     <meta name="keywords" content="Contact PD2i, PVD Coating Contact, Technical Support, Sales Contact">
     <meta name="author" content="PD2i">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self';">
-    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self'; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io;">    
     <!-- Favicon Configuration -->
     <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="32x32">
     <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
@@ -97,16 +96,47 @@
     <style>
         /* Contact Form Styles */
         .contact-form {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-radius: 1.5rem;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+        
+        .contact-form::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 131, 202, 0.03) 0%, transparent 70%);
+            animation: pulse-soft 4s ease-in-out infinite;
+            pointer-events: none;
         }
         
         .contact-form:hover {
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            transform: translateY(-2px);
+            box-shadow: 
+                0 35px 70px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(0, 131, 202, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            transform: translateY(-4px) scale(1.01);
         }
         
         .form-group {
@@ -377,8 +407,11 @@
                     
                     <!-- Right Side: Contact Form -->
                     <div class="animate-slide-in-right">
-                        <form class="contact-form p-6 animate-slide-up delay-300">
-                            <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Send us a message</h2>
+                        <form class="contact-form p-8" action="https://formspree.io/f/xgvngjrj" method="POST">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center relative">
+                                <span class="relative z-10">Send us a message</span>
+                                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-pd2i-blue to-blue-400 rounded-full"></div>
+                            </h2>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="form-group">
@@ -499,8 +532,8 @@
                         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a href="mailto:admin@pd2i.com" 
                                class="btn-primary inline-flex items-center hover:scale-105 transition-transform">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"></path>
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                 </svg>
                                 admin@pd2i.com
                             </a>
@@ -609,21 +642,67 @@
         });
 
         // Form submission handler (static for now)
-        document.querySelector('form').addEventListener('submit', function(e) {
+        // Form submission handler with Formspree
+        document.querySelector('form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Add success animation
             const button = this.querySelector('.btn-primary');
             const originalText = button.textContent;
+            const form = this;
             
-            button.textContent = 'Message Sent!';
-            button.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
+            // Disable button during submission
+            button.disabled = true;
+            button.textContent = 'Sending...';
+            button.style.cursor = 'not-allowed';
             
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.background = 'linear-gradient(135deg, #0083CA 0%, #0066A3 100%)';
-                this.reset();
-            }, 3000);
+            try {
+                // Submit form data to Formspree
+                const response = await fetch('https://formspree.io/f/xgvngjrj', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success animation
+                    button.textContent = 'Message Sent Successfully! ✓';
+                    button.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
+                    form.reset();
+                    
+                    // Reset button after 4 seconds
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = 'linear-gradient(135deg, #0083CA 0%, #0066A3 100%)';
+                        button.disabled = false;
+                        button.style.cursor = 'pointer';
+                    }, 4000);
+                } else {
+                    // Error handling
+                    button.textContent = 'Error - Please try again';
+                    button.style.background = 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)';
+                    
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.background = 'linear-gradient(135deg, #0083CA 0%, #0066A3 100%)';
+                        button.disabled = false;
+                        button.style.cursor = 'pointer';
+                    }, 3000);
+                }
+            } catch (error) {
+                // Network error handling
+                console.error('Error:', error);
+                button.textContent = 'Network Error - Please try again';
+                button.style.background = 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'linear-gradient(135deg, #0083CA 0%, #0066A3 100%)';
+                    button.disabled = false;
+                    button.style.cursor = 'pointer';
+                }, 3000);
+            }
         });
 
         // Add hover effects to form inputs
