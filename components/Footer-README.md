@@ -61,7 +61,7 @@ const footer = new Footer({
 |--------|------|--------|-------------|
 | `logoSrc` | String | `'assets/images/logo-pd2i.png'` | Chemin vers le logo |
 | `logoAlt` | String | `'PD2i Logo'` | Texte alternatif du logo |
-| `slogan` | String | `'Your partner when it is all about performance'` | Slogan de l'entreprise |
+| `slogan` | String | `'Your Partner When Performance Matters'` | Slogan de l'entreprise |
 | `companyInfo` | Object | Voir défaut PD2i | Informations de contact |
 | `navigationLinks` | Array | Voir défaut | Liens de navigation |
 | `socialLinks` | Array | `[LinkedIn]` | Liens sociaux |

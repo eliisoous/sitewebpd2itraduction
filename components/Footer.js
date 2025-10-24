@@ -8,7 +8,7 @@ class Footer {
         this.options = {
             logoSrc: options.logoSrc || 'assets/images/logo-pd2i.png',
             logoAlt: options.logoAlt || 'PD2i Logo',
-            slogan: options.slogan || 'Your partner when it is all about performance',
+            slogan: options.slogan || 'Your Partner When Performance Matters',
             companyInfo: options.companyInfo || {
                 name: 'PD2i FRANCE',
                 address: '86, bd Malesherbes',
