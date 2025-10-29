@@ -111,7 +111,7 @@
         /* Customization Section */
         .customization-section {
             background: white;
-            padding: 0.5rem 0;
+            padding: 1.5rem 0;
         }
         
         .customization-container {
@@ -153,14 +153,14 @@
         }
         
         .customization-item img {
-            width: 150px;
             height: 150px;
+            width: auto;
             object-fit: contain;
         }
         
         .surface-analysis-img {
-            width: 250px !important;
-            height: 250px !important;
+            height: 150px !important;
+            width: auto !important;
         }
         
         /* High Speed Coating Section */
@@ -762,7 +762,7 @@
         .performance-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2rem;
             align-items: center;
         }
         
@@ -801,11 +801,31 @@
         
         .diagram-container {
             text-align: center;
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            justify-content: center;
         }
         
         .diagram-container img {
             max-width: 100%;
             height: auto;
+        }
+        
+        .diagram-container img[src*="Coating Layer Diagram.png"] {
+            max-width: 380px;
+            max-height: 380px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .diagram-container img[src*="carou.png"] {
+            max-width: 380px;
+            max-height: 380px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
         }
         
         .download-section {
@@ -962,13 +982,13 @@
             }
             
             .customization-item img {
-                width: 125px;
                 height: 125px;
+                width: auto;
             }
             
             .surface-analysis-img {
-                width: 200px !important;
-                height: 200px !important;
+                height: 125px !important;
+                width: auto !important;
             }
             
             .features-list {
@@ -1055,13 +1075,13 @@
             }
             
             .customization-item img {
-                width: 100px;
                 height: 100px;
+                width: auto;
             }
             
             .surface-analysis-img {
-                width: 160px !important;
-                height: 160px !important;
+                height: 100px !important;
+                width: auto !important;
             }
             
             .features-list,
@@ -1092,6 +1112,17 @@
             }
             
             /* Amélioration des images sur mobile */
+            .diagram-container {
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+            
+            .diagram-container img[src*="Coating Layer Diagram.png"],
+            .diagram-container img[src*="carou.png"] {
+                max-width: 180px;
+                max-height: 180px;
+            }
+            
             .diagram-container img,
             .cycle-diagram img {
                 max-width: 100%;
@@ -1187,13 +1218,13 @@
             }
             
             .customization-item img {
-                width: 85px;
                 height: 85px;
+                width: auto;
             }
             
             .surface-analysis-img {
-                width: 140px !important;
-                height: 140px !important;
+                height: 85px !important;
+                width: auto !important;
             }
             
             .features-box,
@@ -1355,7 +1386,7 @@
                         <img src="assets/images/pvd-cutting-tools/Surface Analysis.png" alt="Surface Analysis" class="surface-analysis-img">
                     </div>
                     <div class="customization-item">
-                        <img src="assets/images/pvd-cutting-tools/Tool Design.png" alt="Tool Design">
+                        <img src="assets/images/pvd-cutting-tools/tool.png" alt="Tool">
                     </div>
                 </div>
                 
@@ -1367,7 +1398,7 @@
                 <!-- Images de droite -->
                 <div class="customization-right">
                     <div class="customization-item">
-                        <img src="assets/images/pvd-cutting-tools/Performance.png" alt="Coating Process">
+                        <img src="assets/images/pvd-cutting-tools/Tool Design.png" alt="Tool">
                     </div>
                     <div class="customization-item">
                         <img src="assets/images/pvd-cutting-tools/Quality Control.png" alt="Quality Control">
@@ -1499,10 +1530,10 @@
         <section class="performance-section">
             <div class="performance-container scroll-animate delay-400">
                 <div class="performance-grid">
-                    <!-- Left: Diagram -->
+                    <!-- Left: Diagrams -->
                     <div class="diagram-container">
                         <img src="assets/images/pvd-cutting-tools/Coating Layer Diagram.png" alt="Coating Layer Diagram">
- 
+                        <img src="assets/images/pvd-cutting-tools/carou.png" alt="Carousel">
                     </div>
                     
                     <!-- Right: Benefits -->
