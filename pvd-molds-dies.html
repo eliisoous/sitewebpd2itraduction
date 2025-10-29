@@ -250,7 +250,7 @@
         
         .surface-image {
             width: 100%;
-            max-width: 280px;
+            max-width: 500px;
             height: 200px;
             background: #f0f0f0;
             border-radius: 0.5rem;
@@ -269,6 +269,12 @@
             object-fit: cover;
         }
         
+        /* Réduire spécifiquement l'image Im4.png */
+        .surface-image img[src*="Im4.png"] {
+            object-fit: contain;
+            transform: scale(2.55);
+        }
+        
         @media (min-width: 640px) {
             .surface-images {
                 flex-direction: row;
@@ -279,7 +285,7 @@
                 padding: 0 1.5rem;
             }
             .surface-image {
-                width: 220px;
+                width: 400px;
                 height: 180px;
             }
         }
@@ -291,7 +297,7 @@
                 max-width: 800px;
             }
             .surface-image {
-                width: 260px;
+                width: 440px;
                 height: 220px;
             }
         }
@@ -304,7 +310,7 @@
                 padding: 0 2rem;
             }
             .surface-image {
-                width: 300px;
+                width: 500px;
                 height: 260px;
                 margin: 0 10px;
             }
@@ -318,7 +324,7 @@
                 max-width: 1600px;
             }
             .surface-image {
-                width: 320px;
+                width: 530px;
                 height: 280px;
                 margin: 0 20px;
             }
