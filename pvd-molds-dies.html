@@ -1187,47 +1187,43 @@
         /* Coating Images Responsive Fix */
         .coating-portfolio-img {
             width: 100%;
-            max-width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            object-position: center;
         }
         
         .coating-portfolio-container {
             width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin;
-            scrollbar-color: #0083CA #f0f0f0;
+            height: 100%;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
         
-        .coating-portfolio-container::-webkit-scrollbar {
-            height: 8px;
-        }
-        
-        .coating-portfolio-container::-webkit-scrollbar-track {
-            background: #f0f0f0;
-            border-radius: 4px;
-        }
-        
-        .coating-portfolio-container::-webkit-scrollbar-thumb {
-            background: #0083CA;
-            border-radius: 4px;
-        }
-        
-        .coating-portfolio-container::-webkit-scrollbar-thumb:hover {
-            background: #0066A3;
+        .coating-portfolio-container h3 {
+            flex-shrink: 0;
         }
         
         .coating-portfolio-container img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            flex: 1;
+            min-height: 0;
         }
         
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             .coating-portfolio-container {
-                padding-bottom: 1rem;
+                min-height: 280px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .coating-portfolio-container {
+                min-height: 320px;
             }
         }
         
@@ -1373,7 +1369,7 @@
         <!-- Coating Images Section -->
         <section class="bg-white pt-8 md:pt-12">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
                     <!-- First Image: Arc Coating Forming Tools -->
                     <div class="scroll-animate coating-portfolio-container">
                         <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Arc Coating Portfolio for Forming Tools</h3>
@@ -1398,7 +1394,7 @@
         <!-- Coating Images 2 Section -->
         <section class="bg-white pt-16 md:pt-20">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
                     <!-- First Image:Arc Coating Portfolio for Plastic Molding -->
                     <div class="scroll-animate coating-portfolio-container">
                         <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Arc Coating Portfolio for Plastic Molding</h3>
