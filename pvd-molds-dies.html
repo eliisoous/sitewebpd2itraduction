@@ -269,11 +269,12 @@
             object-fit: cover;
         }
         
-        /* Réduire spécifiquement l'image Im4.png */
+        /* Afficher l'image Im4.png en entier */
         .surface-image img[src*="Im4.png"] {
-            object-fit: contain;
-            transform: scale(2.55);
+            object-fit: cover;
+            object-position: center top;
         }
+        
         
         @media (min-width: 640px) {
             .surface-images {
@@ -1297,7 +1298,7 @@
                         <img src="assets/images/pvd-molds-and-dies/mold1.png" alt="Mold sample 1" class="w-full h-full object-cover">
                     </div>
                     <div class="mold-sample">
-                        <img src="assets/images/pvd-molds-and-dies/mold2.png" alt="Mold sample 2" class="w-full h-full object-cover">
+                        <img src="assets/images/dlc_for_tribological_coatings/moulding-3.jpg" alt="Mold sample 2" class="w-full h-full object-cover">
                     </div>
                     <div class="mold-sample">
                         <img src="assets/images/pvd-molds-and-dies/mold3.png" alt="Mold sample 3" class="w-full h-full object-cover">
