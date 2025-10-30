@@ -97,7 +97,7 @@
         /* Hero Section */
         .hero-section {
             position: relative;
-            min-height: 250px;
+            min-height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -109,9 +109,9 @@
         
         .hero-content {
             position: absolute;
-            top: 10%;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             text-align: center;
             color: white;
             z-index: 2;
@@ -123,14 +123,27 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             font-weight: bold;
             line-height: 1.2;
+            font-size: 1.5rem;
         }
         
         .hero-content p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0.95;
             line-height: 1.4;
             max-width: 100%;
             margin: 0 auto;
+        }
+        
+        @media (min-width: 480px) {
+            .hero-section {
+                min-height: 250px;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
         }
         
         @media (min-width: 768px) {
@@ -138,11 +151,10 @@
                 min-height: 350px;
             }
             .hero-content {
-                top: 8%;
                 padding: 0 1.5rem;
             }
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             .hero-content p {
                 font-size: 1.1rem;
@@ -155,11 +167,10 @@
                 min-height: 400px;
             }
             .hero-content {
-                top: 10%;
                 padding: 0 2rem;
             }
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             .hero-content p {
                 font-size: 1.2rem;
@@ -181,10 +192,10 @@
         }
         
         .coating-text h2 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #000;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             line-height: 1.3;
             text-align: center;
             max-width: 100%;
@@ -194,10 +205,10 @@
         }
         
         .coating-text p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #333;
             line-height: 1.6;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
         
         @media (min-width: 768px) {
@@ -239,19 +250,17 @@
         
         /* Surface Images Grid */
         .surface-images {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 1rem;
-            margin: 2rem auto;
+            margin: 1.5rem auto;
             max-width: 100%;
             padding: 0 1rem;
         }
         
         .surface-image {
             width: 100%;
-            max-width: 500px;
-            height: 200px;
+            height: 180px;
             background: #f0f0f0;
             border-radius: 0.5rem;
             overflow: hidden;
@@ -275,45 +284,50 @@
             object-position: center top;
         }
         
+        @media (min-width: 480px) {
+            .surface-images {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            .surface-image {
+                height: 160px;
+            }
+        }
         
         @media (min-width: 640px) {
             .surface-images {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
+                gap: 1.2rem;
                 margin: 2.5rem auto;
                 padding: 0 1.5rem;
             }
             .surface-image {
-                width: 400px;
                 height: 180px;
             }
         }
         
         @media (min-width: 768px) {
             .surface-images {
+                grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
                 margin: 3rem auto;
                 max-width: 800px;
             }
             .surface-image {
-                width: 440px;
-                height: 220px;
+                height: 200px;
             }
         }
         
         @media (min-width: 1024px) {
             .surface-images {
-                flex-wrap: nowrap;
-                justify-content: space-between;
-                max-width: 1400px;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+                max-width: 1200px;
                 padding: 0 2rem;
             }
             .surface-image {
-                width: 500px;
-                height: 260px;
-                margin: 0 10px;
+                height: 220px;
             }
             .surface-image:hover {
                 transform: scale(1.05);
@@ -322,12 +336,11 @@
         
         @media (min-width: 1280px) {
             .surface-images {
-                max-width: 1600px;
+                max-width: 1400px;
+                gap: 2rem;
             }
             .surface-image {
-                width: 530px;
-                height: 280px;
-                margin: 0 20px;
+                height: 240px;
             }
         }
         
@@ -633,9 +646,15 @@
             margin-bottom: 2rem;
         }
         
-        @media (min-width: 640px) {
+        @media (min-width: 480px) {
             .properties-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 640px) {
+            .properties-grid {
                 gap: 1.5rem;
             }
         }
@@ -809,6 +828,63 @@
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
+        
+        /* Specialized List Styles */
+        .specialized-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .specialized-item {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+        }
+        
+        .specialized-bullet {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .specialized-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            .specialized-item {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .specialized-list {
+                gap: 2rem;
+            }
+            .specialized-item {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .specialized-list {
+                gap: 3rem;
+                flex-wrap: nowrap;
+            }
+        }
 
         
         /* Mold Images Section */
@@ -818,12 +894,26 @@
             gap: 1rem;
             max-width: 100%;
             margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 480px) {
+            .mold-images {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
         }
         
         @media (min-width: 640px) {
             .mold-images {
-                grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
+                padding: 0 1.5rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .mold-images {
+                padding: 0 2rem;
             }
         }
         
@@ -832,6 +922,7 @@
                 grid-template-columns: repeat(3, 1fr);
                 gap: 2rem;
                 max-width: 1200px;
+                padding: 0 2rem;
             }
         }
         
@@ -1093,12 +1184,58 @@
             to { transform: scale(1); opacity: 1; }
         }
 
+        /* Coating Images Responsive Fix */
+        .coating-portfolio-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .coating-portfolio-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #0083CA #f0f0f0;
+        }
+        
+        .coating-portfolio-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .coating-portfolio-container::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+        
+        .coating-portfolio-container::-webkit-scrollbar-thumb {
+            background: #0083CA;
+            border-radius: 4px;
+        }
+        
+        .coating-portfolio-container::-webkit-scrollbar-thumb:hover {
+            background: #0066A3;
+        }
+        
+        .coating-portfolio-container img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .coating-portfolio-container {
+                padding-bottom: 1rem;
+            }
+        }
+        
         /* Additional Responsive Utilities */
         @media (max-width: 480px) {
             /* Extra small mobile adjustments */
             .surface-image {
-                max-width: 250px;
-                height: 180px;
+                height: 150px;
             }
             
             .hero-content h1 {
@@ -1106,7 +1243,56 @@
             }
             
             .coating-text h2 {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+            
+            .coating-text p {
+                font-size: 0.85rem;
+            }
+            
+            .properties-title {
+                font-size: 1rem;
+                padding: 1.5rem 0;
+            }
+            
+            .property-card {
+                padding: 1rem;
+            }
+            
+            .property-card h3 {
+                font-size: 1rem;
+            }
+            
+            .property-card p {
+                font-size: 0.8rem;
+            }
+            
+            .specialized-item {
+                font-size: 0.9rem;
+            }
+            
+            .btn-primary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            /* Very small screens */
+            .hero-content h1 {
+                font-size: 1.2rem;
+            }
+            
+            .coating-text h2 {
+                font-size: 0.95rem;
+            }
+            
+            .coating-text p {
+                font-size: 0.8rem;
+            }
+            
+            .surface-image {
+                height: 140px;
             }
         }
     </style>
@@ -1187,22 +1373,22 @@
         <!-- Coating Images Section -->
         <section class="bg-white pt-8 md:pt-12">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
                     <!-- First Image: Arc Coating Forming Tools -->
-                    <div class="scroll-animate">
+                    <div class="scroll-animate coating-portfolio-container">
                         <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Arc Coating Portfolio for Forming Tools</h3>
                         <img src="assets/images/pvd-molds-and-dies/Formingtool Arc.png" 
                              alt="Coating Forming Tools" 
-                             class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                     
                     <!-- Second Image: Hybrid Coating Forming Tools -->
-                    <div class="scroll-animate delay-200">
+                    <div class="scroll-animate delay-200 coating-portfolio-container">
                         <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Hybrid Coating Portfolio for Forming Tools </h3>
                         <img src="assets/images/pvd-molds-and-dies/Formingtool Hybrid.png" 
                              alt="Coating Plastic Molding" 
-                             class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                 </div>
@@ -1212,22 +1398,22 @@
         <!-- Coating Images 2 Section -->
         <section class="bg-white pt-16 md:pt-20">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
                     <!-- First Image:Arc Coating Portfolio for Plastic Molding -->
-                    <div class="scroll-animate">
+                    <div class="scroll-animate coating-portfolio-container">
                         <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Arc Coating Portfolio for Plastic Molding</h3>
                         <img src="assets/images/pvd-molds-and-dies/PlasticMolding Arc.png" 
                              alt="Coating Forming Tools" 
-                             class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                     
                     <!-- Second Image: Hybrid Coating Portfolio for Plastic Molding -->
-                    <div class="scroll-animate delay-200">
+                    <div class="scroll-animate delay-200 coating-portfolio-container">
                         <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Hybrid Coating Portfolio for Plastic Molding</h3>
                         <img src="assets/images/pvd-molds-and-dies/PlasticMolding Hybrid.png" 
                              alt="Coating Plastic Molding" 
-                             class="w-full h-full object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                 </div>
@@ -1273,17 +1459,17 @@
             <div class="specialized-container">
                 <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6 scroll-animate">Specialized Properties for Plastic Injection Molding</h2>
                 <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 scroll-animate delay-100">For mold cavities, cores, and injector runner systems, additional properties are required</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: nowrap; gap: 3rem; white-space: nowrap;">
-                        <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500; color: white;">
-                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 0.5rem;"></span>
+                    <ul class="specialized-list">
+                        <li class="specialized-item">
+                            <span class="specialized-bullet"></span>
                             Corrosion Resistance
                         </li>
-                        <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500; color: white;">
-                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 0.5rem;"></span>
+                        <li class="specialized-item">
+                            <span class="specialized-bullet"></span>
                             Scratch Resistance
                         </li>
-                        <li style="display: flex; align-items: center; font-size: 1.2rem; font-weight: 500; color: white;">
-                            <span style="width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 0.5rem;"></span>
+                        <li class="specialized-item">
+                            <span class="specialized-bullet"></span>
                             Improve Mold Filling and Mold Release
                         </li>
                     </ul>
@@ -1400,7 +1586,7 @@
             navigationLinks: [
                 { label: 'About us', href: 'about-us.html' },
                 { label: 'Contact', href: 'contacts.html' },
-                { label: 'Downloads', href: 'download.html' },
+                { label: 'Download', href: 'download.html' },
                 { label: 'News', href: 'news.html' }
             ],
             socialLinks: [

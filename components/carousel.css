@@ -191,6 +191,37 @@
     }
 }
 
+/* Responsive fixes for slide content and buttons */
+@media (max-width: 768px) {
+    /* Center the overlay content on small screens regardless of per-slide alignment */
+    .carousel-slide .absolute.inset-0.flex {
+        justify-content: center !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Normalize text alignment and width for readability */
+    .carousel-slide .text-left,
+    .carousel-slide .text-right,
+    .carousel-slide .text-center {
+        text-align: center !important;
+        max-width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Make CTA buttons fit nicely on mobile */
+    .carousel-slide a.btn-primary,
+    .carousel-slide a[class*="btn-primary"],
+    .carousel-slide a.inline-block {
+        display: inline-block;
+        width: 100%;
+        max-width: 320px;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .carousel-wrapper {
         height: 450px;

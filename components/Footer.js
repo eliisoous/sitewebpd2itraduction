@@ -30,7 +30,7 @@ class Footer {
         return [
             { label: 'About us', href: 'about-us.html' },
             { label: 'Contact', href: 'contacts.html' },
-            { label: 'Downloads', href: 'download.html' },
+            { label: 'Download', href: 'download.html' },
             { label: 'News', href: 'news.html' }
         ];
     }
