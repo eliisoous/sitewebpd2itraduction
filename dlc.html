@@ -316,31 +316,36 @@
         <!-- Coating Portfolio Section -->
         <section class="bg-white pt-8 md:pt-12 pb-8 md:pb-12">
             <div class="container mx-auto px-4">
+                <div class="text-center mb-8 md:mb-12 scroll-animate">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black">
+                        Coating Portfolio
+                    </h2>
+                </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
                     <!-- First Image: Coating Components -->
-                    <div class="scroll-animate">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Coating Portfolio for Components</h3>
+                    <div class="scroll-animate coating-portfolio-container flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">For Components</h3>
                         <img src="assets/images/dlc_for_tribological_coatings/coatingcompo.png" 
                              alt="Coating Components" 
-                             class="w-full h-80 object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                     
                     <!-- Second Image: Coating Plastic Molding -->
-                    <div class="scroll-animate delay-200">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Coating Portfolio for Plastic Molding</h3>
+                    <div class="scroll-animate delay-200 coating-portfolio-container flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">For Plastic Molding</h3>
                         <img src="assets/images/dlc_for_tribological_coatings/coatingpm.png" 
                              alt="Coating Plastic Molding" 
-                             class="w-full h-80 object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                     
                     <!-- Third Image: Coating Tools -->
-                    <div class="scroll-animate delay-400">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Coating Portfolio for Cutting Tools</h3>
+                    <div class="scroll-animate delay-400 coating-portfolio-container flex flex-col">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">For Forming Tools and Cutting Tools</h3>
                         <img src="assets/images/dlc_for_tribological_coatings/coatingtools.png" 
                              alt="Coating Cutting Tools" 
-                             class="w-full h-80 object-cover rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                 </div>
@@ -608,6 +613,35 @@
     
     <!-- CSS Animations for Modern Table -->
     <style>
+        /* Coating Images Responsive Fix */
+        .coating-portfolio-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .coating-portfolio-container {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 1024px) {
+            .coating-portfolio-img {
+                height: 320px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .coating-portfolio-img {
+                height: 250px;
+            }
+        }
+        
         /* About Card Style - Same as About Us page */
         .about-card {
             background: white;
