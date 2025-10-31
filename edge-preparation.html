@@ -86,6 +86,28 @@
     
     <!-- Page specific styles -->
     <style>
+        /* Hero Section Background - same as services.html */
+        .hero-services {
+            background: linear-gradient(135deg, #0083CA 0%, #4A90E2 50%, #87CEEB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+        
+        .hero-services > * {
+            position: relative;
+            z-index: 1;
+        }
+        
         /* Primary Button Style - same as contacts.html */
         .btn-primary {
             background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
@@ -266,7 +288,7 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-pd2i-blue to-blue-400 text-white">
+        <section class="hero-services text-white">
             <div class="container mx-auto px-4 py-5">
                 
                 <!-- Desktop Layout: Grille 3 colonnes -->
