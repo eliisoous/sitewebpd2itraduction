@@ -104,6 +104,105 @@
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Schema.org - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PD2i",
+      "legalName": "Partner Development Industry International",
+      "url": "https://www.pd2i.com",
+      "logo": "https://www.pd2i.com/assets/images/logo-pd2i.png",
+      "foundingDate": "1989",
+      "description": "PD2i provides advanced PVD coating systems, plasma nitriding, and edge preparation solutions for cutting tools and industrial applications.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "86, bd Malesherbes",
+        "addressLocality": "Paris",
+        "postalCode": "75008",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33-1-53-75-45-05",
+        "contactType": "Customer Service",
+        "email": "admin@pd2i.com",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/pd2i"
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org - Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "DLC for Tribological Coatings",
+      "description": "Diamond-Like Carbon (DLC) coating systems for tribological applications. Low-friction coatings that reduce energy consumption and environmental footprint while improving component performance.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PD2i"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "PD2i"
+      },
+      "image": [
+        "https://www.pd2i.com/assets/images/dlc_for_tribological_coatings/Tribological.png"
+      ],
+      "category": "Industrial Coating Equipment",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "url": "https://www.pd2i.com/dlc.html"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Technology",
+          "value": "DLC (Diamond-Like Carbon)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Application",
+          "value": "Tribological Coatings, Energy Efficiency"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.pd2i.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Coating Equipments",
+          "item": "https://www.pd2i.com/#coating-equipment"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DLC for Tribological Coatings",
+          "item": "https://www.pd2i.com/dlc.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
     <!-- Header sera généré automatiquement par le composant -->
