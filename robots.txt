@@ -1,0 +1,50 @@
+# robots.txt for https://www.pd2i.com/
+# Instructions pour les robots des moteurs de recherche
+# Dernière mise à jour : Janvier 2025
+
+# ========================================
+# RÈGLES POUR TOUS LES ROBOTS
+# ========================================
+
+User-agent: *
+
+# Autoriser tout par défaut
+Allow: /
+
+# Bloquer les dossiers techniques et composants
+Disallow: /components/
+Disallow: /config/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Autoriser explicitement les images (Google Images)
+Allow: /assets/images/
+
+# Bloquer les pages de test
+Disallow: /example-page.html
+
+# Bloquer les URLs avec paramètres de tracking (évite duplicate content)
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?ref=
+
+# ========================================
+# SITEMAP
+# ========================================
+
+Sitemap: https://www.pd2i.com/sitemap.xml
+
+# ========================================
+# RALENTIR LES BOTS TIERS UNIQUEMENT
+# (Google et Bing ignorent Crawl-delay)
+# ========================================
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
