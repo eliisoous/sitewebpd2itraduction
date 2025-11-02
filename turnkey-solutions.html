@@ -273,6 +273,15 @@
             margin-top: 1.5rem;
         }
         
+        /* Hero Section - Reduce top spacing on mobile */
+        main {
+            padding-top: 0;
+        }
+        
+        .hero-section {
+            margin-top: 0;
+        }
+        
         /* Hero Image Height Control */
         .hero-image-container {
             height: 500px;
@@ -282,6 +291,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            position: relative;
         }
         
         .hero-image-container img {
@@ -289,6 +299,23 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+        
+        /* Overlay pour améliorer la lisibilité du texte - Masqué par défaut */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
+            z-index: 1;
+            display: none; /* Masqué sur desktop */
+        }
+        
+        .hero-text-container {
+            z-index: 2;
+            position: relative;
         }
         
         /* Responsive adjustments */
@@ -303,12 +330,39 @@
         }
         
         @media (max-width: 768px) {
-            .hero-image-container {
-                height: 400px;
+            /* Réduire l'espace en haut sur mobile */
+            main {
+                padding-top: 0;
+                margin-top: 0;
             }
-        }
-        
-        @media (max-width: 768px) {
+            
+            .hero-section {
+                margin-top: 0;
+                padding-top: 0;
+            }
+            
+            .hero-image-container {
+                height: auto;
+                min-height: 300px;
+                margin-top: 0;
+            }
+            
+            .hero-image-container img {
+                object-fit: contain;
+                height: auto;
+            }
+            
+            /* Overlay visible uniquement sur mobile pour meilleure lisibilité */
+            .hero-overlay {
+                display: block; /* Afficher sur mobile */
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%);
+            }
+            
+            /* Ajuster le padding du texte sur mobile */
+            .hero-text-container {
+                padding: 1rem 0;
+            }
+            
             .solution-card {
                 padding: 1.5rem;
             }
@@ -324,6 +378,20 @@
         }
         
         @media (max-width: 480px) {
+            /* Encore plus d'espace réduit sur très petits écrans */
+            .hero-section {
+                margin-top: 0;
+            }
+            
+            .hero-image-container {
+                min-height: 250px;
+            }
+            
+            /* Overlay encore plus visible sur très petits écrans */
+            .hero-overlay {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
+            }
+            
             .solution-card {
                 padding: 1rem;
             }
@@ -465,15 +533,18 @@
         
 
         <!-- Hero Section -->
-        <section class="w-full relative">
+        <section class="w-full relative hero-section">
             <div class="hero-image-container">
                 <img src="assets/images/turnkey solution/backgroung.png" 
                      alt="Turnkey Solutions Background" 
                      class="w-full h-auto object-contain">
             </div>
             
+            <!-- Overlay Background pour améliorer la lisibilité -->
+            <div class="hero-overlay"></div>
+            
             <!-- Overlay Text -->
-            <div class="absolute inset-0 flex items-center">
+            <div class="absolute inset-0 flex items-center hero-text-container">
                 <div class="container mx-auto px-4">
                     <div class="max-w-2xl">
                         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 scroll-animate">

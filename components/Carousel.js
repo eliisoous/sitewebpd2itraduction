@@ -40,7 +40,7 @@ class Carousel {
         }
         
         container.innerHTML = `
-            <div class="carousel-wrapper relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden shadow-lg">
+            <div class="carousel-wrapper relative w-full h-[500px] md:h-[400px] lg:h-[550px] overflow-hidden shadow-lg">
                 <!-- Slides Container -->
                 <div class="carousel-slides relative w-full h-full">
                     ${this.generateSlidesHTML()}
@@ -95,8 +95,8 @@ class Carousel {
             
             return `
             <div class="carousel-slide absolute inset-0 transition-all duration-500 ease-in-out ${index === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}" data-slide="${index}">
-                <div class="relative w-full h-full">
-                    <img src="${slide.image}" alt="${slide.alt || `Slide ${index + 1}`}" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMDA4M0NBIi8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UEQyaTwvdGV4dD4KPHN2Zz4=';">
+                <div class="relative w-full h-full" style="${isFirstSlide ? 'background: linear-gradient(to bottom, #1a1a1a 0%, #2d2d2d 100%);' : ''}">
+                    <img src="${slide.image}" alt="${slide.alt || `Slide ${index + 1}`}" class="w-full h-full ${isFirstSlide ? 'object-contain' : 'object-cover'}" style="${isFirstSlide ? 'object-position: center bottom;' : ''}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMDA4M0NBIi8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UEQyaTwvdGV4dD4KPHN2Zz4=';">
                     
                     ${slide.title || slide.description ? `
                         <div class="${containerClasses}">

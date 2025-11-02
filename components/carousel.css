@@ -9,7 +9,7 @@
 .carousel-wrapper {
     position: relative;
     width: 100%;
-    height: 400px;
+    /* height removed - using Tailwind classes instead */
     overflow: hidden;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -146,9 +146,7 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .carousel-wrapper {
-        height: 300px;
-    }
+    /* height removed - using Tailwind classes instead */
     
     .carousel-prev,
     .carousel-next {
@@ -223,9 +221,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .carousel-wrapper {
-        height: 450px;
-    }
+    /* height removed - using Tailwind classes instead */
     
     .carousel-slide h2 {
         font-size: 2rem;
@@ -237,9 +233,7 @@
 }
 
 @media (min-width: 1025px) {
-    .carousel-wrapper {
-        height: 500px;
-    }
+    /* height removed - using Tailwind classes instead */
     
     .carousel-slide h2 {
         font-size: 2.5rem;
@@ -251,9 +245,7 @@
 }
 
 @media (min-width: 1200px) {
-    .carousel-wrapper {
-        height: 600px;
-    }
+    /* height removed - using Tailwind classes instead */
     
     .carousel-slide h2 {
         font-size: 3rem;
@@ -377,7 +369,7 @@
     }
     
     .carousel-wrapper {
-        height: auto;
+        /* height removed - using Tailwind classes instead */
         box-shadow: none;
     }
 }
