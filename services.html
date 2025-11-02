@@ -592,8 +592,6 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Breadcrumbs -->
-        <div id="breadcrumbs"></div>
         
         <!-- Hero Section -->
         <section class="hero-services py-12 text-white flex items-center min-h-[300px]">
@@ -789,7 +787,6 @@
     <!-- Initialize Components -->
     <script src="components/Header.js?v=1.1"></script>
     <script src="components/Footer.js"></script>
-    <script src="components/Breadcrumbs.js"></script>
     <script>
         // Initialize Header with navigation items
         window.headerInstance = new Header({
@@ -881,12 +878,6 @@
             console.log('Language changed to:', event.detail.language);
         });
         
-        // Initialize Breadcrumbs
-        const breadcrumbs = new Breadcrumbs('breadcrumbs', [
-            { label: 'Home', href: 'index.html' },
-            { label: 'Services', href: 'services.html' }
-        ]);
-        breadcrumbs.render();
     </script>
 
     <!-- Main JS -->
