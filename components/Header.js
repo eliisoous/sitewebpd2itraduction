@@ -88,7 +88,7 @@ class Header {
                     <!-- Logo -->
                     <div class="flex-shrink-0">
                         <a href="${this.options.logoLink}" class="flex items-center">
-                            <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" class="h-16 w-auto">
+                            <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" width="1408" height="600" class="h-16 w-auto" decoding="async">
                         </a>
                     </div>
                     

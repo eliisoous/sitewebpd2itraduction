@@ -91,7 +91,7 @@ class Footer {
         return `
             <div class="lg:col-span-1">
                 <div class="mb-3">
-                    <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" class="h-14 w-auto mb-2 filter brightness-0 invert">
+                    <img src="${this.options.logoSrc}" alt="${this.options.logoAlt}" width="150" height="72" class="h-14 w-auto mb-2 filter brightness-0 invert" decoding="async">
                     <p class="text-white text-base font-medium leading-snug">
                         ${this.options.slogan}
                     </p>
