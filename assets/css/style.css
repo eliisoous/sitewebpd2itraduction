@@ -337,6 +337,19 @@ nav a::after {
     }
 }
 
+/* Screen Reader Only - for SEO and accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 /* Smooth Transitions */
 * {
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
