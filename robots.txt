@@ -20,9 +20,6 @@ Disallow: /assets/css/
 # Autoriser explicitement les images (Google Images)
 Allow: /assets/images/
 
-# Bloquer les pages de test
-Disallow: /example-page.html
-
 # Bloquer les URLs avec paramètres de tracking (évite duplicate content)
 Disallow: /*?utm_source=
 Disallow: /*?utm_medium=
