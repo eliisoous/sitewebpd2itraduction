@@ -539,7 +539,7 @@
                             <!-- Featured Image -->
                             <div class="mb-6 md:mb-8">
                                 <img id="articleImage" 
-                                     src="assets/images/news/new-pvd-coatings.jpg" 
+                                     src="assets/images/news/nano4energy.png" 
                                      alt="Article Image" 
                                      class="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-lg"
                                      loading="lazy"
@@ -579,19 +579,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Articles -->
-        <section class="py-12 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center mb-8">Related articles</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="relatedArticles">
-                        <!-- Related articles will be populated by JavaScript -->
                     </div>
                 </div>
             </div>
@@ -683,84 +670,6 @@
     <script>
         // Articles data
         const articlesData = {
-            'new-pvd-coatings': {
-                title: 'New PVD Coatings: we love colors, you too?',
-                category: 'Innovation',
-                date: '15 Mars 2024',
-                readTime: '5 min',
-                author: 'PD2i Team',
-                image: 'assets/images/news/new-pvd-coatings.jpg',
-                content: `
-                    <h2 id="introduction">Introduction</h2>
-                    <p>Performance equals boring industrial design? The new PD2i decorative PVD coatings prove the opposite. Discover our innovative color solutions that combine exceptional performance with aesthetic appeal, revolutionizing the way we think about industrial coating applications.</p>
-                    
-                    <p>Dans un monde où l'esthétique et la performance doivent coexister, PD2i repousse les limites de ce qui est possible avec les revêtements PVD. Nos nouvelles solutions colorées offrent non seulement une protection exceptionnelle, mais transforment également l'apparence des composants industriels.</p>
-                    
-                    <h2 id="technology">Technologie Révolutionnaire</h2>
-                    <p>Nos revêtements PVD colorés utilisent une technologie de pointe qui permet d'obtenir une large gamme de couleurs tout en maintenant les propriétés mécaniques exceptionnelles des revêtements traditionnels.</p>
-                    
-                    <h3>Avantages clés :</h3>
-                    <ul>
-                        <li>Résistance à l'usure exceptionnelle</li>
-                        <li>Stabilité des couleurs dans le temps</li>
-                        <li>Compatibilité avec diverses applications industrielles</li>
-                        <li>Respect de l'environnement</li>
-                    </ul>
-                    
-                    <h2 id="applications">Applications Industrielles</h2>
-                    <p>Ces nouveaux revêtements colorés trouvent leur application dans de nombreux secteurs :</p>
-                    
-                    <ul>
-                        <li><strong>Outillage de précision</strong> : Identification visuelle des outils</li>
-                        <li><strong>Composants automobiles</strong> : Esthétique et performance</li>
-                        <li><strong>Dispositifs médicaux</strong> : Codage couleur pour la sécurité</li>
-                        <li><strong>Électronique</strong> : Design et protection</li>
-                    </ul>
-                    
-                    <h2 id="conclusion">Conclusion</h2>
-                    <p>Les nouveaux revêtements PVD colorés de PD2i marquent une révolution dans l'industrie des traitements de surface. En combinant performance technique et esthétique, nous ouvrons de nouvelles possibilités pour nos clients dans tous les secteurs d'activité.</p>
-                    
-                    <p>Contactez nos experts pour découvrir comment ces innovations peuvent transformer vos applications industrielles.</p>
-                `
-            },
-            'expanding-horizons': {
-                title: 'Expanding Horizons: DLC coating',
-                category: 'Technology',
-                date: '10 Mars 2024',
-                readTime: '3 min',
-                author: 'PD2i Team',
-                image: 'assets/images/news/expanding-horizons.png',
-                content: `
-                    <h2 id="introduction">Introduction au DLC</h2>
-                    <p>PT Prima Nano Coating pionnier des revêtements avancés. Nous explorons les nouvelles frontières du revêtement DLC (Diamond-Like Carbon) et ses applications innovantes dans l'industrie moderne.</p>
-                    
-                    <p>Le revêtement DLC représente une technologie révolutionnaire qui ouvre de nouveaux horizons dans le domaine des traitements de surface industriels.</p>
-                    
-                    <h2 id="technology">Qu'est-ce que le DLC ?</h2>
-                    <p>Le Diamond-Like Carbon (DLC) est un revêtement amorphe qui combine les propriétés exceptionnelles du diamant avec la flexibilité du carbone graphite.</p>
-                    
-                    <h3>Propriétés remarquables :</h3>
-                    <ul>
-                        <li>Dureté exceptionnelle proche du diamant</li>
-                        <li>Coefficient de friction ultra-faible</li>
-                        <li>Résistance chimique excellente</li>
-                        <li>Biocompatibilité</li>
-                    </ul>
-                    
-                    <h2 id="applications">Applications Innovantes</h2>
-                    <p>Le revêtement DLC trouve des applications dans de nombreux domaines :</p>
-                    
-                    <ul>
-                        <li><strong>Industrie automobile</strong> : Composants moteur haute performance</li>
-                        <li><strong>Médical</strong> : Implants et instruments chirurgicaux</li>
-                        <li><strong>Horlogerie</strong> : Composants de précision</li>
-                        <li><strong>Aérospatiale</strong> : Pièces critiques</li>
-                    </ul>
-                    
-                    <h2 id="conclusion">L'Avenir avec PD2i</h2>
-                    <p>Chez PD2i, nous continuons à développer et perfectionner la technologie DLC pour répondre aux défis industriels de demain. Nos solutions DLC représentent l'avenir des revêtements haute performance.</p>
-                `
-            },
             'nano4energy': {
                 title: 'Launches State-of-the-art Energy Solutions',
                 category: 'Innovation',
@@ -797,82 +706,6 @@
                     
                     <h2 id="conclusion">Engagement Durable</h2>
                     <p>Avec ces innovations, PD2i réaffirme son engagement envers le développement durable et l'excellence technologique. Nous continuons à développer des solutions qui allient performance et respect de l'environnement.</p>
-                `
-            },
-            'imtex-2019': {
-                title: 'IMTEX 2019: 24th January',
-                category: 'Événement',
-                date: '24 Janvier 2019',
-                readTime: '2 min',
-                author: 'PD2i Team',
-                image: 'assets/images/news/imtex-2019.png',
-                content: `
-                    <h2 id="introduction">Rencontre à IMTEX 2019</h2>
-                    <p>PD2i vous rencontre au salon Indian Machine and Tool Exhibition, Bangalore Inde. PD2i, la solution pour vos besoins en revêtement industriel.</p>
-                    
-                    <p>Découvrez nos dernières innovations et technologies sur notre stand lors de cet événement majeur de l'industrie.</p>
-                    
-                    <h2 id="technology">Nos Présentations</h2>
-                    <p>Lors de ce salon, nous avons présenté :</p>
-                    
-                    <h3>Technologies exposées :</h3>
-                    <ul>
-                        <li>Équipements PVD dernière génération</li>
-                        <li>Solutions de revêtement pour l'outillage</li>
-                        <li>Innovations en matière de productivité</li>
-                        <li>Services de support technique</li>
-                    </ul>
-                    
-                    <h2 id="applications">Rencontres Clients</h2>
-                    <p>IMTEX 2019 a été l'occasion de rencontrer de nombreux clients et partenaires :</p>
-                    
-                    <ul>
-                        <li><strong>Fabricants d'outils</strong> : Solutions spécialisées</li>
-                        <li><strong>Industriels locaux</strong> : Adaptation aux besoins régionaux</li>
-                        <li><strong>Distributeurs</strong> : Expansion du réseau</li>
-                        <li><strong>Centres de recherche</strong> : Collaborations techniques</li>
-                    </ul>
-                    
-                    <h2 id="conclusion">Succès de l'Événement</h2>
-                    <p>IMTEX 2019 a été un succès majeur pour PD2i, renforçant notre présence sur le marché indien et ouvrant de nouvelles opportunités de collaboration dans la région.</p>
-                `
-            },
-            'industry-4-0': {
-                title: 'Intégration Industrie 4.0 dans nos Solutions PVD',
-                category: 'Industrie',
-                date: '1 Mars 2024',
-                readTime: '6 min',
-                author: 'PD2i Team',
-                image: 'assets/images/coating-equipments/pvd-coating-chamber-3d.jpg',
-                content: `
-                    <h2 id="introduction">L'Industrie 4.0 chez PD2i</h2>
-                    <p>L'avenir de l'industrie passe par la digitalisation. Découvrez comment PD2i intègre les technologies de l'Industrie 4.0 dans ses équipements de revêtement PVD pour une production plus intelligente et plus efficace.</p>
-                    
-                    <p>Cette révolution technologique transforme nos processus de fabrication et offre de nouvelles possibilités à nos clients.</p>
-                    
-                    <h2 id="technology">Technologies Intégrées</h2>
-                    <p>Nos équipements PVD nouvelle génération intègrent des technologies avancées :</p>
-                    
-                    <h3>Innovations clés :</h3>
-                    <ul>
-                        <li>IoT (Internet des Objets) pour la connectivité</li>
-                        <li>Intelligence artificielle pour l'optimisation</li>
-                        <li>Analyse prédictive pour la maintenance</li>
-                        <li>Interface utilisateur intuitive</li>
-                    </ul>
-                    
-                    <h2 id="applications">Avantages Concrets</h2>
-                    <p>L'intégration de l'Industrie 4.0 apporte de nombreux bénéfices :</p>
-                    
-                    <ul>
-                        <li><strong>Productivité accrue</strong> : Optimisation automatique des paramètres</li>
-                        <li><strong>Qualité constante</strong> : Contrôle en temps réel</li>
-                        <li><strong>Maintenance prédictive</strong> : Réduction des arrêts non planifiés</li>
-                        <li><strong>Traçabilité complète</strong> : Suivi de chaque étape</li>
-                    </ul>
-                    
-                    <h2 id="conclusion">L'Avenir de la Production</h2>
-                    <p>Avec l'Industrie 4.0, PD2i ouvre la voie vers une production plus intelligente, plus efficace et plus durable. Nos clients bénéficient d'une technologie de pointe qui transforme leurs processus industriels.</p>
                 `
             },
             'performance-analytics': {
@@ -1002,7 +835,7 @@
         // Get article ID from URL parameters
         function getArticleId() {
             const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('id') || 'new-pvd-coatings';
+            return urlParams.get('id') || 'nano4energy-madrid';
         }
 
         // Load article content
@@ -1017,7 +850,6 @@
             }
             
             // Update page title
-            document.getElementById('pageTitle').textContent = article.title + ' - PD2i';
             document.title = article.title + ' - PD2i';
             
             // Update meta description
@@ -1046,37 +878,6 @@
             };
             
             categoryElement.className = `article-badge px-3 py-1 rounded text-sm font-semibold uppercase ${categoryColors[article.category] || 'bg-gray-100 text-gray-800 border-gray-200'}`;
-            
-            // Load related articles
-            loadRelatedArticles(articleId);
-        }
-
-        // Load related articles
-        function loadRelatedArticles(currentArticleId) {
-            const relatedContainer = document.getElementById('relatedArticles');
-            const allArticles = Object.keys(articlesData).filter(id => id !== currentArticleId);
-            const relatedArticles = allArticles.slice(0, 3); // Show 3 related articles
-            
-            relatedContainer.innerHTML = relatedArticles.map(articleId => {
-                const article = articlesData[articleId];
-                return `
-                    <article class="related-article bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="${article.image}" 
-                             alt="${article.title}" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <div class="text-xs text-gray-500 mb-2">${article.category} • ${article.date}</div>
-                            <h3 class="text-lg font-semibold mb-2 line-clamp-2">${article.title}</h3>
-                            <a href="art-competence-center.html?id=${articleId}" class="inline-flex items-center text-pd2i-blue hover:text-blue-600 font-medium text-sm">
-                                Read the full article
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                `;
-            }).join('');
         }
 
         // Share functions
