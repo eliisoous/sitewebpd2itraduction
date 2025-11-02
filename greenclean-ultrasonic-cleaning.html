@@ -18,6 +18,12 @@
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/greenclean-ultrasonic-cleaning.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/greenclean-ultrasonic-cleaning.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/greenclean-ultrasonic-cleaning.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="components/header.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+
 
     
     <!-- Favicon Configuration -->
@@ -915,6 +921,10 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+        
+
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
@@ -1010,6 +1020,7 @@
     <!-- Scripts -->
     <script src="components/Header.js?v=1.1"></script>
     <script src="components/Footer.js"></script>
+    <script src="components/Breadcrumbs.js"></script>
     <script src="assets/js/main.js"></script>
     
     <!-- Initialize Components -->
@@ -1102,5 +1113,10 @@
             });
         });
     </script>
+        
+        // Initialize Breadcrumbs
+        const breadcrumbs = new Breadcrumbs('breadcrumbs', [{"label": "Home", "href": "index.html"}, {"label": "Green Clean", "href": "greenclean-ultrasonic-cleaning.html"}]);
+        breadcrumbs.render();
+
 </body>
 </html>

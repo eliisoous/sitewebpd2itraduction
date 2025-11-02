@@ -18,6 +18,12 @@
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/turnkey-solutions.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/turnkey-solutions.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/turnkey-solutions.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="components/header.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+
 
 
     <!-- Favicon Configuration -->
@@ -456,6 +462,10 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+        
+
         <!-- Hero Section -->
         <section class="w-full relative">
             <div class="hero-image-container">
@@ -585,6 +595,7 @@
     
     <!-- Footer Component -->
     <script src="components/Footer.js"></script>
+    <script src="components/Breadcrumbs.js"></script>
     
     <!-- Initialize Header -->
     <script>
@@ -680,5 +691,10 @@
             console.log('Turnkey Solutions page loaded with scroll animations');
         });
     </script>
+        
+        // Initialize Breadcrumbs
+        const breadcrumbs = new Breadcrumbs('breadcrumbs', [{"label": "Home", "href": "index.html"}, {"label": "Coating Equipments", "href": "#"}, {"label": "Turnkey Solutions", "href": "turnkey-solutions.html"}]);
+        breadcrumbs.render();
+
 </body>
 </html>

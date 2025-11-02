@@ -18,6 +18,12 @@
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/art-grinding-hub-2026.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/art-grinding-hub-2026.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/art-grinding-hub-2026.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="components/header.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+
 
     
     <!-- Favicon Configuration -->
@@ -249,6 +255,10 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+        
+
         <!-- Hero Section -->
         <section class="article-hero py-12 text-white flex items-center min-h-[300px]">
             <div class="container mx-auto px-4">
@@ -348,6 +358,7 @@
     
     <!-- Footer Component -->
     <script src="components/Footer.js"></script>
+    <script src="components/Breadcrumbs.js"></script>
     
     <!-- Initialize Header -->
     <script>
@@ -423,5 +434,10 @@
             copyrightYear: 2025
         });
     </script>
+        
+        // Initialize Breadcrumbs
+        const breadcrumbs = new Breadcrumbs('breadcrumbs', [{"label": "Home", "href": "index.html"}, {"label": "News", "href": "news.html"}, {"label": "Grinding Hub 2026", "href": "art-grinding-hub-2026.html"}]);
+        breadcrumbs.render();
+
 </body>
 </html>

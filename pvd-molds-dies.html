@@ -18,6 +18,12 @@
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/pvd-molds-dies.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/pvd-molds-dies.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/pvd-molds-dies.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="components/header.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+
 
     
     <!-- Favicon Configuration -->
@@ -1427,6 +1433,10 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+        
+
 
 
 
@@ -1661,6 +1671,7 @@
     <!-- Initialize Components -->
     <script src="components/Header.js?v=1.1"></script>
     <script src="components/Footer.js"></script>
+    <script src="components/Breadcrumbs.js"></script>
     <script>
         // Initialize Header with navigation items
         window.headerInstance = new Header({
@@ -1780,5 +1791,10 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+        
+        // Initialize Breadcrumbs
+        const breadcrumbs = new Breadcrumbs('breadcrumbs', [{"label": "Home", "href": "index.html"}, {"label": "Coating Equipments", "href": "#"}, {"label": "PVD Molds & Dies", "href": "pvd-molds-dies.html"}]);
+        breadcrumbs.render();
+
 </body>
 </html>

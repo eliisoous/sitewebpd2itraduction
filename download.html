@@ -18,6 +18,12 @@
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/download.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/download.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/download.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="components/header.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+
 
     
     <!-- Favicon Configuration -->
@@ -484,6 +490,10 @@
     <!-- Header sera généré automatiquement par le composant -->
 
     <main>
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+        
+
         <!-- Hero Section -->
         <section class="hero-download flex items-center justify-center text-white relative z-10">
             <div class="container mx-auto px-4 text-center relative z-20">
@@ -800,6 +810,7 @@
     
     <!-- Footer Component -->
     <script src="components/Footer.js"></script>
+    <script src="components/Breadcrumbs.js"></script>
     
     <script>
         // Scroll Animation
@@ -885,5 +896,10 @@
             copyrightYear: 2025
         });
     </script>
+        
+        // Initialize Breadcrumbs
+        const breadcrumbs = new Breadcrumbs('breadcrumbs', [{"label": "Home", "href": "index.html"}, {"label": "Download", "href": "download.html"}]);
+        breadcrumbs.render();
+
 </body>
 </html>

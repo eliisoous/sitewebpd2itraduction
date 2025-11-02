@@ -19,6 +19,12 @@
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/legal.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/legal.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/legal.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="components/header.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+
 
     
     <!-- Favicon Configuration -->
@@ -384,6 +390,10 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+        
+
         <!-- Hero Section -->
         <section class="hero-background py-12 text-white flex items-center min-h-[300px]">
             <div class="container mx-auto px-4">
@@ -634,6 +644,7 @@
     <!-- Initialize Components -->
     <script src="components/Header.js?v=1.1"></script>
     <script src="components/Footer.js"></script>
+    <script src="components/Breadcrumbs.js"></script>
     <script>
         // Initialize Header with navigation items
         window.headerInstance = new Header({
@@ -734,5 +745,10 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+        
+        // Initialize Breadcrumbs
+        const breadcrumbs = new Breadcrumbs('breadcrumbs', [{"label": "Home", "href": "index.html"}, {"label": "Legal", "href": "legal.html"}]);
+        breadcrumbs.render();
+
 </body>
 </html>
