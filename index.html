@@ -14,6 +14,11 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.pd2i.com/index.html">
+    
+    <!-- Hreflang tags for multilingual support -->
+    <link rel="alternate" hreflang="en" href="https://www.pd2i.com/index.html">
+    <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/index.html">
 
     <!-- Favicon Configuration -->
     <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="32x32">
@@ -278,13 +283,20 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hidden H1 for SEO (screen reader only) -->
-        <h1 class="sr-only">PD2i - PVD Coating Solutions for Tooling Industries | Innovation & Customization</h1>
-        
         <!-- Hero Carousel Section -->
         <section class="hero-carousel">
             <div id="heroCarousel"></div>
         </section>
+        
+        <!-- Visible H1 for SEO - Integrated in hero section -->
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-pd2i-black mb-4">
+                PD2i - PVD Coating Solutions for Tooling Industries
+            </h1>
+            <p class="text-xl md:text-2xl text-center text-gray-700 max-w-3xl mx-auto">
+                Innovation & Customization: Advanced surface treatment technologies for cutting tools and industrial applications
+            </p>
+        </div>
 
         <!-- PD2i Experience Section - Texte uniquement -->
         <section class="pd2i-experience py-12 bg-white">
