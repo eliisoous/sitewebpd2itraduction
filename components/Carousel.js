@@ -40,7 +40,7 @@ class Carousel {
         }
         
         container.innerHTML = `
-            <div class="carousel-wrapper relative w-full h-[500px] md:h-[400px] lg:h-[550px] overflow-hidden shadow-lg">
+            <div class="carousel-wrapper relative w-full overflow-hidden shadow-lg">
                 <!-- Slides Container -->
                 <div class="carousel-slides relative w-full h-full">
                     ${this.generateSlidesHTML()}
@@ -76,19 +76,19 @@ class Carousel {
             let containerClasses, textClasses;
 
             if (isFirstSlide) {
-                // Im1 - Texte centré sans fond
+                // Im1 - Texte centré (centré verticalement sur desktop, CSS gère mobile)
                 containerClasses = "absolute inset-0 flex items-center justify-center";
                 textClasses = "text-center text-white px-6 py-8 max-w-4xl";
             } else if (isLeftAligned) {
-                // Im4 - Texte à gauche, centré verticalement
+                // Im4 - Texte à gauche (centré verticalement sur desktop, CSS gère mobile)
                 containerClasses = "absolute inset-0 flex items-center justify-start pl-8 md:pl-16 lg:pl-24";
                 textClasses = "text-left text-white px-4 max-w-2xl";
             } else if (isRightAligned) {
-                // Im2 et Im3 - Texte à droite, centré verticalement
+                // Im2 et Im3 - Texte à droite (centré verticalement sur desktop, CSS gère mobile)
                 containerClasses = "absolute inset-0 flex items-center justify-end pr-8 md:pr-16 lg:pr-24";
                 textClasses = "text-right text-white px-4 max-w-2xl";
             } else {
-                // Par défaut - centré verticalement
+                // Par défaut - centré (centré verticalement sur desktop, CSS gère mobile)
                 containerClasses = "absolute inset-0 flex items-center justify-center";
                 textClasses = "text-center text-white px-4 max-w-4xl";
             }
@@ -96,7 +96,7 @@ class Carousel {
             return `
             <div class="carousel-slide absolute inset-0 transition-all duration-500 ease-in-out ${index === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}" data-slide="${index}">
                 <div class="relative w-full h-full" style="${isFirstSlide ? 'background: linear-gradient(to bottom, #1a1a1a 0%, #2d2d2d 100%);' : ''}">
-                    <img src="${slide.image}" alt="${slide.alt || `Slide ${index + 1}`}" class="w-full h-full ${isFirstSlide ? 'object-contain' : 'object-cover'}" style="${isFirstSlide ? 'object-position: center bottom;' : ''}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMDA4M0NBIi8+Cjx0ZXh0IHg9IjYwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UEQyaTwvdGV4dD4KPHN2Zz4=';">
+                    <img src="${slide.image}" alt="${slide.alt || `Slide ${index + 1}`}" class="w-full h-full ${isFirstSlide ? 'object-contain' : 'object-cover'}" style="${isFirstSlide ? 'object-position: center bottom;' : ''}">
                     
                     ${slide.title || slide.description ? `
                         <div class="${containerClasses}">

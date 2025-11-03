@@ -657,11 +657,21 @@
             copyrightYear: 2025
         });
         
-        // Initialisation du carousel hero avec 4 slides
+        // Fonction pour détecter si on est sur mobile
+        function isMobileDevice() {
+            return window.innerWidth <= 768;
+        }
+        
+        // Initialisation du carousel hero avec images mobiles 800x1600
+        const mobileImages = isMobileDevice();
+        
         window.heroCarousel = new Carousel('heroCarousel', {
             slides: [
                 {
-                    image: 'assets/images/home/Im1b.png',
+                    // Image 1 - PVD Coating System
+                    image: mobileImages 
+                        ? 'assets/images/home/Im1Tel.png'  // 800x1600
+                        : 'assets/images/home/Im1b.png',        // Desktop
                     title: 'PVD Coating System to support the Tooling Industries',
                     description: 'Innovation & Customization: We continuously advance <br> our technologies and methods to lead the industry while <br> delivering uniquely tailored solutions for each client\'s specific needs.',
                     buttonText: 'Discover Our Solutions',
@@ -669,7 +679,10 @@
                     buttonClass: 'btn-primary'
                 },
                 {
-                    image: 'assets/images/home/Im2.png',
+                    // Image 2 - Tribological Coating
+                    image: mobileImages 
+                        ? 'assets/images/home/Im2Tel.png'   // 800x1600
+                        : 'assets/images/home/Im2.png',         // Desktop
                     title: 'Tribological Coating System',
                     description: 'A tailor-made solution for demanding applications: DLC, the low-friction coating that cuts energy use. Tribological thin films helping industries go greener',
                     buttonText: 'Discover Our Solutions',
@@ -677,7 +690,10 @@
                     buttonClass: 'btn-primary'
                 },
                 {
-                    image: 'assets/images/home/Im3.png',
+                    // Image 3 - Edge Preparation
+                    image: mobileImages 
+                        ? 'assets/images/home/Im3Tel.png'   // 800x1600
+                        : 'assets/images/home/Im3.png',         // Desktop
                     title: 'Edge preparation & post-treatment for High Performance Cutting Tools',
                     description: 'Build your high-performance cutting edge',
                     buttonText: 'Discover Pro Edge PL24',
@@ -685,7 +701,10 @@
                     buttonClass: 'btn-primary'
                 },
                 {
-                    image: 'assets/images/home/Im4.png',
+                    // Image 4 - Plasma Nitriding
+                    image: mobileImages 
+                        ? 'assets/images/home/Im4Tel.png'   // 800x1600
+                        : 'assets/images/home/Im4.png',         // Desktop
                     title: 'High Pulsed Plasma Nitriding',
                     description: 'The most cost-effective Plasma Nitriding Technology. Simple, efficient, and exactly as it should be.',
                     buttonText: 'Learn More',

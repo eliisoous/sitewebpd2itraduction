@@ -1,375 +1,753 @@
-/* Carousel Component Styles - PD2i Website */
+/* Carousel Component Styles - PD2i Website - MOBILE OPTIMIZED */
 
 /* Base Carousel Styles */
+
 .carousel-container {
+
     position: relative;
+
     width: 100%;
+
 }
 
 .carousel-wrapper {
+
     position: relative;
+
     width: 100%;
-    /* height removed - using Tailwind classes instead */
+
     overflow: hidden;
+
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    height: 600px; /* Desktop par défaut */
+
 }
 
 .carousel-slides {
+
     position: relative;
+
     width: 100%;
+
     height: 100%;
+
 }
 
 .carousel-slide {
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     width: 100%;
+
     height: 100%;
+
     transition: all 0.5s ease-in-out;
+
 }
 
 .carousel-slide img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     object-position: center;
+
 }
 
-/* Slide Content Overlay - Removed */
-
 .carousel-slide h2 {
+
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 1px 1px 4px rgba(0, 0, 0, 0.9);
+
     margin-bottom: 1rem;
+
 }
 
 .carousel-slide p {
+
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(0, 0, 0, 0.9);
+
     margin-bottom: 1.5rem;
+
 }
 
 /* Navigation Arrows */
+
 .carousel-prev,
+
 .carousel-next {
+
     position: absolute;
+
     top: 50%;
+
     transform: translateY(-50%);
+
     background: rgba(255, 255, 255, 0.9);
+
     border: none;
+
     border-radius: 50%;
+
     width: 48px;
+
     height: 48px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
     z-index: 20;
+
     color: #0083CA;
+
 }
 
 .carousel-prev:hover,
+
 .carousel-next:hover {
+
     background: rgba(255, 255, 255, 1);
+
     transform: translateY(-50%) scale(1.1);
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
 }
 
 .carousel-prev {
+
     left: 1rem;
+
 }
 
 .carousel-next {
+
     right: 1rem;
+
 }
 
 .carousel-prev:active,
+
 .carousel-next:active {
+
     transform: translateY(-50%) scale(0.95);
+
 }
 
 /* Indicators */
+
 .carousel-indicators {
+
     position: absolute;
+
     bottom: 1rem;
+
     left: 50%;
+
     transform: translateX(-50%);
+
     display: flex;
+
     gap: 0.5rem;
+
     z-index: 20;
+
 }
 
 .carousel-indicator {
+
     width: 12px;
+
     height: 12px;
+
     border-radius: 50%;
+
     border: none;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
     background: rgba(255, 255, 255, 0.5);
+
 }
 
 .carousel-indicator:hover {
+
     background: rgba(255, 255, 255, 0.8);
+
     transform: scale(1.2);
+
 }
 
 .carousel-indicator.active,
+
 .carousel-indicator:not(.bg-opacity-50) {
+
     background: rgba(255, 255, 255, 1);
+
     transform: scale(1.3);
+
 }
 
 /* Play/Pause Button */
+
 .carousel-play-pause {
+
     position: absolute;
+
     top: 1rem;
+
     right: 1rem;
+
     background: rgba(0, 0, 0, 0.5);
+
     border: none;
+
     border-radius: 50%;
+
     width: 40px;
+
     height: 40px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
     z-index: 20;
+
     color: white;
+
 }
 
 .carousel-play-pause:hover {
+
     background: rgba(0, 0, 0, 0.7);
+
     transform: scale(1.1);
+
 }
 
-/* Responsive Styles */
+/* ========================================
+
+   MOBILE OPTIMIZED - Images 800x1600
+
+   ======================================== */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .carousel-wrapper {
+
+        height: 500px;
+
+    }
+
+}
+
+/* Mobile - OPTIMISÉ POUR IMAGES 800x1600 */
+
 @media (max-width: 768px) {
-    /* height removed - using Tailwind classes instead */
+
+    .carousel-wrapper {
+
+        /* Version simplifiée - hauteur basée sur viewport */
+
+        height: 80vh;
+
+        min-height: 400px;
+
+        max-height: 90vh;
+
+        position: relative;
+
+    }
+
     
+
+    .carousel-slides {
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+    }
+
+    
+
+    /* Images 800x1600 - affichage parfait */
+
+    .carousel-slide img {
+
+        object-fit: cover !important;
+
+        object-position: center !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+    }
+
+    
+
+    /* Navigation plus petite */
+
     .carousel-prev,
+
     .carousel-next {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .carousel-prev {
-        left: 0.5rem;
-    }
-    
-    .carousel-next {
-        right: 0.5rem;
-    }
-    
-    .carousel-play-pause {
+
         width: 36px;
+
         height: 36px;
-        top: 0.5rem;
+
+    }
+
+    
+
+    .carousel-prev {
+
+        left: 0.5rem;
+
+    }
+
+    
+
+    .carousel-next {
+
         right: 0.5rem;
+
     }
+
     
+
+    .carousel-play-pause {
+
+        width: 32px;
+
+        height: 32px;
+
+        top: 0.5rem;
+
+        right: 0.5rem;
+
+    }
+
+    
+
+    /* Texte overlay optimisé pour mobile */
+
     .carousel-slide h2 {
-        font-size: 1.5rem;
-        line-height: 1.3;
+
+        font-size: 1.25rem !important;
+
+        line-height: 1.2 !important;
+
+        margin-bottom: 0.5rem !important;
+
     }
+
     
+
     .carousel-slide p {
-        font-size: 0.875rem;
-        line-height: 1.4;
+
+        font-size: 0.8rem !important;
+
+        line-height: 1.3 !important;
+
+        margin-bottom: 0.75rem !important;
+
     }
+
     
+
     .carousel-indicators {
-        bottom: 0.5rem;
+
+        bottom: 0.75rem;
+
     }
+
     
+
     .carousel-indicator {
-        width: 10px;
-        height: 10px;
+
+        width: 8px;
+
+        height: 8px;
+
     }
+
+}
+
+/* Petits mobiles (iPhone SE, etc) */
+
+@media (max-width: 390px) {
+
+    .carousel-wrapper {
+
+        max-height: 95vh;
+
+    }
+
+    
+
+    .carousel-slide h2 {
+
+        font-size: 1.1rem !important;
+
+    }
+
+    
+
+    .carousel-slide p {
+
+        font-size: 0.75rem !important;
+
+    }
+
+    
+
+    .carousel-prev,
+
+    .carousel-next {
+
+        width: 32px;
+
+        height: 32px;
+
+    }
+
 }
 
 /* Responsive fixes for slide content and buttons */
+
 @media (max-width: 768px) {
-    /* Center the overlay content on small screens regardless of per-slide alignment */
+
+    /* Position text at top on mobile */
+
     .carousel-slide .absolute.inset-0.flex {
-        justify-content: center !important;
+
+        align-items: flex-start !important;
+
+        padding-top: 4rem !important;
+
         padding-left: 1rem !important;
+
         padding-right: 1rem !important;
+
+        padding-bottom: 1rem !important;
+
     }
 
-    /* Normalize text alignment and width for readability */
+    /* Normalize text alignment */
+
     .carousel-slide .text-left,
+
     .carousel-slide .text-right,
+
     .carousel-slide .text-center {
+
         text-align: center !important;
+
         max-width: 90% !important;
+
         margin-left: auto;
+
         margin-right: auto;
+
     }
 
-    /* Make CTA buttons fit nicely on mobile */
+    /* Make CTA buttons fit nicely */
+
     .carousel-slide a.btn-primary,
+
     .carousel-slide a[class*="btn-primary"],
+
     .carousel-slide a.inline-block {
+
         display: inline-block;
+
         width: 100%;
-        max-width: 320px;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+
+        max-width: 280px;
+
+        padding: 0.625rem 1rem !important;
+
+        font-size: 0.85rem !important;
+
     }
+
 }
 
+/* Desktop styles */
+
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* height removed - using Tailwind classes instead */
-    
+
     .carousel-slide h2 {
+
         font-size: 2rem;
+
     }
+
     
+
     .carousel-slide p {
+
         font-size: 1rem;
+
     }
+
 }
 
 @media (min-width: 1025px) {
-    /* height removed - using Tailwind classes instead */
+
+    .carousel-wrapper {
+
+        height: 600px;
+
+    }
+
     
+
     .carousel-slide h2 {
+
         font-size: 2.5rem;
+
     }
+
     
+
     .carousel-slide p {
+
         font-size: 1.125rem;
+
     }
+
 }
 
 @media (min-width: 1200px) {
-    /* height removed - using Tailwind classes instead */
-    
+
     .carousel-slide h2 {
+
         font-size: 3rem;
+
     }
+
 }
 
 /* Loading State */
+
 .carousel-slide img {
+
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+
     background-size: 200% 100%;
+
     animation: loading 1.5s infinite;
+
 }
 
 @keyframes loading {
+
     0% {
+
         background-position: 200% 0;
+
     }
+
     100% {
+
         background-position: -200% 0;
+
     }
+
 }
 
 .carousel-slide img[src] {
-    background: none;
+
     animation: none;
+
 }
 
 /* Smooth Transitions */
+
 .carousel-slide {
+
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
 
-.carousel-slide.slide-enter {
-    opacity: 0;
-    transform: translateX(100%);
-}
-
-.carousel-slide.slide-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.carousel-slide.slide-exit {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.carousel-slide.slide-exit-active {
-    opacity: 0;
-    transform: translateX(-100%);
 }
 
 /* Accessibility */
+
 .carousel-prev:focus,
+
 .carousel-next:focus,
+
 .carousel-indicator:focus,
+
 .carousel-play-pause:focus {
+
     outline: 2px solid #0083CA;
+
     outline-offset: 2px;
+
 }
 
 /* High Contrast Mode */
+
 @media (prefers-contrast: high) {
+
     .carousel-prev,
+
     .carousel-next {
+
         background: #000000;
+
         color: #FFFFFF;
+
         border: 2px solid #FFFFFF;
+
     }
+
     
+
     .carousel-indicator {
+
         border: 2px solid #FFFFFF;
+
     }
+
     
+
     .carousel-play-pause {
+
         background: #000000;
+
         border: 2px solid #FFFFFF;
+
     }
+
 }
 
 /* Reduced Motion */
+
 @media (prefers-reduced-motion: reduce) {
+
     .carousel-slide {
+
         transition: opacity 0.1s ease;
+
     }
+
     
+
     .carousel-prev,
+
     .carousel-next,
+
     .carousel-indicator,
+
     .carousel-play-pause {
+
         transition: none;
+
     }
+
     
+
     .carousel-prev:hover,
+
     .carousel-next:hover {
+
         transform: translateY(-50%);
+
     }
+
     
+
     .carousel-indicator:hover {
+
         transform: none;
+
     }
+
     
+
     .carousel-play-pause:hover {
+
         transform: none;
+
     }
+
 }
 
 /* Print Styles */
+
 @media print {
+
     .carousel-prev,
+
     .carousel-next,
+
     .carousel-indicators,
+
     .carousel-play-pause {
+
         display: none;
+
     }
+
     
+
     .carousel-slide {
+
         position: static;
+
         opacity: 1 !important;
+
         transform: none !important;
+
     }
+
     
+
     .carousel-wrapper {
-        /* height removed - using Tailwind classes instead */
+
         box-shadow: none;
+
+        height: auto;
+
+        padding-bottom: 0;
+
     }
+
 }
