@@ -9,6 +9,9 @@ class Header {
         // Détection automatique de la langue via l'URL
         this.detectedLang = this.detectLanguageFromURL();
         
+        // Initialiser les traductions AVANT de les utiliser
+        this.translations = this.getTranslations();
+        
         this.options = {
             logoSrc: options.logoSrc || 'assets/images/logo-pd2i.png',
             logoAlt: options.logoAlt || 'PD2i Logo',
@@ -21,7 +24,6 @@ class Header {
         };
         
         this.isMenuOpen = false;
-        this.translations = this.getTranslations();
         this.init();
     }
     
