@@ -73,7 +73,7 @@ class Footer {
                 aboutUs: '关于我们',
                 download: '下载',
                 news: '新闻',
-                cookies: 'Cookie政策',
+                cookies: '政策',
                 privacyPolicy: '隐私政策',
                 legalInformations: '法律信息',
                 tel: '电话'
