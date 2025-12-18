@@ -1,14 +1,20 @@
 /**
  * Footer Component - PD2i Website
  * Composant réutilisable pour le footer du site
+ * Supporte les langues: EN, ZH, FR
  */
 
 class Footer {
     constructor(options = {}) {
+        // Détection automatique de la langue via l'URL
+        this.detectedLang = this.detectLanguageFromURL();
+        
+        this.translations = this.getTranslations();
+        
         this.options = {
             logoSrc: options.logoSrc || 'assets/images/logo-pd2i.png',
             logoAlt: options.logoAlt || 'PD2i Logo',
-            slogan: options.slogan || 'Your Partner When Performance Matters',
+            slogan: options.slogan || this.t('slogan'),
             companyInfo: options.companyInfo || {
                 name: 'PD2i FRANCE',
                 address: '86, bd Malesherbes',
@@ -26,12 +32,83 @@ class Footer {
         this.init();
     }
     
+    /**
+     * Détecte la langue actuelle en fonction de l'URL
+     */
+    detectLanguageFromURL() {
+        const path = window.location.pathname;
+        if (path.includes('/zh/')) {
+            return 'ZH';
+        } else if (path.includes('/fr/')) {
+            return 'FR';
+        }
+        return 'EN';
+    }
+    
+    /**
+     * Traductions pour le Footer
+     */
+    getTranslations() {
+        return {
+            EN: {
+                slogan: 'Your Partner When Performance Matters',
+                contact: 'Contact',
+                navigation: 'Navigation',
+                followUs: 'Follow us',
+                allRightsReserved: 'All rights reserved',
+                aboutUs: 'About us',
+                download: 'Download',
+                news: 'News',
+                cookies: 'Cookies',
+                privacyPolicy: 'Privacy policy',
+                legalInformations: 'Legal Informations',
+                tel: 'Tel'
+            },
+            ZH: {
+                slogan: '当性能至关重要时的合作伙伴',
+                contact: '联系方式',
+                navigation: '导航',
+                followUs: '关注我们',
+                allRightsReserved: '版权所有',
+                aboutUs: '关于我们',
+                download: '下载',
+                news: '新闻',
+                cookies: 'Cookie政策',
+                privacyPolicy: '隐私政策',
+                legalInformations: '法律信息',
+                tel: '电话'
+            },
+            FR: {
+                slogan: 'Votre partenaire quand la performance compte',
+                contact: 'Contact',
+                navigation: 'Navigation',
+                followUs: 'Suivez-nous',
+                allRightsReserved: 'Tous droits réservés',
+                aboutUs: 'À propos',
+                download: 'Téléchargements',
+                news: 'Actualités',
+                cookies: 'Cookies',
+                privacyPolicy: 'Politique de confidentialité',
+                legalInformations: 'Mentions légales',
+                tel: 'Tél'
+            }
+        };
+    }
+    
+    /**
+     * Obtient le texte traduit
+     */
+    t(key) {
+        const lang = this.detectedLang;
+        return this.translations[lang]?.[key] || this.translations['EN'][key] || key;
+    }
+    
     getDefaultNavigation() {
         return [
-            { label: 'About us', href: 'about-us.html' },
-            { label: 'Contact', href: 'contacts.html' },
-            { label: 'Download', href: 'download.html' },
-            { label: 'News', href: 'news.html' }
+            { label: this.t('aboutUs'), href: 'about-us.html' },
+            { label: this.t('contact'), href: 'contacts.html' },
+            { label: this.t('download'), href: 'download.html' },
+            { label: this.t('news'), href: 'news.html' }
         ];
     }
     
@@ -41,16 +118,16 @@ class Footer {
                 platform: 'linkedin', 
                 href: 'https://linkedin.com/company/pd2i',
                 icon: 'linkedin',
-                label: 'Follow us'
+                label: this.t('followUs')
             }
         ];
     }
     
     getDefaultBottomLinks() {
         return [
-            { label: 'Cookies', href: 'cookies.html' },
-            { label: 'Privacy policy', href: 'privacy.html' },
-            { label: 'Legal Informations', href: 'legal.html' }
+            { label: this.t('cookies'), href: 'cookies.html' },
+            { label: this.t('privacyPolicy'), href: 'privacy.html' },
+            { label: this.t('legalInformations'), href: 'legal.html' }
         ];
     }
     
@@ -102,14 +179,17 @@ class Footer {
     
     generateContactSection() {
         const { companyInfo } = this.options;
+        const contactTitle = this.t('contact');
+        const telLabel = this.t('tel');
+        
         return `
             <div class="lg:col-span-1">
-                <h3 class="text-white font-semibold text-base mb-3">Contact</h3>
+                <h3 class="text-white font-semibold text-base mb-3">${contactTitle}</h3>
                 <div class="space-y-1.5 text-white text-sm">
                     <p class="font-medium">${companyInfo.name}</p>
                     <p>${companyInfo.address}</p>
                     <p>${companyInfo.city}</p>
-                    <p class="mt-2">Tel : ${companyInfo.phone}</p>
+                    <p class="mt-2">${telLabel} : ${companyInfo.phone}</p>
                     <a href="mailto:${companyInfo.email}" class="text-white hover:text-blue-200 transition-colors duration-200 underline break-all">
                         ${companyInfo.email}
                     </a>
@@ -119,9 +199,11 @@ class Footer {
     }
     
     generateNavigationSection() {
+        const navigationTitle = this.t('navigation');
+        
         return `
             <div class="lg:col-span-1">
-                <h3 class="text-white font-semibold text-base mb-3">Navigation</h3>
+                <h3 class="text-white font-semibold text-base mb-3">${navigationTitle}</h3>
                 <ul class="space-y-2">
                     ${this.options.navigationLinks.map(link => `
                         <li>
@@ -136,9 +218,11 @@ class Footer {
     }
     
     generateSocialSection() {
+        const followUsTitle = this.t('followUs');
+        
         return `
             <div class="lg:col-span-1">
-                <h3 class="text-white font-semibold text-base mb-3">Follow us</h3>
+                <h3 class="text-white font-semibold text-base mb-3">${followUsTitle}</h3>
                 <div class="flex flex-wrap gap-4">
                     ${this.options.socialLinks.map(social => `
                         <a href="${social.href}" 
@@ -178,12 +262,14 @@ class Footer {
     }
     
     generateBottomSection() {
+        const allRightsReserved = this.t('allRightsReserved');
+        
         return `
             <div class="border-t border-blue-400 bg-pd2i-blue">
                 <div class="container mx-auto px-4 py-4">
                     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                         <div class="text-white text-xs md:text-sm text-center md:text-left">
-                            PD2i ${this.options.copyrightYear} © All rights reserved
+                            PD2i ${this.options.copyrightYear} © ${allRightsReserved}
                         </div>
                         <div class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
                             ${this.options.bottomLinks.map(link => `

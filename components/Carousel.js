@@ -9,7 +9,7 @@ class Carousel {
         this.options = {
             slides: options.slides || [],
             autoPlay: options.autoPlay !== false, // true par défaut
-            autoPlayInterval: options.autoPlayInterval || 5000,
+            autoPlayInterval: options.autoPlayInterval || 3000,
             showIndicators: options.showIndicators !== false,
             showArrows: options.showArrows !== false,
             pauseOnHover: options.pauseOnHover !== false,

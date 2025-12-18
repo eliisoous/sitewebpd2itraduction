@@ -1,47 +1,163 @@
 /**
  * Header Component - PD2i Website
  * Composant réutilisable pour le header du site
+ * Supporte les langues: EN, ZH, FR
  */
 
 class Header {
     constructor(options = {}) {
+        // Détection automatique de la langue via l'URL
+        this.detectedLang = this.detectLanguageFromURL();
+        
         this.options = {
             logoSrc: options.logoSrc || 'assets/images/logo-pd2i.png',
             logoAlt: options.logoAlt || 'PD2i Logo',
             logoLink: options.logoLink || 'index.html',
             currentPage: options.currentPage || null,
-            currentLang: options.currentLang || 'EN',
-            languages: options.languages || ['EN', 'FR'],
+            currentLang: options.currentLang || this.detectedLang,
+            languages: options.languages || ['EN', 'ZH', 'FR'],
             navigationItems: options.navigationItems || this.getDefaultNavigation(),
             ...options
         };
         
         this.isMenuOpen = false;
+        this.translations = this.getTranslations();
         this.init();
     }
     
+    /**
+     * Détecte la langue actuelle en fonction de l'URL
+     */
+    detectLanguageFromURL() {
+        const path = window.location.pathname;
+        if (path.includes('/zh/')) {
+            return 'ZH';
+        } else if (path.includes('/fr/')) {
+            return 'FR';
+        }
+        return 'EN';
+    }
+    
+    /**
+     * Retourne le préfixe de chemin pour les assets selon la langue
+     */
+    getAssetPrefix() {
+        if (this.detectedLang === 'ZH' || this.detectedLang === 'FR') {
+            return '../';
+        }
+        return '';
+    }
+    
+    /**
+     * Retourne le préfixe de chemin pour les liens internes
+     */
+    getLangPrefix() {
+        if (this.detectedLang === 'ZH') {
+            return ''; // Les liens restent relatifs dans /zh/
+        } else if (this.detectedLang === 'FR') {
+            return ''; // Les liens restent relatifs dans /fr/
+        }
+        return '';
+    }
+    
+    /**
+     * Traductions pour le Header
+     */
+    getTranslations() {
+        return {
+            EN: {
+                home: 'Home',
+                coatingEquipments: 'Coating Equipments',
+                coatingCompact: 'Coating',
+                pvdTooling: 'PVD Technology for Tooling',
+                pvdMolds: 'PVD Coating System for Molds & Dies',
+                dlcTribological: 'DLC for Tribological Coatings',
+                turnkeySolutions: 'Turnkey Solutions',
+                edgePreparation: 'Edge Preparation',
+                edgePrepCompact: 'Edge Prep',
+                greenClean: 'Green Clean',
+                plasmaNitriding: 'Plasma Nitriding',
+                plasmaCompact: 'Plasma',
+                services: 'Services',
+                news: 'News',
+                aboutUs: 'About us',
+                aboutCompact: 'About',
+                contact: 'Contact'
+            },
+            ZH: {
+                home: '首页',
+                coatingEquipments: '涂层设备',
+                coatingCompact: '涂层',
+                pvdTooling: '工具的PVD技术',
+                pvdMolds: '模具的PVD涂层系统',
+                dlcTribological: '摩擦学涂层的DLC',
+                turnkeySolutions: '交钥匙解决方案',
+                edgePreparation: '刀刃前处理',
+                edgePrepCompact: '刀刃处理',
+                greenClean: '绿色清洁',
+                plasmaNitriding: '等离子氮化',
+                plasmaCompact: '氮化',
+                services: '服务',
+                news: '新闻',
+                aboutUs: '关于我们',
+                aboutCompact: '关于',
+                contact: '联系方式'
+            },
+            FR: {
+                home: 'Accueil',
+                coatingEquipments: 'Équipements de revêtement',
+                coatingCompact: 'Revêtement',
+                pvdTooling: 'Technologie PVD pour l\'outillage',
+                pvdMolds: 'Système PVD pour moules et matrices',
+                dlcTribological: 'DLC pour revêtements tribologiques',
+                turnkeySolutions: 'Solutions clé en main',
+                edgePreparation: 'Préparation des arêtes',
+                edgePrepCompact: 'Arêtes',
+                greenClean: 'Green Clean',
+                plasmaNitriding: 'Nitruration plasma',
+                plasmaCompact: 'Plasma',
+                services: 'Services',
+                news: 'Actualités',
+                aboutUs: 'À propos',
+                aboutCompact: 'À propos',
+                contact: 'Contact'
+            }
+        };
+    }
+    
+    /**
+     * Obtient le texte traduit
+     */
+    t(key) {
+        const lang = this.options.currentLang;
+        return this.translations[lang]?.[key] || this.translations['EN'][key] || key;
+    }
+    
     getDefaultNavigation() {
+        const lang = this.detectedLang;
+        const t = this.translations[lang] || this.translations['EN'];
+        
         return [
-            { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
+            { label: t.home, href: 'index.html', type: 'link', pageId: 'home' },
             {
-                label: 'Coating Equipments',
-                labelCompact: 'Coating',
+                label: t.coatingEquipments,
+                labelCompact: t.coatingCompact,
                 type: 'dropdown',
                 pageId: 'coating-equipments',
-                href: '#', // Lien vers # pour éviter l'erreur 404
+                href: '#',
                 items: [
-                    { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
-                    { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
-                    { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' },
-                    { label: 'Turnkey Solutions', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                    { label: t.pvdTooling, href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                    { label: t.pvdMolds, href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                    { label: t.dlcTribological, href: 'dlc.html', pageId: 'dlc' },
+                    { label: t.turnkeySolutions, href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
                 ]
             },
-            { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
-            { label: 'Green Clean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
-            { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
-            { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
-            { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
-            { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+            { label: t.edgePreparation, labelCompact: t.edgePrepCompact, href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+            { label: t.greenClean, href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
+            { label: t.plasmaNitriding, labelCompact: t.plasmaCompact, href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+            { label: t.services, href: 'services.html', type: 'link', pageId: 'services' },
+            { label: t.news, href: 'news.html', type: 'link', pageId: 'news' },
+            { label: t.aboutUs, labelCompact: t.aboutCompact, href: 'about-us.html', type: 'link', pageId: 'about-us' }
         ];
     }
     
@@ -50,12 +166,10 @@ class Header {
     }
     
     isDropdownActive(item) {
-        // Vérifie si le dropdown lui-même est actif
         if (this.isLinkActive(item)) {
             return true;
         }
         
-        // Vérifie si un des sous-éléments est actif
         if (item.items && item.items.length > 0) {
             return item.items.some(subItem => subItem.pageId && subItem.pageId === this.options.currentPage);
         }
@@ -175,11 +289,12 @@ class Header {
     }
     
     generateTabletActions() {
+        const contactText = this.t('contact');
         return `
             <!-- Tablet Contacts & Language (1024px - 1279px) -->
             <div class="hidden lg:flex xl:hidden items-center space-x-3">
                 <a href="contacts.html" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-4 py-1 text-sm font-medium">
-                    Contact
+                    ${contactText}
                 </a>
                 ${this.generateLanguageSelector('tablet')}
             </div>
@@ -187,11 +302,12 @@ class Header {
     }
     
     generateDesktopActions() {
+        const contactText = this.t('contact');
         return `
             <!-- Desktop Contacts & Language Selector -->
             <div class="hidden xl:flex items-center space-x-4">
                 <a href="contacts.html" class="bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
-                    Contact
+                    ${contactText}
                 </a>
                 ${this.generateLanguageSelector('desktop')}
             </div>
@@ -224,6 +340,7 @@ class Header {
     }
     
     generateMobileNavigation() {
+        const contactText = this.t('contact');
         return `
             <!-- Mobile Navigation -->
             <div class="lg:hidden hidden" id="mobileMenu">
@@ -239,7 +356,7 @@ class Header {
                     
                     <div class="px-3 py-2">
                         <a href="contacts.html" class="inline-block bg-transparent border-2 border-pd2i-blue text-pd2i-blue hover:bg-pd2i-blue hover:text-white transition-all duration-200 px-6 py-2 font-medium">
-                            Contact
+                            ${contactText}
                         </a>
                     </div>
                     <div class="px-3 py-2">
@@ -251,8 +368,8 @@ class Header {
     }
     
     generateMobileDropdown(item) {
-        const dropdownId = item.label.toLowerCase().replace(/\s+/g, '') + 'Dropdown';
-        const arrowId = item.label.toLowerCase().replace(/\s+/g, '') + 'Arrow';
+        const dropdownId = item.label.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/gi, '') + 'Dropdown';
+        const arrowId = item.label.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/gi, '') + 'Arrow';
         
         const isActive = this.isDropdownActive(item);
         const activeClass = isActive ? 'text-pd2i-blue nav-active' : 'text-pd2i-black hover:text-pd2i-blue';
@@ -287,7 +404,7 @@ class Header {
                 </button>
                 <div class="absolute left-0 mt-1 w-20 bg-white border border-gray-300 rounded shadow-lg hidden z-50" id="mobileLangDropdown">
                     ${this.options.languages.map(lang => 
-                        `<a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200" onclick="selectLanguage('${lang}')" data-lang="${lang}">${lang}</a>`
+                        `<a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200" data-lang="${lang}">${lang}</a>`
                     ).join('')}
                 </div>
             </div>
@@ -303,11 +420,12 @@ class Header {
         this.attachLanguageListeners('tabletLanguageBtn', 'tabletLanguageDropdown');
         this.attachLanguageListeners('mobileLangBtn', 'mobileLangDropdown');
         
-        // Language selection
+        // Language selection with redirection
         document.addEventListener('click', (e) => {
             if (e.target.hasAttribute('data-lang')) {
                 e.preventDefault();
-                this.selectLanguage(e.target.getAttribute('data-lang'));
+                const lang = e.target.getAttribute('data-lang');
+                this.switchLanguage(lang);
             }
         });
     }
@@ -317,18 +435,15 @@ class Header {
         const mobileMenu = document.getElementById('mobileMenu');
         
         if (mobileMenuBtn && mobileMenu) {
-            // Remove any existing listeners by cloning
             const newBtn = mobileMenuBtn.cloneNode(true);
             mobileMenuBtn.parentNode.replaceChild(newBtn, mobileMenuBtn);
             
-            // Add click event listener
             newBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 this.toggleMobileMenu();
             });
             
-            // Close menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!newBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
                     this.closeMobileMenu();
@@ -356,7 +471,6 @@ class Header {
                 }
             });
             
-            // Close dropdown when clicking outside
             document.addEventListener('click', (e) => {
                 if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
                     dropdown.classList.add('hidden');
@@ -377,7 +491,6 @@ class Header {
             mobileMenu.classList.toggle('hidden');
             this.isMenuOpen = !this.isMenuOpen;
             
-            // Toggle hamburger icon
             const icon = mobileMenuBtn.querySelector('svg');
             if (this.isMenuOpen) {
                 icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
@@ -395,51 +508,58 @@ class Header {
             mobileMenu.classList.add('hidden');
             this.isMenuOpen = false;
             
-            // Reset hamburger icon
             const icon = mobileMenuBtn.querySelector('svg');
             icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
         }
     }
     
-    selectLanguage(lang) {
-        this.options.currentLang = lang;
+    /**
+     * Change de langue et redirige vers la bonne page
+     */
+    switchLanguage(lang) {
+        const currentPath = window.location.pathname;
+        const currentPage = currentPath.split('/').pop() || 'index.html';
         
-        // Update all language buttons
-        const buttons = ['languageBtn', 'tabletLanguageBtn', 'mobileLangBtn'];
-        buttons.forEach(btnId => {
-            const btn = document.getElementById(btnId);
-            if (btn) {
-                const textNode = btn.childNodes[0];
-                if (textNode) {
-                    textNode.textContent = lang + ' ';
-                }
+        let newPath = '';
+        
+        // Déterminer le chemin de base (sans /zh/ ou /fr/)
+        let basePage = currentPage;
+        
+        if (lang === 'EN') {
+            // Aller vers la version anglaise (racine)
+            if (this.detectedLang === 'ZH' || this.detectedLang === 'FR') {
+                newPath = '../' + basePage;
+            } else {
+                newPath = basePage;
             }
-        });
-        
-        // Close all dropdowns
-        const dropdowns = ['languageDropdown', 'tabletLanguageDropdown', 'mobileLangDropdown'];
-        dropdowns.forEach(dropdownId => {
-            const dropdown = document.getElementById(dropdownId);
-            if (dropdown) {
-                dropdown.classList.add('hidden');
+        } else if (lang === 'ZH') {
+            // Aller vers la version chinoise
+            if (this.detectedLang === 'EN') {
+                newPath = 'zh/' + basePage;
+            } else if (this.detectedLang === 'FR') {
+                newPath = '../zh/' + basePage;
+            } else {
+                newPath = basePage; // Déjà en chinois
             }
-        });
-        
-        // Reset mobile language arrow
-        const mobileLangBtn = document.getElementById('mobileLangBtn');
-        if (mobileLangBtn) {
-            const arrow = mobileLangBtn.querySelector('svg');
-            if (arrow) {
-                arrow.style.transform = 'rotate(0deg)';
+        } else if (lang === 'FR') {
+            // Aller vers la version française
+            if (this.detectedLang === 'EN') {
+                newPath = 'fr/' + basePage;
+            } else if (this.detectedLang === 'ZH') {
+                newPath = '../fr/' + basePage;
+            } else {
+                newPath = basePage; // Déjà en français
             }
         }
         
-        // Trigger custom event for language change
-        document.dispatchEvent(new CustomEvent('languageChanged', {
-            detail: { language: lang }
-        }));
-        
-        console.log('Language selected:', lang);
+        if (newPath && newPath !== currentPage) {
+            window.location.href = newPath;
+        }
+    }
+    
+    // Legacy method for backward compatibility
+    selectLanguage(lang) {
+        this.switchLanguage(lang);
     }
     
     // Public methods for external control
@@ -456,7 +576,7 @@ class Header {
     }
     
     setCurrentLanguage(lang) {
-        this.selectLanguage(lang);
+        this.switchLanguage(lang);
     }
 }
 
@@ -479,7 +599,7 @@ window.toggleMobileDropdown = function(dropdownId) {
 
 window.selectLanguage = function(lang) {
     if (window.headerInstance) {
-        window.headerInstance.selectLanguage(lang);
+        window.headerInstance.switchLanguage(lang);
     }
 };
 

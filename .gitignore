@@ -1,1 +1,25 @@
+# Vidéos lourdes
 assets/images/PD2i Pro Edge PL24.mp4
+
+# PDFs téléchargeables (70MB) - à héberger séparément
+downloadpd2i/
+
+# Node modules
+node_modules/
+
+# Fichiers système
+.DS_Store
+.ftpquota
+Thumbs.db
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers temporaires
+*.tmp
+*.temp
