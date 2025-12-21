@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title -->
+    <title>模具应用的PVD涂层系统 | 电弧与混合技术 | PD2i</title>
+    
+    <meta name="description" content="用于模具和冲模的先进PVD涂层系统。用于成型和模具应用的电弧和混合PVD/PECVD技术。延长工具寿命并提高生产效率。">
+    <meta name="author" content="PD2i">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.pd2i.com/zh/pvd-molds-dies.html">
+    <!-- Hreflang tags for multilingual support -->
+    <link rel="alternate" hreflang="en" href="https://www.pd2i.com/pvd-molds-dies.html">
+    <link rel="alternate" hreflang="zh" href="https://www.pd2i.com/zh/pvd-molds-dies.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/pvd-molds-dies.html">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="../components/header.css" as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
+
+
+    
+    <!-- Favicon Configuration -->
+    <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#0083CA">
+    <meta name="theme-color" content="#0083CA">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pd2i.com/zh/pvd-molds-dies.html">
+    <meta property="og:site_name" content="PD2i">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="模具应用的PVD涂层系统 | PD2i">
+    <meta property="og:description" content="用于模具和冲模的先进PVD涂层系统。电弧和混合技术带来卓越性能。">
+    <meta property="og:image" content="https://www.pd2i.com/assets/images/pvd-molds-and-dies/Im1.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="PD2i模具应用的PVD涂层系统">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="模具应用的PVD涂层系统 | PD2i">
+    <meta name="twitter:description" content="用于成型和模具应用的先进PVD涂层系统">
+    <meta name="twitter:image" content="https://www.pd2i.com/assets/images/pvd-molds-and-dies/Im1.jpg">
+    
+    <!-- Hide Tailwind CDN Warning -->
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production')) {
+                    return;
+                }
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pd2i-blue': '#0083CA',
+                        'pd2i-black': '#000000',
+                        'pd2i-white': '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'roboto': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../components/header.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Page specific styles -->
+    <style>
+        /* About Card Style - Same as About Us page */
+        .about-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0083CA, #4A90E2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #0083CA;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('../assets/images/pvd-molds-and-dies/desert.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+            line-height: 1.2;
+            font-size: 1.5rem;
+        }
+        
+        .hero-content p {
+            font-size: 0.9rem;
+            opacity: 0.95;
+            line-height: 1.4;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 480px) {
+            .hero-section {
+                min-height: 250px;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .hero-section {
+                min-height: 350px;
+            }
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-content p {
+                font-size: 1.1rem;
+                max-width: 800px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-section {
+                min-height: 400px;
+            }
+            .hero-content {
+                padding: 0 2rem;
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        
+        /* Innovative Coating Section */
+        .innovative-coating {
+            background: white;
+            padding: 2rem 0 0 0;
+        }
+        
+        .coating-text {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        .coating-text h2 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+            text-align: center;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: normal;
+        }
+        
+        .coating-text p {
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .innovative-coating {
+                padding: 2.5rem 0 0 0;
+            }
+            .coating-text {
+                max-width: 800px;
+                padding: 0 1.5rem;
+            }
+            .coating-text h2 {
+                font-size: 1.4rem;
+                margin-bottom: 1.2rem;
+            }
+            .coating-text p {
+                font-size: 1.05rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .innovative-coating {
+                padding: 3rem 0 0 0;
+            }
+            .coating-text {
+                padding: 0 2rem;
+                max-width: 1200px;
+            }
+            .coating-text h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                white-space: nowrap;
+            }
+            .coating-text p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        /* Surface Images Grid */
+        .surface-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem auto;
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+        
+        .surface-image {
+            width: 100%;
+            height: 270px;
+            background: #f0f0f0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin: 0;
+        }
+        
+        .surface-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .surface-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Afficher l'image Im4.png en entier */
+        .surface-image img[src*="Im4.png"] {
+            object-fit: cover;
+            object-position: center top;
+        }
+        
+        @media (min-width: 480px) {
+            .surface-images {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            .surface-image {
+                height: 240px;
+            }
+        }
+        
+        @media (min-width: 640px) {
+            .surface-images {
+                gap: 1.2rem;
+                margin: 2.5rem auto;
+                padding: 0 1.5rem;
+            }
+            .surface-image {
+                height: 270px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .surface-images {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                margin: 3rem auto;
+                max-width: 800px;
+            }
+            .surface-image {
+                height: 300px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .surface-images {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+                max-width: 1200px;
+                padding: 0 2rem;
+            }
+            .surface-image {
+                height: 330px;
+            }
+            .surface-image:hover {
+                transform: scale(1.05);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .surface-images {
+                max-width: 1400px;
+                gap: 2rem;
+            }
+            .surface-image {
+                height: 360px;
+            }
+        }
+        
+        /* PD2i Duplex Section */
+        .duplex-section {
+            background: white;
+            padding: 0 0 2rem 0;
+            margin-top: -4rem;  /* Tire encore plus la section vers le haut */
+        }
+        
+        .duplex-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .duplex-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .duplex-content h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .duplex-content p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .duplex-section {
+                padding: 2.5rem 0;
+            }
+            .duplex-container {
+                max-width: 800px;
+                padding: 0 1.5rem;
+            }
+            .duplex-content {
+                margin-bottom: 2.5rem;
+            }
+            .duplex-content h2 {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+            .duplex-content p {
+                font-size: 1.05rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .duplex-section {
+                padding: 3rem 0;
+            }
+            .duplex-container {
+                max-width: 1200px;
+                padding: 0 2rem;
+            }
+            .duplex-content {
+                margin-bottom: 3rem;
+            }
+            .duplex-content h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            .duplex-content p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        .duplex-diagram {
+            position: relative;
+            background: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 1.5rem 0;
+        }
+        
+        @media (min-width: 768px) {
+            .duplex-diagram {
+                padding: 1.5rem;
+                margin: 1.8rem 0;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .duplex-diagram {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+        }
+        
+        .duplex-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .sample-image {
+            width: 100%;
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+        
+        .pyramid-diagram {
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pyramid {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid #4A90E2;
+        }
+        
+        .pyramid-layer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .layer-surface {
+            top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .layer-nitriding {
+            top: 50px;
+            background: #0083CA;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+        
+        .layer-steels {
+            top: 90px;
+            background: #4A90E2;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .pyramid-labels {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .label-coating {
+            position: absolute;
+            left: -80px;
+            top: 20px;
+            background: #B8860B;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .label-nitriding {
+            position: absolute;
+            left: -80px;
+            top: 80px;
+            background: #0083CA;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .label-steels {
+            position: absolute;
+            left: -60px;
+            top: 140px;
+            background: #4A7C59;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .mold-image {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+        
+        /* Performance Section */
+        .performance-section {
+            padding: 2rem 0;
+        }
+        
+        .performance-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .performance-section h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .performance-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        @media (min-width: 768px) {
+            .performance-section {
+                padding: 3rem 0;
+            }
+            .performance-container {
+                max-width: 1000px;
+                padding: 0 1.5rem;
+            }
+            .performance-section h2 {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+            }
+            .performance-section p {
+                font-size: 1.05rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .performance-section {
+                padding: 4rem 0;
+            }
+            .performance-container {
+                max-width: 1400px;
+                padding: 0 2rem;
+            }
+            .performance-section h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .performance-section p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        .athlete-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Properties Section */
+        .properties-section {
+            background: white;
+            padding: 2rem 0 0 0;
+        }
+        
+        .properties-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        
+        .properties-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0;
+            padding: 1rem 0;
+            line-height: 1.4;
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: 480px) {
+            .properties-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 640px) {
+            .properties-grid {
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .properties-section {
+                padding: 1rem 0;
+            }
+            .properties-container {
+                max-width: 800px;
+                padding: 0 1.5rem;
+            }
+            .properties-title {
+                font-size: 1.4rem;
+                margin-bottom: 0;
+                padding: 1.5rem 0;
+            }
+            .properties-grid {
+                gap: 1.8rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .properties-section {
+                padding: 1.5rem 0;
+            }
+            .properties-container {
+                max-width: 1200px;
+                padding: 0 2rem;
+            }
+            .properties-title {
+                font-size: 1.8rem;
+                margin-bottom: 0;
+                padding: 1.5rem 0;
+            }
+            .properties-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        .property-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .property-card:hover {
+            border-color: #0083CA;
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .property-card h3 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #0083CA;
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-card p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        @media (min-width: 768px) {
+            .property-card {
+                padding: 1.8rem;
+            }
+            .property-card h3 {
+                font-size: 1.2rem;
+            }
+            .property-card p {
+                font-size: 0.9rem;
+            }
+            .property-card:hover {
+                transform: translateY(-3px);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .property-card {
+                padding: 2rem;
+            }
+            .property-card h3 {
+                font-size: 1.3rem;
+            }
+            .property-card p {
+                font-size: 0.9rem;
+            }
+            .property-card:hover {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* Specialized Properties Section */
+        .specialized-section {
+            background: #0083CA;
+            color: white;
+            padding: 2rem 0 2rem 0;
+        }
+        
+        .specialized-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        
+        .specialized-section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .specialized-section p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        
+        @media (min-width: 768px) {
+            .specialized-section {
+                padding: 2.5rem 0 2.5rem 0;
+            }
+            .specialized-container {
+                max-width: 800px;
+                padding: 0 1.5rem;
+            }
+            .specialized-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1.2rem;
+            }
+            .specialized-section p {
+                font-size: 1.05rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .specialized-section {
+                padding: 3rem 0 3rem 0;
+            }
+            .specialized-container {
+                max-width: 1200px;
+                padding: 0 2rem;
+            }
+            .specialized-section h2 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            .specialized-section p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        .specialized-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .specialized-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Specialized List Styles */
+        .specialized-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .specialized-item {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+        }
+        
+        .specialized-bullet {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .specialized-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            .specialized-item {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .specialized-list {
+                gap: 2rem;
+            }
+            .specialized-item {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .specialized-list {
+                gap: 3rem;
+                flex-wrap: nowrap;
+            }
+        }
+
+        
+        /* Mold Images Section */
+        .mold-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 480px) {
+            .mold-images {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+        }
+        
+        @media (min-width: 640px) {
+            .mold-images {
+                gap: 1.5rem;
+                padding: 0 1.5rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .mold-images {
+                padding: 0 2rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .mold-images {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                max-width: 1200px;
+                padding: 0 2rem;
+            }
+        }
+        
+        .mold-sample {
+            background: #f0f0f0;
+            border-radius: 1rem;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .mold-sample:hover {
+            transform: scale(1.02);
+        }
+        
+        .mold-sample img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Considerations Section */
+        .considerations-section {
+            background: white;
+            padding: 2rem 0;
+        }
+        
+        .considerations-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .considerations-section {
+                padding: 2.5rem 0;
+            }
+            .considerations-container {
+                max-width: 800px;
+                padding: 0 1.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .considerations-section {
+                padding: 3rem 0;
+            }
+            .considerations-container {
+                max-width: 1200px;
+                padding: 0 2rem;
+            }
+        }
+        
+        .considerations-list {
+            background: #f9fafb;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .considerations-list h3 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.8rem;
+        }
+        
+        .considerations-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .considerations-list li {
+            margin-bottom: 0.4rem;
+            padding-left: 1.2rem;
+            position: relative;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        .considerations-list li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: #0083CA;
+            font-weight: bold;
+        }
+        
+        @media (min-width: 768px) {
+            .considerations-list {
+                padding: 1.8rem;
+                margin-bottom: 1.8rem;
+            }
+            .considerations-list h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+            .considerations-list li {
+                margin-bottom: 0.5rem;
+                padding-left: 1.4rem;
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .considerations-list {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+            .considerations-list h3 {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+            .considerations-list li {
+                margin-bottom: 0.5rem;
+                padding-left: 1.5rem;
+                font-size: 1rem;
+            }
+        }
+        
+        .portfolio-text {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Primary Button Style - same as contacts.html */
+        .btn-primary {
+            background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+            color: white;
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .btn-primary {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .btn-primary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        /* Image Modal Styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .image-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 0.3s ease;
+        }
+        
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s ease;
+        }
+        
+        .image-modal-close:hover {
+            color: #0083CA;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Coating Images Responsive Fix */
+        .coating-portfolio-img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .coating-portfolio-container {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .coating-portfolio-container h3 {
+            flex-shrink: 0;
+        }
+        
+        .coating-portfolio-container img {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            min-height: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .coating-portfolio-container {
+                min-height: 280px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .coating-portfolio-container {
+                min-height: 320px;
+            }
+        }
+        
+        /* Additional Responsive Utilities */
+        @media (max-width: 480px) {
+            /* Extra small mobile adjustments */
+            .surface-image {
+                height: 225px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.3rem;
+            }
+            
+            .coating-text h2 {
+                font-size: 1rem;
+            }
+            
+            .coating-text p {
+                font-size: 0.85rem;
+            }
+            
+            .properties-title {
+                font-size: 1rem;
+                padding: 1.5rem 0;
+            }
+            
+            .property-card {
+                padding: 1rem;
+            }
+            
+            .property-card h3 {
+                font-size: 1rem;
+            }
+            
+            .property-card p {
+                font-size: 0.8rem;
+            }
+            
+            .specialized-item {
+                font-size: 0.9rem;
+            }
+            
+            .btn-primary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            /* Very small screens */
+            .hero-content h1 {
+                font-size: 1.2rem;
+            }
+            
+            .coating-text h2 {
+                font-size: 0.95rem;
+            }
+            
+            .coating-text p {
+                font-size: 0.8rem;
+            }
+            
+            .surface-image {
+                height: 210px;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PD2i",
+      "legalName": "Partner Development Industry International",
+      "url": "https://www.pd2i.com",
+      "logo": "https://www.pd2i.com/assets/images/logo-pd2i.png",
+      "foundingDate": "1989",
+      "description": "PD2i提供先进的PVD涂层系统、等离子氮化和刀刃前处理解决方案，用于切削工具和工业应用。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "86, bd Malesherbes",
+        "addressLocality": "Paris",
+        "postalCode": "75008",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33-1-53-75-45-05",
+        "contactType": "Customer Service",
+        "email": "admin@pd2i.com",
+        "availableLanguage": ["English", "French", "Chinese"]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/pd2i"
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org - Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "模具应用的PVD涂层系统",
+      "description": "专为模具和冲模应用设计的PVD涂层设备。采用先进的电弧和混合PVD技术，提供卓越的涂层质量、延长工具寿命并提高生产效率。",
+      "brand": {
+        "@type": "Brand",
+        "name": "PD2i"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "PD2i"
+      },
+      "image": [
+        "https://www.pd2i.com/assets/images/pvd-molds-and-dies/Im1.jpg"
+      ],
+      "category": "工业涂层设备",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "url": "https://www.pd2i.com/zh/pvd-molds-dies.html"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "技术",
+          "value": "电弧和混合PVD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "应用",
+          "value": "模具、冲模、成型工具、塑料模具"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.pd2i.com/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "涂层设备",
+          "item": "https://www.pd2i.com/zh/#coating-equipment"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "模具PVD涂层",
+          "item": "https://www.pd2i.com/zh/pvd-molds-dies.html"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="font-roboto">
+    <!-- Header Component -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        
+
+
+
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center">模具应用的PVD涂层系统</h1>
+            </div>
+        </section>
+
+        <!-- Surface Images Grid Section -->
+        <section class="innovative-coating">
+            <div class="coating-text">
+                <!-- Texte directement sur fond blanc, sans rectangle -->
+                <div class="text-center mb-6 md:mb-8 scroll-animate">
+                    <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-pd2i-black mb-3 md:mb-4 px-4">用于高性能模具和冲模应用的创新涂层工艺</h2>
+                    <p class="text-sm md:text-base lg:text-lg text-gray-700 px-4">我们为您的模具应用设计涂层，并传授完整的工艺知识</p>
+                </div>
+                
+                <div class="surface-images scroll-animate delay-200">
+                    <!-- Surface images -->
+                    <div class="surface-image">
+                        <img src="../assets/images/pvd-molds-and-dies/Im1.jpg" alt="表面涂层样品1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="surface-image">
+                        <img src="../assets/images/pvd-molds-and-dies/Im2.png" alt="表面涂层样品2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="surface-image">
+                        <img src="../assets/images/pvd-molds-and-dies/Im3.png" alt="表面涂层样品3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="surface-image">
+                        <img src="../assets/images/pvd-molds-and-dies/Im4.png" alt="表面涂层样品4" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PD2i Duplex Coating Section -->
+        <section class="bg-gray-50 pt-2 pb-4 md:pt-3 md:pb-6">
+            <div class="container mx-auto px-4">
+                <!-- Title Section -->
+                <div class="text-center mb-4 md:mb-6 scroll-animate">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-3">PD2i双重涂层</h2>
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600">等离子氮化 + 高硬度PVD涂层</p>
+                </div>
+                
+                <!-- Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center">
+                    <!-- Left side: Image (larger) -->
+                    <div class="lg:col-span-2 scroll-animate delay-200">
+                        <img src="../assets/images/pvd-molds-and-dies/Triangle.png" 
+                             alt="PD2i双重涂层金字塔图" 
+                             class="w-full h-auto">
+                    </div>
+                    
+                    <!-- Right side: Text content (smaller) -->
+                    <div class="lg:col-span-1 scroll-animate delay-400">
+                        <div class="about-card">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-gray-800 leading-tight">用于成型模具的高性能涂层</h3>
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed">PD2i为每种应用设计了最佳解决方案。深拉伸、修边、冲孔、冲裁、冷成型、热冲压、热锻、粉末压制、有色金属成型和铝压铸都需要不同的表面性能才能正常工作。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coating Images Section -->
+        <section class="bg-white pt-8 md:pt-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                    <!-- First Image: Arc Coating Forming Tools -->
+                    <div class="scroll-animate coating-portfolio-container">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">用于成型工具的电弧涂层产品组合</h3>
+                        <img src="../assets/images/pvd-molds-and-dies/Formingtool Arc.png" 
+                             alt="成型工具涂层" 
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                    
+                    <!-- Second Image: Hybrid Coating Forming Tools -->
+                    <div class="scroll-animate delay-200 coating-portfolio-container">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">用于成型工具的混合涂层产品组合</h3>
+                        <img src="../assets/images/pvd-molds-and-dies/Formingtool Hybrid.png" 
+                             alt="塑料模具涂层" 
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coating Images 2 Section -->
+        <section class="bg-white pt-16 md:pt-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                    <!-- First Image:Arc Coating Portfolio for Plastic Molding -->
+                    <div class="scroll-animate coating-portfolio-container">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">用于塑料模具的电弧涂层产品组合</h3>
+                        <img src="../assets/images/pvd-molds-and-dies/PlasticMolding Arc.png" 
+                             alt="成型工具涂层" 
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                    
+                    <!-- Second Image: Hybrid Coating Portfolio for Plastic Molding -->
+                    <div class="scroll-animate delay-200 coating-portfolio-container">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">用于塑料模具的混合涂层产品组合</h3>
+                        <img src="../assets/images/pvd-molds-and-dies/PlasticMolding Hybrid.png" 
+                             alt="塑料模具涂层" 
+                             class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                             onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Properties Grid Section -->
+        <section class="properties-section">
+            <div class="properties-container">
+                <h1 class="properties-title text-lg md:text-xl lg:text-2xl px-4 scroll-animate">设计成功的涂层需要仔细平衡六种基本薄膜性能：</h1>
+                
+                <div class="properties-grid scroll-animate delay-200">
+                    <div class="property-card">
+                        <h3 class="text-lg md:text-xl">高硬度</h3>
+                        <p class="text-sm md:text-base">用于耐磨性</p>
+                    </div>
+                    <div class="property-card">
+                        <h3 class="text-lg md:text-xl">热硬度</h3>
+                        <p class="text-sm md:text-base">用于高温应用</p>
+                    </div>
+                    <div class="property-card">
+                        <h3 class="text-lg md:text-xl">高韧性</h3>
+                        <p class="text-sm md:text-base">用于高强度金属成型</p>
+                    </div>
+                    <div class="property-card">
+                        <h3 class="text-lg md:text-xl">低摩擦系数</h3>
+                        <p class="text-sm md:text-base">减少粘附磨损和微焊接</p>
+                    </div>
+                    <div class="property-card">
+                        <h3 class="text-lg md:text-xl">耐热性</h3>
+                        <p class="text-sm md:text-base">用于热稳定性和热疲劳</p>
+                    </div>
+                    <div class="property-card">
+                        <h3 class="text-lg md:text-xl">抗氧化性</h3>
+                        <p class="text-sm md:text-base">用于热锻、热冲压和铝压铸</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Properties Section -->
+        <section class="specialized-section">
+            <div class="specialized-container">
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6 scroll-animate">塑料注塑成型的专用性能</h2>
+                <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 scroll-animate delay-100">对于模腔、型芯和注射流道系统，需要额外的性能</p>
+                    <ul class="specialized-list">
+                        <li class="specialized-item">
+                            <span class="specialized-bullet"></span>
+                            耐腐蚀性
+                        </li>
+                        <li class="specialized-item">
+                            <span class="specialized-bullet"></span>
+                            耐刮擦性
+                        </li>
+                        <li class="specialized-item">
+                            <span class="specialized-bullet"></span>
+                            改善模具填充和脱模
+                        </li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- Mold Images Section -->
+        <section class="bg-white py-6 md:py-8">
+            <div class="container mx-auto px-4">
+                <div class="mold-images scroll-animate">
+                    <div class="mold-sample">
+                        <img src="../assets/images/pvd-molds-and-dies/mold1.png" alt="模具样品1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mold-sample">
+                        <img src="../assets/images/dlc_for_tribological_coatings/moulding-3.jpg" alt="模具样品2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mold-sample">
+                        <img src="../assets/images/pvd-molds-and-dies/mold3.png" alt="模具样品3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Considerations Section -->
+        <section class="considerations-section">
+            <div class="considerations-container">
+                <div class="about-card scroll-animate">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4">其他考虑因素取决于您的特定基材和应用条件</h3>
+                    <ul class="space-y-3">
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>基材材料 – 工具钢、硬质合金、有色金属、表面清洁度等</span>
+                        </li>
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>热处理 – 关键的淬火和回火条件</span>
+                        </li>
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>工件温度 – 冷成型、热成型、压铸、锻造等</span>
+                        </li>
+                        <li class="text-sm md:text-base text-gray-700 flex items-start">
+                            <span class="text-pd2i-blue font-bold mr-2">•</span>
+                            <span>工具失效 – 磨料磨损、化学磨损、崩刃、热裂纹、刃口磨损、氧化、焊接等</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-center px-4 scroll-animate delay-200 mt-8">
+                    <p class="portfolio-text text-base md:text-lg">PD2i涂层产品组合为每种应用提供最佳的性能平衡。</p>
+                    <a href="contacts.html" class="btn-primary">联系我们</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+        <img class="image-modal-content" id="modalImage" alt="">
+    </div>
+
+    <!-- Initialize Components -->
+    <script src="../components/Header.js?v=1.2"></script>
+    <script src="../components/Footer.js?v=1.1"></script>
+    <script>
+        // Initialize Header with navigation items
+        window.headerInstance = new Header({
+            logoSrc: '../assets/images/logo-pd2i.png',
+            logoAlt: 'PD2i Logo',
+            logoLink: 'index.html',
+            currentPage: 'pvd-molds-dies',
+            currentLang: 'ZH',
+            languages: ['EN', 'ZH'],
+            navigationItems: [
+                { label: '首页', href: 'index.html', type: 'link', pageId: 'home' },
+                {
+                    label: '涂层设备',
+                    labelCompact: '涂层',
+                    href: '#',
+                    type: 'dropdown',
+                    pageId: 'coating-equipments',
+                    items: [
+                        { label: '工具的PVD技术', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: '模具的PVD涂层系统', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: '摩擦学涂层的DLC', href: 'dlc.html', pageId: 'dlc' },
+                        { label: '交钥匙解决方案', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                    ]
+                },
+                { label: '刀刃前处理', labelCompact: '刀刃', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                { label: '绿色清洁', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
+                { label: '等离子氮化', labelCompact: '氮化', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: '服务', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: '新闻', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: '关于我们', labelCompact: '关于', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+            ]
+        });
+        
+        // Initialisation du footer avec la configuration PD2i
+        window.footerInstance = new Footer({
+            logoSrc: '../assets/images/logo-pd2i-footer.png',
+            logoAlt: 'PD2i Logo',
+            slogan: '当性能至关重要时的合作伙伴',
+            companyInfo: {
+                name: 'PD2i 法国',
+                address: '86, bd Malesherbes',
+                city: '75008 巴黎',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: '关于我们', href: 'about-us.html' },
+                { label: '联系方式', href: 'contacts.html' },
+                { label: '下载', href: 'download.html' },
+                { label: '新闻', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: '关注我们'
+                }
+            ],
+            bottomLinks: [
+                { label: '政策', href: 'cookies.html' },
+                { label: '隐私政策', href: 'privacy.html' },
+                { label: '法律信息', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-animate elements
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Image modal functions
+        function openImageModal(src, alt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = src;
+            modalImg.alt = alt;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+    </script>
+
+    <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
+
+</body>
+</html>
+
