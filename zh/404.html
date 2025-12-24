@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Page Not Found (404) | PD2i</title>
-    <meta name="description" content="The page you are looking for could not be found. Return to PD2i homepage or browse our PVD coating solutions.">
+    <title>页面未找到 (404) | PD2i</title>
+    <meta name="description" content="您正在寻找的页面无法找到。返回PD2i首页或浏览我们的PVD涂层解决方案。">
     <meta name="robots" content="noindex, follow">
     <meta name="author" content="PD2i">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.pd2i.com/404.html">
-    <!-- Preload critical resources -->
-    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
-    <link rel="preload" href="components/header.css" as="style">
-    <link rel="preload" href="assets/css/style.css" as="style">
-
-
+    <link rel="canonical" href="https://www.pd2i.com/zh/404.html">
+    <link rel="alternate" hreflang="en" href="https://www.pd2i.com/404.html">
+    <link rel="alternate" hreflang="zh" href="https://www.pd2i.com/zh/404.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/404.html">
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="../components/header.css" as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
+
     <!-- Favicon Configuration -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="32x32">
-    <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -45,9 +47,9 @@
     </script>
     
     <!-- Component CSS -->
-    <link rel="stylesheet" href="components/header.css">
-    <link rel="stylesheet" href="components/footer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../components/header.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     
     <style>
         .btn-primary {
@@ -84,35 +86,35 @@
             </div>
             
             <!-- Error Message -->
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Page Not Found</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">页面未找到</h2>
             <p class="text-xl text-gray-600 mb-8">
-                Sorry, the page you are looking for could not be found.
+                抱歉，您正在寻找的页面无法找到。
             </p>
             <p class="text-gray-500 mb-12">
-                The page may have been moved, deleted, or the URL may be incorrect.
+                该页面可能已被移动、删除，或者URL可能不正确。
             </p>
             
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="index.html" class="btn-primary">
-                    Return to Homepage
+                    返回首页
                 </a>
                 <a href="services.html" class="px-6 py-3 border-2 border-pd2i-blue text-pd2i-blue rounded-lg font-semibold hover:bg-pd2i-blue hover:text-white transition-all duration-300">
-                    Browse Our Services
+                    浏览我们的服务
                 </a>
             </div>
             
             <!-- Quick Links -->
             <div class="mt-16 pt-8 border-t border-gray-200">
-                <p class="text-gray-600 mb-4">Popular Pages:</p>
+                <p class="text-gray-600 mb-4">热门页面：</p>
                 <div class="flex flex-wrap justify-center gap-4 text-pd2i-blue">
-                    <a href="pvd-cutting-tools.html" class="hover:underline">PVD Cutting Tools</a>
+                    <a href="pvd-cutting-tools.html" class="hover:underline">PVD切削工具</a>
                     <span class="text-gray-400">•</span>
-                    <a href="dlc.html" class="hover:underline">DLC Coatings</a>
+                    <a href="dlc.html" class="hover:underline">DLC涂层</a>
                     <span class="text-gray-400">•</span>
-                    <a href="edge-preparation.html" class="hover:underline">Edge Preparation</a>
+                    <a href="edge-preparation.html" class="hover:underline">刀刃前处理</a>
                     <span class="text-gray-400">•</span>
-                    <a href="contacts.html" class="hover:underline">Contact Us</a>
+                    <a href="contacts.html" class="hover:underline">联系我们</a>
                 </div>
             </div>
         </div>
@@ -122,82 +124,83 @@
     <footer id="footer"></footer>
 
     <!-- Header Component -->
-    <script src="components/Header.js?v=1.1"></script>
+    <script src="../components/Header.js?v=1.2"></script>
     
     <!-- Footer Component -->
-    <script src="components/Footer.js"></script>
+    <script src="../components/Footer.js?v=1.1"></script>
     
     <!-- Initialize Header -->
     <script>
         window.headerInstance = new Header({
-            logoSrc: 'assets/images/logo-pd2i.png',
+            logoSrc: '../assets/images/logo-pd2i.png',
             logoAlt: 'PD2i Logo',
             logoLink: 'index.html',
             currentPage: 'home',
-            currentLang: 'EN',
+            currentLang: 'ZH',
             languages: ['EN', 'ZH'],
             navigationItems: [
-                { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
+                { label: '首页', href: 'index.html', type: 'link', pageId: 'home' },
                 {
-                    label: 'Coating Equipments',
-                    labelCompact: 'Coating',
+                    label: '涂层设备',
+                    labelCompact: '涂层',
                     href: '#',
                     type: 'dropdown',
                     pageId: 'coating-equipments',
                     items: [
-                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
-                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
-                        { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' },
-                        { label: 'Turnkey Solutions', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                        { label: '工具的PVD技术', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: '模具的PVD涂层系统', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: '摩擦学涂层的DLC', href: 'dlc.html', pageId: 'dlc' },
+                        { label: '交钥匙解决方案', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
                     ]
                 },
-                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
-                { label: 'Green Clean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
-                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
-                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
-                { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
-                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+                { label: '刀刃前处理', labelCompact: '刀刃', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                { label: '绿色清洁', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
+                { label: '等离子氮化', labelCompact: '氮化', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: '服务', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: '新闻', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: '关于我们', labelCompact: '关于', href: 'about-us.html', type: 'link', pageId: 'about-us' }
             ]
         });
         
         // Initialize Footer
         window.footerInstance = new Footer({
-            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoSrc: '../assets/images/logo-pd2i-footer.png',
             logoAlt: 'PD2i Logo',
-            slogan: 'Your Partner When Performance Matters',
+            slogan: '当性能至关重要时的合作伙伴',
             companyInfo: {
-                name: 'PD2i FRANCE',
+                name: 'PD2i 法国',
                 address: '86, bd Malesherbes',
-                city: '75008 Paris',
+                city: '75008 巴黎',
                 phone: '+33 (0) 153 75 45 05',
                 email: 'admin@pd2i.com'
             },
             navigationLinks: [
-                { label: 'About us', href: 'about-us.html' },
-                { label: 'Contact', href: 'contacts.html' },
-                { label: 'Download', href: 'download.html' },
-                { label: 'News', href: 'news.html' }
+                { label: '关于我们', href: 'about-us.html' },
+                { label: '联系方式', href: 'contacts.html' },
+                { label: '下载', href: 'download.html' },
+                { label: '新闻', href: 'news.html' }
             ],
             socialLinks: [
                 { 
                     platform: 'linkedin', 
                     href: 'https://linkedin.com/company/pd2i',
                     icon: 'linkedin',
-                    label: 'Follow us'
+                    label: '关注我们'
                 }
             ],
             bottomLinks: [
-                { label: 'Cookies', href: 'cookies.html' },
-                { label: 'Privacy policy', href: 'privacy.html' },
-                { label: 'Legal Informations', href: 'legal.html' }
+                { label: '政策', href: 'cookies.html' },
+                { label: '隐私政策', href: 'privacy.html' },
+                { label: '法律信息', href: 'legal.html' }
             ],
             copyrightYear: 2025
         });
     </script>
     
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
 
 </body>
 </html>
+
