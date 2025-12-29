@@ -171,6 +171,61 @@
             border-color: #0083CA;
         }
         
+        /* Coating Placeholder */
+        .coating-placeholder {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #dee2e6;
+            transition: all 0.3s ease;
+        }
+        
+        .coating-placeholder:hover {
+            border-color: #0083CA;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+        }
+        
+        .placeholder-content {
+            max-width: 400px;
+        }
+        
+        .placeholder-icon {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .coating-placeholder:hover .placeholder-icon {
+            color: #0083CA;
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .placeholder-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        
+        .placeholder-text {
+            font-size: 1rem;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .placeholder-note {
+            color: #adb5bd;
+            font-style: italic;
+        }
+        
         /* Training Section Styles */
         .training-section {
             background: linear-gradient(135deg, #0083CA 0%, #4A90E2 100%);
@@ -284,7 +339,7 @@
         .delay-500 { animation-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; }
         
-        /* Primary Button Style */
+        /* Primary Button Style - same as contacts.html */
         .btn-primary {
             background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
             color: white;
@@ -347,6 +402,31 @@
             box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
         }
         
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        /* Secondary button - outline style */
+        .secondary-btn {
+            background: transparent;
+            color: #0083CA;
+            border: 2px solid #0083CA;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .secondary-btn:hover {
+            background: #0083CA;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .service-card {
@@ -356,6 +436,24 @@
             .training-title,
             .optimize-title {
                 font-size: 2rem;
+            }
+            
+            .coating-placeholder {
+                padding: 2rem 1rem;
+                min-height: 250px;
+            }
+            
+            .placeholder-title {
+                font-size: 1.25rem;
+            }
+            
+            .placeholder-text {
+                font-size: 0.9rem;
+            }
+            
+            .placeholder-icon svg {
+                width: 60px;
+                height: 60px;
             }
             
             .quote-text {
@@ -378,6 +476,24 @@
             .optimize-title {
                 font-size: 1.5rem;
                 letter-spacing: 1px;
+            }
+            
+            .coating-placeholder {
+                padding: 1.5rem 0.75rem;
+                min-height: 200px;
+            }
+            
+            .placeholder-title {
+                font-size: 1.1rem;
+            }
+            
+            .placeholder-text {
+                font-size: 0.85rem;
+            }
+            
+            .placeholder-icon svg {
+                width: 50px;
+                height: 50px;
             }
             
             .btn-primary {
