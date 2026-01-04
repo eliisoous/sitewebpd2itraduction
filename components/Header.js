@@ -12,6 +12,13 @@ class Header {
         // Initialiser les traductions AVANT de les utiliser
         this.translations = this.getTranslations();
         
+        // Mapping des codes de langue vers les noms affichés
+        this.languageDisplayNames = {
+            'EN': 'EN',
+            'ZH': '中文',
+            'FR': 'FR'
+        };
+        
         this.options = {
             logoSrc: options.logoSrc || 'assets/images/logo-pd2i.png',
             logoAlt: options.logoAlt || 'PD2i Logo',
@@ -25,6 +32,13 @@ class Header {
         
         this.isMenuOpen = false;
         this.init();
+    }
+    
+    /**
+     * Retourne le nom d'affichage pour un code de langue
+     */
+    getLanguageDisplayName(langCode) {
+        return this.languageDisplayNames[langCode] || langCode;
     }
     
     /**
@@ -327,14 +341,14 @@ class Header {
         return `
             <div class="relative">
                 <button class="flex items-center text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium ${textSize}" id="${buttonId}">
-                    ${this.options.currentLang}
+                    ${this.getLanguageDisplayName(this.options.currentLang)}
                     <svg class="${iconSize} ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
                 <div class="absolute right-0 mt-2 w-20 bg-white border border-gray-200 rounded-md shadow-lg hidden" id="${dropdownId}">
                     ${this.options.languages.map(lang => 
-                        `<a href="#" class="block px-3 py-2 ${itemSize} text-pd2i-black hover:bg-gray-100" data-lang="${lang}">${lang}</a>`
+                        `<a href="#" class="block px-3 py-2 ${itemSize} text-pd2i-black hover:bg-gray-100" data-lang="${lang}">${this.getLanguageDisplayName(lang)}</a>`
                     ).join('')}
                 </div>
             </div>
@@ -399,14 +413,14 @@ class Header {
         return `
             <div class="relative">
                 <button class="flex items-center text-pd2i-black hover:text-pd2i-blue transition-colors duration-200 font-medium bg-white border border-gray-300 px-3 py-2 rounded w-20 justify-between" id="mobileLangBtn">
-                    ${this.options.currentLang}
+                    ${this.getLanguageDisplayName(this.options.currentLang)}
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
                 <div class="absolute left-0 mt-1 w-20 bg-white border border-gray-300 rounded shadow-lg hidden z-50" id="mobileLangDropdown">
                     ${this.options.languages.map(lang => 
-                        `<a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200" data-lang="${lang}">${lang}</a>`
+                        `<a href="#" class="block px-3 py-2 text-sm text-pd2i-black hover:bg-gray-100 hover:text-pd2i-blue transition-colors duration-200" data-lang="${lang}">${this.getLanguageDisplayName(lang)}</a>`
                     ).join('')}
                 </div>
             </div>
