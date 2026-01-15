@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Title -->
-    <title>交钥匙PVD涂层解决方案 | 完整的表面处理系统 | PD2i</title>
+    <title>Solutions Clé en Main PVD | Systèmes Complets de Traitement de Surface | PD2i</title>
     
-    <meta name="description" content="用于工业应用的完整交钥匙PVD涂层和表面处理解决方案。从设计到安装、培训和支持。立即获取您的生产就绪涂层系统。">
+    <meta name="description" content="Solutions complètes clé en main de revêtement PVD et traitement de surface pour applications industrielles. De la conception à l'installation, formation et support. Obtenez votre système de revêtement prêt à produire.">
     <meta name="author" content="PD2i">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
+
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.pd2i.com/zh/turnkey-solutions.html">
-    <!-- Hreflang tags -->
+    <link rel="canonical" href="https://www.pd2i.com/fr/turnkey-solutions.html">
+    <!-- Hreflang tags for multilingual support -->
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/turnkey-solutions.html">
     <link rel="alternate" hreflang="zh-CN" href="https://www.pd2i.com/zh/turnkey-solutions.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/fr/turnkey-solutions.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/turnkey-solutions.html">
-    
     <!-- Preload critical resources -->
     <link rel="preload" href="../assets/images/logo-pd2i.png" as="image">
     <link rel="preload" href="../components/header.css" as="style">
     <link rel="preload" href="../assets/css/style.css" as="style">
+
+
+
 
     <!-- Favicon Configuration -->
     <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="32x32">
@@ -36,33 +39,57 @@
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.pd2i.com/zh/turnkey-solutions.html">
+    <meta property="og:url" content="https://www.pd2i.com/fr/turnkey-solutions.html">
     <meta property="og:site_name" content="PD2i">
-    <meta property="og:locale" content="zh_CN">
-    <meta property="og:title" content="交钥匙PVD涂层解决方案 | PD2i">
-    <meta property="og:description" content="从设计到安装和培训的完整交钥匙PVD涂层和表面处理解决方案。">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Solutions Clé en Main PVD | PD2i">
+    <meta property="og:description" content="Solutions complètes clé en main de revêtement PVD et traitement de surface, de la conception à l'installation et la formation.">
     <meta property="og:image" content="https://www.pd2i.com/assets/images/turnkey solution/Turnkey Solution.webp">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1080">
-    <meta property="og:image:alt" content="PD2i交钥匙PVD涂层解决方案">
+    <meta property="og:image:alt" content="Solutions Clé en Main PVD PD2i">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="交钥匙PVD涂层解决方案 | PD2i">
-    <meta name="twitter:description" content="从设计到安装的完整表面处理解决方案">
+    <meta name="twitter:title" content="Solutions Clé en Main PVD | PD2i">
+    <meta name="twitter:description" content="Solutions complètes de traitement de surface, de la conception à l'installation">
     <meta name="twitter:image" content="https://www.pd2i.com/assets/images/turnkey solution/Turnkey Solution.webp">
     
     <!-- Hide Tailwind CDN Warning -->
     <script>
         (function() {
             const originalWarn = console.warn;
+            const originalLog = console.log;
+            const originalError = console.error;
+            
             console.warn = function(...args) {
                 const message = args.join(' ');
                 if (message.includes('cdn.tailwindcss.com') || 
-                    message.includes('should not be used in production')) {
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
                     return;
                 }
                 originalWarn.apply(console, args);
+            };
+            
+            console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalLog.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('cdn.tailwindcss.com') || 
+                    message.includes('should not be used in production') ||
+                    message.includes('tailwindcss.com/docs/installation')) {
+                    return;
+                }
+                originalError.apply(console, args);
             };
         })();
     </script>
@@ -93,6 +120,7 @@
     
     <!-- Page specific styles -->
     <style>
+        /* Primary Button Style - same as contacts.html */
         .btn-primary {
             background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
             color: white;
@@ -130,6 +158,33 @@
             color: white;
         }
         
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        /* Responsive adjustments for buttons */
+        @media (max-width: 768px) {
+            .btn-primary {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            /* Bouton dans solution-card sur mobile */
+            .solution-card .btn-primary {
+                display: block;
+                margin: 1.5rem auto 0 auto;
+                width: calc(100% - 2rem);
+                max-width: 100%;
+                text-align: center;
+                white-space: normal;
+                word-wrap: break-word;
+                line-height: 1.4;
+            }
+        }
+        
+        /* Scroll animations */
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
@@ -141,12 +196,15 @@
             transform: translateY(0);
         }
         
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; }
         
+        /* Solution Cards */
         .solution-card {
             background: white;
             border-radius: 1rem;
@@ -217,6 +275,7 @@
             margin-top: 1.5rem;
         }
         
+        /* Hero Section - Reduce top spacing on mobile */
         main {
             padding-top: 0;
         }
@@ -225,6 +284,7 @@
             margin-top: 0;
         }
         
+        /* Hero Image Height Control */
         .hero-image-container {
             height: 500px;
             width: 100vw;
@@ -243,6 +303,7 @@
             object-position: center;
         }
         
+        /* Overlay pour améliorer la lisibilité du texte - Masqué par défaut */
         .hero-overlay {
             position: absolute;
             top: 0;
@@ -251,7 +312,7 @@
             bottom: 0;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
             z-index: 1;
-            display: none;
+            display: none; /* Masqué sur desktop */
         }
         
         .hero-text-container {
@@ -259,7 +320,19 @@
             position: relative;
         }
         
+        /* Responsive adjustments */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .solution-card {
+                padding: 1.5rem;
+            }
+            
+            .hero-image-container {
+                height: 450px;
+            }
+        }
+        
         @media (max-width: 768px) {
+            /* Réduire l'espace en haut sur mobile */
             main {
                 padding-top: 0;
                 margin-top: 0;
@@ -281,11 +354,13 @@
                 height: auto;
             }
             
+            /* Overlay visible uniquement sur mobile pour meilleure lisibilité */
             .hero-overlay {
-                display: block;
+                display: block; /* Afficher sur mobile */
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 100%);
             }
             
+            /* Ajuster le padding du texte sur mobile */
             .hero-text-container {
                 padding: 1rem 0;
             }
@@ -302,28 +377,19 @@
                 font-size: 0.9rem;
                 margin-bottom: 0.8rem;
             }
-            
-            .btn-primary {
-                padding: 0.875rem 2rem;
-                font-size: 1rem;
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .solution-card .btn-primary {
-                display: block;
-                margin: 1.5rem auto 0 auto;
-                width: calc(100% - 2rem);
-                max-width: 100%;
-                text-align: center;
-            }
         }
         
         @media (max-width: 480px) {
+            /* Encore plus d'espace réduit sur très petits écrans */
+            .hero-section {
+                margin-top: 0;
+            }
+            
             .hero-image-container {
                 min-height: 250px;
             }
             
+            /* Overlay encore plus visible sur très petits écrans */
             .hero-overlay {
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
             }
@@ -345,33 +411,149 @@
                 padding: 0.75rem 1.5rem;
                 font-size: 0.9rem;
             }
+            
+            /* Bouton dans solution-card sur très petits écrans */
+            .solution-card .btn-primary {
+                display: block;
+                margin: 1.2rem auto 0 auto;
+                width: calc(100% - 1rem);
+                max-width: 100%;
+                text-align: center;
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
+                white-space: normal;
+                word-wrap: break-word;
+                line-height: 1.4;
+            }
         }
     </style>
+    
+    <!-- Schema.org - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PD2i",
+      "legalName": "Partner Development Industry International",
+      "url": "https://www.pd2i.com",
+      "logo": "https://www.pd2i.com/assets/images/logo-pd2i.png",
+      "foundingDate": "1989",
+      "description": "PD2i fournit des systèmes de revêtement PVD avancés, la nitruration plasma et des solutions de préparation d'arêtes pour les outils de coupe et les applications industrielles.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "86, bd Malesherbes",
+        "addressLocality": "Paris",
+        "postalCode": "75008",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33-1-53-75-45-05",
+        "contactType": "Service Client",
+        "email": "admin@pd2i.com",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/pd2i"
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org - Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Solutions Clé en Main de Revêtement",
+      "description": "Solutions complètes clé en main de revêtement incluant équipement, installation, formation et support continu. Systèmes de revêtement PVD complets conçus pour répondre à vos besoins de production spécifiques du début à la fin.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PD2i"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "PD2i"
+      },
+      "image": [
+        "https://www.pd2i.com/assets/images/turnkey solution/Turnkey Solution.webp"
+      ],
+      "category": "Équipement de Revêtement Industriel",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "url": "https://www.pd2i.com/fr/turnkey-solutions.html"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Type de service",
+          "value": "Solution clé en main"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Inclut",
+          "value": "Équipement, Installation, Formation, Support"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://www.pd2i.com/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Équipements de revêtement",
+          "item": "https://www.pd2i.com/fr/#coating-equipment"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Solutions clé en main",
+          "item": "https://www.pd2i.com/fr/turnkey-solutions.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
-    <!-- Header -->
-    <header id="header"></header>
+    <!-- Header sera généré automatiquement par le composant -->
 
     <!-- Main Content -->
     <main>
+        
+
         <!-- Hero Section -->
         <section class="w-full relative hero-section">
             <div class="hero-image-container">
                 <img src="../assets/images/turnkey solution/backgroung.webp" 
-                     alt="交钥匙解决方案背景" 
+                     alt="Arrière-plan Solutions Clé en Main" 
                      class="w-full h-auto object-contain">
             </div>
             
+            <!-- Overlay Background pour améliorer la lisibilité -->
             <div class="hero-overlay"></div>
             
+            <!-- Overlay Text -->
             <div class="absolute inset-0 flex items-center hero-text-container">
                 <div class="container mx-auto px-4">
                     <div class="max-w-2xl">
                         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 scroll-animate">
-                            我们的交钥匙解决方案
+                            Nos solutions clés en main
                         </h1>
                         <p class="text-base md:text-lg text-white/90 leading-relaxed scroll-animate delay-200">
-                            我们为您的所有PVD涂层和表面处理需求提供完整的端到端解决方案
+                             Nous offrons des solutions complètes de bout en bout pour tous vos<br>besoins en revêtement PVD et traitement de surface
                         </p>
                     </div>
                 </div>
@@ -383,7 +565,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-4 md:mb-6">
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pd2i-black mb-2 scroll-animate">
-                        适用于每种应用的完整解决方案
+                        Solutions complètes pour chaque application
                     </h2>
                 </div>
 
@@ -392,27 +574,28 @@
                     <!-- Left Column: Image -->
                     <div class="scroll-animate delay-300">
                         <img src="../assets/images/turnkey solution/Turnkey Solution.webp" 
-                             alt="交钥匙解决方案流程" 
+                             alt="Processus des solutions clé en main" 
                              class="w-full h-auto object-contain">
                     </div>
 
                     <!-- Right Column: Content Box -->
                     <div class="scroll-animate delay-400">
                         <div class="solution-card">
-                            <h3>完整的交钥匙解决方案</h3>
+                            <h3>Solutions clés en main complètes</h3>
                             <p class="text-gray-700 mb-6 leading-relaxed">
-                                我们全面的交钥匙解决方案整合了PVD涂层和表面处理的所有方面，为您提供根据您的特定要求定制的完整、即用型系统。
+                                Nos solutions clés en main complètes intègrent tous les aspects du revêtement PVD et du traitement de surface, 
+                                vous fournissant un système complet et prêt à l'emploi adapté à vos besoins spécifiques.
                             </p>
                             <ul>
-                                <li>端到端工艺集成</li>
-                                <li>完整的设备安装和设置</li>
-                                <li>全面的操作员培训计划</li>
-                                <li>持续的技术支持和维护</li>
-                                <li>质量控制和工艺优化</li>
-                                <li>定制工作流程设计和实施</li>
+                                <li>Intégration du processus de bout en bout</li>
+                                <li>Installation et configuration complètes de l'équipement</li>
+                                <li>Programmes de formation complets pour les opérateurs</li>
+                                <li>Support technique et maintenance continus</li>
+                                <li>Contrôle qualité et optimisation des procédés</li>
+                                <li>Conception et mise en œuvre de flux de travail personnalisés</li>
                             </ul>
                             <a href="/downloadpd2i/Turn Key Solution.pdf" download class="btn-primary">
-                                下载交钥匙解决方案
+                                Télécharger la solution clé en main
                             </a>
                         </div>
                     </div>
@@ -425,10 +608,10 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pd2i-black mb-6 scroll-animate">
-                        我们的交钥匙流程
+                        Notre processus clé en main
                     </h2>
                     <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto scroll-animate delay-200">
-                        从初步咨询到最终交付，我们确保无缝的实施过程
+                        De la consultation initiale à la livraison finale, nous assurons un processus de mise en œuvre sans faille
                     </p>
                 </div>
 
@@ -439,8 +622,8 @@
                         <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                             1
                         </div>
-                        <h3 class="text-xl font-bold text-pd2i-black mb-3">咨询</h3>
-                        <p class="text-gray-700">对您的需求和技术规格进行初步评估</p>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Consultation</h3>
+                        <p class="text-gray-700">Évaluation initiale de vos besoins et spécifications techniques</p>
                     </div>
 
                     <!-- Step 2 -->
@@ -448,8 +631,8 @@
                         <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                             2
                         </div>
-                        <h3 class="text-xl font-bold text-pd2i-black mb-3">设计</h3>
-                        <p class="text-gray-700">根据您的特定需求和限制定制解决方案设计</p>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Conception</h3>
+                        <p class="text-gray-700">Conception de solution personnalisée adaptée à vos besoins et contraintes spécifiques</p>
                     </div>
 
                     <!-- Step 3 -->
@@ -457,8 +640,8 @@
                         <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                             3
                         </div>
-                        <h3 class="text-xl font-bold text-pd2i-black mb-3">实施</h3>
-                        <p class="text-gray-700">专业安装、配置和系统集成</p>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Mise en œuvre</h3>
+                        <p class="text-gray-700">Installation professionnelle, configuration et intégration du système</p>
                     </div>
 
                     <!-- Step 4 -->
@@ -466,41 +649,95 @@
                         <div class="bg-pd2i-blue text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                             4
                         </div>
-                        <h3 class="text-xl font-bold text-pd2i-black mb-3">支持</h3>
-                        <p class="text-gray-700">持续的培训、维护和技术支持服务</p>
+                        <h3 class="text-xl font-bold text-pd2i-black mb-3">Support</h3>
+                        <p class="text-gray-700">Formation continue, maintenance et services de support technique</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
     
-    <!-- Footer -->
-    <footer id="footer"></footer>
+    <!-- Footer sera généré automatiquement par le composant -->
 
-    <!-- Scripts -->
+    <!-- Header Component -->
     <script src="../components/Header.js?v=1.5"></script>
+    
+    <!-- Footer Component -->
     <script src="../components/Footer.js"></script>
     
-    <!-- Initialize Components -->
+    <!-- Initialize Header -->
     <script>
+        // Initialisation du header avec la configuration PD2i
         window.headerInstance = new Header({
             logoSrc: '../assets/images/logo-pd2i.png',
             logoAlt: 'PD2i Logo',
             logoLink: 'index.html',
             currentPage: 'turnkey-solutions',
-            currentLang: 'ZH',
-            languages: ['EN', 'ZH', 'FR']
+            currentLang: 'FR',
+            languages: ['EN', 'ZH', 'FR'],
+            navigationItems: [
+                { label: 'Accueil', href: 'index.html', type: 'link', pageId: 'home' },
+                {
+                    label: 'Équipements',
+                    labelCompact: 'Équipements',
+                    href: '#',
+                    type: 'dropdown',
+                    pageId: 'coating-equipments',
+                    items: [
+                        { label: 'Technologie PVD pour l\'outillage', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'Système PVD pour moules et matrices', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC pour revêtements tribologiques', href: 'dlc.html', pageId: 'dlc' },
+                        { label: 'Solutions clé en main', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                    ]
+                },
+                { label: 'Prep. arêtes', labelCompact: 'Prep. arêtes', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                { label: 'Green Clean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
+                { label: 'Nitruration', labelCompact: 'Nitruration', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: 'Actualités', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'À propos', labelCompact: 'À propos', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+            ]
         });
         
+        // Initialisation du footer avec la configuration PD2i
         window.footerInstance = new Footer({
             logoSrc: '../assets/images/logo-pd2i-footer.png',
             logoAlt: 'PD2i Logo',
-            currentLang: 'ZH'
+            slogan: 'Votre partenaire quand la performance compte',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'À propos', href: 'about-us.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Téléchargements', href: 'download.html' },
+                { label: 'Actualités', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Suivez-nous'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Politique de confidentialité', href: 'privacy.html' },
+                { label: 'Mentions légales', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
         });
     </script>
     
     <!-- Page specific JavaScript -->
     <script>
+        // Scroll animations
         document.addEventListener('DOMContentLoaded', function() {
             const observerOptions = {
                 threshold: 0.1,
@@ -515,14 +752,18 @@
                 });
             }, observerOptions);
 
+            // Observe all scroll-animate elements
             document.querySelectorAll('.scroll-animate').forEach(el => {
                 observer.observe(el);
             });
             
-            console.log('交钥匙解决方案页面加载成功');
+            console.log('Page Solutions clé en main chargée avec animations de défilement');
         });
     </script>
     
+    <script>
+    </script>
+
     <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
 
 </body>
