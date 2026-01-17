@@ -1,95 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Title -->
-    <title>DLC Tribological Coatings | Hybrid PVD/PECVD Systems | PD2i</title>
+    <title>Revêtements tribologiques DLC | Systèmes hybrides PVD/PECVD | PD2i</title>
     
-    <meta name="description" content="Advanced DLC (Diamond-Like Carbon) coating systems for tribological applications. Modular hybrid PVD/PECVD technology for precision components and cutting tools. Energy-efficient solutions.">
+    <meta name="description" content="Systèmes de revêtement DLC (Diamond-Like Carbon) avancés pour applications tribologiques. Technologie hybride modulaire PVD/PECVD pour composants de précision et outils de coupe. Solutions écoénergétiques.">
     <meta name="author" content="PD2i">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
 
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.pd2i.com/dlc.html">
+    <link rel="canonical" href="https://www.pd2i.com/fr/dlc.html">
     <!-- Hreflang tags for multilingual support -->
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/dlc.html">
     <link rel="alternate" hreflang="zh-CN" href="https://www.pd2i.com/zh/dlc.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/fr/dlc.html">
     <link rel="alternate" hreflang="x-default" href="https://www.pd2i.com/dlc.html">
     <!-- Preload critical resources -->
-    <link rel="preload" href="assets/images/logo-pd2i.png" as="image">
-    <link rel="preload" href="components/header.css" as="style">
-    <link rel="preload" href="assets/css/style.css" as="style">
-
-
-
+    <link rel="preload" href="../assets/images/logo-pd2i.png" as="image">
+    <link rel="preload" href="../components/header.css" as="style">
+    <link rel="preload" href="../assets/css/style.css" as="style">
 
     <!-- Favicon Configuration -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="32x32">
-    <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#0083CA">
     <meta name="theme-color" content="#0083CA">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.pd2i.com/dlc.html">
+    <meta property="og:url" content="https://www.pd2i.com/fr/dlc.html">
     <meta property="og:site_name" content="PD2i">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="DLC Tribological Coatings | Hybrid PVD/PECVD Systems | PD2i">
-    <meta property="og:description" content="Modular hybrid PVD/PECVD coating systems for advanced tribological applications. Energy-efficient DLC technology.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Revêtements tribologiques DLC | Systèmes hybrides PVD/PECVD | PD2i">
+    <meta property="og:description" content="Systèmes de revêtement hybrides modulaires PVD/PECVD pour applications tribologiques avancées. Technologie DLC écoénergétique.">
     <meta property="og:image" content="https://www.pd2i.com/assets/images/dlc_for_tribological_coatings/Tribological.webp">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1080">
-    <meta property="og:image:alt" content="PD2i DLC Tribological Coating System">
+    <meta property="og:image:alt" content="Système de revêtement tribologique DLC PD2i">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DLC Tribological Coatings | PD2i">
-    <meta name="twitter:description" content="Hybrid PVD/PECVD systems for advanced tribological applications">
+    <meta name="twitter:title" content="Revêtements tribologiques DLC | PD2i">
+    <meta name="twitter:description" content="Systèmes hybrides PVD/PECVD pour applications tribologiques avancées">
     <meta name="twitter:image" content="https://www.pd2i.com/assets/images/dlc_for_tribological_coatings/Tribological.webp">
     
     <!-- Hide Tailwind CDN Warning -->
     <script>
         (function() {
             const originalWarn = console.warn;
-            const originalLog = console.log;
-            const originalError = console.error;
-            
             console.warn = function(...args) {
                 const message = args.join(' ');
                 if (message.includes('cdn.tailwindcss.com') || 
-                    message.includes('should not be used in production') ||
-                    message.includes('tailwindcss.com/docs/installation')) {
+                    message.includes('should not be used in production')) {
                     return;
                 }
                 originalWarn.apply(console, args);
-            };
-            
-            console.log = function(...args) {
-                const message = args.join(' ');
-                if (message.includes('cdn.tailwindcss.com') || 
-                    message.includes('should not be used in production') ||
-                    message.includes('tailwindcss.com/docs/installation')) {
-                    return;
-                }
-                originalLog.apply(console, args);
-            };
-            
-            console.error = function(...args) {
-                const message = args.join(' ');
-                if (message.includes('cdn.tailwindcss.com') || 
-                    message.includes('should not be used in production') ||
-                    message.includes('tailwindcss.com/docs/installation')) {
-                    return;
-                }
-                originalError.apply(console, args);
             };
         })();
     </script>
@@ -114,9 +87,9 @@
     </script>
     
     <!-- Component CSS -->
-    <link rel="stylesheet" href="components/header.css">
-    <link rel="stylesheet" href="components/footer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../components/header.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     
     <!-- Schema.org - Organization -->
     <script type="application/ld+json">
@@ -128,24 +101,7 @@
       "url": "https://www.pd2i.com",
       "logo": "https://www.pd2i.com/assets/images/logo-pd2i.png",
       "foundingDate": "1989",
-      "description": "PD2i provides advanced PVD coating systems, plasma nitriding, and edge preparation solutions for cutting tools and industrial applications.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "86, bd Malesherbes",
-        "addressLocality": "Paris",
-        "postalCode": "75008",
-        "addressCountry": "FR"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+33-1-53-75-45-05",
-        "contactType": "Customer Service",
-        "email": "admin@pd2i.com",
-        "availableLanguage": ["English", "French"]
-      },
-      "sameAs": [
-        "https://linkedin.com/company/pd2i"
-      ]
+      "description": "PD2i fournit des systèmes de revêtement PVD avancés, la nitruration plasma et des solutions de préparation d'arêtes pour les outils de coupe et les applications industrielles."
     }
     </script>
     
@@ -154,8 +110,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "DLC for Tribological Coatings",
-      "description": "Diamond-Like Carbon (DLC) coating systems for tribological applications. Low-friction coatings that reduce energy consumption and environmental footprint while improving component performance.",
+      "name": "DLC pour revêtements tribologiques",
+      "description": "Systèmes de revêtement Diamond-Like Carbon (DLC) pour applications tribologiques. Revêtements à faible friction qui réduisent la consommation d'énergie et l'empreinte environnementale.",
       "brand": {
         "@type": "Brand",
         "name": "PD2i"
@@ -164,76 +120,27 @@
         "@type": "Organization",
         "name": "PD2i"
       },
-      "image": [
-        "https://www.pd2i.com/assets/images/dlc_for_tribological_coatings/Tribological.webp"
-      ],
-      "category": "Industrial Coating Equipment",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "EUR",
-        "url": "https://www.pd2i.com/dlc.html"
-      },
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Technology",
-          "value": "DLC (Diamond-Like Carbon)"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Application",
-          "value": "Tribological Coatings, Energy Efficiency"
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Schema.org - BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.pd2i.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Coating Equipments",
-          "item": "https://www.pd2i.com/#coating-equipment"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DLC for Tribological Coatings",
-          "item": "https://www.pd2i.com/dlc.html"
-        }
-      ]
+      "image": ["https://www.pd2i.com/assets/images/dlc_for_tribological_coatings/Tribological.webp"],
+      "category": "Équipement de revêtement industriel"
     }
     </script>
 </head>
 <body class="font-roboto bg-white text-pd2i-black">
-    <!-- Header sera généré automatiquement par le composant -->
+    <!-- Header Component -->
+    <header id="header"></header>
 
     <!-- Main Content -->
     <main>
-        
-
         <!-- High Productivity / Green Technology Section with centered title -->
         <section class="productivity-green-section py-0 relative">
             <!-- Centered main title overlay -->
             <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none px-4">
                 <div class="bg-black bg-opacity-60 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-lg text-center max-w-4xl mx-auto scroll-animate">
                     <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                        DLC for Tribological Coatings
+                        DLC pour revêtements tribologiques
                     </h1>
                     <p class="text-lg md:text-xl text-white opacity-90">
-                        Modular Hybrid PVD / PECVD Coating System
+                        Système de revêtement hybride modulaire PVD / PECVD
                     </p>
                 </div>
             </div>
@@ -241,28 +148,24 @@
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <!-- High Productivity (Left) -->
                 <div class="relative h-64 sm:h-72 md:h-80 lg:h-80 flex items-center justify-center overflow-hidden scroll-animate delay-100">
-                    <!-- High Productivity Background Image -->
-                    <img src="assets/images/dlc_for_tribological_coatings/High_Productivity.webp" 
-                         alt="High Productivity" 
+                    <img src="../assets/images/dlc_for_tribological_coatings/High_Productivity.webp" 
+                         alt="Haute productivité" 
                          class="absolute inset-0 w-full h-full object-cover">
-                    <!-- High Productivity title -->
                     <div class="absolute inset-0 flex items-center lg:items-end justify-center pb-0 lg:pb-8 z-10">
                         <h2 class="text-2xl md:text-3xl font-bold text-white drop-shadow-lg text-center px-4">
-                            High Productivity
+                            Haute productivité
                         </h2>
                     </div>
                 </div>
 
                 <!-- Green Technology (Right) -->
                 <div class="relative h-64 sm:h-72 md:h-80 lg:h-80 flex items-center justify-center overflow-hidden scroll-animate delay-200">
-                    <!-- Green Technology Background Image -->
-                    <img src="assets/images/dlc_for_tribological_coatings/Green_Technology.webp" 
-                         alt="Green Technology" 
+                    <img src="../assets/images/dlc_for_tribological_coatings/Green_Technology.webp" 
+                         alt="Technologie verte" 
                          class="absolute inset-0 w-full h-full object-cover">
-                    <!-- Green Technology title -->
                     <div class="absolute inset-0 flex items-center lg:items-end justify-center pb-0 lg:pb-8 z-10">
                         <h2 class="text-2xl md:text-3xl font-bold text-white drop-shadow-lg text-center px-4">
-                            Green Technology
+                            Technologie verte
                         </h2>
                     </div>
                 </div>
@@ -274,21 +177,20 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12 scroll-animate delay-300">
                     <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black mb-4">
-                        Tailor-Made Solutions for Hard and Tribological Coatings
+                        Solutions sur mesure pour revêtements durs et tribologiques
                     </h2>
                     <p class="text-lg text-gray-600">
-                        4 Coating Portfolios in 1 System
+                        4 portfolios de revêtements en 1 système
                     </p>
                 </div>
 
-                
                 <!-- Equipment and Properties -->
                 <div class="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-8 mb-12">
                     <!-- Center: Equipment Image -->
                     <div class="flex-shrink-0 flex justify-center scroll-animate delay-500">
-                        <!-- MpC Series Equipment Image -->
-                        <div class="w-full max-w-[400px] sm:max-w-[450px] lg:w-[500px] h-[300px] sm:h-[350px] lg:h-[400px] flex items-center justify-center equipment-pulse equipment-hover">                            <img src="assets/images/dlc_for_tribological_coatings/MpC Series.webp" 
-                                alt="MpC Series Coating Equipment" 
+                        <div class="w-full max-w-[400px] sm:max-w-[450px] lg:w-[500px] h-[300px] sm:h-[350px] lg:h-[400px] flex items-center justify-center equipment-pulse equipment-hover">
+                            <img src="../assets/images/dlc_for_tribological_coatings/MpC Series.webp" 
+                                alt="Équipement de revêtement série MpC" 
                                 class="max-w-full max-h-full object-contain p-4">
                         </div>
                     </div>
@@ -303,61 +205,61 @@
                     <!-- Right: Properties Optimization -->
                     <div class="w-full xl:w-[500px] scroll-animate delay-600">
                         <div class="bg-green-600 text-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-lg min-h-[300px] sm:min-h-[350px] lg:h-[400px] flex flex-col justify-center properties-glow">
-                            <h3 class="text-xl font-bold mb-6 text-center">Properties Optimization</h3>
+                            <h3 class="text-xl font-bold mb-6 text-center">Optimisation des propriétés</h3>
                             <ul class="space-y-2 text-lg">
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>High hardness</span>
+                                    <span>Haute dureté</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Low coefficient of friction (0.02 – 0.15)</span>
+                                    <span>Faible coefficient de friction (0,02 – 0,15)</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>High corrosion resistance</span>
+                                    <span>Haute résistance à la corrosion</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Great adhesion to substrate material</span>
+                                    <span>Excellente adhérence au matériau du substrat</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Fretting resistance</span>
+                                    <span>Résistance au fretting</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Adhesive wear resistance</span>
+                                    <span>Résistance à l'usure adhésive</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Self-lubrication in dry wear conditions</span>
+                                    <span>Auto-lubrification en conditions d'usure sèche</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Excellent release properties</span>
+                                    <span>Excellentes propriétés de démoulage</span>
                                 </li>
                                 <li class="flex items-start property-item">
                                     <svg class="w-4 h-4 text-green-300 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
-                                    <span>Bio compatibility</span>
+                                    <span>Biocompatibilité</span>
                                 </li>
                             </ul>
                         </div>
@@ -367,7 +269,7 @@
                 <!-- Download Button -->
                 <div class="text-center scroll-animate delay-400">
                     <a href="/downloadpd2i/Modular Hybrid PVD  PECVD Coating System.pdf" download class="btn-primary">
-                        💎 Download DLC Coating Portfolio
+                        💎 Télécharger le portfolio de revêtements DLC
                     </a>
                 </div>
             </div>
@@ -377,8 +279,8 @@
         <section class="py-8 bg-white">
             <div class="container mx-auto px-4">
                 <div class="flex justify-center scroll-animate">
-                    <img src="assets/images/dlc_for_tribological_coatings/Tribological.webp" 
-                         alt="Tribological and Hard Coating Structure" 
+                    <img src="../assets/images/dlc_for_tribological_coatings/Tribological.webp" 
+                         alt="Structure des revêtements tribologiques et durs" 
                          class="w-full max-w-3xl h-auto rounded-lg shadow-lg">
                 </div>
             </div>
@@ -389,7 +291,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-8 scroll-animate">
                     <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black">
-                        Our Equipment
+                        Nos équipements
                     </h2>
                 </div>
 
@@ -398,8 +300,8 @@
                     <!-- MPC 500 -->
                     <div class="about-card scroll-animate delay-300">
                         <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-4">
-                            <img src="assets/images/dlc_for_tribological_coatings/Mpc500.webp" 
-                                 alt="MPC 500 Equipment" 
+                            <img src="../assets/images/dlc_for_tribological_coatings/Mpc500.webp" 
+                                 alt="Équipement MPC 500" 
                                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="text-center">
@@ -410,8 +312,8 @@
                     <!-- MPC 800 -->
                     <div class="about-card scroll-animate delay-200">
                         <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-4">
-                            <img src="assets/images/dlc_for_tribological_coatings/MPC800.webp" 
-                                 alt="MPC 800 Equipment" 
+                            <img src="../assets/images/dlc_for_tribological_coatings/MPC800.webp" 
+                                 alt="Équipement MPC 800" 
                                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="text-center">
@@ -422,21 +324,20 @@
                     <!-- MPC 1000 -->
                     <div class="about-card scroll-animate delay-100">
                         <div class="h-48 sm:h-56 md:h-64 flex items-center justify-center mb-4">
-                            <img src="assets/images/dlc_for_tribological_coatings/MPC1000.webp" 
-                                 alt="MPC 1000 Equipment" 
+                            <img src="../assets/images/dlc_for_tribological_coatings/MPC1000.webp" 
+                                 alt="Équipement MPC 1000" 
                                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="text-center">
                             <h3 class="text-xl font-bold text-pd2i-blue">MPC 1000</h3>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Equipment Specifications Table Image -->
                 <div class="scroll-animate delay-400 flex justify-center">
-                    <img src="assets/images/dlc_for_tribological_coatings/Tableau.webp" 
-                         alt="Equipment Specifications Table" 
+                    <img src="../assets/images/dlc_for_tribological_coatings/Tableau.webp" 
+                         alt="Tableau des spécifications des équipements" 
                          class="w-full max-w-4xl h-auto rounded-lg shadow-lg">
                 </div>
             </div>
@@ -447,33 +348,33 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-8 md:mb-12 scroll-animate">
                     <h2 class="text-3xl lg:text-4xl font-bold text-pd2i-black">
-                        Coating Portfolio
+                        Portfolio de revêtements
                     </h2>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
                     <!-- First Image: Coating Components -->
                     <div class="scroll-animate coating-portfolio-container flex flex-col">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">For Components</h3>
-                        <img src="assets/images/dlc_for_tribological_coatings/coatingcompo.webp" 
-                             alt="Coating Components" 
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Pour composants</h3>
+                        <img src="../assets/images/dlc_for_tribological_coatings/coatingcompo.webp" 
+                             alt="Revêtements pour composants" 
                              class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                     
                     <!-- Second Image: Coating Plastic Molding -->
                     <div class="scroll-animate delay-200 coating-portfolio-container flex flex-col">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">For Plastic Molding</h3>
-                        <img src="assets/images/dlc_for_tribological_coatings/coatingpm.webp" 
-                             alt="Coating Plastic Molding" 
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Pour moulage de plastique</h3>
+                        <img src="../assets/images/dlc_for_tribological_coatings/coatingpm.webp" 
+                             alt="Revêtements pour moulage plastique" 
                              class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
                     
                     <!-- Third Image: Coating Tools -->
                     <div class="scroll-animate delay-400 coating-portfolio-container flex flex-col">
-                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">For Forming Tools and Cutting Tools</h3>
-                        <img src="assets/images/dlc_for_tribological_coatings/coatingtools.webp" 
-                             alt="Coating Cutting Tools" 
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-4 text-center">Pour outils de formage et outils de coupe</h3>
+                        <img src="../assets/images/dlc_for_tribological_coatings/coatingtools.webp" 
+                             alt="Revêtements pour outils de coupe" 
                              class="coating-portfolio-img shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
                              onclick="openImageModal(this.src, this.alt)">
                     </div>
@@ -489,38 +390,38 @@
                     <!-- Benefits / Advantages -->
                     <div class="about-card scroll-animate delay-100">
                         <h3 class="text-xl font-bold text-pd2i-blue mb-6 text-center">
-                            Benefits / Advantages
+                            Bénéfices / Avantages
                         </h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">Low running costs</span>
+                                <span class="text-gray-700 font-medium text-base">Faibles coûts d'exploitation</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">Adjustable processes</span>
+                                <span class="text-gray-700 font-medium text-base">Procédés ajustables</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">Open source recipe editor</span>
+                                <span class="text-gray-700 font-medium text-base">Éditeur de recettes open source</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">Full technology & service support</span>
+                                <span class="text-gray-700 font-medium text-base">Support technique et service complet</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">Scalable technologies</span>
+                                <span class="text-gray-700 font-medium text-base">Technologies évolutives</span>
                             </li>
                         </ul>
                     </div>
@@ -528,32 +429,32 @@
                     <!-- 4 coatings Portfolio -->
                     <div class="about-card scroll-animate delay-200">
                         <h3 class="text-xl font-bold text-pd2i-blue mb-6 text-center">
-                            4 coatings Portfolio in 1 coater
+                            4 portfolios de revêtements dans 1 équipement
                         </h3>
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">One for components</span>
+                                <span class="text-gray-700 font-medium text-base">Un pour les composants</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">One for forming cutting tools</span>
+                                <span class="text-gray-700 font-medium text-base">Un pour les outils de coupe et de formage</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">One for plastic molding</span>
+                                <span class="text-gray-700 font-medium text-base">Un pour le moulage de plastique</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-pd2i-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700 font-medium text-base">One for forming tools</span>
+                                <span class="text-gray-700 font-medium text-base">Un pour les outils de formage</span>
                             </li>
                         </ul>
                     </div>
@@ -562,55 +463,53 @@
             </div>
         </section>
             
-
-            
-            <!-- Bande d'outils selon la maquette Figma -->
-            <div class="bg-white pb-6 sm:pb-8">
-                <div class="container mx-auto px-4">
-                    <div class="flex justify-center items-center">
-                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-6xl w-full">
-                            <!-- Outil 1 -->
-                            <div class="flex items-center justify-center scroll-animate delay-100">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil1.webp" 
-                                     alt="Cutting Tool 1" 
-                                     class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
-                            </div>
-                            
-                            <!-- Outil 2 -->
-                            <div class="flex items-center justify-center scroll-animate delay-200">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil2.webp" 
-                                     alt="Cutting Tool 2" 
-                                     class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
-                            </div>
-                            
-                            <!-- Outil 3 -->
-                            <div class="flex items-center justify-center scroll-animate delay-300">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil3.webp" 
-                                     alt="Cutting Tool 3" 
-                                     class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
-                            </div>
-                            
-                            <!-- Outil 4 -->
-                            <div class="flex items-center justify-center scroll-animate delay-400">
-                                <img src="assets/images/dlc_for_tribological_coatings/Outil4.webp" 
-                                     alt="Cutting Tool 4" 
-                                     class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
-                            </div>
-                            
-                            <!-- Outil 5 - Picture1.png -->
-                            <div class="flex items-center justify-center scroll-animate delay-500">
-                                <img src="assets/images/pvd-cutting-tools/Picture1.webp" 
-                                     alt="Cutting Tool 5" 
-                                     class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
-                            </div>
+        <!-- Bande d'outils -->
+        <div class="bg-white pb-6 sm:pb-8">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-6xl w-full">
+                        <!-- Outil 1 -->
+                        <div class="flex items-center justify-center scroll-animate delay-100">
+                            <img src="../assets/images/dlc_for_tribological_coatings/Outil1.webp" 
+                                 alt="Outil de coupe 1" 
+                                 class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Outil 2 -->
+                        <div class="flex items-center justify-center scroll-animate delay-200">
+                            <img src="../assets/images/dlc_for_tribological_coatings/Outil2.webp" 
+                                 alt="Outil de coupe 2" 
+                                 class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Outil 3 -->
+                        <div class="flex items-center justify-center scroll-animate delay-300">
+                            <img src="../assets/images/dlc_for_tribological_coatings/Outil3.webp" 
+                                 alt="Outil de coupe 3" 
+                                 class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Outil 4 -->
+                        <div class="flex items-center justify-center scroll-animate delay-400">
+                            <img src="../assets/images/dlc_for_tribological_coatings/Outil4.webp" 
+                                 alt="Outil de coupe 4" 
+                                 class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Outil 5 -->
+                        <div class="flex items-center justify-center scroll-animate delay-500">
+                            <img src="../assets/images/pvd-cutting-tools/Picture1.webp" 
+                                 alt="Outil de coupe 5" 
+                                 class="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain hover:scale-105 transition-transform duration-300">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     
-    <!-- Footer sera généré automatiquement par le composant -->
+    <!-- Footer Component -->
+    <footer id="footer"></footer>
 
     <!-- Image Modal -->
     <div id="imageModal" class="image-modal">
@@ -619,48 +518,43 @@
     </div>
 
     <!-- Header Component -->
-    <script src="components/Header.js?v=1.5"></script>
+    <script src="../components/Header.js?v=1.5"></script>
     
     <!-- Footer Component -->
-    <script src="components/Footer.js"></script>
+    <script src="../components/Footer.js"></script>
     
     <!-- Initialize Header -->
     <script>
-        // Initialisation du header avec la configuration PD2i
+        // Initialisation du header
         window.headerInstance = new Header({
-            logoSrc: 'assets/images/logo-pd2i.png',
+            logoSrc: '../assets/images/logo-pd2i.png',
             logoAlt: 'PD2i Logo',
             logoLink: 'index.html',
             currentPage: 'dlc',
-            currentLang: 'EN',
+            currentLang: 'FR',
             languages: ['EN', 'ZH', 'FR'],
             navigationItems: [
-                { label: 'Home', href: 'index.html', type: 'link', pageId: 'home' },
+                { label: 'Accueil', href: 'index.html', type: 'link', pageId: 'home' },
                 {
-                    label: 'Coating Equipments',
-                    labelCompact: 'Coating',
+                    label: 'Équipements',
+                    labelCompact: 'Équipements',
                     href: '#',
                     type: 'dropdown',
                     pageId: 'coating-equipments',
                     items: [
-                        { label: 'PVD Technology for Tooling', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
-                        { label: 'PVD Coating System for Molds & Dies', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
-                        { label: 'DLC for Tribological Coatings', href: 'dlc.html', pageId: 'dlc' },
-                        { label: 'Turnkey Solutions', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                        { label: 'Technologie PVD pour l\'outillage', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'Système PVD pour moules et matrices', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC pour revêtements tribologiques', href: 'dlc.html', pageId: 'dlc' },
+                        { label: 'Solutions clé en main', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
                     ]
                 },
-                { label: 'Edge Preparation', labelCompact: 'Edge Prep', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                { label: 'Prep. arêtes', labelCompact: 'Prep. arêtes', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
                 { label: 'Green Clean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
-                { label: 'Plasma Nitriding', labelCompact: 'Plasma', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Nitruration', labelCompact: 'Nitruration', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
                 { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
-                { label: 'News', href: 'news.html', type: 'link', pageId: 'news' },
-                { label: 'About us', labelCompact: 'About', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+                { label: 'Actualités', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'À propos', labelCompact: 'À propos', href: 'about-us.html', type: 'link', pageId: 'about-us' }
             ]
-        });
-        
-        // Écouter les changements de langue
-        document.addEventListener('languageChanged', (event) => {
-            console.log('Langue changée vers:', event.detail.language);
         });
 
         // Scroll animations
@@ -677,16 +571,15 @@
             });
         }, observerOptions);
 
-        // Observe all scroll-animate elements
         document.querySelectorAll('.scroll-animate').forEach(el => {
             observer.observe(el);
         });
         
-        // Initialisation du footer avec la configuration PD2i
+        // Initialisation du footer
         window.footerInstance = new Footer({
-            logoSrc: 'assets/images/logo-pd2i-footer.png',
+            logoSrc: '../assets/images/logo-pd2i-footer.png',
             logoAlt: 'PD2i Logo',
-            slogan: 'Your Partner When Performance Matters',
+            slogan: 'Votre partenaire quand la performance compte',
             companyInfo: {
                 name: 'PD2i FRANCE',
                 address: '86, bd Malesherbes',
@@ -695,23 +588,23 @@
                 email: 'admin@pd2i.com'
             },
             navigationLinks: [
-                { label: 'About us', href: 'about-us.html' },
+                { label: 'À propos', href: 'about-us.html' },
                 { label: 'Contact', href: 'contacts.html' },
-                { label: 'Download', href: 'download.html' },
-                { label: 'News', href: 'news.html' }
+                { label: 'Téléchargements', href: 'download.html' },
+                { label: 'Actualités', href: 'news.html' }
             ],
             socialLinks: [
                 { 
                     platform: 'linkedin', 
                     href: 'https://linkedin.com/company/pd2i',
                     icon: 'linkedin',
-                    label: 'Follow us'
+                    label: 'Suivez-nous'
                 }
             ],
             bottomLinks: [
                 { label: 'Cookies', href: 'cookies.html' },
-                { label: 'Privacy policy', href: 'privacy.html' },
-                { label: 'Legal Informations', href: 'legal.html' }
+                { label: 'Politique de confidentialité', href: 'privacy.html' },
+                { label: 'Mentions légales', href: 'legal.html' }
             ],
             copyrightYear: 2025
         });
@@ -723,16 +616,15 @@
             modalImg.src = src;
             modalImg.alt = alt;
             modal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeImageModal() {
             const modal = document.getElementById('imageModal');
             modal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside the image
         document.getElementById('imageModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeImageModal();
@@ -740,9 +632,8 @@
         });
     </script>
     
-    <!-- CSS Animations for Modern Table -->
+    <!-- CSS Animations -->
     <style>
-        /* Coating Images Responsive Fix */
         .coating-portfolio-img {
             width: 100%;
             height: 280px;
@@ -751,27 +642,18 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         .coating-portfolio-container {
             width: 100%;
             overflow: hidden;
             display: flex;
             flex-direction: column;
         }
-        
         @media (min-width: 1024px) {
-            .coating-portfolio-img {
-                height: 320px;
-            }
+            .coating-portfolio-img { height: 320px; }
         }
-        
         @media (max-width: 640px) {
-            .coating-portfolio-img {
-                height: 250px;
-            }
+            .coating-portfolio-img { height: 250px; }
         }
-        
-        /* About Card Style - Same as About Us page */
         .about-card {
             background: white;
             border-radius: 1rem;
@@ -782,7 +664,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .about-card::before {
             content: '';
             position: absolute;
@@ -794,18 +675,12 @@
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
-        
-        .about-card:hover::before {
-            transform: scaleX(1);
-        }
-        
+        .about-card:hover::before { transform: scaleX(1); }
         .about-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             border-color: #0083CA;
         }
-
-        /* Primary Button Style - same as contacts.html */
         .btn-primary {
             background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
             color: white;
@@ -821,7 +696,6 @@
             text-decoration: none;
             display: inline-block;
         }
-        
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -832,50 +706,34 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s ease;
         }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
+        .btn-primary:hover::before { left: 100%; }
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
             color: white;
         }
-        
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-        
-        /* Scroll animations */
+        .btn-primary:active { transform: translateY(0); }
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease;
         }
-        
         .scroll-animate.animate {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        /* Animation delays */
         .delay-100 { transition-delay: 0.1s; }
         .delay-200 { transition-delay: 0.2s; }
         .delay-300 { transition-delay: 0.3s; }
         .delay-400 { transition-delay: 0.4s; }
         .delay-500 { transition-delay: 0.5s; }
         .delay-600 { transition-delay: 0.6s; }
-        
-        /* Tailor-made section animations */
         .equipment-pulse {
             animation: equipmentPulse 4s ease-in-out infinite;
         }
-        
         .properties-glow {
             animation: propertiesGlow 3s ease-in-out infinite;
         }
-        
         @keyframes equipmentPulse {
             0%, 100% {
                 transform: scale(1);
@@ -886,23 +744,15 @@
                 box-shadow: 0 20px 40px rgba(0, 131, 202, 0.2);
             }
         }
-        
         @keyframes propertiesGlow {
-            0%, 100% {
-                box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
-            }
-            50% {
-                box-shadow: 0 20px 40px rgba(34, 197, 94, 0.5);
-            }
+            0%, 100% { box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 20px 40px rgba(34, 197, 94, 0.5); }
         }
-        
-        /* Individual property list item animations */
         .property-item {
             opacity: 0;
             transform: translateX(-20px);
             animation: slideInLeft 0.6s ease-out forwards;
         }
-        
         .property-item:nth-child(1) { animation-delay: 0.1s; }
         .property-item:nth-child(2) { animation-delay: 0.2s; }
         .property-item:nth-child(3) { animation-delay: 0.3s; }
@@ -912,113 +762,22 @@
         .property-item:nth-child(7) { animation-delay: 0.7s; }
         .property-item:nth-child(8) { animation-delay: 0.8s; }
         .property-item:nth-child(9) { animation-delay: 0.9s; }
-        .property-item:nth-child(10) { animation-delay: 1.0s; }
-        
         @keyframes slideInLeft {
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-        
-        /* Hover effects for the equipment */
         .equipment-hover:hover {
             transform: translateY(-5px) scale(1.02);
             transition: all 0.3s ease;
         }
-        
-        /* Tool images hover effects */
-        .tool-container {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .tool-container:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            border-color: rgba(0, 131, 202, 0.2);
-        }
-        
-        /* Responsive adjustments */
-        
         @media (max-width: 768px) {
-            .btn-primary {
-                padding: 0.875rem 2rem;
-                font-size: 1rem;
-                width: 100%;
-                text-align: center;
-            }
+            .btn-primary { padding: 0.875rem 2rem; font-size: 1rem; width: 100%; text-align: center; }
         }
-        
         @media (max-width: 640px) {
-            .btn-primary {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.9rem;
-            }
+            .btn-primary { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
         }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-        
-        /* Progressive fade-in effect for each row */
-        .animate-fade-in-up:nth-of-type(1) { animation-delay: 0.1s; }
-        .animate-fade-in-up:nth-of-type(2) { animation-delay: 0.2s; }
-        .animate-fade-in-up:nth-of-type(3) { animation-delay: 0.3s; }
-        .animate-fade-in-up:nth-of-type(4) { animation-delay: 0.4s; }
-        .animate-fade-in-up:nth-of-type(5) { animation-delay: 0.5s; }
-        
-        /* Pulse animation for header cards */
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            }
-            50% {
-                box-shadow: 0 10px 15px -3px rgba(0, 131, 202, 0.3), 0 4px 6px -2px rgba(0, 131, 202, 0.15);
-            }
-        }
-        
-        #modern-table .bg-pd2i-blue {
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-        
-        /* Smooth hover transitions */
-        #modern-table .bg-white {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        #modern-table .bg-white:hover {
-            transform: translateY(-2px);
-        }
-        
-        /* Mobile responsiveness for table */
-        @media (max-width: 768px) {
-            #modern-table .grid-cols-5 {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            #modern-table .hidden.md\:block {
-                display: none !important;
-            }
-            
-            .animate-fade-in-up {
-                animation-delay: 0s !important;
-            }
-        }
-
-        /* Image Modal Styles */
         .image-modal {
             display: none;
             position: fixed;
@@ -1030,13 +789,11 @@
             background-color: rgba(0, 0, 0, 0.9);
             animation: fadeIn 0.3s ease;
         }
-        
         .image-modal.show {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
         .image-modal-content {
             max-width: 90%;
             max-height: 90%;
@@ -1045,7 +802,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             animation: zoomIn 0.3s ease;
         }
-
         .image-modal-close {
             position: absolute;
             top: 20px;
@@ -1057,27 +813,16 @@
             z-index: 1001;
             transition: color 0.3s ease;
         }
-        
-        .image-modal-close:hover {
-            color: #0083CA;
-        }
-
-
+        .image-modal-close:hover { color: #0083CA; }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         @keyframes zoomIn {
             from { transform: scale(0.5); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
-
-
     </style>
-    
-    <script>
-    </script>
 
     <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
 

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Title -->
-    <title>隐私政策 | PD2i</title>
+    <title>Politique de confidentialité | PD2i</title>
     
-    <meta name="description" content="PD2i隐私政策。我们如何收集、使用和保护您的个人数据。">
+    <meta name="description" content="Politique de confidentialité de PD2i. Comment nous collectons, utilisons et protégeons vos données personnelles.">
     <meta name="robots" content="noindex, follow">
     <meta name="author" content="PD2i">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cmp.osano.com https://cdn.tailwindcss.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cmp.osano.com; worker-src blob:;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.pd2i.com/zh/privacy.html">
-    <!-- Hreflang tags -->
+    <link rel="canonical" href="https://www.pd2i.com/fr/privacy.html">
+    <!-- Hreflang tags for multilingual support -->
     <link rel="alternate" hreflang="en" href="https://www.pd2i.com/privacy.html">
     <link rel="alternate" hreflang="zh-CN" href="https://www.pd2i.com/zh/privacy.html">
     <link rel="alternate" hreflang="fr" href="https://www.pd2i.com/fr/privacy.html">
@@ -36,11 +36,11 @@
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.pd2i.com/zh/privacy.html">
+    <meta property="og:url" content="https://www.pd2i.com/fr/privacy.html">
     <meta property="og:site_name" content="PD2i">
-    <meta property="og:locale" content="zh_CN">
-    <meta property="og:title" content="隐私政策 | PD2i">
-    <meta property="og:description" content="我们如何收集、使用和保护您的个人数据">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Politique de confidentialité | PD2i">
+    <meta property="og:description" content="Comment nous collectons, utilisons et protégeons vos données personnelles">
     
     <!-- Hide Tailwind CDN Warning -->
     <script>
@@ -73,16 +73,11 @@
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'float': 'float 3s ease-in-out infinite',
                     },
                     keyframes: {
                         fadeIn: {
                             '0%': { opacity: '0' },
                             '100%': { opacity: '1' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' }
                         }
                     }
                 }
@@ -102,15 +97,15 @@
             position: relative;
             overflow: hidden;
         }
-        
         .hero-background::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            animation: float 20s ease-in-out infinite;
         }
-        
         .privacy-card {
             background: white;
             border-radius: 1rem;
@@ -121,25 +116,23 @@
             position: relative;
             overflow: hidden;
         }
-        
         .privacy-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 4px;
             background: linear-gradient(90deg, #0083CA, #4A90E2);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
-        
         .privacy-card:hover::before { transform: scaleX(1); }
-        
         .privacy-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             border-color: #0083CA;
         }
-        
         .privacy-icon {
             width: 80px;
             height: 80px;
@@ -151,12 +144,10 @@
             margin: 0 auto 1rem;
             transition: all 0.3s ease;
         }
-        
         .privacy-icon:hover {
             transform: scale(1.1) rotate(5deg);
             box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
         }
-        
         .info-box {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             border-left: 4px solid #0083CA;
@@ -164,53 +155,18 @@
             border-radius: 0.5rem;
             margin: 1.5rem 0;
         }
-        
         .info-box.warning {
             background: linear-gradient(135deg, #fef3cd 0%, #fde68a 100%);
             border-left-color: #f59e0b;
         }
-        
         .info-box.success {
             background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
             border-left-color: #10b981;
         }
-        
         .info-box.important {
             background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
             border-left-color: #ef4444;
         }
-        
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .scroll-animate.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        
-        .toc {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-        }
-        
-        .toc a {
-            color: #0083CA;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        
         .contact-btn {
             background: linear-gradient(135deg, #0083CA 0%, #0066A3 100%);
             color: white;
@@ -220,18 +176,74 @@
             font-weight: 600;
             display: inline-block;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .contact-btn:hover::before { left: 100%; }
         .contact-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0, 131, 202, 0.3);
         }
-        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        .toc ul { list-style: none; padding: 0; }
+        .toc li { margin-bottom: 0.5rem; }
+        .toc a {
+            color: #0083CA;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .toc a:hover {
+            color: #0066A3;
+            text-decoration: underline;
+        }
         @media (max-width: 768px) {
             .privacy-card { padding: 1.5rem; }
             .privacy-icon { width: 60px; height: 60px; }
+            .info-box { padding: 1rem; margin: 1rem 0; }
         }
     </style>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PD2i",
+      "legalName": "Partner Development Industry International",
+      "url": "https://www.pd2i.com",
+      "logo": "https://www.pd2i.com/assets/images/logo-pd2i.png"
+    }
+    </script>
 </head>
 
 <body class="font-roboto bg-gray-50">
@@ -244,14 +256,14 @@
         <section class="hero-background py-12 text-white flex items-center min-h-[300px]">
             <div class="container mx-auto px-4">
                 <div class="text-center text-white relative z-10">
-                    <h1 class="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">隐私政策</h1>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Politique de confidentialité</h1>
                     <p class="text-lg md:text-xl mb-6 opacity-90 leading-relaxed max-w-4xl mx-auto animate-fade-in delay-200">
-                        我们如何收集、使用和保护您的个人数据
+                        Comment nous collectons, utilisons et protégeons vos données personnelles
                     </p>
                     <div class="mt-8 animate-fade-in delay-400">
                         <div class="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
                             <p class="text-lg font-medium">
-                                🔒 您的隐私是我们的首要任务
+                                🔒 Votre vie privée est notre priorité
                             </p>
                         </div>
                     </div>
@@ -264,16 +276,16 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="toc scroll-animate">
-                        <h2 class="text-xl font-bold text-gray-800 mb-4">目录</h2>
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Table des matières</h2>
                         <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            <li><a href="#who-we-are">1. 我们是谁</a></li>
-                            <li><a href="#data-collection">2. 我们收集哪些个人数据</a></li>
-                            <li><a href="#data-usage">3. 我们如何使用您的数据</a></li>
-                            <li><a href="#data-retention">4. 数据保留</a></li>
-                            <li><a href="#data-sharing">5. 数据共享</a></li>
-                            <li><a href="#your-rights">6. 您的权利</a></li>
-                            <li><a href="#security">7. 数据安全</a></li>
-                            <li><a href="#contact">8. 联系信息</a></li>
+                            <li><a href="#qui-nous-sommes">1. Qui nous sommes</a></li>
+                            <li><a href="#collecte-donnees">2. Quelles données personnelles nous collectons</a></li>
+                            <li><a href="#utilisation-donnees">3. Comment nous utilisons vos données</a></li>
+                            <li><a href="#conservation-donnees">4. Conservation des données</a></li>
+                            <li><a href="#partage-donnees">5. Partage des données</a></li>
+                            <li><a href="#vos-droits">6. Vos droits</a></li>
+                            <li><a href="#securite">7. Sécurité des données</a></li>
+                            <li><a href="#contact">8. Informations de contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -281,7 +293,7 @@
         </section>
 
         <!-- Who We Are Section -->
-        <section id="who-we-are" class="py-16 bg-gray-50">
+        <section id="qui-nous-sommes" class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="privacy-card scroll-animate">
@@ -290,15 +302,16 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                             </svg>
                         </div>
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">我们是谁</h2>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">Qui nous sommes</h2>
                         <p class="text-gray-700 leading-relaxed text-lg mb-4">
-                            PD2i（合作伙伴发展工业国际）是一家专门从事PVD涂层技术和工业解决方案的公司。我们的网站地址是：<strong>https://pd2i.com</strong>
+                            PD2i (Partner Development Industry International) est une entreprise spécialisée dans la technologie 
+                            de revêtement PVD et les solutions industrielles. L'adresse de notre site web est : <strong>https://pd2i.com</strong>
                         </p>
                         <div class="info-box">
                             <p class="text-sm">
-                                <strong>数据控制者：</strong>PD2i 法国<br>
-                                <strong>地址：</strong>86, bd Malesherbes – 75008 巴黎 – 法国<br>
-                                <strong>联系方式：</strong>admin@pd2i.com
+                                <strong>Responsable du traitement des données :</strong> PD2i France<br>
+                                <strong>Adresse :</strong> 86, bd Malesherbes – 75008 Paris – France<br>
+                                <strong>Contact :</strong> admin@pd2i.com
                             </p>
                         </div>
                     </div>
@@ -307,80 +320,90 @@
         </section>
 
         <!-- Data Collection Section -->
-        <section id="data-collection" class="py-16 bg-white">
+        <section id="collecte-donnees" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="privacy-card scroll-animate delay-200">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">我们收集哪些个人数据以及原因</h2>
+                        <div class="privacy-icon">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6 text-center">Quelles données personnelles nous collectons et pourquoi</h2>
                         
                         <div class="space-y-6">
                             <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">联系表单</h3>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Formulaires de contact</h3>
                                 <p class="text-gray-700 leading-relaxed mb-4">
-                                    当您通过我们的联系表单与我们联系时，我们收集：
+                                    Lorsque vous nous contactez via nos formulaires de contact, nous collectons :
                                 </p>
                                 <ul class="space-y-2 text-gray-700 ml-4">
                                     <li class="flex items-start">
                                         <span class="text-pd2i-blue mr-2">•</span>
-                                        您的姓名和电子邮件地址
+                                        Votre nom et adresse e-mail
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-pd2i-blue mr-2">•</span>
-                                        您的消息内容
+                                        Le contenu de votre message
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-pd2i-blue mr-2">•</span>
-                                        用于安全目的的IP地址和时间戳
+                                        Adresse IP et horodatage à des fins de sécurité
                                     </li>
                                 </ul>
                                 <p class="text-gray-700 leading-relaxed mt-4">
-                                    <strong>目的：</strong>回应您的咨询并提供客户支持。
+                                    <strong>Objectif :</strong> Répondre à vos demandes et fournir un support client.
                                 </p>
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">媒体上传</h3>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Téléchargements de médias</h3>
                                 <p class="text-gray-700 leading-relaxed mb-4">
-                                    如果您向网站上传图像，应避免上传包含嵌入位置数据（EXIF GPS）的图像。网站访问者可以从网站上的图像下载并提取任何位置数据。
+                                    Si vous téléchargez des images sur le site web, vous devriez éviter de télécharger des images 
+                                    contenant des données de localisation intégrées (EXIF GPS). Les visiteurs du site web peuvent 
+                                    télécharger et extraire toutes les données de localisation des images présentes sur le site.
                                 </p>
                                 <div class="info-box warning">
                                     <p class="text-sm font-medium">
-                                        ⚠️ 请在上传前从图像中删除位置数据以保护您的隐私。
+                                        ⚠️ Veuillez supprimer les données de localisation des images avant de les télécharger pour protéger votre vie privée.
                                     </p>
                                 </div>
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Cookie</h3>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Cookies</h3>
                                 <p class="text-gray-700 leading-relaxed mb-4">
-                                    我们使用Cookie来增强您的浏览体验。如果您留下评论或与我们联系，您可以选择在Cookie中保存您的姓名和电子邮件地址以方便使用。这些Cookie将持续一年。
+                                    Nous utilisons des cookies pour améliorer votre expérience de navigation. Si vous laissez un commentaire 
+                                    ou nous contactez, vous pouvez choisir d'enregistrer votre nom et votre adresse e-mail dans des cookies 
+                                    pour votre commodité. Ces cookies dureront un an.
                                 </p>
                                 <p class="text-gray-700 leading-relaxed">
-                                    有关我们Cookie使用的详细信息，请参阅我们的<a href="cookies.html" class="text-pd2i-blue hover:underline">Cookie政策</a>。
+                                    Pour des informations détaillées sur notre utilisation des cookies, veuillez consulter notre 
+                                    <a href="cookies.html" class="text-pd2i-blue hover:underline">Politique relative aux cookies</a>.
                                 </p>
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">网站分析</h3>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Analyses du site web</h3>
                                 <p class="text-gray-700 leading-relaxed mb-4">
-                                    我们收集基本的网站分析数据以了解访问者如何使用我们的网站：
+                                    Nous collectons des données d'analyse de base du site web pour comprendre comment les visiteurs utilisent notre site :
                                 </p>
                                 <ul class="space-y-2 text-gray-700 ml-4">
                                     <li class="flex items-start">
                                         <span class="text-pd2i-blue mr-2">•</span>
-                                        访问的页面和在网站上花费的时间
+                                        Pages visitées et temps passé sur le site
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-pd2i-blue mr-2">•</span>
-                                        浏览器类型和设备信息
+                                        Type de navigateur et informations sur l'appareil
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-pd2i-blue mr-2">•</span>
-                                        一般地理位置（国家/城市级别）
+                                        Localisation géographique générale (niveau pays/ville)
                                     </li>
                                 </ul>
                                 <p class="text-gray-700 leading-relaxed mt-4">
-                                    <strong>目的：</strong>改善我们的网站性能和用户体验。
+                                    <strong>Objectif :</strong> Améliorer les performances de notre site web et l'expérience utilisateur.
                                 </p>
                             </div>
                         </div>
@@ -394,16 +417,21 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="privacy-card scroll-animate delay-300">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">来自其他网站的嵌入内容</h2>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Contenu intégré provenant d'autres sites web</h2>
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            本网站上的文章可能包含嵌入内容（例如视频、图像、文章等）。来自其他网站的嵌入内容的行为方式与访问者访问其他网站时完全相同。
+                            Les articles de ce site peuvent inclure du contenu intégré (par exemple, vidéos, images, articles, etc.). 
+                            Le contenu intégré provenant d'autres sites web se comporte exactement de la même manière que si le visiteur 
+                            s'était rendu sur l'autre site web.
                         </p>
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            这些网站可能会收集有关您的数据，使用Cookie，嵌入额外的第三方跟踪，并监控您与该嵌入内容的交互，包括如果您有帐户并登录到该网站，则跟踪您与嵌入内容的交互。
+                            Ces sites web peuvent collecter des données vous concernant, utiliser des cookies, intégrer un suivi tiers 
+                            supplémentaire et surveiller votre interaction avec ce contenu intégré, y compris le suivi de votre interaction 
+                            avec le contenu intégré si vous avez un compte et êtes connecté à ce site web.
                         </p>
                         <div class="info-box important">
                             <p class="text-sm font-medium">
-                                🔴 <strong>重要提示：</strong>我们无法控制嵌入的第三方内容的隐私做法。请查看这些外部服务的隐私政策。
+                                🔴 <strong>Important :</strong> Nous ne pouvons pas contrôler les pratiques de confidentialité du contenu tiers intégré. 
+                                Veuillez consulter les politiques de confidentialité de ces services externes.
                             </p>
                         </div>
                     </div>
@@ -412,55 +440,55 @@
         </section>
 
         <!-- Data Usage Section -->
-        <section id="data-usage" class="py-16 bg-white">
+        <section id="utilisation-donnees" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
-                    <div class="privacy-card scroll-animate">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">我们如何使用您的数据</h2>
+                    <div class="privacy-card scroll-animate delay-400">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Comment nous utilisons vos données</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <h3 class="font-bold text-gray-800 mb-4">合法目的：</h3>
+                                <h3 class="font-bold text-gray-800 mb-4">Finalités légitimes :</h3>
                                 <ul class="space-y-2 text-gray-700 text-sm">
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">✓</span>
-                                        回应客户咨询
+                                        Répondre aux demandes des clients
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">✓</span>
-                                        提供技术支持
+                                        Fournir un support technique
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">✓</span>
-                                        改进我们的服务
+                                        Améliorer nos services
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">✓</span>
-                                        网站安全和欺诈预防
+                                        Sécurité du site web et prévention de la fraude
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">✓</span>
-                                        法律合规
+                                        Conformité légale
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="font-bold text-gray-800 mb-4">我们不会：</h3>
+                                <h3 class="font-bold text-gray-800 mb-4">Nous NE faisons PAS :</h3>
                                 <ul class="space-y-2 text-gray-700 text-sm">
                                     <li class="flex items-start">
                                         <span class="text-red-500 mr-2">✗</span>
-                                        将您的数据出售给第三方
+                                        Vendre vos données à des tiers
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-red-500 mr-2">✗</span>
-                                        未经同意将数据用于营销
+                                        Utiliser les données à des fins marketing sans consentement
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-red-500 mr-2">✗</span>
-                                        不必要地共享个人数据
+                                        Partager les données personnelles inutilement
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-red-500 mr-2">✗</span>
-                                        在其他网站上跟踪您
+                                        Vous suivre sur d'autres sites web
                                     </li>
                                 </ul>
                             </div>
@@ -471,27 +499,27 @@
         </section>
 
         <!-- Data Retention Section -->
-        <section id="data-retention" class="py-16 bg-gray-50">
+        <section id="conservation-donnees" class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
-                    <div class="privacy-card scroll-animate">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">数据保留</h2>
+                    <div class="privacy-card scroll-animate delay-500">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Conservation des données</h2>
                         <div class="space-y-4">
                             <div class="border-l-4 border-pd2i-blue pl-4">
-                                <h3 class="font-bold text-gray-800 mb-2">联系表单数据</h3>
-                                <p class="text-gray-700 text-sm">保留3年或直到您请求删除</p>
+                                <h3 class="font-bold text-gray-800 mb-2">Données des formulaires de contact</h3>
+                                <p class="text-gray-700 text-sm">Conservées pendant 3 ans ou jusqu'à ce que vous demandiez leur suppression</p>
                             </div>
                             <div class="border-l-4 border-pd2i-blue pl-4">
-                                <h3 class="font-bold text-gray-800 mb-2">网站分析</h3>
-                                <p class="text-gray-700 text-sm">匿名数据保留25个月</p>
+                                <h3 class="font-bold text-gray-800 mb-2">Analyses du site web</h3>
+                                <p class="text-gray-700 text-sm">Données anonymisées conservées pendant 25 mois</p>
                             </div>
                             <div class="border-l-4 border-pd2i-blue pl-4">
-                                <h3 class="font-bold text-gray-800 mb-2">Cookie</h3>
-                                <p class="text-gray-700 text-sm">最多12个月或直到手动删除</p>
+                                <h3 class="font-bold text-gray-800 mb-2">Cookies</h3>
+                                <p class="text-gray-700 text-sm">Jusqu'à 12 mois ou jusqu'à suppression manuelle</p>
                             </div>
                             <div class="border-l-4 border-pd2i-blue pl-4">
-                                <h3 class="font-bold text-gray-800 mb-2">法律义务</h3>
-                                <p class="text-gray-700 text-sm">某些数据可能因法律合规而保留更长时间</p>
+                                <h3 class="font-bold text-gray-800 mb-2">Obligations légales</h3>
+                                <p class="text-gray-700 text-sm">Certaines données peuvent être conservées plus longtemps pour des raisons de conformité légale</p>
                             </div>
                         </div>
                     </div>
@@ -500,49 +528,62 @@
         </section>
 
         <!-- Your Rights Section -->
-        <section id="your-rights" class="py-16 bg-white">
+        <section id="vos-droits" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
-                    <div class="privacy-card scroll-animate">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">您在GDPR下的权利</h2>
+                    <div class="privacy-card scroll-animate delay-600">
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Vos droits en vertu du RGPD</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <h3 class="font-bold text-gray-800 mb-4">您有权：</h3>
+                                <h3 class="font-bold text-gray-800 mb-4">Vous avez le droit de :</h3>
                                 <ul class="space-y-3 text-gray-700">
                                     <li class="flex items-start">
                                         <span class="text-green-500 mr-2">📄</span>
-                                        <div><strong>访问</strong> - 请求您个人数据的副本</div>
+                                        <div>
+                                            <strong>Accès</strong> - Demander une copie de vos données personnelles
+                                        </div>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-blue-500 mr-2">✏️</span>
-                                        <div><strong>更正</strong> - 更正不准确的数据</div>
+                                        <div>
+                                            <strong>Rectification</strong> - Corriger des données inexactes
+                                        </div>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-red-500 mr-2">🗑️</span>
-                                        <div><strong>删除</strong> - 请求删除您的数据</div>
+                                        <div>
+                                            <strong>Effacement</strong> - Demander la suppression de vos données
+                                        </div>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-orange-500 mr-2">⏸️</span>
-                                        <div><strong>限制</strong> - 限制我们如何处理您的数据</div>
+                                        <div>
+                                            <strong>Limitation</strong> - Limiter la manière dont nous traitons vos données
+                                        </div>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-purple-500 mr-2">📦</span>
-                                        <div><strong>可携性</strong> - 以结构化格式接收您的数据</div>
+                                        <div>
+                                            <strong>Portabilité</strong> - Recevoir vos données dans un format structuré
+                                        </div>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-gray-500 mr-2">🚫</span>
-                                        <div><strong>反对</strong> - 选择退出某些数据处理</div>
+                                        <div>
+                                            <strong>Opposition</strong> - Refuser certains traitements de données
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="font-bold text-gray-800 mb-4">如何行使您的权利：</h3>
+                                <h3 class="font-bold text-gray-800 mb-4">Comment exercer vos droits :</h3>
                                 <p class="text-gray-700 text-sm mb-4">
-                                    通过<a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a>与我们联系并提出您的请求。我们将在30天内回复。
+                                    Contactez-nous à <a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a> 
+                                    avec votre demande. Nous répondrons dans un délai de 30 jours.
                                 </p>
                                 <div class="info-box success">
                                     <p class="text-sm font-medium">
-                                        ✅ 除非请求过多或重复，否则所有请求均免费处理。
+                                        ✅ Toutes les demandes sont traitées gratuitement sauf si elles sont excessives ou répétitives.
                                     </p>
                                 </div>
                             </div>
@@ -553,13 +594,13 @@
         </section>
 
         <!-- Security Section -->
-        <section id="security" class="py-16 bg-gray-50">
+        <section id="securite" class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="privacy-card scroll-animate">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">数据安全</h2>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Sécurité des données</h2>
                         <p class="text-gray-700 leading-relaxed mb-6">
-                            我们实施适当的技术和组织措施来保护您的个人数据：
+                            Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles :
                         </p>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="text-center">
@@ -568,8 +609,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="font-bold text-gray-800 mt-2">加密</h3>
-                                <p class="text-gray-600 text-sm">用于数据传输的SSL/TLS加密</p>
+                                <h3 class="font-bold text-gray-800 mt-2">Chiffrement</h3>
+                                <p class="text-gray-600 text-sm">Chiffrement SSL/TLS pour la transmission des données</p>
                             </div>
                             <div class="text-center">
                                 <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
@@ -577,8 +618,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="font-bold text-gray-800 mt-2">访问控制</h3>
-                                <p class="text-gray-600 text-sm">仅限授权人员访问</p>
+                                <h3 class="font-bold text-gray-800 mt-2">Contrôle d'accès</h3>
+                                <p class="text-gray-600 text-sm">Accès limité au personnel autorisé</p>
                             </div>
                             <div class="text-center">
                                 <div class="privacy-icon mx-auto" style="width: 60px; height: 60px;">
@@ -586,8 +627,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
                                     </svg>
                                 </div>
-                                <h3 class="font-bold text-gray-800 mt-2">安全存储</h3>
-                                <p class="text-gray-600 text-sm">具有定期备份的安全托管</p>
+                                <h3 class="font-bold text-gray-800 mt-2">Stockage sécurisé</h3>
+                                <p class="text-gray-600 text-sm">Hébergement sécurisé avec sauvegardes régulières</p>
                             </div>
                         </div>
                     </div>
@@ -600,21 +641,23 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
                     <div class="privacy-card scroll-animate">
-                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">对我们的隐私政策有疑问？</h2>
+                        <h2 class="text-2xl font-bold text-pd2i-blue mb-6">Des questions sur notre politique de confidentialité ?</h2>
                         <p class="text-gray-700 leading-relaxed mb-8">
-                            如果您对我们的隐私政策有疑问、希望行使您的权利或需要报告数据保护问题，请与我们联系。
+                            Si vous avez des questions concernant notre politique de confidentialité, souhaitez exercer vos droits 
+                            ou devez signaler une préoccupation relative à la protection des données, veuillez nous contacter.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a href="contacts.html" class="contact-btn">
-                                联系我们
+                                Contactez-nous
                             </a>
                             <div class="text-gray-600">
-                                <p class="text-sm">或通过电子邮件：<a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a></p>
+                                <p class="text-sm">Ou par e-mail : <a href="mailto:admin@pd2i.com" class="text-pd2i-blue hover:underline">admin@pd2i.com</a></p>
                             </div>
                         </div>
                         <div class="info-box mt-6">
                             <p class="text-sm">
-                                <strong>数据保护官：</strong>对于严重的隐私问题，您还可以通过<a href="https://www.cnil.fr" class="text-pd2i-blue hover:underline">www.cnil.fr</a>联系法国数据保护机构（CNIL）
+                                <strong>Délégué à la protection des données :</strong> Pour les préoccupations sérieuses en matière de confidentialité, 
+                                vous pouvez également contacter l'autorité française de protection des données (CNIL) sur <a href="https://www.cnil.fr" class="text-pd2i-blue hover:underline">www.cnil.fr</a>
                             </p>
                         </div>
                     </div>
@@ -626,8 +669,8 @@
         <section class="py-8 bg-gray-50 border-t border-gray-200">
             <div class="container mx-auto px-4">
                 <div class="text-center text-gray-600 text-sm">
-                    <p>最后更新：2025年1月</p>
-                    <p class="mt-2">本隐私政策可能会不时更新。我们将通知您任何重大变更。</p>
+                    <p>Dernière mise à jour : Janvier 2025</p>
+                    <p class="mt-2">Cette politique de confidentialité peut être mise à jour de temps à autre. Nous vous informerons de tout changement important.</p>
                 </div>
             </div>
         </section>
@@ -640,19 +683,77 @@
     <script src="../components/Header.js?v=1.5"></script>
     <script src="../components/Footer.js"></script>
     <script>
+        // Initialize Header
         window.headerInstance = new Header({
             logoSrc: '../assets/images/logo-pd2i.png',
             logoAlt: 'PD2i Logo',
             logoLink: 'index.html',
-            currentLang: 'ZH',
-            languages: ['EN', 'ZH', 'FR']
+            currentPage: 'privacy',
+            currentLang: 'FR',
+            languages: ['EN', 'ZH', 'FR'],
+            navigationItems: [
+                { label: 'Accueil', href: 'index.html', type: 'link', pageId: 'home' },
+                {
+                    label: 'Équipements',
+                    labelCompact: 'Équipements',
+                    href: '#',
+                    type: 'dropdown',
+                    pageId: 'coating-equipments',
+                    items: [
+                        { label: 'Technologie PVD pour l\'outillage', href: 'pvd-cutting-tools.html', pageId: 'pvd-cutting-tools' },
+                        { label: 'Système PVD pour moules et matrices', href: 'pvd-molds-dies.html', pageId: 'pvd-molds-dies' },
+                        { label: 'DLC pour revêtements tribologiques', href: 'dlc.html', pageId: 'dlc' },
+                        { label: 'Solutions clé en main', href: 'turnkey-solutions.html', pageId: 'turnkey-solutions' }
+                    ]
+                },
+                { label: 'Prep. arêtes', labelCompact: 'Prep. arêtes', href: 'edge-preparation.html', type: 'link', pageId: 'edge-preparation' },
+                { label: 'Green Clean', href: 'greenclean-ultrasonic-cleaning.html', type: 'link', pageId: 'greenclean-ultrasonic-cleaning' },
+                { label: 'Nitruration', labelCompact: 'Nitruration', href: 'plasma-nitriding.html', type: 'link', pageId: 'plasma-nitriding' },
+                { label: 'Services', href: 'services.html', type: 'link', pageId: 'services' },
+                { label: 'Actualités', href: 'news.html', type: 'link', pageId: 'news' },
+                { label: 'À propos', labelCompact: 'À propos', href: 'about-us.html', type: 'link', pageId: 'about-us' }
+            ]
         });
         
+        // Initialize Footer
         window.footerInstance = new Footer({
             logoSrc: '../assets/images/logo-pd2i-footer.png',
             logoAlt: 'PD2i Logo',
-            currentLang: 'ZH'
+            slogan: 'Votre partenaire quand la performance compte',
+            companyInfo: {
+                name: 'PD2i FRANCE',
+                address: '86, bd Malesherbes',
+                city: '75008 Paris',
+                phone: '+33 (0) 153 75 45 05',
+                email: 'admin@pd2i.com'
+            },
+            navigationLinks: [
+                { label: 'À propos', href: 'about-us.html' },
+                { label: 'Contact', href: 'contacts.html' },
+                { label: 'Téléchargements', href: 'download.html' },
+                { label: 'Actualités', href: 'news.html' }
+            ],
+            socialLinks: [
+                { 
+                    platform: 'linkedin', 
+                    href: 'https://linkedin.com/company/pd2i',
+                    icon: 'linkedin',
+                    label: 'Suivez-nous'
+                }
+            ],
+            bottomLinks: [
+                { label: 'Cookies', href: 'cookies.html' },
+                { label: 'Politique de confidentialité', href: 'privacy.html' },
+                { label: 'Mentions légales', href: 'legal.html' }
+            ],
+            copyrightYear: 2025
         });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -660,7 +761,7 @@
                     entry.target.classList.add('animate');
                 }
             });
-        }, { threshold: 0.1 });
+        }, observerOptions);
 
         document.querySelectorAll('.scroll-animate').forEach(el => {
             observer.observe(el);
@@ -672,7 +773,10 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
@@ -680,6 +784,7 @@
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
+
     <script src="https://cmp.osano.com/n5V2uYyqKw/4c1b4d95-ff4b-4405-bb68-1637ebe3d1ad/osano.js"></script>
 
 </body>
